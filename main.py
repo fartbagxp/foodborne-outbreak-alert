@@ -1,0 +1,876 @@
+"""
+Foodborne Outbreak Alert System
+Scrapes outbreak data from FDA and CDC public health sources
+"""
+
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime, timezone
+from typing import List, Dict, Optional
+import re
+import json
+import time
+from urllib.parse import urljoin
+from pathlib import Path
+
+
+class FDAOutbreakScraper:
+    def __init__(self):
+        self.base_url = "https://www.fda.gov"
+        self.listing_url = "https://www.fda.gov/food/outbreaks-foodborne-illness/public-health-advisories-investigations-foodborne-illness-outbreaks"
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+
+    def scrape_listing_page(self) -> List[Dict]:
+        """
+        Scrape the main listing page for all outbreak links
+        Returns a list of outbreak metadata
+        """
+        print(f"Fetching listing page: {self.listing_url}")
+        response = self.session.get(self.listing_url)
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+        outbreaks = []
+
+        # Find all outbreak links (they're in anchor tags)
+        links = soup.find_all('a', href=re.compile(r'/food/outbreaks-foodborne-illness/outbreak-investigation-'))
+
+        for link in links:
+            outbreak_data = self._parse_listing_link(link)
+            if outbreak_data:
+                outbreaks.append(outbreak_data)
+
+        print(f"Found {len(outbreaks)} outbreaks on listing page")
+        return outbreaks
+
+    def _parse_listing_link(self, link) -> Optional[Dict]:
+        """Parse a single outbreak link from the listing page"""
+        href = link.get('href')
+        title = link.get_text(strip=True)
+
+        if not href or not title:
+            return None
+
+        # Build full URL
+        full_url = self.base_url + href if href.startswith('/') else href
+
+        # Extract pathogen and food item from title
+        # Format is usually: "Pathogen: Food Item (Month Year)"
+        pathogen = None
+        food_item = None
+        date_str = None
+
+        # Try to parse title
+        if ':' in title:
+            parts = title.split(':', 1)
+            pathogen = parts[0].strip()
+            rest = parts[1].strip()
+
+            # Extract date in parentheses
+            date_match = re.search(r'\(([^)]+)\)', rest)
+            if date_match:
+                date_str = date_match.group(1)
+                food_item = rest[:date_match.start()].strip()
+            else:
+                food_item = rest
+
+        # Generate a unique ID from the URL
+        outbreak_id = href.split('/')[-1] if '/' in href else href
+
+        return {
+            'outbreak_id': outbreak_id,
+            'title': title,
+            'url': full_url,
+            'pathogen': pathogen,
+            'food_item': food_item,
+            'date_str': date_str,
+            'scraped_at': datetime.now(timezone.utc).isoformat()
+        }
+
+    def scrape_outbreak_details(self, outbreak_url: str) -> Dict:
+        """
+        Scrape detailed information from an individual outbreak page
+        """
+        print(f"Fetching outbreak details: {outbreak_url}")
+
+        try:
+            response = self.session.get(outbreak_url)
+            response.raise_for_status()
+        except Exception as e:
+            print(f"Error fetching {outbreak_url}: {e}")
+            return {}
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        details = {
+            'url': outbreak_url,
+            'scraped_at': datetime.now(timezone.utc).isoformat()
+        }
+
+        # Extract main content
+        main_content = soup.find('div', class_='panel-pane')
+        if not main_content:
+            main_content = soup.find('article')
+
+        if main_content:
+            # Get full text content
+            details['full_text'] = main_content.get_text(separator='\n', strip=True)
+
+            # Look for specific information patterns
+            text = details['full_text']
+
+            # Extract case counts
+            case_match = re.search(r'(\d+)\s+(?:people|individuals|cases|illnesses)', text, re.IGNORECASE)
+            if case_match:
+                details['case_count'] = int(case_match.group(1))
+
+            # Extract deaths
+            death_match = re.search(r'(\d+)\s+death', text, re.IGNORECASE)
+            if death_match:
+                details['deaths'] = int(death_match.group(1))
+
+            # Extract hospitalizations
+            hosp_match = re.search(r'(\d+)\s+(?:hospitalized|hospitalizations)', text, re.IGNORECASE)
+            if hosp_match:
+                details['hospitalizations'] = int(hosp_match.group(1))
+
+            # Extract states mentioned
+            states = self._extract_states(text)
+            if states:
+                details['states_affected'] = states
+
+            # Look for "What to do" or "Advice" sections
+            advice_section = main_content.find(['h2', 'h3'], string=re.compile(r'what.*do|advice|recommendation', re.IGNORECASE))
+            if advice_section:
+                # Get the next few paragraphs
+                advice_text = []
+                for sibling in advice_section.find_next_siblings(['p', 'ul', 'ol']):
+                    if sibling.name in ['h2', 'h3']:
+                        break
+                    advice_text.append(sibling.get_text(strip=True))
+                details['consumer_advice'] = '\n'.join(advice_text)
+
+            # Look for product/brand information
+            details['brands'] = self._extract_brands(text)
+            details['products'] = self._extract_products(soup)
+
+        return details
+
+    def _extract_states(self, text: str) -> List[str]:
+        """Extract US state abbreviations from text"""
+        # Common US state abbreviations
+        state_pattern = r'\b([A-Z]{2})\b'
+        potential_states = re.findall(state_pattern, text)
+
+        # Filter to valid state codes (simplified - you'd want a complete list)
+        valid_states = {'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+                       'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+                       'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+                       'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+                       'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'DC'}
+
+        found_states = [s for s in potential_states if s in valid_states]
+        return list(set(found_states))  # Remove duplicates
+
+    def _extract_brands(self, text: str) -> List[str]:
+        """Extract brand names (simplified - looks for capitalized words)"""
+        # This is a simple heuristic - you'd want to improve this
+        brand_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s+(?:brand|foods|company|products)'
+        brands = re.findall(brand_pattern, text, re.IGNORECASE)
+        return list(set(brands))
+
+    def _extract_products(self, soup: BeautifulSoup) -> List[str]:
+        """Extract specific product descriptions"""
+        products = []
+
+        # Look for lists or tables that might contain product info
+        for ul in soup.find_all(['ul', 'ol']):
+            for li in ul.find_all('li'):
+                text = li.get_text(strip=True)
+                # If it looks like a product description (contains numbers, brands, etc.)
+                if re.search(r'\d+\s*oz|\d+\s*lb|lot|UPC|best by', text, re.IGNORECASE):
+                    products.append(text)
+
+        return products
+
+    def scrape_all(self, limit: Optional[int] = None, delay: float = 1.0) -> List[Dict]:
+        """
+        Scrape all outbreaks with full details
+
+        Args:
+            limit: Maximum number of outbreaks to scrape (None for all)
+            delay: Delay between requests in seconds (be respectful!)
+        """
+        # Get listing
+        outbreaks = self.scrape_listing_page()
+
+        if limit:
+            outbreaks = outbreaks[:limit]
+
+        # Scrape details for each
+        detailed_outbreaks = []
+        for i, outbreak in enumerate(outbreaks, 1):
+            print(f"\nScraping {i}/{len(outbreaks)}: {outbreak['title']}")
+
+            details = self.scrape_outbreak_details(outbreak['url'])
+
+            # Merge listing data with detailed data
+            full_data = {**outbreak, **details}
+            detailed_outbreaks.append(full_data)
+
+            # Be respectful - add delay
+            if i < len(outbreaks):
+                time.sleep(delay)
+
+        return detailed_outbreaks
+
+    def save_to_json(self, outbreaks: List[Dict], filename: str = 'data/raw/fda_outbreaks.json'):
+        """Save scraped data to JSON file"""
+        # Ensure directory exists
+        Path(filename).parent.mkdir(parents=True, exist_ok=True)
+
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(outbreaks, f, indent=2, ensure_ascii=False)
+        print(f"\nSaved {len(outbreaks)} outbreaks to {filename}")
+
+
+class CDCOutbreakScraper:
+    """
+    Scraper for CDC outbreak investigation pages
+    CDC organizes outbreaks by pathogen type with individual investigation pages
+    """
+
+    def __init__(self):
+        self.base_url = "https://www.cdc.gov"
+        self.pathogen_pages = {
+            'salmonella': 'https://www.cdc.gov/salmonella/outbreaks/index.html',
+            'listeria': 'https://www.cdc.gov/listeria/outbreaks/index.html',
+            'ecoli': 'https://www.cdc.gov/ecoli/outbreaks/index.html',
+            'campylobacter': 'https://www.cdc.gov/campylobacter/outbreaks/index.html',
+        }
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+
+    def discover_investigation_links(self, pathogen: str) -> List[Dict]:
+        """
+        Discover active outbreak investigation links for a given pathogen
+        Uses multiple strategies since CDC pages load dynamically
+        """
+        investigations = []
+
+        # Try to scrape the pathogen page
+        if pathogen not in self.pathogen_pages:
+            print(f"Unknown pathogen: {pathogen}")
+            return investigations
+
+        url = self.pathogen_pages[pathogen]
+        print(f"Checking {pathogen} outbreaks page: {url}")
+
+        try:
+            response = self.session.get(url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Strategy 1: Look for investigation links with the standard pattern
+            pattern = re.compile(rf'/{pathogen}/outbreaks/[^/]+/investigation\.html')
+            for link in soup.find_all('a', href=pattern):
+                href = link.get('href')
+                if href:
+                    full_url = urljoin(self.base_url, href)
+                    title = link.get_text(strip=True)
+
+                    # Extract identifier from URL
+                    match = re.search(rf'/{pathogen}/outbreaks/([^/]+)/investigation\.html', href)
+                    outbreak_id = match.group(1) if match else href.split('/')[-2]
+
+                    investigations.append({
+                        'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                        'pathogen': pathogen,
+                        'url': full_url,
+                        'title': title,
+                        'source': 'CDC'
+                    })
+
+            # Strategy 2: Look for any outbreak-related links (broader pattern)
+            if not investigations:
+                broader_pattern = re.compile(rf'/{pathogen}/outbreaks/[^/]+')
+                for link in soup.find_all('a', href=broader_pattern):
+                    href = link.get('href')
+                    if href and 'investigation' in href.lower():
+                        full_url = urljoin(self.base_url, href)
+                        title = link.get_text(strip=True)
+                        outbreak_id = href.split('/')[-1].replace('.html', '')
+
+                        if outbreak_id and outbreak_id != 'investigation':
+                            investigations.append({
+                                'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                                'pathogen': pathogen,
+                                'url': full_url,
+                                'title': title or f'{pathogen.title()} outbreak',
+                                'source': 'CDC'
+                            })
+
+            # Strategy 3: Check for "card" or "list item" elements that might contain outbreak info
+            if not investigations:
+                # CDC often uses cards or list items for outbreak listings
+                for card in soup.find_all(['div', 'li'], class_=re.compile(r'card|outbreak|list-item')):
+                    link = card.find('a', href=re.compile(rf'/{pathogen}/outbreaks/'))
+                    if link:
+                        href = link.get('href')
+                        if href and 'investigation' in href.lower():
+                            full_url = urljoin(self.base_url, href)
+                            title = link.get_text(strip=True) or card.get_text(strip=True)[:100]
+                            outbreak_id = href.split('/')[-2] if '/' in href else 'unknown'
+
+                            investigations.append({
+                                'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                                'pathogen': pathogen,
+                                'url': full_url,
+                                'title': title,
+                                'source': 'CDC'
+                            })
+
+            print(f"Found {len(investigations)} {pathogen} investigations")
+
+        except Exception as e:
+            print(f"Error discovering {pathogen} investigations: {e}")
+
+        return investigations
+
+    def scrape_investigation_details(self, investigation_url: str, pathogen: str) -> Dict:
+        """
+        Scrape detailed information from a CDC outbreak investigation page
+        """
+        print(f"Fetching CDC investigation: {investigation_url}")
+
+        try:
+            response = self.session.get(investigation_url)
+            response.raise_for_status()
+        except Exception as e:
+            print(f"Error fetching {investigation_url}: {e}")
+            return {}
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        details = {
+            'url': investigation_url,
+            'pathogen': pathogen,
+            'source': 'CDC',
+            'scraped_at': datetime.now(timezone.utc).isoformat()
+        }
+
+        # Extract title
+        title = soup.find('h1')
+        if title:
+            details['title'] = title.get_text(strip=True)
+
+        # Get main content
+        content = soup.find('div', class_='content') or soup.find('main') or soup.find('article')
+
+        if content:
+            full_text = content.get_text(separator='\n', strip=True)
+            details['full_text'] = full_text
+
+            # Extract investigation status
+            if re.search(r'investigation.*(?:closed|ended|over)', full_text, re.IGNORECASE):
+                details['status'] = 'closed'
+            elif re.search(r'investigation.*ongoing|active', full_text, re.IGNORECASE):
+                details['status'] = 'ongoing'
+            else:
+                details['status'] = 'unknown'
+
+            # Extract case count - CDC often says "X people" or "X cases"
+            case_patterns = [
+                r'(\d+)\s+people?\s+(?:infected|reported|ill)',
+                r'(\d+)\s+cases?',
+                r'total.*?(\d+)\s+people'
+            ]
+            for pattern in case_patterns:
+                match = re.search(pattern, full_text, re.IGNORECASE)
+                if match:
+                    details['case_count'] = int(match.group(1))
+                    break
+
+            # Extract deaths
+            death_match = re.search(r'(\d+)\s+death', full_text, re.IGNORECASE)
+            if death_match:
+                details['deaths'] = int(death_match.group(1))
+
+            # Extract hospitalizations - CDC often gives "X of Y" format
+            hosp_patterns = [
+                r'(\d+)\s+of\s+\d+.*?hospitalized',
+                r'(\d+).*?hospitalized',
+                r'hospitalizations?:\s*(\d+)'
+            ]
+            for pattern in hosp_patterns:
+                match = re.search(pattern, full_text, re.IGNORECASE)
+                if match:
+                    details['hospitalizations'] = int(match.group(1))
+                    break
+
+            # Extract states - CDC often says "X states"
+            state_count_match = re.search(r'(\d+)\s+states?', full_text, re.IGNORECASE)
+            if state_count_match:
+                details['state_count'] = int(state_count_match.group(1))
+
+            # Extract specific states
+            states = self._extract_states(full_text)
+            if states:
+                details['states_affected'] = states
+
+            # Extract posted/updated date
+            date_match = re.search(r'(?:posted|updated).*?(\w+\s+\d+,\s+\d{4})', full_text, re.IGNORECASE)
+            if date_match:
+                details['posted_date'] = date_match.group(1)
+
+            # Extract illness date range
+            illness_range = re.search(r'illness.*?(\w+\s+\d+,\s+\d{4})\s+to\s+(\w+\s+\d+,\s+\d{4})', full_text, re.IGNORECASE)
+            if illness_range:
+                details['illness_start_date'] = illness_range.group(1)
+                details['illness_end_date'] = illness_range.group(2)
+
+            # Extract food source/vehicle
+            food_patterns = [
+                r'linked to\s+([^.]+?)(?:\.|$)',
+                r'source.*?:\s*([^.]+?)(?:\.|$)',
+                r'vehicle.*?:\s*([^.]+?)(?:\.|$)'
+            ]
+            for pattern in food_patterns:
+                match = re.search(pattern, full_text, re.IGNORECASE)
+                if match:
+                    potential_food = match.group(1).strip()
+                    # Clean up the extracted text
+                    if len(potential_food) < 100:  # Reasonable length
+                        details['food_source'] = potential_food
+                        break
+
+            # Extract recommendations/advice
+            advice_headers = ['what you should do', 'recommendations', 'advice', 'actions']
+            for header in advice_headers:
+                advice_section = content.find(['h2', 'h3', 'h4'], string=re.compile(header, re.IGNORECASE))
+                if advice_section:
+                    advice_text = []
+                    for sibling in advice_section.find_next_siblings(['p', 'ul', 'ol', 'li']):
+                        if sibling.name in ['h2', 'h3', 'h4']:
+                            break
+                        advice_text.append(sibling.get_text(strip=True))
+                    if advice_text:
+                        details['consumer_advice'] = '\n'.join(advice_text)
+                        break
+
+        return details
+
+    def _extract_states(self, text: str) -> List[str]:
+        """Extract US state abbreviations from text"""
+        state_pattern = r'\b([A-Z]{2})\b'
+        potential_states = re.findall(state_pattern, text)
+
+        valid_states = {'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+                       'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+                       'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+                       'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+                       'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'DC'}
+
+        found_states = [s for s in potential_states if s in valid_states]
+        return list(set(found_states))
+
+    def discover_from_main_page(self) -> List[Dict]:
+        """
+        Discover outbreaks from the main CDC foodborne outbreaks page
+        This page lists all currently active investigations
+        """
+        main_url = "https://www.cdc.gov/foodborne-outbreaks/outbreaks/"
+        print(f"Checking main CDC outbreak page: {main_url}")
+        investigations = []
+
+        try:
+            response = self.session.get(main_url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Look for any links to outbreak investigation pages
+            investigation_pattern = re.compile(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella)/outbreaks/.+/investigation')
+
+            for link in soup.find_all('a', href=investigation_pattern):
+                href = link.get('href')
+                if href:
+                    full_url = urljoin(self.base_url, href)
+                    title = link.get_text(strip=True)
+
+                    # Extract pathogen from URL
+                    pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella)/', href)
+                    pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
+
+                    # Extract identifier
+                    outbreak_id = href.split('/')[-2] if '/' in href else 'unknown'
+
+                    investigations.append({
+                        'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                        'pathogen': pathogen,
+                        'url': full_url,
+                        'title': title or f'{pathogen.title()} outbreak',
+                        'source': 'CDC'
+                    })
+
+            print(f"Found {len(investigations)} investigations from main page")
+
+        except Exception as e:
+            print(f"Error scraping main CDC page: {e}")
+
+        return investigations
+
+    def scrape_known_urls(self, urls: List[str], delay: float = 1.0) -> List[Dict]:
+        """
+        Scrape a list of known CDC investigation URLs
+        Useful when automatic discovery fails due to dynamic content
+
+        Args:
+            urls: List of CDC investigation URLs to scrape
+            delay: Delay between requests in seconds
+        """
+        all_outbreaks = []
+
+        for i, url in enumerate(urls, 1):
+            print(f"\nScraping {i}/{len(urls)}: {url}")
+
+            # Extract pathogen from URL
+            pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella)/', url)
+            pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
+
+            # Extract identifier
+            outbreak_id = url.split('/')[-2] if '/' in url else 'unknown'
+
+            # Create investigation metadata
+            investigation = {
+                'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                'pathogen': pathogen,
+                'url': url,
+                'source': 'CDC'
+            }
+
+            # Scrape details
+            details = self.scrape_investigation_details(url, pathogen)
+
+            # Merge data
+            full_data = {**investigation, **details}
+            all_outbreaks.append(full_data)
+
+            # Be respectful - add delay
+            if i < len(urls):
+                time.sleep(delay)
+
+        return all_outbreaks
+
+    def scrape_all_pathogens(self, delay: float = 1.0, use_main_page: bool = True, known_urls: Optional[List[str]] = None) -> List[Dict]:
+        """
+        Discover and scrape all outbreak investigations across all pathogens
+
+        Args:
+            delay: Delay between requests in seconds
+            use_main_page: Try to discover from main CDC outbreak page first
+            known_urls: Optional list of known investigation URLs to scrape directly
+        """
+        all_outbreaks = []
+
+        # If known URLs provided, use those directly
+        if known_urls:
+            print(f"\n=== Scraping {len(known_urls)} known CDC outbreak URLs ===")
+            return self.scrape_known_urls(known_urls, delay)
+
+        # First, try to discover from main CDC page (more reliable)
+        if use_main_page:
+            print("\n=== Discovering from main CDC outbreak page ===")
+            main_page_investigations = self.discover_from_main_page()
+
+            if main_page_investigations:
+                for i, investigation in enumerate(main_page_investigations, 1):
+                    print(f"\nScraping {i}/{len(main_page_investigations)}: {investigation.get('title', 'Unknown')}")
+
+                    details = self.scrape_investigation_details(
+                        investigation['url'],
+                        investigation.get('pathogen', 'unknown')
+                    )
+
+                    # Merge metadata with details
+                    full_data = {**investigation, **details}
+                    all_outbreaks.append(full_data)
+
+                    # Be respectful - add delay
+                    if i < len(main_page_investigations):
+                        time.sleep(delay)
+
+                return all_outbreaks
+
+        # Fallback: Try individual pathogen pages
+        print("\n=== Falling back to individual pathogen pages ===")
+        for pathogen in self.pathogen_pages.keys():
+            print(f"\n=== Processing {pathogen.upper()} outbreaks ===")
+
+            # Discover investigations
+            investigations = self.discover_investigation_links(pathogen)
+
+            # Scrape each investigation
+            for i, investigation in enumerate(investigations, 1):
+                print(f"Scraping {i}/{len(investigations)}: {investigation.get('title', 'Unknown')}")
+
+                details = self.scrape_investigation_details(investigation['url'], pathogen)
+
+                # Merge metadata with details
+                full_data = {**investigation, **details}
+                all_outbreaks.append(full_data)
+
+                # Be respectful - add delay
+                if i < len(investigations):
+                    time.sleep(delay)
+
+            # Delay between pathogens
+            time.sleep(delay)
+
+        return all_outbreaks
+
+    def save_to_json(self, outbreaks: List[Dict], filename: str = 'data/raw/cdc_outbreaks.json'):
+        """Save scraped data to JSON file"""
+        # Ensure directory exists
+        Path(filename).parent.mkdir(parents=True, exist_ok=True)
+
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(outbreaks, f, indent=2, ensure_ascii=False)
+        print(f"\nSaved {len(outbreaks)} CDC outbreaks to {filename}")
+
+
+class OutbreakAggregator:
+    """
+    Combines outbreak data from multiple sources (FDA, CDC) into a unified format
+    """
+
+    def __init__(self):
+        self.fda_scraper = FDAOutbreakScraper()
+        self.cdc_scraper = CDCOutbreakScraper()
+
+    def scrape_all_sources(self, fda_limit: Optional[int] = None, delay: float = 1.5, cdc_known_urls: Optional[List[str]] = None) -> Dict[str, List[Dict]]:
+        """
+        Scrape data from all sources
+
+        Args:
+            fda_limit: Limit number of FDA outbreaks to scrape (None for all)
+            delay: Delay between requests in seconds
+            cdc_known_urls: Optional list of known CDC investigation URLs
+
+        Returns:
+            Dictionary with 'fda' and 'cdc' keys containing outbreak lists
+        """
+        print("=" * 60)
+        print("FOODBORNE OUTBREAK ALERT SYSTEM")
+        print("=" * 60)
+
+        # Scrape FDA
+        print("\n[1/2] Scraping FDA Outbreaks...")
+        print("-" * 60)
+        fda_outbreaks = self.fda_scraper.scrape_all(limit=fda_limit, delay=delay)
+
+        # Scrape CDC
+        print("\n[2/2] Scraping CDC Outbreaks...")
+        print("-" * 60)
+        cdc_outbreaks = self.cdc_scraper.scrape_all_pathogens(delay=delay, known_urls=cdc_known_urls)
+
+        return {
+            'fda': fda_outbreaks,
+            'cdc': cdc_outbreaks
+        }
+
+    def normalize_outbreak(self, outbreak: Dict) -> Dict:
+        """
+        Normalize outbreak data to a common format regardless of source
+        """
+        normalized = {
+            'id': outbreak.get('outbreak_id'),
+            'source': outbreak.get('source', 'FDA' if 'fda.gov' in outbreak.get('url', '') else 'Unknown'),
+            'title': outbreak.get('title'),
+            'url': outbreak.get('url'),
+            'pathogen': outbreak.get('pathogen'),
+            'food_source': outbreak.get('food_item') or outbreak.get('food_source'),
+            'status': outbreak.get('status', 'unknown'),
+            'case_count': outbreak.get('case_count'),
+            'deaths': outbreak.get('deaths'),
+            'hospitalizations': outbreak.get('hospitalizations'),
+            'states_affected': outbreak.get('states_affected', []),
+            'state_count': outbreak.get('state_count') or (len(outbreak.get('states_affected', [])) if outbreak.get('states_affected') else None),
+            'posted_date': outbreak.get('date_str') or outbreak.get('posted_date'),
+            'consumer_advice': outbreak.get('consumer_advice'),
+            'scraped_at': outbreak.get('scraped_at')
+        }
+
+        # Remove None values
+        return {k: v for k, v in normalized.items() if v is not None}
+
+    def combine_and_normalize(self, all_data: Dict[str, List[Dict]]) -> List[Dict]:
+        """
+        Combine all outbreak data and normalize to common format
+        """
+        combined = []
+
+        for source, outbreaks in all_data.items():
+            for outbreak in outbreaks:
+                normalized = self.normalize_outbreak(outbreak)
+                combined.append(normalized)
+
+        # Sort by case count (descending) for priority
+        combined.sort(key=lambda x: x.get('case_count', 0), reverse=True)
+
+        return combined
+
+    def get_summary_stats(self, combined_data: List[Dict]) -> Dict:
+        """
+        Generate summary statistics across all outbreaks
+        """
+        total_outbreaks = len(combined_data)
+        total_cases = sum(o.get('case_count', 0) for o in combined_data)
+        total_deaths = sum(o.get('deaths', 0) for o in combined_data)
+        total_hospitalizations = sum(o.get('hospitalizations', 0) for o in combined_data)
+
+        # Count by source
+        by_source = {}
+        for outbreak in combined_data:
+            source = outbreak.get('source', 'Unknown')
+            by_source[source] = by_source.get(source, 0) + 1
+
+        # Count by pathogen
+        by_pathogen = {}
+        for outbreak in combined_data:
+            pathogen = outbreak.get('pathogen', 'Unknown')
+            by_pathogen[pathogen] = by_pathogen.get(pathogen, 0) + 1
+
+        # Count by status
+        by_status = {}
+        for outbreak in combined_data:
+            status = outbreak.get('status', 'unknown')
+            by_status[status] = by_status.get(status, 0) + 1
+
+        # Unique states affected
+        all_states = set()
+        for outbreak in combined_data:
+            states = outbreak.get('states_affected', [])
+            all_states.update(states)
+
+        return {
+            'total_outbreaks': total_outbreaks,
+            'total_cases': total_cases,
+            'total_deaths': total_deaths,
+            'total_hospitalizations': total_hospitalizations,
+            'outbreaks_by_source': by_source,
+            'outbreaks_by_pathogen': by_pathogen,
+            'outbreaks_by_status': by_status,
+            'unique_states_affected': len(all_states),
+            'states_list': sorted(all_states)
+        }
+
+    def save_combined_data(self, combined_data: List[Dict], stats: Dict, filename: str = 'data/raw/combined_outbreaks.json'):
+        """Save combined data with summary stats"""
+        # Ensure directory exists
+        Path(filename).parent.mkdir(parents=True, exist_ok=True)
+
+        output = {
+            'summary': stats,
+            'outbreaks': combined_data,
+            'generated_at': datetime.now(timezone.utc).isoformat()
+        }
+
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
+
+        print(f"\nSaved combined data to {filename}")
+
+
+def main():
+    """
+    Main function demonstrating combined FDA and CDC outbreak scraping
+    """
+    # Initialize the aggregator
+    aggregator = OutbreakAggregator()
+
+    # Example known CDC investigation URLs (since CDC pages load dynamically)
+    # You can find recent outbreaks at: https://www.cdc.gov/foodborne-outbreaks/outbreaks/
+    known_cdc_urls = [
+        'https://www.cdc.gov/salmonella/outbreaks/cotham-11-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/investigation.html',
+        'https://www.cdc.gov/listeria/outbreaks/ready-to-eat-foods-may-2025/investigation.html',
+    ]
+
+    # Scrape from both sources (limit FDA for demo purposes)
+    # Set fda_limit=None to scrape all FDA outbreaks
+    # Set cdc_known_urls=None to attempt automatic discovery (may find 0 due to dynamic content)
+    all_data = aggregator.scrape_all_sources(
+        fda_limit=3,
+        delay=2.0,
+        cdc_known_urls=known_cdc_urls  # Comment this out to test automatic discovery
+    )
+
+    # Combine and normalize the data
+    print("\n" + "=" * 60)
+    print("COMBINING AND NORMALIZING DATA")
+    print("=" * 60)
+    combined = aggregator.combine_and_normalize(all_data)
+
+    # Generate summary statistics
+    stats = aggregator.get_summary_stats(combined)
+
+    # Display summary
+    print("\n" + "=" * 60)
+    print("SUMMARY STATISTICS")
+    print("=" * 60)
+    print(f"Total Outbreaks: {stats['total_outbreaks']}")
+    print(f"Total Cases: {stats['total_cases']}")
+    print(f"Total Deaths: {stats['total_deaths']}")
+    print(f"Total Hospitalizations: {stats['total_hospitalizations']}")
+    print(f"States Affected: {stats['unique_states_affected']}")
+
+    print("\nOutbreaks by Source:")
+    for source, count in stats['outbreaks_by_source'].items():
+        print(f"  {source}: {count}")
+
+    print("\nOutbreaks by Pathogen:")
+    for pathogen, count in sorted(stats['outbreaks_by_pathogen'].items(), key=lambda x: x[1], reverse=True):
+        print(f"  {pathogen}: {count}")
+
+    print("\nOutbreaks by Status:")
+    for status, count in stats['outbreaks_by_status'].items():
+        print(f"  {status}: {count}")
+
+    # Show top 5 outbreaks by case count
+    print("\n" + "=" * 60)
+    print("TOP 5 OUTBREAKS BY CASE COUNT")
+    print("=" * 60)
+    for i, outbreak in enumerate(combined[:5], 1):
+        print(f"\n{i}. {outbreak.get('title', 'Unknown')}")
+        print(f"   Source: {outbreak.get('source')}")
+        print(f"   Pathogen: {outbreak.get('pathogen', 'Unknown')}")
+        print(f"   Food: {outbreak.get('food_source', 'Unknown')}")
+        print(f"   Cases: {outbreak.get('case_count', 'N/A')}")
+        print(f"   Deaths: {outbreak.get('deaths', 'N/A')}")
+        print(f"   States: {outbreak.get('state_count', 'N/A')}")
+        print(f"   Status: {outbreak.get('status', 'unknown')}")
+        print(f"   URL: {outbreak.get('url')}")
+
+    # Save combined data
+    aggregator.save_combined_data(combined, stats)
+
+    # Also save separate files for each source
+    aggregator.fda_scraper.save_to_json(all_data['fda'])
+    aggregator.cdc_scraper.save_to_json(all_data['cdc'])
+
+    print("\n" + "=" * 60)
+    print("SCRAPING COMPLETE")
+    print("=" * 60)
+    print("Files created:")
+    print("  - data/raw/combined_outbreaks.json (unified data with statistics)")
+    print("  - data/raw/fda_outbreaks.json (FDA data only)")
+    print("  - data/raw/cdc_outbreaks.json (CDC data only)")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "total_outbreaks": 6,
+    "total_cases": 136,
+    "total_deaths": 15,
+    "total_hospitalizations": 46,
+    "outbreaks_by_source": {
+      "CDC": 3,
+      "FDA": 3
+    },
+    "outbreaks_by_pathogen": {
+      "salmonella": 2,
+      "Outbreak Investigation of Infant Botulism": 1,
+      "listeria": 1,
+      "Unknown": 2
+    },
+    "outbreaks_by_status": {
+      "unknown": 6
+    },
+    "unique_states_affected": 12,
+    "states_list": [
+      "AZ",
+      "CA",
+      "IL",
+      "KY",
+      "MN",
+      "NC",
+      "NJ",
+      "OR",
+      "PA",
+      "RI",
+      "TX",
+      "WA"
+    ]
+  },
+  "outbreaks": [
+    {
+      "id": "cdc_salmonella_eggs-08-25",
+      "source": "CDC",
+      "title": "Investigation Update: Salmonella Outbreak, August 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "eggs",
+      "status": "unknown",
+      "case_count": 95,
+      "hospitalizations": 14,
+      "states_affected": [],
+      "state_count": 14,
+      "consumer_advice": "On August 27, 2025, Country Eggs, LLC recalled eggs. CDC advises people to not eat recalled eggs and businesses to not sell or serve recalled eggs.",
+      "scraped_at": "2025-11-14T16:04:58.696350+00:00"
+    },
+    {
+      "id": "cdc_salmonella_cotham-11-25",
+      "source": "CDC",
+      "title": "Investigation Update:SalmonellaOutbreak, November 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/cotham-11-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "pet bearded dragons",
+      "status": "unknown",
+      "case_count": 17,
+      "hospitalizations": 14,
+      "states_affected": [],
+      "state_count": 11,
+      "scraped_at": "2025-11-14T16:04:56.620608+00:00"
+    },
+    {
+      "id": "outbreak-investigation-infant-botulism-infant-formula-november-2025",
+      "source": "FDA",
+      "title": "Outbreak Investigation of Infant Botulism: Infant Formula (November 2025)",
+      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-infant-botulism-infant-formula-november-2025",
+      "pathogen": "Outbreak Investigation of Infant Botulism",
+      "food_source": "Infant Formula",
+      "status": "unknown",
+      "case_count": 14,
+      "deaths": 15,
+      "hospitalizations": 15,
+      "states_affected": [
+        "AZ",
+        "PA",
+        "OR",
+        "MN",
+        "TX",
+        "CA",
+        "WA",
+        "KY",
+        "RI",
+        "IL",
+        "NC",
+        "NJ"
+      ],
+      "state_count": 12,
+      "posted_date": "November 2025",
+      "consumer_advice": "Parents and Caregiversshould stop using any ByHeart infant formula products immediately.If your child consumed ByHeart formula and is experiencing symptoms (see below) seek immediate medical attention.If your child consumed ByHeart formula and is not currently showing symptoms, continue monitoring them and seek medical attention if symptoms develop.If you still have the formula in your home, you should:take a photo or record the information on the bottom of the package.keep the container in a safe spot and be sure to label that product as DO NOT USE.If your child develops symptoms your state health department might want to collect your formula container for testing. If your child does not develop symptoms after 30 days, throw your containers out.Botulism can be fatal,and you should take action right away. If your child has consumed ByHeart Whole Nutrition Infant Formula and is experiencingsigns and symptomsof botulism such as poor feeding, loss of head control, difficulty swallowing, or decreased facial expression, seek immediate medical attention.If you are a Physicianand suspect an infant patient has botulism,immediatelycall510-231-7600for case consultation. Consultation is available 24/7.\n",
+      "scraped_at": "2025-11-14T16:04:56.469607+00:00"
+    },
+    {
+      "id": "cdc_listeria_ready-to-eat-foods-may-2025",
+      "source": "CDC",
+      "title": "Investigation Update:ListeriaOutbreak, Ready-to-Eat Foods, May 2025",
+      "url": "https://www.cdc.gov/listeria/outbreaks/ready-to-eat-foods-may-2025/investigation.html",
+      "pathogen": "listeria",
+      "status": "unknown",
+      "case_count": 10,
+      "hospitalizations": 3,
+      "states_affected": [],
+      "consumer_advice": "On May 10, 2025, Fresh & Ready Foods LLCrecalledselect ready-to-eat foods.",
+      "scraped_at": "2025-11-14T16:05:00.790537+00:00"
+    },
+    {
+      "id": "outbreak-investigation-reports",
+      "source": "FDA",
+      "title": "Outbreak Investigation Reports",
+      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-reports",
+      "status": "unknown",
+      "states_affected": [],
+      "scraped_at": "2025-11-14T16:04:52.152318+00:00"
+    },
+    {
+      "id": "outbreak-investigation-reports",
+      "source": "FDA",
+      "title": "Outbreak Investigation Reports",
+      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-reports",
+      "status": "unknown",
+      "states_affected": [],
+      "scraped_at": "2025-11-14T16:04:54.282943+00:00"
+    }
+  ],
+  "generated_at": "2025-11-14T16:05:00.802329+00:00"
+}

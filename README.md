@@ -2,11 +2,18 @@
 
 A real-time foodborne outbreak monitoring system that aggregates and analyzes outbreak data from both FDA and CDC sources.
 
+**Current Coverage:**
+- 🏛️ FDA: 70 outbreak investigations (2011-2025)
+- 🔬 CDC: 18 active investigations (2024-2025)
+- 📊 Total: 88 foodborne outbreak investigations
+
 ## Features
 
 - **Multi-Source Scraping**: Combines outbreak data from:
-  - FDA Public Health Advisories
-  - CDC Investigation Updates (Salmonella, Listeria, E. coli, Campylobacter)
+  - FDA Public Health Advisories (70 investigations, 2011-2025)
+  - CDC Investigation Updates (18 investigations, 2024-2025)
+  - Salmonella, Listeria, E. coli, and other pathogens
+- **Command-Line Interface**: Run FDA and CDC scrapers separately or together with `--fda` and `--cdc` flags
 - **Unified Data Format**: Normalizes data from different sources into a consistent structure
 - **Rich Metadata Extraction**:
   - Case counts, deaths, and hospitalizations
@@ -24,9 +31,56 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 uv sync
 ```
 
+## Quick Start
+
+```bash
+# Scrape both FDA and CDC data
+uv run python main.py
+
+# Or scrape selectively
+uv run python main.py --fda  # FDA only (faster, ~70 outbreaks)
+uv run python main.py --cdc  # CDC only (18 investigations)
+```
+
+This will create JSON files in `data/raw/` with outbreak data, statistics, and normalized formats ready for analysis.
+
 ## Usage
 
-### Basic Usage
+### Command Line Interface
+
+The scraper supports command-line arguments to run FDA and CDC scrapers separately or together:
+
+```bash
+# Scrape both FDA and CDC (default - 88 total outbreaks)
+uv run python main.py
+
+# Scrape FDA only (70 outbreaks from 2011-2025)
+uv run python main.py --fda
+
+# Scrape CDC only (18 investigations from 2024-2025)
+uv run python main.py --cdc
+
+# Scrape both with custom delay
+uv run python main.py --fda --cdc --delay 3.0
+
+# Show help and available options
+uv run python main.py --help
+```
+
+**Output files generated:**
+- `data/raw/combined_outbreaks.json` - Unified data with summary statistics
+- `data/raw/fda_outbreaks.json` - FDA data only (when `--fda` is used)
+- `data/raw/cdc_outbreaks.json` - CDC data only (when `--cdc` is used)
+
+**Command-line options:**
+- `--fda` - Scrape FDA outbreak data only
+- `--cdc` - Scrape CDC outbreak data only
+- `--delay DELAY` - Delay between requests in seconds (default: 2.0)
+- `--help` - Show help message
+
+### Python API
+
+You can also use the scrapers programmatically:
 
 ```python
 from main import OutbreakAggregator
@@ -50,52 +104,45 @@ stats = aggregator.get_summary_stats(combined)
 aggregator.save_combined_data(combined, stats)
 ```
 
-### Running the Demo
+### Updating CDC Investigation URLs
 
-```bash
-# Run the demo script
-uv run python main.py
-```
+The scraper includes **18 pre-configured CDC investigation URLs** (lines 826-850 in main.py) covering:
+- 10 Salmonella outbreaks (2025)
+- 5 Listeria outbreaks (2024-2025)
+- 3 E. coli outbreaks (2024)
 
-This will scrape FDA outbreaks and known CDC investigations, then generate three JSON files in `data/raw/`:
-- `data/raw/combined_outbreaks.json` - Unified data with summary statistics
-- `data/raw/fda_outbreaks.json` - FDA data only
-- `data/raw/cdc_outbreaks.json` - CDC data only
+**To add new CDC investigations:**
 
-### CDC Known URLs
-
-Due to CDC pages loading content dynamically, you may need to provide known investigation URLs:
+1. Find new outbreak investigation URLs at: [CDC Foodborne Outbreaks](https://www.cdc.gov/foodborne-outbreaks/outbreaks/)
+2. Or search Google: `site:cdc.gov/[pathogen]/outbreaks investigation.html 2025`
+3. Edit `main.py` (lines 826-850) and add URLs to the `known_cdc_urls` list:
 
 ```python
 known_cdc_urls = [
-    'https://www.cdc.gov/salmonella/outbreaks/cotham-11-25/investigation.html',
-    'https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/investigation.html',
-    'https://www.cdc.gov/listeria/outbreaks/ready-to-eat-foods-may-2025/investigation.html',
+    # Add your new URLs here
+    'https://www.cdc.gov/salmonella/outbreaks/new-outbreak/investigation.html',
+    ...
 ]
-
-all_data = aggregator.scrape_all_sources(
-    fda_limit=None,
-    delay=2.0,
-    cdc_known_urls=known_cdc_urls
-)
 ```
 
-You can find current CDC investigations at: https://www.cdc.gov/foodborne-outbreaks/outbreaks/
+**Why manual URLs?** CDC pages load content dynamically via JavaScript, so automatic discovery often finds 0 results. Providing known URLs ensures reliable data collection.
 
 ### Individual Scrapers
 
 You can also use the scrapers independently:
 
 **FDA Scraper:**
+
 ```python
 from main import FDAOutbreakScraper
 
 scraper = FDAOutbreakScraper()
-outbreaks = scraper.scrape_all(limit=10, delay=2.0)
+outbreaks = scraper.scrape_all(limit=None, delay=2.0)  # limit=None scrapes all
 scraper.save_to_json(outbreaks)  # Saves to data/raw/fda_outbreaks.json
 ```
 
 **CDC Scraper:**
+
 ```python
 from main import CDCOutbreakScraper
 
@@ -123,9 +170,9 @@ scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
     "total_deaths": 15,
     "total_hospitalizations": 46,
     "unique_states_affected": 12,
-    "outbreaks_by_source": {"CDC": 3, "FDA": 3},
-    "outbreaks_by_pathogen": {"salmonella": 2, "listeria": 1},
-    "outbreaks_by_status": {"ongoing": 4, "closed": 2}
+    "outbreaks_by_source": { "CDC": 3, "FDA": 3 },
+    "outbreaks_by_pathogen": { "salmonella": 2, "listeria": 1 },
+    "outbreaks_by_status": { "ongoing": 4, "closed": 2 }
   },
   "outbreaks": [
     {
@@ -167,7 +214,7 @@ scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
 
 1. **Respect Rate Limits**: Use delays between requests (2+ seconds recommended)
 2. **Update Regularly**: Run the scraper periodically to get fresh data
-3. **Check CDC Website**: Manually check for new CDC investigations and update known URLs
+3. **Check CDC Website**: Manually check for new CDC investigations and update known URLs in main.py (lines 826-850)
 4. **Error Handling**: The scrapers handle errors gracefully but log them to stdout
 5. **Data Validation**: Always verify scraped data before using in production
 

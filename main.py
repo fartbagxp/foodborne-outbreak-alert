@@ -12,6 +12,7 @@ import json
 import time
 from urllib.parse import urljoin
 from pathlib import Path
+import argparse
 
 
 class FDAOutbreakScraper:
@@ -52,6 +53,10 @@ class FDAOutbreakScraper:
         title = link.get_text(strip=True)
 
         if not href or not title:
+            return None
+
+        # Skip navigation pages (not actual outbreak investigations)
+        if href.endswith('outbreak-investigation-reports'):
             return None
 
         # Build full URL
@@ -789,26 +794,79 @@ class OutbreakAggregator:
 def main():
     """
     Main function demonstrating combined FDA and CDC outbreak scraping
+    Supports command-line arguments to scrape FDA only, CDC only, or both
     """
-    # Initialize the aggregator
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(
+        description='Scrape foodborne outbreak data from FDA and/or CDC',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python main.py              # Scrape both FDA and CDC (default)
+  python main.py --fda        # Scrape FDA only
+  python main.py --cdc        # Scrape CDC only
+  python main.py --fda --cdc  # Scrape both FDA and CDC
+        """
+    )
+    parser.add_argument('--fda', action='store_true', help='Scrape FDA outbreak data')
+    parser.add_argument('--cdc', action='store_true', help='Scrape CDC outbreak data')
+    parser.add_argument('--delay', type=float, default=2.0, help='Delay between requests in seconds (default: 2.0)')
+
+    args = parser.parse_args()
+
+    # If no flags specified, scrape both
+    scrape_fda = args.fda or (not args.fda and not args.cdc)
+    scrape_cdc = args.cdc or (not args.fda and not args.cdc)
+
+    # Initialize scrapers
     aggregator = OutbreakAggregator()
 
     # Example known CDC investigation URLs (since CDC pages load dynamically)
     # You can find recent outbreaks at: https://www.cdc.gov/foodborne-outbreaks/outbreaks/
     known_cdc_urls = [
+        # Salmonella outbreaks (2025)
         'https://www.cdc.gov/salmonella/outbreaks/cotham-11-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/supplement-10-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/homedeliverymeals-09-25/investigation.html',
         'https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/sproutedbeans-07-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/pistachiocream-06-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/eggs-06-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/whole-cucumbers-05-25/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/mbandaka-05-01/investigation.html',
+        'https://www.cdc.gov/salmonella/outbreaks/muenchen-03-25/investigation.html',
+
+        # Listeria outbreaks (2024-2025)
+        'https://www.cdc.gov/listeria/outbreaks/chicken-fettuccine-alfredo-06-25/investigation.html',
         'https://www.cdc.gov/listeria/outbreaks/ready-to-eat-foods-may-2025/investigation.html',
+        'https://www.cdc.gov/listeria/outbreaks/shakes-022025/investigation.html',
+        'https://www.cdc.gov/listeria/outbreaks/meat-and-poultry-products-11-24/investigation.html',
+        'https://www.cdc.gov/listeria/outbreaks/delimeats-7-24/investigation.html',
+
+        # E. coli outbreaks (2024)
+        'https://www.cdc.gov/ecoli/outbreaks/investigation-update-e-coli-o157-2024.html',
+        'https://www.cdc.gov/ecoli/outbreaks/investigation-update-e-coli-o121.html',
+        'https://www.cdc.gov/ecoli/outbreaks/details-organic-walnuts-04-24.html',
     ]
 
-    # Scrape from both sources (limit FDA for demo purposes)
-    # Set fda_limit=None to scrape all FDA outbreaks
-    # Set cdc_known_urls=None to attempt automatic discovery (may find 0 due to dynamic content)
-    all_data = aggregator.scrape_all_sources(
-        fda_limit=3,
-        delay=2.0,
-        cdc_known_urls=known_cdc_urls  # Comment this out to test automatic discovery
-    )
+    print("=" * 60)
+    print("FOODBORNE OUTBREAK ALERT SYSTEM")
+    print("=" * 60)
+
+    # Scrape selected sources
+    all_data = {'fda': [], 'cdc': []}
+
+    if scrape_fda:
+        print("\n[FDA] Scraping FDA Outbreaks...")
+        print("-" * 60)
+        fda_outbreaks = aggregator.fda_scraper.scrape_all(limit=None, delay=args.delay)
+        all_data['fda'] = fda_outbreaks
+
+    if scrape_cdc:
+        print("\n[CDC] Scraping CDC Outbreaks...")
+        print("-" * 60)
+        cdc_outbreaks = aggregator.cdc_scraper.scrape_all_pathogens(delay=args.delay, known_urls=known_cdc_urls)
+        all_data['cdc'] = cdc_outbreaks
 
     # Combine and normalize the data
     print("\n" + "=" * 60)
@@ -856,20 +914,33 @@ def main():
         print(f"   Status: {outbreak.get('status', 'unknown')}")
         print(f"   URL: {outbreak.get('url')}")
 
-    # Save combined data
-    aggregator.save_combined_data(combined, stats)
+    # Save data
+    print("\n" + "=" * 60)
+    print("SAVING DATA")
+    print("=" * 60)
 
-    # Also save separate files for each source
-    aggregator.fda_scraper.save_to_json(all_data['fda'])
-    aggregator.cdc_scraper.save_to_json(all_data['cdc'])
+    files_created = []
+
+    # Save combined data if we have any data
+    if combined:
+        aggregator.save_combined_data(combined, stats)
+        files_created.append("  - data/raw/combined_outbreaks.json (unified data with statistics)")
+
+    # Save individual source files
+    if scrape_fda and all_data['fda']:
+        aggregator.fda_scraper.save_to_json(all_data['fda'])
+        files_created.append("  - data/raw/fda_outbreaks.json (FDA data only)")
+
+    if scrape_cdc and all_data['cdc']:
+        aggregator.cdc_scraper.save_to_json(all_data['cdc'])
+        files_created.append("  - data/raw/cdc_outbreaks.json (CDC data only)")
 
     print("\n" + "=" * 60)
     print("SCRAPING COMPLETE")
     print("=" * 60)
     print("Files created:")
-    print("  - data/raw/combined_outbreaks.json (unified data with statistics)")
-    print("  - data/raw/fda_outbreaks.json (FDA data only)")
-    print("  - data/raw/cdc_outbreaks.json (CDC data only)")
+    for file in files_created:
+        print(file)
 
 
 if __name__ == "__main__":

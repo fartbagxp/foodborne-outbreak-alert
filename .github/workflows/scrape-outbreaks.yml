@@ -1,0 +1,45 @@
+name: Foodborne Outbreak nightly update
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '45 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape-outbreaks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Write access is needed to push changes back to the repository
+    steps:
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244 # v7.1.4
+        with:
+          version: 'latest'
+
+      - name: Running scrape script on FDA
+        run: |
+          uv run python main.py --fda
+
+      - name: Running scrape script on CDC
+        run: |
+          uv run python main.py --cdc
+
+      - name: Commit and push changes
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git status
+          git config --local user.email "noreply@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/raw/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Nightly update of raw foodborne outbreak changes - $(date +'%Y-%m-%d')"
+            git push -u origin main
+          fi

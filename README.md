@@ -3,6 +3,7 @@
 A real-time foodborne outbreak monitoring system that aggregates and analyzes outbreak data from both FDA and CDC sources.
 
 **Current Coverage:**
+
 - 🏛️ FDA: 70 outbreak investigations (2011-2025)
 - 🔬 CDC: 18 active investigations (2024-2025)
 - 📊 Total: 88 foodborne outbreak investigations
@@ -68,11 +69,13 @@ uv run python main.py --help
 ```
 
 **Output files generated:**
+
 - `data/raw/combined_outbreaks.json` - Unified data with summary statistics
 - `data/raw/fda_outbreaks.json` - FDA data only (when `--fda` is used)
 - `data/raw/cdc_outbreaks.json` - CDC data only (when `--cdc` is used)
 
 **Command-line options:**
+
 - `--fda` - Scrape FDA outbreak data only
 - `--cdc` - Scrape CDC outbreak data only
 - `--delay DELAY` - Delay between requests in seconds (default: 2.0)
@@ -107,6 +110,7 @@ aggregator.save_combined_data(combined, stats)
 ### Updating CDC Investigation URLs
 
 The scraper includes **18 pre-configured CDC investigation URLs** (lines 826-850 in main.py) covering:
+
 - 10 Salmonella outbreaks (2025)
 - 5 Listeria outbreaks (2024-2025)
 - 3 E. coli outbreaks (2024)

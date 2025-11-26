@@ -1,53 +1,209 @@
 {
   "summary": {
-    "total_outbreaks": 6,
-    "total_cases": 136,
-    "total_deaths": 15,
-    "total_hospitalizations": 46,
+    "total_outbreaks": 18,
+    "total_cases": 1358,
+    "total_deaths": 22,
+    "total_hospitalizations": 2316,
     "outbreaks_by_source": {
-      "CDC": 3,
-      "FDA": 3
+      "CDC": 18
     },
     "outbreaks_by_pathogen": {
-      "salmonella": 2,
-      "Outbreak Investigation of Infant Botulism": 1,
-      "listeria": 1,
-      "Unknown": 2
+      "salmonella": 10,
+      "ecoli": 3,
+      "listeria": 5
     },
     "outbreaks_by_status": {
-      "unknown": 6
+      "closed": 1,
+      "unknown": 13,
+      "ongoing": 4
     },
-    "unique_states_affected": 12,
+    "unique_states_affected": 4,
     "states_list": [
-      "AZ",
       "CA",
-      "IL",
-      "KY",
-      "MN",
-      "NC",
-      "NJ",
-      "OR",
-      "PA",
-      "RI",
-      "TX",
-      "WA"
+      "IN",
+      "NY",
+      "VA"
     ]
   },
   "outbreaks": [
+    {
+      "id": "cdc_salmonella_mbandaka-05-01",
+      "source": "CDC",
+      "title": "Investigation Update:SalmonellaOutbreaks, May 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/mbandaka-05-01/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "four hatcheries",
+      "status": "closed",
+      "case_count": 559,
+      "deaths": 2,
+      "hospitalizations": 48,
+      "states_affected": [],
+      "state_count": 48,
+      "scraped_at": "2025-11-26T17:31:46.596153+00:00"
+    },
+    {
+      "id": "cdc_salmonella_eggs-06-25",
+      "source": "CDC",
+      "title": "Investigation Update:SalmonellaOutbreak, Eggs, June 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/eggs-06-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+      "status": "unknown",
+      "case_count": 134,
+      "hospitalizations": 10,
+      "states_affected": [],
+      "state_count": 10,
+      "consumer_advice": "August Egg Company recalled eggs. Recalled eggs are past shelf life and should no longer be available for sale.",
+      "scraped_at": "2025-11-26T17:31:42.373068+00:00"
+    },
     {
       "id": "cdc_salmonella_eggs-08-25",
       "source": "CDC",
       "title": "Investigation Update: Salmonella Outbreak, August 2025",
       "url": "https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/investigation.html",
       "pathogen": "salmonella",
-      "food_source": "eggs",
+      "food_source": "diarrheal illness",
       "status": "unknown",
-      "case_count": 95,
+      "case_count": 105,
       "hospitalizations": 14,
+      "states_affected": [
+        "CA"
+      ],
+      "state_count": 14,
+      "consumer_advice": "On August 27, 2025, Country Eggs, LLC recalled large brown cage-free “sunshine yolks” or “omega-3 golden yolks” eggs. These eggs had sell-by dates from July 1, 2025, through September 18, 2025, with the code “CA 7695” on the cartons. These eggs are no longer available for sale.",
+      "scraped_at": "2025-11-26T17:31:35.679189+00:00"
+    },
+    {
+      "id": "cdc_ecoli_outbreaks",
+      "source": "CDC",
+      "title": "Investigation Update:E. coliOutbreak, Onions Served at McDonald's - November 13, 2024",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/investigation-update-e-coli-o157-2024.html",
+      "pathogen": "ecoli",
+      "food_source": "this strain",
+      "status": "unknown",
+      "case_count": 104,
+      "hospitalizations": 2024,
       "states_affected": [],
       "state_count": 14,
-      "consumer_advice": "On August 27, 2025, Country Eggs, LLC recalled eggs. CDC advises people to not eat recalled eggs and businesses to not sell or serve recalled eggs.",
-      "scraped_at": "2025-11-14T16:04:58.696350+00:00"
+      "consumer_advice": "Follow steps toprotect yourself from getting sick fromE. coli.\n",
+      "scraped_at": "2025-11-26T17:32:02.650014+00:00"
+    },
+    {
+      "id": "cdc_salmonella_muenchen-03-25",
+      "source": "CDC",
+      "title": "Investigation Update:SalmonellaOutbreaks, March 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/muenchen-03-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "pet geckos",
+      "status": "unknown",
+      "case_count": 101,
+      "hospitalizations": 27,
+      "states_affected": [],
+      "state_count": 6,
+      "scraped_at": "2025-11-26T17:31:48.904090+00:00"
+    },
+    {
+      "id": "cdc_salmonella_whole-cucumbers-05-25",
+      "source": "CDC",
+      "title": "Investigation Update: Whole Cucumbers Outbreak, May 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/whole-cucumbers-05-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "diarrheal illness",
+      "status": "ongoing",
+      "case_count": 69,
+      "hospitalizations": 21,
+      "states_affected": [],
+      "state_count": 21,
+      "scraped_at": "2025-11-26T17:31:44.421072+00:00"
+    },
+    {
+      "id": "cdc_listeria_delimeats-7-24",
+      "source": "CDC",
+      "title": "Investigation Update: Listeria Outbreak, Meats Sliced at Delis",
+      "url": "https://www.cdc.gov/listeria/outbreaks/delimeats-7-24/investigation.html",
+      "pathogen": "listeria",
+      "status": "unknown",
+      "case_count": 61,
+      "hospitalizations": 19,
+      "states_affected": [
+        "VA"
+      ],
+      "state_count": 19,
+      "consumer_advice": "This outbreak is over. CDC always advises women who are pregnant, aged 65 or older, or have a weakened immune system, to avoid eating deli meats or to heat them before consuming.\nIn July 2024, Boar's Head issued a recall of all deli products made at their Jarratt, VA facility, which included prepackaged deli products and ready-to-eat liverwurst products, due to being contaminated withListeria monocytogenes.These products are past shelf-life.",
+      "scraped_at": "2025-11-26T17:32:00.597817+00:00"
+    },
+    {
+      "id": "cdc_ecoli_outbreaks",
+      "source": "CDC",
+      "title": "Investigation Update: E. coli Outbreak, Organic Carrots, November 2024",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/investigation-update-e-coli-o121.html",
+      "pathogen": "ecoli",
+      "food_source": "diarrheal illness",
+      "status": "ongoing",
+      "case_count": 48,
+      "hospitalizations": 19,
+      "states_affected": [],
+      "state_count": 19,
+      "consumer_advice": "This outbreak is over. These products are no longer in stores and are past shelf life. However, they may be in your refrigerator or freezer. Check your freezer for any recalled products and throw them away or return them to where you bought them. Always take steps toprotect yourself from getting sick fromE. coli.\nOn November 16, 2024, Grimmway Farms initiated a voluntary recall of these carrots and contacted their distributors. On November 21, 2024, the recall expanded to include additional bag sizes for organic whole carrots. Additional recalls were conducted by companies that used or repackaged carrots that may have come from Grimmway Farms.",
+      "scraped_at": "2025-11-26T17:32:05.492058+00:00"
+    },
+    {
+      "id": "cdc_listeria_shakes-022025",
+      "source": "CDC",
+      "title": "Investigation Update:ListeriaOutbreak, Supplement Shakes, February 2025",
+      "url": "https://www.cdc.gov/listeria/outbreaks/shakes-022025/investigation.html",
+      "pathogen": "listeria",
+      "status": "unknown",
+      "case_count": 42,
+      "deaths": 14,
+      "hospitalizations": 21,
+      "states_affected": [],
+      "state_count": 21,
+      "consumer_advice": "On February 22, 2025, Lyons Magnus LLCrecalledsupplement shakes.\nThis outbreak is over. CDC always advises people to takestepsto protect themselves from getting sick fromListeria.",
+      "scraped_at": "2025-11-26T17:31:56.076424+00:00"
+    },
+    {
+      "id": "cdc_listeria_chicken-fettuccine-alfredo-06-25",
+      "source": "CDC",
+      "title": "Investigation Update: Prepared Meals Outbreak, October 2025",
+      "url": "https://www.cdc.gov/listeria/outbreaks/chicken-fettuccine-alfredo-06-25/investigation.html",
+      "pathogen": "listeria",
+      "food_source": "the outbreak",
+      "status": "ongoing",
+      "case_count": 27,
+      "deaths": 6,
+      "hospitalizations": 18,
+      "states_affected": [],
+      "state_count": 18,
+      "consumer_advice": "Do not eat recalled foods, return them or throw them out.",
+      "scraped_at": "2025-11-26T17:31:51.359736+00:00"
+    },
+    {
+      "id": "cdc_listeria_meat-and-poultry-products-11-24",
+      "source": "CDC",
+      "title": "Investigation Update:ListeriaOutbreak, Meat and Poultry Products, 2024",
+      "url": "https://www.cdc.gov/listeria/outbreaks/meat-and-poultry-products-11-24/investigation.html",
+      "pathogen": "listeria",
+      "status": "unknown",
+      "case_count": 24,
+      "hospitalizations": 24,
+      "states_affected": [],
+      "consumer_advice": "On November 9, 2024, Yu Shang Food, Inc. recalled ready-to-eat meat and poultry products. On November 21, 2024, Yu Shang Food, Inc. expanded their recall.",
+      "scraped_at": "2025-11-26T17:31:58.547906+00:00"
+    },
+    {
+      "id": "cdc_salmonella_homedeliverymeals-09-25",
+      "source": "CDC",
+      "title": "Investigation Update:SalmonellaOutbreak, September 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/homedeliverymeals-09-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+      "status": "unknown",
+      "case_count": 21,
+      "hospitalizations": 13,
+      "states_affected": [],
+      "state_count": 13,
+      "scraped_at": "2025-11-26T17:31:33.624352+00:00"
     },
     {
       "id": "cdc_salmonella_cotham-11-25",
@@ -61,37 +217,56 @@
       "hospitalizations": 14,
       "states_affected": [],
       "state_count": 11,
-      "scraped_at": "2025-11-14T16:04:56.620608+00:00"
+      "scraped_at": "2025-11-26T17:31:29.499225+00:00"
     },
     {
-      "id": "outbreak-investigation-infant-botulism-infant-formula-november-2025",
-      "source": "FDA",
-      "title": "Outbreak Investigation of Infant Botulism: Infant Formula (November 2025)",
-      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-infant-botulism-infant-formula-november-2025",
-      "pathogen": "Outbreak Investigation of Infant Botulism",
-      "food_source": "Infant Formula",
+      "id": "cdc_ecoli_outbreaks",
+      "source": "CDC",
+      "title": "Investigation Update:E. coliOutbreak, Organic Walnuts - April 2024",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/details-organic-walnuts-04-24.html",
+      "pathogen": "ecoli",
+      "food_source": "diarrheal illness",
       "status": "unknown",
-      "case_count": 14,
-      "deaths": 15,
-      "hospitalizations": 15,
+      "case_count": 13,
+      "hospitalizations": 13,
+      "states_affected": [],
+      "state_count": 2,
+      "consumer_advice": "Follow these steps toprotect yourself from getting sick fromE. coli.",
+      "scraped_at": "2025-11-26T17:32:07.791830+00:00"
+    },
+    {
+      "id": "cdc_salmonella_sproutedbeans-07-25",
+      "source": "CDC",
+      "title": "Investigation Update:SalmonellaOutbreak, July 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/sproutedbeans-07-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+      "status": "unknown",
+      "case_count": 12,
+      "hospitalizations": 11,
       "states_affected": [
-        "AZ",
-        "PA",
-        "OR",
-        "MN",
-        "TX",
-        "CA",
-        "WA",
-        "KY",
-        "RI",
-        "IL",
-        "NC",
-        "NJ"
+        "IN"
       ],
-      "state_count": 12,
-      "posted_date": "November 2025",
-      "consumer_advice": "Parents and Caregiversshould stop using any ByHeart infant formula products immediately.If your child consumed ByHeart formula and is experiencing symptoms (see below) seek immediate medical attention.If your child consumed ByHeart formula and is not currently showing symptoms, continue monitoring them and seek medical attention if symptoms develop.If you still have the formula in your home, you should:take a photo or record the information on the bottom of the package.keep the container in a safe spot and be sure to label that product as DO NOT USE.If your child develops symptoms your state health department might want to collect your formula container for testing. If your child does not develop symptoms after 30 days, throw your containers out.Botulism can be fatal,and you should take action right away. If your child has consumed ByHeart Whole Nutrition Infant Formula and is experiencingsigns and symptomsof botulism such as poor feeding, loss of head control, difficulty swallowing, or decreased facial expression, seek immediate medical attention.If you are a Physicianand suspect an infant patient has botulism,immediatelycall510-231-7600for case consultation. Consultation is available 24/7.\n",
-      "scraped_at": "2025-11-14T16:04:56.469607+00:00"
+      "state_count": 11,
+      "consumer_advice": "Chetak LLC Group recalled Deep brand frozen sprouted beans, fruits and vegetables due to potential contaminationwith Salmonella. These products are no longer available for sale.",
+      "scraped_at": "2025-11-26T17:31:37.728290+00:00"
+    },
+    {
+      "id": "cdc_salmonella_supplement-10-25",
+      "source": "CDC",
+      "title": "Investigation Update: Salmonella Outbreak, Moringa Leaf Powder October 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/supplement-10-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+      "status": "unknown",
+      "case_count": 11,
+      "hospitalizations": 7,
+      "states_affected": [
+        "NY"
+      ],
+      "state_count": 7,
+      "consumer_advice": "On November 12, 2025, Food To Live, of Brooklyn, NY, recalled its packaged Organic Moringa LeafPowder (dried Moringa oleifera) and its Organic SuperGreens Powder mix distributed under the Food To Live brand. CDC and FDA advise consumers not to eat and businesses not to sell any of the recalled moringa leaf powder.",
+      "scraped_at": "2025-11-26T17:31:31.579538+00:00"
     },
     {
       "id": "cdc_listeria_ready-to-eat-foods-may-2025",
@@ -104,26 +279,21 @@
       "hospitalizations": 3,
       "states_affected": [],
       "consumer_advice": "On May 10, 2025, Fresh & Ready Foods LLCrecalledselect ready-to-eat foods.",
-      "scraped_at": "2025-11-14T16:05:00.790537+00:00"
+      "scraped_at": "2025-11-26T17:31:53.443827+00:00"
     },
     {
-      "id": "outbreak-investigation-reports",
-      "source": "FDA",
-      "title": "Outbreak Investigation Reports",
-      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-reports",
-      "status": "unknown",
+      "id": "cdc_salmonella_pistachiocream-06-25",
+      "source": "CDC",
+      "title": "Investigation Update: Pistachio Cream Outbreak, June 2025",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/pistachiocream-06-25/investigation.html",
+      "pathogen": "salmonella",
+      "food_source": "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+      "status": "ongoing",
+      "hospitalizations": 10,
       "states_affected": [],
-      "scraped_at": "2025-11-14T16:04:52.152318+00:00"
-    },
-    {
-      "id": "outbreak-investigation-reports",
-      "source": "FDA",
-      "title": "Outbreak Investigation Reports",
-      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-reports",
-      "status": "unknown",
-      "states_affected": [],
-      "scraped_at": "2025-11-14T16:04:54.282943+00:00"
+      "consumer_advice": "On May 13, 2025, FDA and CDC issued an advisory for a 5-kilogram white tub of Emek-brand Pistachio Cream with a use-by date of October 19, 2026, and production code PNO: 241019. On July 14, 2025, World Market voluntarily recalled Emek Spread Pistachio Cacao Cream with Kadayif due to potential contamination withSalmonella. Both of these pistachio cream products are no longer available for sale.",
+      "scraped_at": "2025-11-26T17:31:40.307849+00:00"
     }
   ],
-  "generated_at": "2025-11-14T16:05:00.802329+00:00"
+  "generated_at": "2025-11-26T17:32:07.795316+00:00"
 }

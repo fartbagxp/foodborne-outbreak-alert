@@ -39,7 +39,7 @@
       "hospitalizations": 48,
       "states_affected": [],
       "state_count": 48,
-      "scraped_at": "2025-12-01T10:51:12.937159+00:00"
+      "scraped_at": "2025-12-02T10:50:40.590210+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-06-25",
@@ -54,7 +54,7 @@
       "states_affected": [],
       "state_count": 10,
       "consumer_advice": "August Egg Company recalled eggs. Recalled eggs are past shelf life and should no longer be available for sale.",
-      "scraped_at": "2025-12-01T10:51:07.838370+00:00"
+      "scraped_at": "2025-12-02T10:50:35.350885+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-08-25",
@@ -71,7 +71,7 @@
       ],
       "state_count": 14,
       "consumer_advice": "On August 27, 2025, Country Eggs, LLC recalled large brown cage-free “sunshine yolks” or “omega-3 golden yolks” eggs. These eggs had sell-by dates from July 1, 2025, through September 18, 2025, with the code “CA 7695” on the cartons. These eggs are no longer available for sale.",
-      "scraped_at": "2025-12-01T10:51:01.129496+00:00"
+      "scraped_at": "2025-12-02T10:50:28.763740+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -86,7 +86,7 @@
       "states_affected": [],
       "state_count": 14,
       "consumer_advice": "Follow steps toprotect yourself from getting sick fromE. coli.\n",
-      "scraped_at": "2025-12-01T10:51:30.088348+00:00"
+      "scraped_at": "2025-12-02T10:50:55.999281+00:00"
     },
     {
       "id": "cdc_salmonella_muenchen-03-25",
@@ -100,7 +100,7 @@
       "hospitalizations": 27,
       "states_affected": [],
       "state_count": 6,
-      "scraped_at": "2025-12-01T10:51:15.291131+00:00"
+      "scraped_at": "2025-12-02T10:50:42.801094+00:00"
     },
     {
       "id": "cdc_salmonella_whole-cucumbers-05-25",
@@ -114,7 +114,7 @@
       "hospitalizations": 21,
       "states_affected": [],
       "state_count": 21,
-      "scraped_at": "2025-12-01T10:51:10.341185+00:00"
+      "scraped_at": "2025-12-02T10:50:37.950176+00:00"
     },
     {
       "id": "cdc_listeria_delimeats-7-24",
@@ -130,7 +130,7 @@
       ],
       "state_count": 19,
       "consumer_advice": "This outbreak is over. CDC always advises women who are pregnant, aged 65 or older, or have a weakened immune system, to avoid eating deli meats or to heat them before consuming.\nIn July 2024, Boar's Head issued a recall of all deli products made at their Jarratt, VA facility, which included prepackaged deli products and ready-to-eat liverwurst products, due to being contaminated withListeria monocytogenes.These products are past shelf-life.",
-      "scraped_at": "2025-12-01T10:51:27.389204+00:00"
+      "scraped_at": "2025-12-02T10:50:53.329621+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -145,7 +145,7 @@
       "states_affected": [],
       "state_count": 19,
       "consumer_advice": "This outbreak is over. These products are no longer in stores and are past shelf life. However, they may be in your refrigerator or freezer. Check your freezer for any recalled products and throw them away or return them to where you bought them. Always take steps toprotect yourself from getting sick fromE. coli.\nOn November 16, 2024, Grimmway Farms initiated a voluntary recall of these carrots and contacted their distributors. On November 21, 2024, the recall expanded to include additional bag sizes for organic whole carrots. Additional recalls were conducted by companies that used or repackaged carrots that may have come from Grimmway Farms.",
-      "scraped_at": "2025-12-01T10:51:32.132382+00:00"
+      "scraped_at": "2025-12-02T10:50:58.538508+00:00"
     },
     {
       "id": "cdc_listeria_shakes-022025",
@@ -160,7 +160,7 @@
       "states_affected": [],
       "state_count": 21,
       "consumer_advice": "On February 22, 2025, Lyons Magnus LLCrecalledsupplement shakes.\nThis outbreak is over. CDC always advises people to takestepsto protect themselves from getting sick fromListeria.",
-      "scraped_at": "2025-12-01T10:51:22.374524+00:00"
+      "scraped_at": "2025-12-02T10:50:48.979819+00:00"
     },
     {
       "id": "cdc_listeria_chicken-fettuccine-alfredo-06-25",
@@ -176,7 +176,7 @@
       "states_affected": [],
       "state_count": 18,
       "consumer_advice": "Do not eat recalled foods, return them or throw them out.",
-      "scraped_at": "2025-12-01T10:51:17.799191+00:00"
+      "scraped_at": "2025-12-02T10:50:44.860750+00:00"
     },
     {
       "id": "cdc_listeria_meat-and-poultry-products-11-24",
@@ -189,7 +189,7 @@
       "hospitalizations": 24,
       "states_affected": [],
       "consumer_advice": "On November 9, 2024, Yu Shang Food, Inc. recalled ready-to-eat meat and poultry products. On November 21, 2024, Yu Shang Food, Inc. expanded their recall.",
-      "scraped_at": "2025-12-01T10:51:24.951971+00:00"
+      "scraped_at": "2025-12-02T10:50:51.274599+00:00"
     },
     {
       "id": "cdc_salmonella_homedeliverymeals-09-25",
@@ -203,7 +203,7 @@
       "hospitalizations": 13,
       "states_affected": [],
       "state_count": 13,
-      "scraped_at": "2025-12-01T10:50:58.343532+00:00"
+      "scraped_at": "2025-12-02T10:50:26.717792+00:00"
     },
     {
       "id": "cdc_salmonella_cotham-11-25",
@@ -217,7 +217,7 @@
       "hospitalizations": 14,
       "states_affected": [],
       "state_count": 11,
-      "scraped_at": "2025-12-01T10:50:52.733678+00:00"
+      "scraped_at": "2025-12-02T10:50:22.615558+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -232,7 +232,7 @@
       "states_affected": [],
       "state_count": 2,
       "consumer_advice": "Follow these steps toprotect yourself from getting sick fromE. coli.",
-      "scraped_at": "2025-12-01T10:51:34.530957+00:00"
+      "scraped_at": "2025-12-02T10:51:01.210232+00:00"
     },
     {
       "id": "cdc_salmonella_sproutedbeans-07-25",
@@ -249,7 +249,7 @@
       ],
       "state_count": 11,
       "consumer_advice": "Chetak LLC Group recalled Deep brand frozen sprouted beans, fruits and vegetables due to potential contaminationwith Salmonella. These products are no longer available for sale.",
-      "scraped_at": "2025-12-01T10:51:03.501456+00:00"
+      "scraped_at": "2025-12-02T10:50:30.809843+00:00"
     },
     {
       "id": "cdc_salmonella_supplement-10-25",
@@ -266,7 +266,7 @@
       ],
       "state_count": 7,
       "consumer_advice": "On November 12, 2025, Food To Live, of Brooklyn, NY, recalled its packaged Organic Moringa LeafPowder (dried Moringa oleifera) and its Organic SuperGreens Powder mix distributed under the Food To Live brand. CDC and FDA advise consumers not to eat and businesses not to sell any of the recalled moringa leaf powder.",
-      "scraped_at": "2025-12-01T10:50:55.529327+00:00"
+      "scraped_at": "2025-12-02T10:50:24.672240+00:00"
     },
     {
       "id": "cdc_listeria_ready-to-eat-foods-may-2025",
@@ -279,7 +279,7 @@
       "hospitalizations": 3,
       "states_affected": [],
       "consumer_advice": "On May 10, 2025, Fresh & Ready Foods LLCrecalledselect ready-to-eat foods.",
-      "scraped_at": "2025-12-01T10:51:20.338882+00:00"
+      "scraped_at": "2025-12-02T10:50:46.906752+00:00"
     },
     {
       "id": "cdc_salmonella_pistachiocream-06-25",
@@ -292,8 +292,8 @@
       "hospitalizations": 10,
       "states_affected": [],
       "consumer_advice": "On May 13, 2025, FDA and CDC issued an advisory for a 5-kilogram white tub of Emek-brand Pistachio Cream with a use-by date of October 19, 2026, and production code PNO: 241019. On July 14, 2025, World Market voluntarily recalled Emek Spread Pistachio Cacao Cream with Kadayif due to potential contamination withSalmonella. Both of these pistachio cream products are no longer available for sale.",
-      "scraped_at": "2025-12-01T10:51:05.801699+00:00"
+      "scraped_at": "2025-12-02T10:50:33.085509+00:00"
     }
   ],
-  "generated_at": "2025-12-01T10:51:34.534385+00:00"
+  "generated_at": "2025-12-02T10:51:01.213770+00:00"
 }

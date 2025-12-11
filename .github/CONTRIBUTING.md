@@ -38,8 +38,10 @@ deactivate
 To figure out which dependency may be outdated, find the dependencies via:
 
 ```bash
-uv pip list --outdated
+uv tree --outdated --depth 1
 ```
+
+Update the dependencies and then run `uv sync` to update the environment.
 
 To create a new dependency lock file manually (optional as it should happen automatically on uv add):
 

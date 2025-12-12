@@ -34,6 +34,11 @@ jobs:
         run: |
           uv run python main.py --cdc
 
+      - name: Combine both FDA and CDC sources
+        continue-on-error: true # If either source failed, this may not work properly
+        run: |
+          uv run python main.py --combine
+
       - name: Commit and push changes
         if: github.ref == 'refs/heads/main'
         run: |

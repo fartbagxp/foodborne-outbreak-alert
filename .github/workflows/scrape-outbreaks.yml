@@ -24,6 +24,10 @@ jobs:
         with:
           version: 'latest'
 
+      - name: Install Playwright browsers
+        run: |
+          uv run playwright install --with-deps chromium
+
       - name: Running scrape script on FDA
         continue-on-error: true # FDA blocks Github action IPs and re-routes traffic.
         run: |

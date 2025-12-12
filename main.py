@@ -105,18 +105,38 @@ class FDAOutbreakScraper:
         print(f"Fetching outbreak details: {outbreak_url}")
 
         try:
-            response = self.session.get(outbreak_url)
+            response = self.session.get(outbreak_url, allow_redirects=True)
             response.raise_for_status()
+            final_url = response.url
+            print("✓ Successfully fetched")
+        except requests.exceptions.HTTPError as e:
+            print(f"✗ HTTP Error {e.response.status_code}: {outbreak_url}")
+            return {
+                'url': outbreak_url,
+                'scraped_at': datetime.now(timezone.utc).isoformat(),
+                'scrape_status': f'http_error_{e.response.status_code}',
+                'scrape_error': str(e)
+            }
         except Exception as e:
-            print(f"Error fetching {outbreak_url}: {e}")
-            return {}
+            print(f"✗ Error fetching {outbreak_url}: {e}")
+            return {
+                'url': outbreak_url,
+                'scraped_at': datetime.now(timezone.utc).isoformat(),
+                'scrape_status': 'error',
+                'scrape_error': str(e)
+            }
 
         soup = BeautifulSoup(response.content, 'html.parser')
 
         details = {
-            'url': outbreak_url,
-            'scraped_at': datetime.now(timezone.utc).isoformat()
+            'url': final_url,
+            'original_url': outbreak_url if final_url != outbreak_url else None,
+            'scraped_at': datetime.now(timezone.utc).isoformat(),
+            'scrape_status': 'success'
         }
+
+        # Remove None values
+        details = {k: v for k, v in details.items() if v is not None}
 
         # Extract main content
         main_content = soup.find('div', class_='panel-pane')
@@ -356,21 +376,94 @@ class CDCOutbreakScraper:
         """
         print(f"Fetching CDC investigation: {investigation_url}")
 
-        try:
-            response = self.session.get(investigation_url)
-            response.raise_for_status()
-        except Exception as e:
-            print(f"Error fetching {investigation_url}: {e}")
-            return {}
+        response = None
+        final_url = investigation_url
+
+        # Try multiple URL variations if the original fails
+        urls_to_try = [investigation_url]
+
+        # If original URL fails with 404, try the CDC archive
+        # Archive URL format: https://archive.cdc.gov/www_cdc_gov/[path]
+        if investigation_url.startswith('https://www.cdc.gov/'):
+            archive_url = investigation_url.replace('https://www.cdc.gov/', 'https://archive.cdc.gov/www_cdc_gov/')
+            urls_to_try.append(archive_url)
+        elif investigation_url.startswith('http://www.cdc.gov/'):
+            archive_url = investigation_url.replace('http://www.cdc.gov/', 'https://archive.cdc.gov/www_cdc_gov/')
+            urls_to_try.append(archive_url)
+
+        for try_url in urls_to_try:
+            try:
+                response = self.session.get(try_url, allow_redirects=True)
+                response.raise_for_status()
+                final_url = response.url  # Track if we were redirected
+                if try_url != investigation_url:
+                    print("✓ Successfully fetched from archive")
+                else:
+                    print("✓ Successfully fetched")
+                break
+            except requests.exceptions.HTTPError as e:
+                if e.response.status_code == 404:
+                    if try_url == urls_to_try[0] and len(urls_to_try) > 1:
+                        # First URL failed, trying archive
+                        print("  Original URL not found, trying CDC archive...")
+                        continue
+                    elif try_url == urls_to_try[-1]:  # Last attempt
+                        print("✗ Not found in archive either")
+                        return {
+                            'url': investigation_url,
+                            'pathogen': pathogen,
+                            'source': 'CDC',
+                            'scraped_at': datetime.now(timezone.utc).isoformat(),
+                            'scrape_status': '404_not_found',
+                            'scrape_error': 'Page not found (tried original and archive)'
+                        }
+                    # Try next variation
+                    continue
+                else:
+                    print(f"✗ HTTP Error {e.response.status_code}: {try_url}")
+                    return {
+                        'url': investigation_url,
+                        'pathogen': pathogen,
+                        'source': 'CDC',
+                        'scraped_at': datetime.now(timezone.utc).isoformat(),
+                        'scrape_status': f'http_error_{e.response.status_code}',
+                        'scrape_error': str(e)
+                    }
+            except Exception as e:
+                print(f"✗ Error fetching {try_url}: {e}")
+                if try_url == urls_to_try[-1]:  # Last attempt
+                    return {
+                        'url': investigation_url,
+                        'pathogen': pathogen,
+                        'source': 'CDC',
+                        'scraped_at': datetime.now(timezone.utc).isoformat(),
+                        'scrape_status': 'error',
+                        'scrape_error': str(e)
+                    }
+
+        if not response:
+            return {
+                'url': investigation_url,
+                'pathogen': pathogen,
+                'source': 'CDC',
+                'scraped_at': datetime.now(timezone.utc).isoformat(),
+                'scrape_status': 'error',
+                'scrape_error': 'No response received'
+            }
 
         soup = BeautifulSoup(response.content, 'html.parser')
 
         details = {
-            'url': investigation_url,
+            'url': final_url,  # Use the final URL (may differ if redirected)
+            'original_url': investigation_url if final_url != investigation_url else None,
             'pathogen': pathogen,
             'source': 'CDC',
-            'scraped_at': datetime.now(timezone.utc).isoformat()
+            'scraped_at': datetime.now(timezone.utc).isoformat(),
+            'scrape_status': 'success'
         }
+
+        # Remove None values
+        details = {k: v for k, v in details.items() if v is not None}
 
         # Extract title
         title = soup.find('h1')
@@ -985,23 +1078,30 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python main.py              # Scrape both FDA and CDC (default)
-  python main.py --fda        # Scrape FDA only
-  python main.py --cdc        # Scrape CDC only
-  python main.py --fda --cdc  # Scrape both FDA and CDC
+  python main.py                # Scrape both FDA and CDC (default)
+  python main.py --fda          # Scrape FDA only
+  python main.py --cdc          # Scrape CDC only
+  python main.py --fda --cdc    # Scrape both FDA and CDC
+  python main.py --combine      # Combine existing FDA and CDC JSON files
         """
     )
     parser.add_argument('--fda', action='store_true', help='Scrape FDA outbreak data')
     parser.add_argument('--cdc', action='store_true', help='Scrape CDC outbreak data')
+    parser.add_argument('--combine', action='store_true', help='Combine existing FDA and CDC JSON files without scraping')
     parser.add_argument('--delay', type=float, default=2.0, help='Delay between requests in seconds (default: 2.0)')
     parser.add_argument('--no-playwright', action='store_true', help='Disable Playwright and use simple HTTP requests (may find fewer outbreaks)')
     parser.add_argument('--use-known-urls', action='store_true', help='Use hardcoded list of known CDC URLs instead of auto-discovery')
 
     args = parser.parse_args()
 
-    # If no flags specified, scrape both
-    scrape_fda = args.fda or (not args.fda and not args.cdc)
-    scrape_cdc = args.cdc or (not args.fda and not args.cdc)
+    # If --combine is specified, don't scrape
+    if args.combine:
+        scrape_fda = False
+        scrape_cdc = False
+    else:
+        # If no flags specified, scrape both
+        scrape_fda = args.fda or (not args.fda and not args.cdc)
+        scrape_cdc = args.cdc or (not args.fda and not args.cdc)
 
     # Initialize scrapers
     aggregator = OutbreakAggregator()
@@ -1040,6 +1140,36 @@ Examples:
 
     # Scrape selected sources
     all_data = {'fda': [], 'cdc': []}
+
+    # If --combine is specified, load existing JSON files
+    if args.combine:
+        print("\n[COMBINE] Loading existing outbreak data from files...")
+        print("-" * 60)
+
+        fda_file = 'data/raw/fda_outbreaks.json'
+        cdc_file = 'data/raw/cdc_outbreaks.json'
+
+        # Load FDA data if exists
+        if Path(fda_file).exists():
+            try:
+                with open(fda_file, 'r', encoding='utf-8') as f:
+                    all_data['fda'] = json.load(f)
+                print(f"Loaded {len(all_data['fda'])} FDA outbreaks from {fda_file}")
+            except Exception as e:
+                print(f"Error loading FDA data: {e}")
+        else:
+            print(f"Warning: {fda_file} not found, skipping FDA data")
+
+        # Load CDC data if exists
+        if Path(cdc_file).exists():
+            try:
+                with open(cdc_file, 'r', encoding='utf-8') as f:
+                    all_data['cdc'] = json.load(f)
+                print(f"Loaded {len(all_data['cdc'])} CDC outbreaks from {cdc_file}")
+            except Exception as e:
+                print(f"Error loading CDC data: {e}")
+        else:
+            print(f"Warning: {cdc_file} not found, skipping CDC data")
 
     if scrape_fda:
         print("\n[FDA] Scraping FDA Outbreaks...")

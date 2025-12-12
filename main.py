@@ -3,17 +3,20 @@ Foodborne Outbreak Alert System
 Scrapes outbreak data from FDA and CDC public health sources
 """
 
+import argparse
+import csv
+import io
+import json
+import re
 import requests
+import time
+
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
-from typing import List, Dict, Optional
-import re
-import json
-import time
 from urllib.parse import urljoin
 from pathlib import Path
-import argparse
-
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from typing import List, Dict, Optional
 
 class FDAOutbreakScraper:
     def __init__(self):
@@ -529,6 +532,180 @@ class CDCOutbreakScraper:
 
         return investigations
 
+    def discover_from_csv_file(self) -> List[Dict]:
+        """
+        Discover outbreaks by downloading the CSV file that the CDC uses for their DataTable
+        This is faster and more reliable than scraping the paginated JavaScript table
+        """
+        csv_url = "https://www.cdc.gov/foodborne-outbreaks/media/files/2024/04/full-outbreak-list.csv"
+        print(f"Fetching outbreak data from CSV: {csv_url}")
+        investigations = []
+
+        try:
+            response = self.session.get(csv_url)
+            response.raise_for_status()
+
+            # Parse CSV
+            csv_content = response.content.decode('utf-8')
+            csv_reader = csv.DictReader(io.StringIO(csv_content))
+
+            for row in csv_reader:
+                # CSV columns: Contaminated Food, Germ, Year
+                # The "Contaminated Food" value might be a link text, we need to construct the URL
+                food = row.get('Contaminated Food', '').strip()
+                germ = row.get('Germ', '').strip()
+                year = row.get('Year', '').strip()
+
+                if not food:
+                    continue
+
+                # The food name is the link text in the table, but we need to find the actual URL
+                # We'll need to scrape the main page to get the URLs, or use the Playwright method
+                # For now, let's use the Playwright method to get the actual URLs
+                investigations.append({
+                    'food': food,
+                    'germ': germ,
+                    'year': year
+                })
+
+            print(f"Found {len(investigations)} outbreak entries in CSV")
+
+        except Exception as e:
+            print(f"Error fetching CSV file: {e}")
+
+        return investigations
+
+    def discover_from_main_page_playwright(self) -> List[Dict]:
+        """
+        Discover outbreaks from the main CDC foodborne outbreaks page using Playwright
+        This handles JavaScript-rendered content and pagination
+        """
+        main_url = "https://www.cdc.gov/foodborne-outbreaks/outbreaks/index.html"
+        print(f"Checking main CDC outbreak page with Playwright: {main_url}")
+        investigations = []
+
+        try:
+            with sync_playwright() as p:
+                # Launch browser in headless mode
+                browser = p.chromium.launch(headless=True)
+                context = browser.new_context(
+                    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                )
+                page = context.new_page()
+
+                # Set longer timeout for slow-loading pages
+                page.set_default_timeout(60000)  # 60 seconds
+
+                # Navigate to the page - use 'load' instead of 'networkidle' for faster loading
+                print("Loading page...")
+                try:
+                    page.goto(main_url, wait_until="load", timeout=60000)
+                except PlaywrightTimeoutError:
+                    print("Page load timeout, trying with domcontentloaded...")
+                    page.goto(main_url, wait_until="domcontentloaded", timeout=60000)
+
+                # Wait for the table to load - the table has id or class we need to identify
+                # Try multiple selectors since CDC might use different structures
+                try:
+                    # Wait for table to appear (adjust selector based on actual page structure)
+                    page.wait_for_selector('table', timeout=20000)
+                    print("Table loaded successfully")
+                except PlaywrightTimeoutError:
+                    print("Warning: Table did not load within timeout, proceeding anyway...")
+
+                # Give JavaScript more time to fully render the content
+                print("Waiting for JavaScript to render...")
+                time.sleep(5)
+
+                # Get all links from the table using Playwright directly (more reliable)
+                print("Extracting all outbreak links from table...")
+                links_found = set()  # Use set to avoid duplicates
+
+                # Find all table rows
+                table_rows = page.locator('table tbody tr').all()
+                print(f"Found {len(table_rows)} rows in the initial table view")
+
+                # Since the table is paginated, we need to get all pages
+                # First, try to get the total number of entries
+                try:
+                    pagination_info = page.locator('.dataTables_info').inner_text()
+                    print(f"Pagination info: {pagination_info}")
+
+                    # Try to show all entries by changing the page size to maximum
+                    try:
+                        # Click on the page size dropdown and select a large number
+                        page.select_option('select[name*="DataTables"]', '100')
+                        print("Changed page size to 100")
+                        time.sleep(2)  # Wait for table to reload
+                    except Exception:
+                        print("Could not change page size, will paginate manually")
+                except Exception:
+                    pass
+
+                # Now extract all links from all visible pages
+                page_num = 1
+                while True:
+                    # Get content of current page
+                    html_content = page.content()
+                    soup = BeautifulSoup(html_content, 'html.parser')
+
+                    # Find the table and extract all links from rows
+                    table = soup.find('table')
+                    if table:
+                        for row in table.find_all('tr'):
+                            # Find all links in the first column (Contaminated Food)
+                            link = row.find('td')
+                            if link:
+                                a_tag = link.find('a')
+                                if a_tag and a_tag.get('href'):
+                                    href = a_tag.get('href')
+                                    if href and href not in links_found:
+                                        links_found.add(href)
+                                        full_url = urljoin(self.base_url, href)
+                                        title = a_tag.get_text(strip=True)
+
+                                        # Extract pathogen from URL
+                                        pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella|botulism)/', href)
+                                        pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
+
+                                        # Extract identifier from URL
+                                        parts = href.rstrip('/').split('/')
+                                        outbreak_id = parts[-2] if len(parts) > 1 else 'unknown'
+
+                                        investigations.append({
+                                            'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                                            'pathogen': pathogen,
+                                            'url': full_url,
+                                            'title': title or f'{pathogen.title()} outbreak',
+                                            'source': 'CDC'
+                                        })
+
+                    # Try to go to next page
+                    try:
+                        next_button = page.locator('#DataTables_Table_0_next')
+                        if next_button.get_attribute('class') and 'disabled' not in next_button.get_attribute('class'):
+                            print(f"Going to page {page_num + 1}...")
+                            next_button.click()
+                            page_num += 1
+                            time.sleep(2)  # Wait for page to load
+                        else:
+                            print("Reached last page")
+                            break
+                    except Exception:
+                        print("No more pages to paginate")
+                        break
+
+                browser.close()
+
+                print(f"Found {len(investigations)} investigations from main page (with Playwright)")
+
+        except Exception as e:
+            print(f"Error scraping main CDC page with Playwright: {e}")
+            import traceback
+            traceback.print_exc()
+
+        return investigations
+
     def scrape_known_urls(self, urls: List[str], delay: float = 1.0) -> List[Dict]:
         """
         Scrape a list of known CDC investigation URLs
@@ -571,13 +748,14 @@ class CDCOutbreakScraper:
 
         return all_outbreaks
 
-    def scrape_all_pathogens(self, delay: float = 1.0, use_main_page: bool = True, known_urls: Optional[List[str]] = None) -> List[Dict]:
+    def scrape_all_pathogens(self, delay: float = 1.0, use_main_page: bool = True, use_playwright: bool = True, known_urls: Optional[List[str]] = None) -> List[Dict]:
         """
         Discover and scrape all outbreak investigations across all pathogens
 
         Args:
             delay: Delay between requests in seconds
             use_main_page: Try to discover from main CDC outbreak page first
+            use_playwright: Use Playwright for JavaScript-rendered content (recommended)
             known_urls: Optional list of known investigation URLs to scrape directly
         """
         all_outbreaks = []
@@ -590,7 +768,12 @@ class CDCOutbreakScraper:
         # First, try to discover from main CDC page (more reliable)
         if use_main_page:
             print("\n=== Discovering from main CDC outbreak page ===")
-            main_page_investigations = self.discover_from_main_page()
+
+            # Use Playwright if requested (better for JavaScript-rendered content)
+            if use_playwright:
+                main_page_investigations = self.discover_from_main_page_playwright()
+            else:
+                main_page_investigations = self.discover_from_main_page()
 
             if main_page_investigations:
                 for i, investigation in enumerate(main_page_investigations, 1):
@@ -811,6 +994,8 @@ Examples:
     parser.add_argument('--fda', action='store_true', help='Scrape FDA outbreak data')
     parser.add_argument('--cdc', action='store_true', help='Scrape CDC outbreak data')
     parser.add_argument('--delay', type=float, default=2.0, help='Delay between requests in seconds (default: 2.0)')
+    parser.add_argument('--no-playwright', action='store_true', help='Disable Playwright and use simple HTTP requests (may find fewer outbreaks)')
+    parser.add_argument('--use-known-urls', action='store_true', help='Use hardcoded list of known CDC URLs instead of auto-discovery')
 
     args = parser.parse_args()
 
@@ -865,7 +1050,15 @@ Examples:
     if scrape_cdc:
         print("\n[CDC] Scraping CDC Outbreaks...")
         print("-" * 60)
-        cdc_outbreaks = aggregator.cdc_scraper.scrape_all_pathogens(delay=args.delay, known_urls=known_cdc_urls)
+        # Determine which URLs to use
+        urls_to_use = known_cdc_urls if args.use_known_urls else None
+        # Use Playwright unless disabled
+        use_pw = not args.no_playwright
+        cdc_outbreaks = aggregator.cdc_scraper.scrape_all_pathogens(
+            delay=args.delay,
+            use_playwright=use_pw,
+            known_urls=urls_to_use
+        )
         all_data['cdc'] = cdc_outbreaks
 
     # Combine and normalize the data

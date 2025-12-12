@@ -3,20 +3,20 @@ Foodborne Outbreak Alert System
 Scrapes outbreak data from FDA and CDC public health sources
 """
 
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime, timezone
-from typing import List, Dict, Optional
-import re
-import json
-import time
-from urllib.parse import urljoin
-from pathlib import Path
 import argparse
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 import csv
 import io
+import json
+import re
+import requests
+import time
 
+from bs4 import BeautifulSoup
+from datetime import datetime, timezone
+from urllib.parse import urljoin
+from pathlib import Path
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from typing import List, Dict, Optional
 
 class FDAOutbreakScraper:
     def __init__(self):

@@ -28,10 +28,10 @@ jobs:
         run: |
           uv run playwright install --with-deps chromium
 
-      - name: Running scrape script on FDA
-        continue-on-error: true # FDA blocks Github action IPs and re-routes traffic.
-        run: |
-          uv run python main.py --fda
+      # - name: Running scrape script on FDA
+      #   continue-on-error: true # FDA blocks Github action IPs and re-routes traffic.
+      #   run: |
+      #     uv run python main.py --fda
 
       - name: Running scrape script on CDC
         continue-on-error: true # If CDC is down, we don't want the whole job to fail.

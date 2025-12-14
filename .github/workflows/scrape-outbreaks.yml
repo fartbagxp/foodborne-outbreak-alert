@@ -43,6 +43,10 @@ jobs:
         run: |
           uv run python main.py --combine
 
+      - name: Summarize using README
+        run: |
+          uv run python generate_stats.py
+
       - name: Commit and push changes
         if: github.ref == 'refs/heads/main'
         run: |

@@ -1,18 +1,73 @@
+[![Foodborne Outbreak nightly update](https://github.com/fartbagxp/foodborne-outbreak-alert/actions/workflows/scrape-outbreaks.yml/badge.svg)](https://github.com/fartbagxp/foodborne-outbreak-alert/actions/workflows/scrape-outbreaks.yml)
+
 # Foodborne Outbreak Alert System
 
 A real-time foodborne outbreak monitoring system that aggregates and analyzes outbreak data from both FDA and CDC sources.
 
 **Current Coverage:**
 
-- 🏛️ FDA: 70 outbreak investigations (2011-2025)
-- 🔬 CDC: 18 active investigations (2024-2025)
-- 📊 Total: 88 foodborne outbreak investigations
+- 🏛️ FDA: 70 outbreak investigations (2006-2025)
+- 🔬 CDC: 219 total investigations (2006-2025)
+- 🚨 Active: 33 ongoing investigations
+- 📊 Total: 289 foodborne outbreak investigations
+
+## Current Statistics
+
+| Metric                    | Count  |
+| ------------------------- | ------ |
+| **Total Outbreaks**       | 289    |
+| **Active Investigations** | 33     |
+| **Total Cases**           | 40,830 |
+| **Deaths**                | 4,494  |
+| **Hospitalizations**      | 15,625 |
+| **States Affected**       | 51     |
+
+## By Source
+
+| Source | Outbreaks | Year Range |
+| ------ | --------- | ---------- |
+| CDC    | 219       | 2006-2025  |
+| FDA    | 70        | 2006-2025  |
+
+## By Status
+
+| Status  | Count |
+| ------- | ----- |
+| Unknown | 194   |
+| Closed  | 62    |
+| Ongoing | 33    |
+
+## By Pathogen (Top 10)
+
+| Pathogen   | Outbreaks |
+| ---------- | --------- |
+| Salmonella | 123       |
+| Unknown    | 63        |
+| E. coli    | 56        |
+| Listeria   | 42        |
+| Vibrio     | 3         |
+| Botulism   | 2         |
+
+## By Year (Recent)
+
+| Year | Outbreaks |
+| ---- | --------- |
+| 2025 | 13        |
+| 2024 | 11        |
+| 2023 | 13        |
+| 2022 | 23        |
+| 2021 | 22        |
+| 2020 | 20        |
+| 2019 | 27        |
+| 2018 | 20        |
+| 2017 | 7         |
+| 2016 | 17        |
 
 ## Features
 
 - **Multi-Source Scraping**: Combines outbreak data from:
-  - FDA Public Health Advisories (70 investigations, 2011-2025)
-  - CDC Investigation Updates (18 investigations, 2024-2025)
+  - FDA Public Health Advisories (70 investigations, 2006-2025)
+  - CDC Investigation Updates (219 investigations, 2006-2025)
   - Salmonella, Listeria, E. coli, and other pathogens
 - **Command-Line Interface**: Run FDA and CDC scrapers separately or together with `--fda` and `--cdc` flags
 - **Unified Data Format**: Normalizes data from different sources into a consistent structure

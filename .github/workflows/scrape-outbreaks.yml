@@ -43,6 +43,10 @@ jobs:
         run: |
           uv run python main.py --combine
 
+      - name: Summarize using README
+        run: |
+          uv run python generate_stats.py
+
       - name: Commit and push changes
         if: github.ref == 'refs/heads/main'
         run: |
@@ -50,6 +54,7 @@ jobs:
           git config --local user.email "noreply@github.com"
           git config --local user.name "github-actions[bot]"
           git add data/raw/
+          git add README.md
           if ! git diff-index --quiet HEAD; then
             git commit -m "Nightly update of raw foodborne outbreak changes - $(date +'%Y-%m-%d')"
             git push -u origin main

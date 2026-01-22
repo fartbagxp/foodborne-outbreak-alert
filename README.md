@@ -6,34 +6,34 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 **Current Coverage:**
 
-- 🏛️ FDA: 70 outbreak investigations (2006-2025)
-- 🔬 CDC: 223 total investigations (2006-2025)
+- 🏛️ FDA: 71 outbreak investigations (2006-2026)
+- 🔬 CDC: 223 total investigations (2006-2026)
 - 🚨 Active: 33 ongoing investigations
-- 📊 Total: 293 foodborne outbreak investigations
+- 📊 Total: 294 foodborne outbreak investigations
 
 ## Current Statistics
 
 | Metric                    | Count  |
 | ------------------------- | ------ |
-| **Total Outbreaks**       | 293    |
+| **Total Outbreaks**       | 294    |
 | **Active Investigations** | 33     |
-| **Total Cases**           | 40,820 |
-| **Deaths**                | 4,655  |
-| **Hospitalizations**      | 15,676 |
+| **Total Cases**           | 40,865 |
+| **Deaths**                | 4,667  |
+| **Hospitalizations**      | 15,721 |
 | **States Affected**       | 51     |
 
 ## By Source
 
 | Source | Outbreaks | Year Range |
 | ------ | --------- | ---------- |
-| CDC    | 223       | 2006-2025  |
-| FDA    | 70        | 2006-2025  |
+| CDC    | 223       | 2006-2026  |
+| FDA    | 71        | 2006-2026  |
 
 ## By Status
 
 | Status  | Count |
 | ------- | ----- |
-| Unknown | 198   |
+| Unknown | 199   |
 | Closed  | 62    |
 | Ongoing | 33    |
 
@@ -41,7 +41,7 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 | Pathogen   | Outbreaks |
 | ---------- | --------- |
-| Salmonella | 127       |
+| Salmonella | 128       |
 | Unknown    | 63        |
 | E. coli    | 56        |
 | Listeria   | 42        |
@@ -52,6 +52,7 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 | Year | Outbreaks |
 | ---- | --------- |
+| 2026 | 1         |
 | 2025 | 13        |
 | 2024 | 11        |
 | 2023 | 13        |
@@ -61,7 +62,6 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | 2019 | 27        |
 | 2018 | 20        |
 | 2017 | 7         |
-| 2016 | 17        |
 
 ## Features
 

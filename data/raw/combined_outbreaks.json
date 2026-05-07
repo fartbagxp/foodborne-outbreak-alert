@@ -121,7 +121,7 @@
       "states_affected": [],
       "state_count": 12,
       "posted_date": "May 4, 2017",
-      "scraped_at": "2026-05-06T11:29:14.608106+00:00"
+      "scraped_at": "2026-05-07T11:30:37.647208+00:00"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-part2-07-15",
@@ -136,7 +136,7 @@
       "states_affected": [],
       "state_count": 5,
       "posted_date": "October 16, 2015",
-      "scraped_at": "2026-05-06T11:30:13.312764+00:00"
+      "scraped_at": "2026-05-07T11:31:45.529594+00:00"
     },
     {
       "id": "cdc_salmonella_newport-05-14",
@@ -151,7 +151,7 @@
       "states_affected": [],
       "state_count": 16,
       "posted_date": "August 13, 2014",
-      "scraped_at": "2026-05-06T11:30:41.421757+00:00"
+      "scraped_at": "2026-05-07T11:32:15.600457+00:00"
     },
     {
       "id": "cdc_ecoli_O121-05-14",
@@ -166,7 +166,7 @@
       "states_affected": [],
       "state_count": 19,
       "posted_date": "August 1, 2014",
-      "scraped_at": "2026-05-06T11:30:44.395402+00:00"
+      "scraped_at": "2026-05-07T11:32:18.788513+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-10-13",
@@ -181,7 +181,7 @@
       "states_affected": [],
       "state_count": 29,
       "posted_date": "July 31, 2014",
-      "scraped_at": "2026-05-06T11:31:00.427925+00:00"
+      "scraped_at": "2026-05-07T11:32:41.069804+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-11-13",
@@ -197,7 +197,7 @@
       "states_affected": [],
       "state_count": 33,
       "posted_date": "December 11, 2013",
-      "scraped_at": "2026-05-06T11:30:58.039728+00:00"
+      "scraped_at": "2026-05-07T11:32:37.281950+00:00"
     },
     {
       "id": "cdc_ecoli_O121-03-13",
@@ -212,7 +212,7 @@
       "states_affected": [],
       "state_count": 19,
       "posted_date": "May 30, 2013",
-      "scraped_at": "2026-05-06T11:31:19.956240+00:00"
+      "scraped_at": "2026-05-07T11:32:59.727664+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-02-13",
@@ -228,7 +228,7 @@
       "states_affected": [],
       "state_count": 13,
       "posted_date": "July 10, 2013",
-      "scraped_at": "2026-05-06T11:31:23.067267+00:00"
+      "scraped_at": "2026-05-07T11:33:03.065900+00:00"
     },
     {
       "id": "cdc_salmonella_bredeney-09-12",
@@ -243,7 +243,7 @@
       "states_affected": [],
       "state_count": 20,
       "posted_date": "November 30, 2012",
-      "scraped_at": "2026-05-06T11:31:32.012651+00:00"
+      "scraped_at": "2026-05-07T11:33:12.231801+00:00"
     },
     {
       "id": "cdc_listeria_cheese-09-12",
@@ -258,7 +258,7 @@
       "states_affected": [],
       "state_count": 13,
       "posted_date": "November 21, 2012",
-      "scraped_at": "2026-05-06T11:31:35.125256+00:00"
+      "scraped_at": "2026-05-07T11:33:15.501188+00:00"
     },
     {
       "id": "cdc_ecoli_O145-06-12",
@@ -273,7 +273,7 @@
       "states_affected": [],
       "state_count": 9,
       "posted_date": "July 20, 2012",
-      "scraped_at": "2026-05-06T11:31:46.923215+00:00"
+      "scraped_at": "2026-05-07T11:33:28.809305+00:00"
     },
     {
       "id": "cdc_salmonella_bareilly-04-12",
@@ -289,7 +289,7 @@
       "states_affected": [],
       "state_count": 28,
       "posted_date": "July 26, 2012",
-      "scraped_at": "2026-05-06T11:31:49.983102+00:00"
+      "scraped_at": "2026-05-07T11:33:30.986863+00:00"
     },
     {
       "id": "cdc_ecoli_O26-02-12",
@@ -304,7 +304,7 @@
       "states_affected": [],
       "state_count": 11,
       "posted_date": "April 3, 2012",
-      "scraped_at": "2026-05-06T11:31:53.092829+00:00"
+      "scraped_at": "2026-05-07T11:33:34.404713+00:00"
     },
     {
       "id": "cdc_listeria_cantaloupes-jensen-farms",
@@ -319,7 +319,7 @@
       "states_affected": [],
       "state_count": 28,
       "posted_date": "August 27, 2012",
-      "scraped_at": "2026-05-06T11:32:09.925856+00:00"
+      "scraped_at": "2026-05-07T11:33:49.902811+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-oranienburg-whole-fresh-onions-october-2021",
@@ -389,7 +389,7 @@
       "states_affected": [],
       "state_count": 40,
       "posted_date": "March 18, 2016",
-      "scraped_at": "2026-05-06T11:30:05.486315+00:00"
+      "scraped_at": "2026-05-07T11:31:36.961380+00:00"
     },
     {
       "id": "outbreak-investigation-cyclospora-bagged-salads-june-2020",
@@ -549,7 +549,7 @@
       "states_affected": [],
       "state_count": 403,
       "posted_date": "March 22, 2019",
-      "scraped_at": "2026-05-06T11:28:08.382790+00:00"
+      "scraped_at": "2026-05-07T11:29:20.072056+00:00"
     },
     {
       "id": "cdc_salmonella_reading-07-18",
@@ -566,7 +566,7 @@
       ],
       "state_count": 358,
       "consumer_advice": "Always handle raw turkey carefully and cook it thoroughly to prevent food poisoning. Raw turkey products can have germs that spread around food preparation areas and can make you sick.\nWith the exception of therecalledturkey products, CDC is not advising that consumers avoid eating properly cooked turkey products, or that retailers stop selling raw turkey products.\nCDC advises consumers to follow these steps to help preventSalmonellainfection from raw turkey:\nWash your hands.Salmonellainfections can spread from one person to another. Wash hands before and after handling raw turkey products.Cook raw turkey thoroughly to kill harmful germs.Turkey breasts, whole turkeys, and ground poultry, including turkey burgers, casseroles, and sausage, should always be cooked to an internal temperature of 165°F to kill harmful germs. Leftovers should be reheated to 165°F.Use a food thermometer to check, and place it in the thickest part of the food.Don’t spread germs from raw turkey around food preparation areas.Washing raw poultry before cooking is not recommended. Germs in raw poultry juices can spread to other areas and foods. Thoroughly wash hands, counters, cutting boards, and utensils with warm, soapy water after they touch raw turkey. Use a separate cutting board for raw turkey and other raw meats if possible.CDC does not recommend feedingraw diets to pets. Germs likeSalmonellain raw pet food can make your pets sick. Your family also can get sick by handling the raw food or by taking care of your pet.\nDo not eat, sell, or serve recalled turkey products:\nGround Turkey\nJennie-O Turkey Store Sales, LLC, in Faribault, Minnesotarecalledapproximately 164,210 pounds of raw ground turkey products on December 21, 2018. The recalled ground turkey was sold in 1-pound, 2.5-pound and 3-pound packages labeled with establishment number “P-579”. This is found on the side of the product tray package.Jennie-O Turkey Store Sales, LLC, in Barron, Wisconsinrecalledapproximately 147,276 pounds of raw ground turkey products on November 15, 2018. The recalled ground turkey was sold in one-pound packages labeled with establishment number “P-190”. This is found inside the USDA mark of inspection.\nPet Food\nWoody’s Pet Food Deli in Minnesotarecalledraw turkey pet food on January 28, 2019. The recalled product was sold in 5-pound plastic containers labeled “Woody’s Pet Food Deli Raw Free Range Turkey” and was sold in Minnesota.Raws for Paws of Minneapolis, MNrecalledapproximately 4,000 pounds of its 5 pounds and 1 pound chubs of Ground Turkey Pet Food on February 5, 2018.",
-      "scraped_at": "2026-05-06T11:28:19.416513+00:00"
+      "scraped_at": "2026-05-07T11:29:33.303516+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-02-18",
@@ -581,7 +581,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "April 16, 2018",
-      "scraped_at": "2026-05-06T11:28:43.782045+00:00"
+      "scraped_at": "2026-05-07T11:30:03.851849+00:00"
     },
     {
       "id": "cdc_salmonella_kiambu-07-17",
@@ -598,7 +598,7 @@
       ],
       "state_count": 23,
       "posted_date": "November 3, 2017",
-      "scraped_at": "2026-05-06T11:29:10.160359+00:00"
+      "scraped_at": "2026-05-07T11:30:30.778888+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-04-18",
@@ -613,7 +613,7 @@
       "states_affected": [],
       "state_count": 36,
       "posted_date": "June 28, 2018",
-      "scraped_at": "2026-05-06T11:28:39.262486+00:00"
+      "scraped_at": "2026-05-07T11:29:56.874844+00:00"
     },
     {
       "id": "cdc_ecoli_o103-04-19",
@@ -627,7 +627,7 @@
       "hospitalizations": 1,
       "states_affected": [],
       "state_count": 209,
-      "scraped_at": "2026-05-06T11:27:50.903112+00:00"
+      "scraped_at": "2026-05-07T11:28:59.411317+00:00"
     },
     {
       "id": "cdc_salmonella_kratom-02-18",
@@ -642,7 +642,7 @@
       "states_affected": [],
       "state_count": 41,
       "posted_date": "May 24, 2018",
-      "scraped_at": "2026-05-06T11:28:46.005479+00:00"
+      "scraped_at": "2026-05-07T11:30:06.119304+00:00"
     },
     {
       "id": "cdc_salmonella_pork-08-15",
@@ -658,7 +658,7 @@
       "states_affected": [],
       "state_count": 192,
       "posted_date": "December 2, 2015",
-      "scraped_at": "2026-05-06T11:30:08.782554+00:00"
+      "scraped_at": "2026-05-07T11:31:40.314535+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -676,7 +676,7 @@
       "state_count": 14,
       "posted_date": "May 8, 2009",
       "consumer_advice": "Do not eat raw alfalfa sprouts, including sprout blends containing alfalfa sprouts, until further notice.For persons who continue to eat sprouts, cook them first following FDA’s advice.Persons who think they may have become ill from eating raw alfalfa sprouts are advised to consult their health care providers.\nNever eat raw alfalfa sprouts.\nFDA has provided a several resource documents for Seed Suppliers, Distributors, and Sprouters on theirwebsite.\nMost persons infected withSalmonelladevelop diarrhea, fever, and abdominal cramps 12–72 hours after infection. Infection is usually diagnosed by culture of a stool sample. The illness usually lasts 4 to 7 days. Although most people recover without treatment, severe infections may occur. Infants, elderly persons, and those with impaired immune systems are more likely than others to develop severe illness. When severe infection occurs,Salmonellamay spread from the intestines to the bloodstream and then to other body sites and can cause death unless the person is treated promptly with antibiotics.\nOutbreak ofSalmonellaSerotype Saintpaul Infections Associated with Eating Alfalfa Sprouts – United States, 2009[PDF – 115KB]",
-      "scraped_at": "2026-05-06T11:33:03.102501+00:00"
+      "scraped_at": "2026-05-07T11:34:57.801786+00:00"
     },
     {
       "id": "cdc_salmonella_2006",
@@ -689,31 +689,31 @@
       "case_count": 183,
       "hospitalizations": 34,
       "states_affected": [
-        "VA",
+        "GA",
+        "AL",
+        "VT",
+        "WA",
+        "MA",
+        "ME",
         "PA",
         "NC",
-        "NE",
-        "NH",
-        "MI",
-        "CT",
-        "MA",
-        "AR",
-        "IN",
-        "VT",
-        "ME",
-        "TN",
         "OH",
-        "GA",
+        "NH",
+        "TN",
         "WI",
-        "AL",
-        "WA",
         "MN",
         "KY",
-        "RI"
+        "AR",
+        "IN",
+        "NE",
+        "VA",
+        "RI",
+        "MI",
+        "CT"
       ],
       "state_count": 21,
       "posted_date": "November 3, 2006",
-      "scraped_at": "2026-05-06T11:33:40.003909+00:00"
+      "scraped_at": "2026-05-07T11:35:33.437361+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-19",
@@ -728,7 +728,7 @@
       "states_affected": [],
       "state_count": 27,
       "posted_date": "January 15, 2020",
-      "scraped_at": "2026-05-06T11:27:22.179069+00:00"
+      "scraped_at": "2026-05-07T11:28:26.645101+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-javiana-fruit-mix-december-2019",
@@ -770,7 +770,7 @@
       "hospitalizations": 1,
       "states_affected": [],
       "state_count": 165,
-      "scraped_at": "2026-05-06T11:27:17.568453+00:00"
+      "scraped_at": "2026-05-07T11:28:19.917420+00:00"
     },
     {
       "id": "cdc_salmonella_carrau-04-19",
@@ -784,7 +784,7 @@
       "hospitalizations": 38,
       "states_affected": [],
       "state_count": 137,
-      "scraped_at": "2026-05-06T11:27:48.694045+00:00"
+      "scraped_at": "2026-05-07T11:28:57.220152+00:00"
     },
     {
       "id": "cdc_salmonella_mbandaka-06-18",
@@ -799,7 +799,7 @@
       "states_affected": [],
       "state_count": 36,
       "posted_date": "September 26, 2018",
-      "scraped_at": "2026-05-06T11:28:32.626877+00:00"
+      "scraped_at": "2026-05-07T11:29:47.702715+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-eggs-june-2025",
@@ -846,7 +846,7 @@
       "states_affected": [],
       "state_count": 129,
       "posted_date": "February 21, 2019",
-      "scraped_at": "2026-05-06T11:28:06.157356+00:00"
+      "scraped_at": "2026-05-07T11:29:16.727349+00:00"
     },
     {
       "id": "cdc_salmonella_newport-07-20",
@@ -861,7 +861,7 @@
       "states_affected": [],
       "state_count": 127,
       "posted_date": "October 8, 2020",
-      "scraped_at": "2026-05-06T11:27:06.453286+00:00"
+      "scraped_at": "2026-05-07T11:28:06.481199+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -877,7 +877,7 @@
       "state_count": 25,
       "posted_date": "August 29, 2011",
       "consumer_advice": "While the shelf-life of the recalled, fresh, whole papayas has been exceeded, consumers might still have recalled papayas in their homes if the papayas were frozen or dehydrated at home.\nConsumers should not eat recalled papayas, and restaurant and food service operators should not serve them.Consumers who have papayas in their homes purchased before July 23, 2011 can check with the place of purchase to determine if the fruit came from Agromod Produce, Inc.Consumers and food preparers should wash their hands before and after handling any papayas. Rinse the papayas under running water, and then dry them with a clean cloth or paper towel before cutting. Promptly refrigerate cut papayas.\nThis particular outbreak appears to be over. However,Salmonellais still an important cause of human illness in the United States. More information aboutSalmonella, and steps people can take to reduce their risk of infection, can be found on theCDCSalmonellaWeb Pageand theCDC Vital Signs Web Page.\nFoodborne outbreak potentially associated with papaya distributed by Agromod Produce, Inc.Agromod Produce, Inc. Recalls Papaya Because Of Possible Health RiskFDA working with Mexico to protect safety of imported papayasCDC Vital Signs: Making Food Safer to EatFoodSafety.govPulseNet\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nA total of 106 individuals infected with the outbreak strain ofSalmonellaAgona were reported from 25 states between January 1 and August 25, 2011. The number of ill persons identified in each state with the outbreak strain was as follows: Arkansas (1), Arizona (4), California (8), Colorado (1), Georgia (8), Illinois (18), Indiana (1), Kentucky (1), Louisiana (2), Massachusetts (1), Minnesota (3), Missouri (3), Nebraska (2), Nevada (1), New Jersey (1), New Mexico (3), New York (9), Ohio (1), Oklahoma (1), Pennsylvania (2), Tennessee (1), Texas (25), Virginia (2), Washington (5), and Wisconsin (2).\n*n=103 for whom information was reported as of August 25, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:14.386833+00:00"
+      "scraped_at": "2026-05-07T11:33:55.354447+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-11-14",
@@ -892,7 +892,7 @@
       "states_affected": [],
       "state_count": 12,
       "posted_date": "January 23, 2015",
-      "scraped_at": "2026-05-06T11:30:28.347211+00:00"
+      "scraped_at": "2026-05-07T11:32:02.200919+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-cucumbers-november-2024",
@@ -1096,7 +1096,7 @@
       "states_affected": [],
       "state_count": 101,
       "posted_date": "October 16, 2020",
-      "scraped_at": "2026-05-06T11:27:04.244067+00:00"
+      "scraped_at": "2026-05-07T11:28:02.879990+00:00"
     },
     {
       "id": "cdc_salmonella_sandiego-07-18",
@@ -1111,7 +1111,7 @@
       "states_affected": [],
       "state_count": 101,
       "posted_date": "September 5, 2018",
-      "scraped_at": "2026-05-06T11:28:22.586179+00:00"
+      "scraped_at": "2026-05-07T11:29:36.569035+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-moringa-leaf-powder-january-2026",
@@ -1175,7 +1175,7 @@
       "hospitalizations": 2019,
       "states_affected": [],
       "state_count": 81,
-      "scraped_at": "2026-05-06T11:27:35.292107+00:00"
+      "scraped_at": "2026-05-07T11:28:41.483801+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-onions-october-2023",
@@ -1231,7 +1231,7 @@
       "states_affected": [],
       "state_count": 77,
       "posted_date": "July 26, 2018",
-      "scraped_at": "2026-05-06T11:28:34.851864+00:00"
+      "scraped_at": "2026-05-07T11:29:50.000109+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-uganda-fresh-papayas-june-2019",
@@ -1339,7 +1339,7 @@
       "states_affected": [],
       "state_count": 11,
       "posted_date": "August 19, 2015",
-      "scraped_at": "2026-05-06T11:30:18.783677+00:00"
+      "scraped_at": "2026-05-07T11:31:49.915542+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-sprouts-december-2022",
@@ -1377,7 +1377,7 @@
       "states_affected": [],
       "state_count": 24,
       "posted_date": "September 29, 2016",
-      "scraped_at": "2026-05-06T11:29:33.236171+00:00"
+      "scraped_at": "2026-05-07T11:30:58.530603+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-18",
@@ -1393,7 +1393,7 @@
       "state_count": 62,
       "posted_date": "January 9, 2019",
       "consumer_advice": "Antibiotics are not recommendedfor patients withE. coliO157 infections. Antibiotics are also not recommended for patients in whomE.coliO157 infection is suspected, until diagnostic testing rules out this infection.Some studies have shown that administering antibiotics to patients withE. coliO157 infections might increase their risk of developing hemolytic uremic syndrome (a type of kidney failure), and the benefit of antibiotic treatment has not been clearly demonstrated.",
-      "scraped_at": "2026-05-06T11:28:03.904471+00:00"
+      "scraped_at": "2026-05-07T11:29:14.547275+00:00"
     },
     {
       "id": "cdc_salmonella_stanley-09-20",
@@ -1408,7 +1408,7 @@
       "states_affected": [],
       "state_count": 55,
       "posted_date": "November 4, 2020",
-      "scraped_at": "2026-05-06T11:27:02.019939+00:00"
+      "scraped_at": "2026-05-07T11:28:00.558364+00:00"
     },
     {
       "id": "cdc_ecoli_o26-11-15",
@@ -1423,7 +1423,7 @@
       "states_affected": [],
       "state_count": 11,
       "posted_date": "February 1, 2016",
-      "scraped_at": "2026-05-06T11:30:00.115559+00:00"
+      "scraped_at": "2026-05-07T11:31:30.366389+00:00"
     },
     {
       "id": "cdc_salmonella_oranienburg-10-16",
@@ -1438,7 +1438,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "November 9, 2016",
-      "scraped_at": "2026-05-06T11:29:17.769951+00:00"
+      "scraped_at": "2026-05-07T11:30:39.829341+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o103-clover-sprouts-february-2020",
@@ -1478,7 +1478,7 @@
       "states_affected": [],
       "state_count": 51,
       "posted_date": "April 22, 2020",
-      "scraped_at": "2026-05-06T11:27:13.160867+00:00"
+      "scraped_at": "2026-05-07T11:28:13.123238+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o121h19-organic-carrots-november-2024",
@@ -1558,7 +1558,7 @@
       "states_affected": [],
       "state_count": 10,
       "posted_date": "July 26, 2018",
-      "scraped_at": "2026-05-06T11:28:37.061342+00:00"
+      "scraped_at": "2026-05-07T11:29:53.478816+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-09-18",
@@ -1573,7 +1573,7 @@
       "states_affected": [],
       "state_count": 44,
       "posted_date": "October 25, 2018",
-      "scraped_at": "2026-05-06T11:28:14.968301+00:00"
+      "scraped_at": "2026-05-07T11:29:27.420611+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-frozen-supplemental-shakes-february-2025",
@@ -1627,7 +1627,7 @@
       "states_affected": [],
       "state_count": 40,
       "posted_date": "December 22, 2020",
-      "scraped_at": "2026-05-06T11:26:55.228168+00:00"
+      "scraped_at": "2026-05-07T11:27:50.385387+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -1641,7 +1641,7 @@
       "states_affected": [],
       "posted_date": "January 11, 2012",
       "consumer_advice": "This particular outbreak appears to be over. However,Salmonellais still an important cause of human illness in the United States. More information aboutSalmonella, and steps people can take to reduce their risk of infection, can be found on theCDCSalmonellaWeb Pageand theCDC Vital Signs Web Page.\nConsumers might still have recalled products in their homes if the “kosher broiled chicken livers” or foods made with “kosher broiled chicken livers” were frozen.\nCook chicken liver to the proper temperature:\nConsumers should not eat chicken liver or any foods prepared with chicken liver that have not been fully cooked to an internal temperature of 165°F.Restaurants and food service operators should fully cook chicken liver to an internal temperature of 165°F.If served undercooked chicken liver in a restaurant, send it back to the kitchen for further cooking.If repackaging partially cooked chicken livers for sale, retailers should clearly label them as not ready-to-eat, and therefore, require further cooking before eating.\nBe careful in preparing foods:\nSeparate raw livers and other uncooked meats from produce, cooked foods, and ready-to-eat foods to avoid cross contamination.Washhands, kitchen work surfaces, cutting boards, knives and other utensils with soap and water immediately after they have been in contact with livers or other raw meat or poultry.Disinfect the food contact surfaces using a freshly prepared solution of 1 tablespoon unscented liquid chlorine bleach to 1 gallon of water.\nConsult your health care provider:\nPersons who think they might have become ill from eating undercooked chicken liver or any food prepared with chicken liver should consult their health care providers.Infants, older adults, and persons with impaired immune systems are more likely than others to develop severe illness.\nNYC Health Department Warns MealMart Kosher Broiled Chicken Livers Can Cause Illness fromSalmonellaBacteriaPrevention for Consumers: FoodSafety.govAskKaren.gov (FSIS virtual representative)1-888-MPHotline (1-888-674-6854), USDA English/Spanish Meat and Poultry Hotline\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.",
-      "scraped_at": "2026-05-06T11:32:03.233420+00:00"
+      "scraped_at": "2026-05-07T11:33:43.188195+00:00"
     },
     {
       "id": "cdc_ecoli_2007",
@@ -1656,7 +1656,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "October 26, 2007",
-      "scraped_at": "2026-05-06T11:33:27.826019+00:00"
+      "scraped_at": "2026-05-07T11:35:23.189832+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-seafood-october-2022",
@@ -1738,7 +1738,7 @@
       "states_affected": [],
       "state_count": 36,
       "posted_date": "June 9, 2020",
-      "scraped_at": "2026-05-06T11:27:10.933914+00:00"
+      "scraped_at": "2026-05-07T11:28:10.956955+00:00"
     },
     {
       "id": "cdc_listeria_caramel-apples-12-14",
@@ -1754,7 +1754,7 @@
       "states_affected": [],
       "state_count": 12,
       "posted_date": "February 12, 2015",
-      "scraped_at": "2026-05-06T11:30:26.120850+00:00"
+      "scraped_at": "2026-05-07T11:31:58.822385+00:00"
     },
     {
       "id": "cdc_ecoli_bison-07-19",
@@ -1770,7 +1770,7 @@
       "states_affected": [],
       "state_count": 33,
       "posted_date": "September 13, 2019",
-      "scraped_at": "2026-05-06T11:27:32.187495+00:00"
+      "scraped_at": "2026-05-07T11:28:39.238756+00:00"
     },
     {
       "id": "cdc_salmonella_virchow-02-16",
@@ -1785,7 +1785,7 @@
       "states_affected": [],
       "state_count": 23,
       "posted_date": "April 21, 2016",
-      "scraped_at": "2026-05-06T11:29:50.471954+00:00"
+      "scraped_at": "2026-05-07T11:31:18.355201+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-10-20a",
@@ -1800,7 +1800,7 @@
       "states_affected": [],
       "state_count": 32,
       "posted_date": "December 18, 2020",
-      "scraped_at": "2026-05-06T11:26:57.575319+00:00"
+      "scraped_at": "2026-05-07T11:27:53.850588+00:00"
     },
     {
       "id": "outbreak-investigation-infant-botulism-infant-formula-november-2025",
@@ -1926,7 +1926,7 @@
       "states_affected": [],
       "state_count": 9,
       "posted_date": "February 15, 2018",
-      "scraped_at": "2026-05-06T11:28:52.155946+00:00"
+      "scraped_at": "2026-05-07T11:30:13.588338+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-queso-fresco-and-cotija-cheese-february-2024",
@@ -2034,7 +2034,7 @@
       "states_affected": [],
       "state_count": 12,
       "posted_date": "May 13, 2016",
-      "scraped_at": "2026-05-06T11:29:47.305149+00:00"
+      "scraped_at": "2026-05-07T11:31:14.811603+00:00"
     },
     {
       "id": "cdc_salmonella_chicken-08-18",
@@ -2049,7 +2049,7 @@
       "states_affected": [],
       "state_count": 25,
       "posted_date": "December 7, 2018",
-      "scraped_at": "2026-05-06T11:28:17.173858+00:00"
+      "scraped_at": "2026-05-07T11:29:29.627144+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o121h19-frozen-falafel-october-2022",
@@ -2085,7 +2085,7 @@
       "states_affected": [],
       "state_count": 24,
       "posted_date": "November 7, 2019",
-      "scraped_at": "2026-05-06T11:27:26.604307+00:00"
+      "scraped_at": "2026-05-07T11:28:33.503339+00:00"
     },
     {
       "id": "cdc_ecoli_flour-05-19",
@@ -2099,7 +2099,7 @@
       "hospitalizations": 7,
       "states_affected": [],
       "state_count": 21,
-      "scraped_at": "2026-05-06T11:27:37.491838+00:00"
+      "scraped_at": "2026-05-07T11:28:44.982000+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-jules-cashew-brie-april-2021",
@@ -2158,7 +2158,7 @@
       "states_affected": [],
       "state_count": 19,
       "posted_date": "March 31, 2016",
-      "scraped_at": "2026-05-06T11:29:52.656407+00:00"
+      "scraped_at": "2026-05-07T11:31:21.585902+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-15",
@@ -2173,7 +2173,7 @@
       "states_affected": [],
       "state_count": 7,
       "posted_date": "December 22, 2015",
-      "scraped_at": "2026-05-06T11:29:57.917876+00:00"
+      "scraped_at": "2026-05-07T11:31:27.032949+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-mini-pastries-january-2025",
@@ -2282,7 +2282,7 @@
       "states_affected": [],
       "state_count": 18,
       "posted_date": "December 18, 2020",
-      "scraped_at": "2026-05-06T11:26:53.023821+00:00"
+      "scraped_at": "2026-05-07T11:27:46.828472+00:00"
     },
     {
       "id": "cdc_ecoli_o26-09-18",
@@ -2297,7 +2297,7 @@
       "states_affected": [],
       "state_count": 18,
       "posted_date": "September 20, 2018",
-      "scraped_at": "2026-05-06T11:28:12.755054+00:00"
+      "scraped_at": "2026-05-07T11:29:25.220162+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-flour-may-2019",
@@ -2370,7 +2370,7 @@
       "hospitalizations": 15,
       "states_affected": [],
       "state_count": 16,
-      "scraped_at": "2026-05-06T11:27:41.973956+00:00"
+      "scraped_at": "2026-05-07T11:28:49.499375+00:00"
     },
     {
       "id": "cdc_salmonella_newport-04-19",
@@ -2385,7 +2385,7 @@
       "states_affected": [],
       "state_count": 15,
       "posted_date": "May 22, 2019",
-      "scraped_at": "2026-05-06T11:27:46.363644+00:00"
+      "scraped_at": "2026-05-07T11:28:55.060659+00:00"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-07-15",
@@ -2400,7 +2400,7 @@
       "states_affected": [],
       "state_count": 15,
       "posted_date": "October 16, 2015",
-      "scraped_at": "2026-05-06T11:30:16.541338+00:00"
+      "scraped_at": "2026-05-07T11:31:47.725461+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-cantaloupe-08-12",
@@ -2415,7 +2415,7 @@
       "states_affected": [],
       "state_count": 24,
       "posted_date": "October 5, 2012",
-      "scraped_at": "2026-05-06T11:31:40.739157+00:00"
+      "scraped_at": "2026-05-07T11:33:22.169213+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-flour-april-2023",
@@ -2458,7 +2458,7 @@
       "states_affected": [],
       "state_count": 143,
       "posted_date": "December 16, 2016",
-      "scraped_at": "2026-05-06T11:29:24.438519+00:00"
+      "scraped_at": "2026-05-07T11:30:48.598451+00:00"
     },
     {
       "id": "cdc_listeria_cheese-07-13",
@@ -2473,7 +2473,7 @@
       "states_affected": [],
       "state_count": 6,
       "posted_date": "September 24, 2013",
-      "scraped_at": "2026-05-06T11:31:07.572371+00:00"
+      "scraped_at": "2026-05-07T11:32:48.771408+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-bulk-organic-walnuts-april-2024",
@@ -2525,7 +2525,7 @@
       "states_affected": [],
       "state_count": 13,
       "consumer_advice": "Alwayshandle and cook ground meatssafely to avoid foodborne illness. Thoroughly cook ground beef and any food that contains ground beef to an internal temperature of 160°F to kill germs.Wash hands with soap and water after touching raw ground beef. Use hot, soapy water or a bleach solution to wash items that came in contact with raw meat or its juices.Do not eat or try to cook recalled ground beef. Check your home for it, including your freezer. Return it to the store or throw it away.If you don’t know if the ground beef you have at home was recalled, contact the store where it was purchased to find out if it was recalled.Restaurants and retailers should not serve or sell recalled beef and should check food storage and freezers for it.If possible, retailers who received recalled beef should contact their customers to alert them of the recall.",
-      "scraped_at": "2026-05-06T11:27:24.410132+00:00"
+      "scraped_at": "2026-05-07T11:28:30.167759+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-03-18",
@@ -2540,7 +2540,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "May 18, 2018",
-      "scraped_at": "2026-05-06T11:28:41.468658+00:00"
+      "scraped_at": "2026-05-07T11:30:00.252076+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-17",
@@ -2555,7 +2555,7 @@
       "states_affected": [],
       "state_count": 15,
       "posted_date": "January 25, 2018",
-      "scraped_at": "2026-05-06T11:28:55.255869+00:00"
+      "scraped_at": "2026-05-07T11:30:17.127434+00:00"
     },
     {
       "id": "cdc_salmonella_paratyphi-b-12-15",
@@ -2570,7 +2570,7 @@
       "states_affected": [],
       "state_count": 10,
       "posted_date": "January 15, 2016",
-      "scraped_at": "2026-05-06T11:29:54.886421+00:00"
+      "scraped_at": "2026-05-07T11:31:23.772783+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-deep-brand-frozen-products-july-2025",
@@ -2615,7 +2615,7 @@
       "states_affected": [],
       "state_count": 12,
       "posted_date": "January 28, 2021",
-      "scraped_at": "2026-05-06T11:26:59.784904+00:00"
+      "scraped_at": "2026-05-07T11:27:57.193437+00:00"
     },
     {
       "id": "cdc_vibrio_vibriop-07-18",
@@ -2630,7 +2630,7 @@
       "states_affected": [],
       "state_count": 3,
       "posted_date": "September 27, 2018",
-      "scraped_at": "2026-05-06T11:28:29.386559+00:00"
+      "scraped_at": "2026-05-07T11:29:44.396913+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-07-12",
@@ -2645,7 +2645,7 @@
       "states_affected": [],
       "state_count": 9,
       "posted_date": "September 13, 2012",
-      "scraped_at": "2026-05-06T11:31:43.931396+00:00"
+      "scraped_at": "2026-05-07T11:33:25.424342+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-moringa-leaf-powder-october-2025",
@@ -2775,7 +2775,7 @@
       "states_affected": [],
       "state_count": 9,
       "posted_date": "May 20, 2016",
-      "scraped_at": "2026-05-06T11:29:40.769380+00:00"
+      "scraped_at": "2026-05-07T11:31:08.329754+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -2788,56 +2788,56 @@
       "case_count": 11,
       "hospitalizations": 4,
       "states_affected": [
-        "VA",
+        "DC",
+        "GA",
+        "AL",
         "CA",
-        "FL",
-        "MD",
+        "OK",
+        "WA",
+        "MA",
         "NJ",
+        "WY",
+        "TX",
+        "CO",
+        "ME",
         "PA",
+        "IL",
         "NC",
-        "NE",
+        "AZ",
+        "OH",
         "NH",
+        "TN",
+        "UT",
+        "DE",
+        "WI",
+        "MN",
+        "LA",
+        "OR",
+        "SC",
+        "IN",
+        "MS",
+        "WV",
+        "IA",
+        "NE",
         "SD",
-        "NM",
+        "VA",
+        "MO",
+        "FL",
+        "RI",
+        "MD",
+        "NY",
         "MI",
         "AK",
-        "KS",
-        "WY",
-        "IL",
         "ID",
+        "KS",
+        "NM",
         "CT",
-        "MA",
-        "ND",
-        "WV",
-        "UT",
-        "IN",
-        "OR",
-        "NY",
-        "AZ",
-        "MS",
-        "MO",
-        "ME",
-        "RI",
-        "DC",
-        "OH",
-        "TN",
-        "GA",
-        "CO",
-        "IA",
-        "AL",
-        "WI",
-        "WA",
-        "SC",
-        "MN",
-        "OK",
-        "LA",
-        "DE",
-        "TX"
+        "ND"
       ],
       "state_count": 44,
       "posted_date": "May 4, 2010",
       "consumer_advice": "Recalled products may still be in grocery stores and in consumers’ homes, including in the freezer. Recalled products should not be consumed. Consumers are advised to review the list of all recalled Italian-style meat products. Consumers should be aware of additional products containing black or red pepper that have been recalled. Consumers are advised to reviewFDA’s recall sitefor a list of recalled products containing black or red pepper.Consumer with questions regarding the recall should contact the Daniele International, Inc. Hotline at (888) 345-4160 and its PR contact, Levick Strategic Communications at (202) 973-1335.If you have a recalled product, do not eat it; return it to the place of purchase or dispose of it in a closed plastic bag and placed in a sealed trash can to prevent people or animals, including wild animals, from eating it.No illness has been linked to salami products produced by other companies.Consumers with food safety questions can “Ask Karen,” the FSIS virtual representative available 24 hours a day atAskKaren.gov.The toll-free USDA Meat and Poultry Hotline 1-888-MPHotline (1-888-674-6854) is available in English and Spanish and can be reached from 10 a.m. to 4 p.m. EST Monday through Friday. Recorded food safety messages are available 24 hours a day.Consumers without Internet access can also call 1-800-CDC-INFO (1-800-232-4636), 24 hours a day, 7 days a week, for product recall information from the USDA-FSIS website and for other information on salmonellosis.Persons who think they might have become ill from eating a recalled product should consult their health care providers. Infants, elderly persons, and persons with impaired immune systems are more likely than others to develop severe illness.\nSalmonellaMontevideo Infections Associated with Salami Products Made with Contaminated Imported Black and Red Pepper—United States, July 2009–April 2010FDA Efforts to Work with the Spice Industry (April 20, 2010)[PDF – 2 pages]Mincing Overseas Spice Company Voluntarily Recalls Two Lots of Black Pepper (March 5, 2010)FDASalmonellaMontevideo investigation update (February 25, 2010)Wholesome Spice crushed red pepper recall (February 25, 2010)Press release from Rhode Island Department of Health (February 25, 2010)Press release from Rhode Island Department of Health (January 28, 2010)Potentially Tainted Italian Sausage Recalled, Products from Rhode Island-based Firm May be Contaminated withSalmonella– Los Angeles County Department of Public HealthHygienic Laboratory First to ConfirmSalmonellain Nationwide Outbreak– University of IowaSalmonellaOutbreak Prompts Salami Recall, Oregon Public Health Officials are Tracking Cases Throughout the State[PDF – 3 pages]– Oregon Department of Human Services\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of April 28, 2010, a total of 272 individuals infected with the outbreak strain ofSalmonellaMontevideo, which displays either of two closely related pulsed-field gel electrophoresis (PFGE) patterns, have been reported from 44 states and District of Columbia since July 1, 2009. The number of ill persons identified in each state with this strain is as follows: AK (1), AL (2), AZ (9), CA (32), CO (5), CT (5), DC (1), DE (3), FL (7), GA (3), IA (1), ID (4), IL (28), IN (4), KS (5), LA (2), MA (16), MD (1), ME (1), MI (4), MN (7), MO (3), MS (1), NC (11), ND (1), NE (3), NH (2), NJ (9), NM (2), NY (20), OH (9), OK (1), OR (10), PA (7), RI (2), SC (1), SD (4), TN (5), TX (7), UT (9), VA (1), WA (19), WI (1), WV (1), and WY (2). Because the mainSalmonellaMontevideo outbreak PFGE pattern is commonly occurring in the United States, some of these illnesses are not part of this outbreak.\nThis outbreak can be visually described with a chart showing the number of persons who became ill each day. This chart is called an epi curve. Please see theTimeline for Reporting Cases ofSalmonellaInfectionfor more details on the reporting process.\n*n=272 for whom information was available as of April 28, 2010. Some illness onset dates have been estimated from other reported information.",
-      "scraped_at": "2026-05-06T11:32:48.841482+00:00"
+      "scraped_at": "2026-05-07T11:34:41.812678+00:00"
     },
     {
       "id": "outbreak-investigation-extensively-drug-resistant-salmonella-moringa-powder-february-2026",
@@ -2958,7 +2958,7 @@
       "states_affected": [],
       "state_count": 10,
       "posted_date": "January 15, 2020",
-      "scraped_at": "2026-05-06T11:27:19.843717+00:00"
+      "scraped_at": "2026-05-07T11:28:23.240424+00:00"
     },
     {
       "id": "cdc_listeria_deliproducts-04-19",
@@ -2973,7 +2973,7 @@
       "states_affected": [],
       "state_count": 10,
       "posted_date": "September 26, 2019",
-      "scraped_at": "2026-05-06T11:27:44.145299+00:00"
+      "scraped_at": "2026-05-07T11:28:51.660100+00:00"
     },
     {
       "id": "cdc_salmonella_montevideo-01-18",
@@ -2988,7 +2988,7 @@
       "states_affected": [],
       "state_count": 3,
       "posted_date": "February 28, 2018",
-      "scraped_at": "2026-05-06T11:28:48.969205+00:00"
+      "scraped_at": "2026-05-07T11:30:09.810730+00:00"
     },
     {
       "id": "cdc_salmonella_anatum-9-17",
@@ -3003,7 +3003,7 @@
       "states_affected": [],
       "state_count": 20,
       "posted_date": "November 3, 2017",
-      "scraped_at": "2026-05-06T11:29:06.828175+00:00"
+      "scraped_at": "2026-05-07T11:30:27.208188+00:00"
     },
     {
       "id": "cdc_listeria_ice-cream-03-15",
@@ -3018,7 +3018,7 @@
       "states_affected": [],
       "state_count": 4,
       "posted_date": "June 10, 2015",
-      "scraped_at": "2026-05-06T11:30:20.970354+00:00"
+      "scraped_at": "2026-05-07T11:31:53.030256+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-hard-boiled-eggs-december-2019",
@@ -3053,7 +3053,7 @@
       "states_affected": [],
       "state_count": 15,
       "posted_date": "February 24, 2014",
-      "scraped_at": "2026-05-06T11:30:52.732683+00:00"
+      "scraped_at": "2026-05-07T11:32:30.014440+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -3069,7 +3069,7 @@
       "state_count": 20,
       "posted_date": "July 18, 2007",
       "consumer_advice": "I have a bag of Robert’s American Gourmet Veggie Booty &/or Super Veggie Tings and I/my children ate some of it, but no one is sick. What should I do?\nDo not eat any more of the Veggie Booty or Super Veggie Tings. Throw away the bag(s). If anyone in your family develops diarrheal illness with bloody diarrhea, fever, or symptoms lasting more than three days, he or she should consult a healthcare provider.\nI/my household member ate Robert’s American Gourmet Veggie Booty &/or Super Veggie Tings and I/my household member is ill with diarrhea. I still have the bag. What should I do?\nDo not eat any more of the Veggie Booty or Super Veggie Tings. If the diarrheal illness is severe, with bloody diarrhea, fever, or symptoms lasting more than three days, you should consult a healthcare provider. Salmonella infection is diagnosed by culture of a stool specimen. Call your local health department as well, as they may wish to investigate your case further.\nWhat about Robert’s American Gourmet Super Veggie Tings Crunch Corn Sticks?\nRobert’s American Gourmet Food, Inc. expanded its product recall on July 2, 2007 to include all lots and sizes of Super Veggie Tings Crunchy Corn Sticks due to the company’s concern that Veggie Booty and Super Veggie Tings share ingredients that could be contaminated. Persons should discard any bags of either product in their possession.\nHas Super Veggie Tings Crunchy Corn Sticks been associated with illness?\nCDC is not aware of any human illness associated with Super Veggie Tings Crunchy Corn Sticks. The voluntary recall by the company was a precautionary measure.\nI/my household member ate another snack product from the Robert’s American Gourmet brand that is not Veggie Booty or Super Veggie Tings, and I/my household member is ill with diarrhea. I still have the bag. What should I do?\nThere is no evidence that this illness has been caused by the snack food you are describing. If the illness is severe, with bloody diarrhea, fever, or symptoms lasting more than three days, you should consult a healthcare provider.\nI/my household member ate a snack food that is not the Robert’s American Gourmet brand, and I/my household member is ill with diarrhea. I still have the bag. What should I do?\nThere is no evidence that your illness has been caused by the snack food you are describing. If the illness is severe, with bloody diarrhea, fever, or symptoms lasting more than three days, you should consult a healthcare provider.",
-      "scraped_at": "2026-05-06T11:33:31.215749+00:00"
+      "scraped_at": "2026-05-07T11:35:25.400046+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026",
@@ -3136,7 +3136,7 @@
       "hospitalizations": 71,
       "states_affected": [],
       "state_count": 7,
-      "scraped_at": "2026-05-06T11:27:54.793747+00:00"
+      "scraped_at": "2026-05-07T11:29:02.826662+00:00"
     },
     {
       "id": "cdc_salmonella_saintpaul-04-13",
@@ -3151,7 +3151,7 @@
       "states_affected": [],
       "state_count": 18,
       "posted_date": "June 20, 2013",
-      "scraped_at": "2026-05-06T11:31:16.401833+00:00"
+      "scraped_at": "2026-05-07T11:32:56.503593+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-leafy-greens-december-2020",
@@ -3199,7 +3199,7 @@
       "states_affected": [],
       "state_count": 4,
       "posted_date": "November 3, 2017",
-      "scraped_at": "2026-05-06T11:29:03.834744+00:00"
+      "scraped_at": "2026-05-07T11:30:23.759910+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-08-12",
@@ -3215,7 +3215,7 @@
       "states_affected": [],
       "state_count": 15,
       "posted_date": "October 11, 2012",
-      "scraped_at": "2026-05-06T11:31:37.408481+00:00"
+      "scraped_at": "2026-05-07T11:33:18.723686+00:00"
     },
     {
       "id": "cdc_salmonella_restaurant-enteriditis",
@@ -3230,7 +3230,7 @@
       "state_count": 10,
       "posted_date": "January 19, 2012",
       "consumer_advice": "At this time, there is no specific advice to consumers.Consumers are not warned to avoid any specific foods or restaurants.If a food source is identified for this outbreak and if there is evidence of continued risk of infection, public health officials will advise the public and take the necessary steps to avoid risk of additional illnesses.To facilitate successful traceback efforts and outbreak investigations, retail establishments should maintain detailed records of food suppliers and distributors.",
-      "scraped_at": "2026-05-06T11:31:56.381290+00:00"
+      "scraped_at": "2026-05-07T11:33:36.578459+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -3243,18 +3243,18 @@
       "case_count": 3,
       "hospitalizations": 7,
       "states_affected": [
-        "ME",
-        "HI",
-        "MA",
-        "NH",
         "KY",
         "NY",
-        "VT"
+        "HI",
+        "NH",
+        "VT",
+        "MA",
+        "ME"
       ],
       "state_count": 7,
       "posted_date": "February 1, 2012",
       "consumer_advice": "This particular outbreak appears to be over. However,Salmonellais still an important cause of human illness in the United States. More information aboutSalmonella, and steps people can take to reduce their risk of infection, can be found on theCDCSalmonellaWeb Pageand theCDC Vital Signs Web Page.\nConsumers should check their homes, including their freezers, for recalled ground beef products and not eat them; restaurant and food service operators should not serve it. Consumers with questions about recalled ground beef products may contact Hannaford’s Customer Information Center, 8 a.m. to 8 p.m. at telephone number (800) 213-9040, and choose option 6.Wash hands, kitchen work surfaces, and utensils with soap and water immediately after they have been in contact with raw meat or poultry, including frozen and fresh ground beef. Then, disinfect the food contact surfaces using a freshly prepared solution of 1 tablespoon unscented liquid chlorine bleach to 1 gallon of water.Cook ground beef thoroughly. Ground beef dishes should always be cooked to 160°F internal temperature as measured with a food thermometer; leftovers also should be reheated to 160°F. The color of cooked ground beef is not an indicator that product has been safely cooked. Only by using a food thermometer can one accurately determine that ground beef has reached a safe minimum internal temperature of 160°F throughout the product. Ground beef can remain pink even after cooking to a safe minimum internal temperature of 160°F. Be particularly careful with foods prepared for infants, older adults, and persons with impaired immune systems.If served undercooked ground beef in a restaurant, send it back to the kitchen for further cooking.Avoid cross-contaminating other foods. Uncooked meats and ground beef should be kept separate from produce, cooked foods, and ready-to-eat foods. Do not wash raw meat or poultry before cooking because splashing water can spread any pathogens present on raw meat surfaces to other kitchen surfaces. Hands, cutting boards, counters, knives, and other utensils should be washed thoroughly after touching uncooked foods. Hands should be washed before handling food, and between handling different food items.Refrigerate raw and cooked meat and poultry within 2 hours after purchase (1 hour if temperatures exceed 90°F). Refrigerate cooked meat and poultry within 2 hours after cooking. Refrigerators should be set to maintain a temperature of 40°F or below.Persons who think they might have become ill from eating possibly contaminated ground beef should consult their health care providers. Infants, older adults, and persons with impaired immune systems are more likely than others to develop severe illness.\nFoodSafety.govFSIS Fact Sheet on Meat Preparation: Ground Beef and Food SafetyAskKaren.gov (FSIS virtual representative)1-888-MPHotline (1-888-674-6854), USDA English/Spanish Meat and Poultry Hotline\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nA total of 20 persons infected with the outbreak strain ofSalmonellaTyphimurium have been reported from 7 states. The number of ill persons identified in each state is as follows: HI (1), KY (1), MA (1), ME (4), NH (6), NY (6), and VT (1).\n*n=20 for whom information was reported as of January 30, 2012",
-      "scraped_at": "2026-05-06T11:31:58.835449+00:00"
+      "scraped_at": "2026-05-07T11:33:38.723559+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -3272,7 +3272,7 @@
       "state_count": 1,
       "posted_date": "March 23, 2011",
       "consumer_advice": "Consumers should not eat any of the recalled products, and restaurants and food service operators should not serve them. Consumers, retailers, and others who have any of the recalled products should dispose of them in a closed plastic bag placed in a sealed trash can. This will prevent people or animals from eating them.\nCDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular, with FDA and FSIS. CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nE. coliResources for CliniciansFoodSafety.govUSDA FSIS Notice Regarding Lebanon Bologna[PDF – 3 pages]\nAs of March 22, 2011, 14 persons infected with the outbreak strain ofE. coliserotype O157:H7 have been reported from Maryland (3 cases), New Jersey (2 cases), North Carolina (1 case), Ohio (2 cases) and Pennsylvania (6 cases).\n*n=14 for whom information was reported as of March 22, 2011",
-      "scraped_at": "2026-05-06T11:32:24.323691+00:00"
+      "scraped_at": "2026-05-07T11:34:08.083664+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-01-13",
@@ -3287,7 +3287,7 @@
       "states_affected": [],
       "state_count": 6,
       "posted_date": "March 15, 2013",
-      "scraped_at": "2026-05-06T11:31:26.233840+00:00"
+      "scraped_at": "2026-05-07T11:33:05.247148+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -3302,7 +3302,7 @@
       "state_count": 10,
       "posted_date": "April 4, 2011",
       "consumer_advice": "Recalled turkey burgers may still be in grocery stores and in consumers’ homes, including in the freezer. Consumer should not eat recalled turkey burgers and food service operators should not serve them.The recalling firm is asking customers to return the product to the place of purchase for a refund (per the company’s product recall notice). Individuals choosing not to return the product should dispose of the recalled turkey burgers in a closed plastic bag placed in a sealed trash can. This will prevent people or animals from eating them.Wash hands, kitchen work surfaces, and utensils with soap and water immediately after they have been in contact with raw meat or poultry. Then, disinfect the food contact surfaces using a sanitizing agent, such as bleach, following label instructions.Cook poultry thoroughly. Be particularly careful with foods prepared for infants, the elderly, and the immune-compromised. For more information, please see the FSIS fact sheet about safe food handling.If served undercooked poultry in a restaurant, send it back to the kitchen for further cooking.Cross-contamination of foods should be avoided. Uncooked meats should be kept separate from produce, cooked foods, and ready-to-eat foods. Hands, cutting boards, counters, knives, and other utensils should be washed thoroughly after touching uncooked foods. Hands should be washed before handling food, and between handling different food items.Persons who think they might have become ill from eating possibly contaminated turkey burgers should consult their health care providers. Infants, elderly persons, and persons with impaired immune systems are more likely than others to develop severe illness.\nAskKaren.gov (FSIS virtual representative)FoodSafety.gov1-888-MPHotline (1-888-674-6854), USDA English/Spanish Meat and Poultry Hotline\nCDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular, with the U.S. Food and Drug Administration and USDA-FSIS. CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of April 1, 2011, 12 persons infected with the outbreak strain ofSalmonellaHadar have been reported from 10 states: Arizona (1 case), California (1 case), Colorado (1 case), Georgia (1 case), Illinois (1 case), Missouri (1 case), Mississippi (1 case), Ohio (1 case), Washington (1 case), and Wisconsin (3 cases).\n*n=12 for whom information was reported as of April 1, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:22.137204+00:00"
+      "scraped_at": "2026-05-07T11:34:04.709233+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -3314,16 +3314,16 @@
       "status": "unknown",
       "case_count": 1,
       "states_affected": [
+        "AZ",
         "CA",
         "CO",
-        "NV",
         "NM",
-        "AZ"
+        "NV"
       ],
       "state_count": 5,
       "posted_date": "November 24, 2010",
       "consumer_advice": "Consumers who have any Bravo Farms Cheeses should not eat them. Instead, they should return the cheeses to the place of purchase or dispose of them in a closed plastic bag placed in a sealed trash can. This will prevent people or animals, including wild animals, from eating it.\nE. coliResources for CliniciansFoodSafety.govDescription of the Steps In a Foodborne Outbreak InvestigationCDC’s Role during a Multi-State Foodborne Outbreak Investigation\nThirty-eight persons infected with the outbreak strain ofE. coliO157:H7 have been reported from five states. The number of ill persons identified in each state with this strain is as follows: AZ (19), CA (3), CO (11), NM (3) and NV (2).\n*n=37 for whom information was reported as of November 24, 2010",
-      "scraped_at": "2026-05-06T11:32:35.511778+00:00"
+      "scraped_at": "2026-05-07T11:34:24.286349+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -3335,26 +3335,26 @@
       "status": "unknown",
       "case_count": 1,
       "states_affected": [
-        "SD",
-        "CA",
         "MI",
-        "KS",
-        "MN",
-        "OH",
-        "OK",
-        "FL",
         "HI",
-        "TN",
-        "CO",
-        "NV",
-        "IA",
-        "UT",
+        "KS",
+        "OH",
+        "CA",
         "IN",
-        "WA"
+        "OK",
+        "TN",
+        "IA",
+        "SD",
+        "UT",
+        "WA",
+        "CO",
+        "FL",
+        "NV",
+        "MN"
       ],
       "state_count": 16,
       "posted_date": "January 6, 2010",
-      "scraped_at": "2026-05-06T11:32:52.028128+00:00"
+      "scraped_at": "2026-05-07T11:34:45.355593+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -3369,7 +3369,7 @@
       "states_affected": [],
       "state_count": 44,
       "posted_date": "March 7, 2007",
-      "scraped_at": "2026-05-06T11:33:34.549576+00:00"
+      "scraped_at": "2026-05-07T11:35:28.925020+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-pistachio-cream-june-2025",
@@ -3923,7 +3923,7 @@
       "status": "unknown",
       "states_affected": [],
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromE. coli.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:18.282544+00:00"
+      "scraped_at": "2026-05-07T11:24:50.963848+00:00"
     },
     {
       "id": "cdc_salmonella_moringacapsules-02-26",
@@ -3936,7 +3936,7 @@
       "deaths": 3,
       "states_affected": [],
       "consumer_advice": "Check your home and throw out any of the recalled products if you still have them. They have a long shelf-life.\nAlways follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
-      "scraped_at": "2026-05-06T11:24:20.815215+00:00"
+      "scraped_at": "2026-05-07T11:24:53.624131+00:00"
     },
     {
       "id": "cdc_salmonella_supergreenssupplementpowders-1-26",
@@ -3949,7 +3949,7 @@
       "deaths": 26,
       "states_affected": [],
       "consumer_advice": "Check your home and throw out any of the recalled products if you still have them. They have a long shelf-life.\nAlways follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:22.883243+00:00"
+      "scraped_at": "2026-05-07T11:24:56.451392+00:00"
     },
     {
       "id": "cdc_salmonella_oysters-12-25",
@@ -3962,7 +3962,7 @@
       "deaths": 34,
       "states_affected": [],
       "consumer_advice": "Follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
-      "scraped_at": "2026-05-06T11:24:25.583646+00:00"
+      "scraped_at": "2026-05-07T11:24:58.830739+00:00"
     },
     {
       "id": "cdc_botulism_infant-formula-nov-2025",
@@ -3976,7 +3976,7 @@
       "states_affected": [],
       "state_count": 3,
       "consumer_advice": "Symptoms of infant botulismcan take as long as several weeks to develop, so parents should remain vigilant if they used ByHeart Whole Nutrition infant formula.",
-      "scraped_at": "2026-05-06T11:24:28.444057+00:00"
+      "scraped_at": "2026-05-07T11:25:01.339217+00:00"
     },
     {
       "id": "cdc_salmonella_supplement-10-25",
@@ -3989,7 +3989,7 @@
       "deaths": 3,
       "states_affected": [],
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:30.506926+00:00"
+      "scraped_at": "2026-05-07T11:25:03.808554+00:00"
     },
     {
       "id": "cdc_salmonella_homedeliverymeals-09-25",
@@ -4002,7 +4002,7 @@
       "deaths": 8,
       "states_affected": [],
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:32.569133+00:00"
+      "scraped_at": "2026-05-07T11:25:06.426705+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-08-25",
@@ -4018,7 +4018,7 @@
       ],
       "state_count": 1,
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:35.131479+00:00"
+      "scraped_at": "2026-05-07T11:25:08.471678+00:00"
     },
     {
       "id": "cdc_salmonella_sproutedbeans-07-25",
@@ -4031,7 +4031,7 @@
       "deaths": 4,
       "states_affected": [],
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.\nSeparate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.\nCook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:37.202350+00:00"
+      "scraped_at": "2026-05-07T11:25:10.749108+00:00"
     },
     {
       "id": "cdc_listeria_chicken-fettuccine-alfredo-06-25",
@@ -4045,7 +4045,7 @@
       "states_affected": [],
       "state_count": 7,
       "consumer_advice": "Stay healthy and preventListeria\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeriaand take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:24:39.269168+00:00"
+      "scraped_at": "2026-05-07T11:25:12.838707+00:00"
     },
     {
       "id": "cdc_salmonella_pistachiocream-06-25",
@@ -4058,7 +4058,7 @@
       "deaths": 1,
       "states_affected": [],
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.\nSeparate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.\nCook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:41.666964+00:00"
+      "scraped_at": "2026-05-07T11:25:15.379222+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-06-25",
@@ -4072,7 +4072,7 @@
       "states_affected": [],
       "state_count": 1,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.\nSeparate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.\nCook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:43.726115+00:00"
+      "scraped_at": "2026-05-07T11:25:17.428126+00:00"
     },
     {
       "id": "cdc_salmonella_whole-cucumbers-05-25",
@@ -4085,7 +4085,7 @@
       "deaths": 22,
       "states_affected": [],
       "consumer_advice": "Follow thesefour food safety stepsto prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:46.086172+00:00"
+      "scraped_at": "2026-05-07T11:25:19.727179+00:00"
     },
     {
       "id": "cdc_listeria_ready-to-eat-foods-may-2025",
@@ -4098,7 +4098,7 @@
       "states_affected": [],
       "state_count": 1,
       "consumer_advice": "Stay healthy and preventListeria\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeriaand take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:24:48.149268+00:00"
+      "scraped_at": "2026-05-07T11:25:22.194051+00:00"
     },
     {
       "id": "cdc_listeria_shakes-022025",
@@ -4111,7 +4111,7 @@
       "states_affected": [],
       "state_count": 14,
       "consumer_advice": "Stay healthy and preventListeria\nFind out if you are athigher riskfor getting sick withListeria.\nLearn which foods are more likely to containListeriaand take steps toprevent getting sick.\nStay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:24:50.249567+00:00"
+      "scraped_at": "2026-05-07T11:25:24.881104+00:00"
     },
     {
       "id": "cdc_listeria_meat-and-poultry-products-11-24",
@@ -4124,7 +4124,7 @@
       "states_affected": [],
       "state_count": 3,
       "consumer_advice": "Stay Healthy and PreventListeria\nFind out if you are athigher riskfor getting sick withListeria.\nLearn which foods are more likely to containListeriaand take steps toprevent getting sick.\nStay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:24:52.851179+00:00"
+      "scraped_at": "2026-05-07T11:25:27.453157+00:00"
     },
     {
       "id": "cdc_salmonella_cucumbers-11-24",
@@ -4137,7 +4137,7 @@
       "deaths": 28,
       "states_affected": [],
       "consumer_advice": "Follow thesefour food safety stepsto prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:54.913633+00:00"
+      "scraped_at": "2026-05-07T11:25:29.982547+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -4151,7 +4151,7 @@
       "states_affected": [],
       "state_count": 1,
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromE. coli.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:57.347543+00:00"
+      "scraped_at": "2026-05-07T11:25:32.564463+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -4165,7 +4165,7 @@
       "states_affected": [],
       "state_count": 1,
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromE. coli.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:24:59.781416+00:00"
+      "scraped_at": "2026-05-07T11:25:35.104847+00:00"
     },
     {
       "id": "cdc_listeria_delimeats-7-24",
@@ -4178,7 +4178,7 @@
       "states_affected": [],
       "state_count": 10,
       "consumer_advice": "Do not eat recalled meats.Throw them away or contact stores about returns.Check your refrigerator for any recalled deli meats and throw them away or return them to the store.Listeriacan grow on foods kept in the refrigerator.Cleanyour refrigerator, containers, and surfaces that may have touched recalled meats.",
-      "scraped_at": "2026-05-06T11:25:01.848635+00:00"
+      "scraped_at": "2026-05-07T11:25:37.566557+00:00"
     },
     {
       "id": "cdc_unknown_outbreak-investigation-diamond-shruumz-products",
@@ -4190,44 +4190,44 @@
       "status": "closed",
       "hospitalizations": 73,
       "states_affected": [
-        "VA",
+        "GA",
+        "AL",
         "CA",
+        "OK",
+        "WA",
+        "NJ",
+        "TX",
+        "CO",
+        "PA",
+        "MT",
+        "IL",
+        "NC",
+        "AZ",
+        "OH",
+        "TN",
+        "WI",
+        "MN",
+        "KY",
+        "OR",
+        "SC",
+        "IN",
+        "WV",
+        "IA",
+        "SD",
+        "VA",
+        "MO",
         "FL",
         "MD",
-        "NJ",
-        "PA",
-        "NC",
-        "SD",
-        "MI",
-        "KS",
-        "IL",
-        "ID",
-        "ND",
-        "WV",
-        "IN",
-        "NV",
-        "OR",
         "NY",
-        "AZ",
-        "MO",
-        "TN",
-        "OH",
-        "GA",
-        "CO",
-        "IA",
-        "AL",
-        "WI",
-        "WA",
-        "SC",
-        "MN",
-        "OK",
-        "MT",
-        "KY",
-        "TX"
+        "MI",
+        "ID",
+        "KS",
+        "NV",
+        "ND"
       ],
       "state_count": 3,
       "consumer_advice": "Do not buy or eat Diamond ShruumzTMbrand chocolate bars, cones, or gummies. Discard any product that has been purchased.Do not consume chocolate, gummies, snack foods, or other edible products claiming to produce feelings of euphoria, hallucinations, or psychedelic effects. They might contain undisclosed ingredients that might be linked to severe illness.If you do purchase edibles and other products that contain mushrooms, THC, or CBD, safely store them away from children. Children may mistake some edibles for candy.Seek immediate medical attention or call thePoison Help Line(1-800-222-1222) for advice if you have consumed a product and are having symptoms. Signs and symptoms may include hallucinations, uncontrolled movements, fast or slow heart rate, high or low blood pressure, flushed skin, and gastrointestinal effects (such as nausea, vomiting, or abdominal pain). Other severe adverse effects have been reported, including seizures, decreased level of consciousness, loss of consciousness, confusion, sleepiness, and respiratory failure.Consumers are also encouraged to report adverse events related to these products toFDA MedWatch.",
-      "scraped_at": "2026-05-06T11:25:03.916697+00:00"
+      "scraped_at": "2026-05-07T11:25:40.529244+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-09-24",
@@ -4240,7 +4240,7 @@
       "deaths": 34,
       "states_affected": [],
       "consumer_advice": "Always followfour food safety stepsto prevent getting sick from Salmonella:\nClean:Wash your hands, utensils, and surfaces often.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:25:06.582702+00:00"
+      "scraped_at": "2026-05-07T11:25:43.270822+00:00"
     },
     {
       "id": "cdc_salmonella_africana-06-24",
@@ -4250,7 +4250,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:08.938947+00:00"
+      "scraped_at": "2026-05-07T11:25:45.723734+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -4263,28 +4263,28 @@
       "deaths": 7,
       "states_affected": [
         "CA",
-        "SD",
-        "NM",
-        "AK",
-        "KS",
-        "WY",
-        "HI",
-        "ID",
-        "LA",
-        "UT",
-        "AR",
-        "NV",
-        "OR",
-        "AZ",
-        "CO",
         "WA",
+        "WY",
+        "TX",
+        "CO",
         "MT",
+        "HI",
+        "AZ",
+        "UT",
+        "LA",
+        "OR",
+        "AR",
+        "SD",
         "NE",
-        "TX"
+        "AK",
+        "ID",
+        "KS",
+        "NM",
+        "NV"
       ],
       "state_count": 19,
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromE. coli.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won’t be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
-      "scraped_at": "2026-05-06T11:25:10.995274+00:00"
+      "scraped_at": "2026-05-07T11:25:48.485925+00:00"
     },
     {
       "id": "cdc_salmonella_basil-04-24",
@@ -4294,7 +4294,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:13.257486+00:00"
+      "scraped_at": "2026-05-07T11:25:50.728915+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -4307,7 +4307,7 @@
       "deaths": 5,
       "states_affected": [],
       "consumer_advice": "Be aware that unpasteurized dairy products are more likely to contain germs than pasteurized dairy products.Check your refrigerators and freezersfor Raw Farm brand raw cheddar cheese products with the best by dates listed above and throw them away.Wash items and surfacesthat may have touched the contaminated cheese using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-05-06T11:25:16.089607+00:00"
+      "scraped_at": "2026-05-07T11:25:52.772617+00:00"
     },
     {
       "id": "cdc_listeria_cheese-02-24",
@@ -4321,7 +4321,7 @@
       "states_affected": [],
       "state_count": 2,
       "consumer_advice": "Know yourListeriarisk.If you are pregnant, aged 65 or older, or have a weakened immune system due to certain medical conditions or treatments,Listeriacan be more harmful to you.Choosesafer foods.Find out which foods are more likely to be contaminated withListeriaand ways you can protect your health.Be aware that fresh soft cheeses made with pasteurized milk have causedListeriaoutbreaks, including this one.Although pasteurization of milk killsListeria,soft cheeses made from pasteurized milk can still get contaminated during cheese-making.",
-      "scraped_at": "2026-05-06T11:25:18.152395+00:00"
+      "scraped_at": "2026-05-07T11:25:55.462462+00:00"
     },
     {
       "id": "cdc_salmonella_charcuterie-meats-01-24",
@@ -4331,7 +4331,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:20.416213+00:00"
+      "scraped_at": "2026-05-07T11:25:57.880345+00:00"
     },
     {
       "id": "cdc_listeria_peaches-11-23",
@@ -4345,7 +4345,7 @@
       "states_affected": [],
       "state_count": 1,
       "consumer_advice": "Stay Healthy and PreventListeria\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeriaand take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:25:22.930808+00:00"
+      "scraped_at": "2026-05-07T11:26:00.103417+00:00"
     },
     {
       "id": "cdc_salmonella_sundsvall-11-23",
@@ -4355,7 +4355,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:25.217793+00:00"
+      "scraped_at": "2026-05-07T11:26:02.347541+00:00"
     },
     {
       "id": "cdc_salmonella_thompson-10-23",
@@ -4365,7 +4365,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:27.708889+00:00"
+      "scraped_at": "2026-05-07T11:26:04.642424+00:00"
     },
     {
       "id": "cdc_listeria_ice-cream-08-23",
@@ -4381,7 +4381,7 @@
       ],
       "state_count": 1,
       "consumer_advice": "Check your freezer for recalled ice cream products. If you have any left:\nDo not eat them. Throw them away or return them to where you bought them.Call a healthcare provider right away if you have these symptoms after eating recalled ice cream:Pregnant women: Fever, muscle aches, and tiredness. Your illness may be mild, butListeriacan cause pregnancy loss or premature birth. It can also cause serious illness or death in newborns.Other people may have: Headache, stiff neck, confusion, loss of balance, and convulsions, in addition to fever, muscle aches, and tiredness.\nStay healthy and prevent getting sick fromListeria:\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeria, and take steps toprevent getting sick.Stay up to date onfood recallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:25:29.773259+00:00"
+      "scraped_at": "2026-05-07T11:26:06.695258+00:00"
     },
     {
       "id": "cdc_salmonella_saintpaul-07-23",
@@ -4391,7 +4391,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:32.093858+00:00"
+      "scraped_at": "2026-05-07T11:26:08.886974+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-05-23",
@@ -4401,7 +4401,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:34.355694+00:00"
+      "scraped_at": "2026-05-07T11:26:11.074863+00:00"
     },
     {
       "id": "cdc_salmonella_infantis-03-23",
@@ -4411,7 +4411,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:36.661593+00:00"
+      "scraped_at": "2026-05-07T11:26:13.272466+00:00"
     },
     {
       "id": "cdc_unknown_hav-contaminated-food",
@@ -4421,7 +4421,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:38.997457+00:00"
+      "scraped_at": "2026-05-07T11:26:15.552018+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-02-23",
@@ -4434,7 +4434,7 @@
       "deaths": 18,
       "states_affected": [],
       "consumer_advice": "Stay healthy and preventListeria:\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeria, and take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.\nPrepare leafy greens safely\nVegetables, including leafy greens, are an important part of a healthy and balanced diet. However, they can sometimes be contaminated with harmful germs.\nThe safest produce is cooked; the next safest is washed. However, no washing method can remove all germs.\nWhen eating raw leafy greens:\nWashyour hands, utensils, and surfaces before and after preparing leafy greens.Cleanleafy greensbefore eating or cutting them.Discard outer leaves on whole heads of lettuce and any torn or bruised leaves.Rinse under running water and use your hands to gently rub the surface of the leaves.Dry with a clean cloth or paper towel.If the label on a leafy greens package says \"ready to eat,\" \"triple washed,\" or \"no washing necessary,\" you don't need to wash the greens.Keep leafy greensseparatefrom raw meat, poultry, and seafood.Refrigerateleafy greenswithin 2 hours. Refrigerate within 1 hour if they have been exposed to temperatures above 90°F (like a hot car or picnic).",
-      "scraped_at": "2026-05-06T11:25:42.432497+00:00"
+      "scraped_at": "2026-05-07T11:26:17.938155+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-12-22",
@@ -4448,7 +4448,7 @@
       "hospitalizations": 10,
       "states_affected": [],
       "posted_date": "February 28, 2023",
-      "scraped_at": "2026-05-06T11:25:44.663427+00:00"
+      "scraped_at": "2026-05-07T11:26:20.312934+00:00"
     },
     {
       "id": "cdc_unknown_outbreaks",
@@ -4458,7 +4458,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:25:46.951209+00:00"
+      "scraped_at": "2026-05-07T11:26:23.055223+00:00"
     },
     {
       "id": "cdc_listeria_enoki-11-22",
@@ -4473,7 +4473,7 @@
         "MD"
       ],
       "state_count": 1,
-      "scraped_at": "2026-05-06T11:25:49.013384+00:00"
+      "scraped_at": "2026-05-07T11:26:25.553977+00:00"
     },
     {
       "id": "cdc_listeria_deli-11-22",
@@ -4488,7 +4488,7 @@
       "states_affected": [],
       "state_count": 1,
       "posted_date": "March 29, 2023",
-      "scraped_at": "2026-05-06T11:25:51.201895+00:00"
+      "scraped_at": "2026-05-07T11:26:27.752813+00:00"
     },
     {
       "id": "cdc_salmonella_litchfield-10-22",
@@ -4502,7 +4502,7 @@
       "hospitalizations": 15,
       "states_affected": [],
       "posted_date": "December 14, 2022",
-      "scraped_at": "2026-05-06T11:25:53.435523+00:00"
+      "scraped_at": "2026-05-07T11:26:31.080859+00:00"
     },
     {
       "id": "cdc_ecoli_o121-10-22",
@@ -4516,7 +4516,7 @@
       "hospitalizations": 5,
       "states_affected": [],
       "posted_date": "December 1, 2022",
-      "scraped_at": "2026-05-06T11:25:55.663601+00:00"
+      "scraped_at": "2026-05-07T11:26:34.261596+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-09-22",
@@ -4529,7 +4529,7 @@
       "deaths": 5,
       "states_affected": [],
       "consumer_advice": "Check your freezer forrecalled baked brie.\nIf you have any, do not eat it. Throw it away.\nStay healthy and preventListeria:\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeria, and take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:25:58.298117+00:00"
+      "scraped_at": "2026-05-07T11:26:36.906175+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-09-22",
@@ -4543,7 +4543,7 @@
       "hospitalizations": 6,
       "states_affected": [],
       "posted_date": "October 28, 2022",
-      "scraped_at": "2026-05-06T11:26:00.485025+00:00"
+      "scraped_at": "2026-05-07T11:26:39.933896+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-08-22",
@@ -4556,7 +4556,7 @@
       "hospitalizations": 52,
       "states_affected": [],
       "posted_date": "October 4, 2022",
-      "scraped_at": "2026-05-06T11:26:02.718270+00:00"
+      "scraped_at": "2026-05-07T11:26:42.079683+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-06-22",
@@ -4569,7 +4569,7 @@
       "states_affected": [],
       "state_count": 1,
       "consumer_advice": "Check your freezer for recalled ice cream. If you have any left:\nDo not eat the recalled products. Throw them away or return them to where you bought them.Follow thesesteps to cleanany areas, containers, and surfaces that may have touched the recalled products.Listeriacan survive in the freezer and can easily spread to other foods and surfaces.Call your healthcare provider right away if you have these symptoms after eating recalled products.Pregnant women: Fever, muscle aches and tiredness. Your illness may be mild, butListeriacan cause pregnancy loss or premature birth. It can also cause serious illness or death in newborns.Other people may have: Headache, stiff neck, confusion, loss of balance, and convulsions, in addition to fever, muscle aches and tiredness.\nStay Healthy and PreventListeria\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeria, and take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
-      "scraped_at": "2026-05-06T11:26:05.452601+00:00"
+      "scraped_at": "2026-05-07T11:26:44.693375+00:00"
     },
     {
       "id": "cdc_unknown_hav-contaminated-food",
@@ -4579,7 +4579,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:26:07.798249+00:00"
+      "scraped_at": "2026-05-07T11:26:47.082640+00:00"
     },
     {
       "id": "cdc_salmonella_senftenberg-05-22",
@@ -4592,7 +4592,7 @@
       "hospitalizations": 4,
       "states_affected": [],
       "posted_date": "July 27, 2022",
-      "scraped_at": "2026-05-06T11:26:10.914583+00:00"
+      "scraped_at": "2026-05-07T11:26:50.364245+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-21",
@@ -4607,7 +4607,7 @@
       "states_affected": [],
       "state_count": 1,
       "posted_date": "March 3, 2022",
-      "scraped_at": "2026-05-06T11:26:13.125000+00:00"
+      "scraped_at": "2026-05-07T11:26:53.568153+00:00"
     },
     {
       "id": "cdc_listeria_packaged-salad-12-21-b",
@@ -4621,7 +4621,7 @@
       "states_affected": [],
       "state_count": 1,
       "posted_date": "March 8, 2022",
-      "scraped_at": "2026-05-06T11:26:15.331474+00:00"
+      "scraped_at": "2026-05-07T11:26:55.719042+00:00"
     },
     {
       "id": "cdc_listeria_packaged-salad-mix-12-21",
@@ -4635,7 +4635,7 @@
       "states_affected": [],
       "state_count": 3,
       "posted_date": "April 4, 2022",
-      "scraped_at": "2026-05-06T11:26:17.524363+00:00"
+      "scraped_at": "2026-05-07T11:26:57.869341+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-21",
@@ -4648,7 +4648,7 @@
       "hospitalizations": 4,
       "states_affected": [],
       "posted_date": "January 6, 2022",
-      "scraped_at": "2026-05-06T11:26:19.760546+00:00"
+      "scraped_at": "2026-05-07T11:27:01.402256+00:00"
     },
     {
       "id": "cdc_salmonella_i45-10-21",
@@ -4662,7 +4662,7 @@
       "hospitalizations": 7,
       "states_affected": [],
       "posted_date": "December 8, 2021",
-      "scraped_at": "2026-05-06T11:26:23.118041+00:00"
+      "scraped_at": "2026-05-07T11:27:04.930243+00:00"
     },
     {
       "id": "cdc_salmonella_thompson-10-21",
@@ -4676,7 +4676,7 @@
       "hospitalizations": 20,
       "states_affected": [],
       "posted_date": "December 6, 2021",
-      "scraped_at": "2026-05-06T11:26:25.350671+00:00"
+      "scraped_at": "2026-05-07T11:27:08.346795+00:00"
     },
     {
       "id": "cdc_salmonella_oranienburg-09-21",
@@ -4690,7 +4690,7 @@
       "hospitalizations": 260,
       "states_affected": [],
       "posted_date": "February 2, 2022",
-      "scraped_at": "2026-05-06T11:26:27.586746+00:00"
+      "scraped_at": "2026-05-07T11:27:11.682528+00:00"
     },
     {
       "id": "cdc_salmonella_italian-style-meat-08-21",
@@ -4704,7 +4704,7 @@
       "hospitalizations": 12,
       "states_affected": [],
       "posted_date": "October 26, 2021",
-      "scraped_at": "2026-05-06T11:26:29.834238+00:00"
+      "scraped_at": "2026-05-07T11:27:15.116926+00:00"
     },
     {
       "id": "cdc_ecoli_o121-07-21",
@@ -4718,7 +4718,7 @@
       "hospitalizations": 7,
       "states_affected": [],
       "posted_date": "September 16, 2021",
-      "scraped_at": "2026-05-06T11:26:32.048885+00:00"
+      "scraped_at": "2026-05-07T11:27:18.746326+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-07-21",
@@ -4731,7 +4731,7 @@
       "hospitalizations": 4,
       "states_affected": [],
       "posted_date": "October 6, 2021",
-      "scraped_at": "2026-05-06T11:26:34.262451+00:00"
+      "scraped_at": "2026-05-07T11:27:22.493542+00:00"
     },
     {
       "id": "cdc_listeria_precooked-chicken-07-21",
@@ -4746,7 +4746,7 @@
       "states_affected": [],
       "state_count": 1,
       "posted_date": "September 10, 2021",
-      "scraped_at": "2026-05-06T11:26:36.435797+00:00"
+      "scraped_at": "2026-05-07T11:27:24.671515+00:00"
     },
     {
       "id": "cdc_salmonella_weltevreden-06-21",
@@ -4760,7 +4760,7 @@
       "hospitalizations": 3,
       "states_affected": [],
       "posted_date": "September 21, 2021",
-      "scraped_at": "2026-05-06T11:26:39.566823+00:00"
+      "scraped_at": "2026-05-07T11:27:27.790728+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-06-21",
@@ -4773,7 +4773,7 @@
       "hospitalizations": 12,
       "states_affected": [],
       "posted_date": "October 13, 2021",
-      "scraped_at": "2026-05-06T11:26:41.797060+00:00"
+      "scraped_at": "2026-05-07T11:27:29.998802+00:00"
     },
     {
       "id": "cdc_salmonella_duisburg-04-21",
@@ -4787,7 +4787,7 @@
       "hospitalizations": 5,
       "states_affected": [],
       "posted_date": "July 7, 2021",
-      "scraped_at": "2026-05-06T11:26:44.009289+00:00"
+      "scraped_at": "2026-05-07T11:27:33.275859+00:00"
     },
     {
       "id": "cdc_salmonella_hadar-04-21",
@@ -4801,7 +4801,7 @@
       "hospitalizations": 4,
       "states_affected": [],
       "posted_date": "May 18, 2021",
-      "scraped_at": "2026-05-06T11:26:46.234327+00:00"
+      "scraped_at": "2026-05-07T11:27:36.654370+00:00"
     },
     {
       "id": "cdc_listeria_hispanic-soft-cheese-02-21",
@@ -4818,7 +4818,7 @@
       ],
       "state_count": 1,
       "posted_date": "May 14, 2021",
-      "scraped_at": "2026-05-06T11:26:48.647948+00:00"
+      "scraped_at": "2026-05-07T11:27:39.888920+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-02-21",
@@ -4833,7 +4833,7 @@
       "states_affected": [],
       "state_count": 1,
       "posted_date": "March 11, 2021",
-      "scraped_at": "2026-05-06T11:26:50.829332+00:00"
+      "scraped_at": "2026-05-07T11:27:43.516139+00:00"
     },
     {
       "id": "cdc_unknown_2020",
@@ -4843,7 +4843,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:27:08.757110+00:00"
+      "scraped_at": "2026-05-07T11:28:08.776836+00:00"
     },
     {
       "id": "cdc_listeria_eggs-12-19",
@@ -4857,7 +4857,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "March 4, 2020",
-      "scraped_at": "2026-05-06T11:27:15.335076+00:00"
+      "scraped_at": "2026-05-07T11:28:16.594353+00:00"
     },
     {
       "id": "cdc_unknown_weekly",
@@ -4867,7 +4867,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:27:29.140816+00:00"
+      "scraped_at": "2026-05-07T11:28:35.824706+00:00"
     },
     {
       "id": "cdc_salmonella_concord-05-19",
@@ -4877,7 +4877,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:27:39.740122+00:00"
+      "scraped_at": "2026-05-07T11:28:47.283522+00:00"
     },
     {
       "id": "cdc_salmonella_concord-11-18",
@@ -4892,7 +4892,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "February 27, 2019",
-      "scraped_at": "2026-05-06T11:27:57.224034+00:00"
+      "scraped_at": "2026-05-07T11:29:05.957594+00:00"
     },
     {
       "id": "cdc_salmonella_agbeni-11-18",
@@ -4907,7 +4907,7 @@
       "states_affected": [],
       "state_count": 7,
       "posted_date": "January 14, 2019",
-      "scraped_at": "2026-05-06T11:27:59.467753+00:00"
+      "scraped_at": "2026-05-07T11:29:09.182054+00:00"
     },
     {
       "id": "cdc_listeria_porkproducts-11-18",
@@ -4921,7 +4921,7 @@
       "states_affected": [],
       "state_count": 4,
       "posted_date": "January 29, 2019",
-      "scraped_at": "2026-05-06T11:28:01.655115+00:00"
+      "scraped_at": "2026-05-07T11:29:11.350004+00:00"
     },
     {
       "id": "cdc_listeria_countryham-10-18",
@@ -4935,7 +4935,7 @@
       "states_affected": [],
       "state_count": 4,
       "posted_date": "December 18, 2018",
-      "scraped_at": "2026-05-06T11:28:10.564144+00:00"
+      "scraped_at": "2026-05-07T11:29:23.073862+00:00"
     },
     {
       "id": "cdc_unknown_b-071318",
@@ -4945,7 +4945,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:28:24.903553+00:00"
+      "scraped_at": "2026-05-07T11:29:38.864006+00:00"
     },
     {
       "id": "cdc_unknown_a-062018",
@@ -4955,7 +4955,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:28:27.178886+00:00"
+      "scraped_at": "2026-05-07T11:29:41.147227+00:00"
     },
     {
       "id": "cdc_unknown_2017",
@@ -4965,7 +4965,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:28:57.551349+00:00"
+      "scraped_at": "2026-05-07T11:30:19.389261+00:00"
     },
     {
       "id": "cdc_salmonella_urbana-09-17",
@@ -4979,7 +4979,7 @@
       "states_affected": [],
       "state_count": 7,
       "posted_date": "November 3, 2017",
-      "scraped_at": "2026-05-06T11:29:00.740817+00:00"
+      "scraped_at": "2026-05-07T11:30:21.588118+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheese-03-17",
@@ -4993,7 +4993,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "May 3, 2017",
-      "scraped_at": "2026-05-06T11:29:12.379901+00:00"
+      "scraped_at": "2026-05-07T11:30:34.375761+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -5003,7 +5003,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:29:20.058154+00:00"
+      "scraped_at": "2026-05-07T11:30:42.135683+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-09-16",
@@ -5017,7 +5017,7 @@
       "states_affected": [],
       "state_count": 11,
       "posted_date": "October 19, 2016",
-      "scraped_at": "2026-05-06T11:29:22.256981+00:00"
+      "scraped_at": "2026-05-07T11:30:45.382849+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -5029,7 +5029,7 @@
       "states_affected": [],
       "posted_date": "August 19, 2016",
       "consumer_advice": "Residents of Hawaii and Recent Travelers to Hawaii\nIf you live in Hawaii, or have recently traveled to Hawaii and ate scallops at a Genki Sushi restaurant, HDOH has specific advice on itswebsitefor you.\nAdvice to Restaurants and Retailers\nRestaurants and retailers should not serve or sellrecalled scallops.The recalled scallops were produced on November 23-24, 2015 in the Philippines.Recalled lot numbers are 5885, 5886, and 5887The products were distributed to California, Hawaii, and Nevada. Restaurants and retailers should check their freezers and inventory for recalled scallops and return them to their distributor.\nAdvice to Consumers\nBefore you eat raw or cooked scallops in a restaurant, ask the restaurant who supplied the scallops and if they were recalled. If they were recalled or the restaurant doesn’t know the origin of the scallops, don’t eat them.If you think you’ve gotten sick from eating contaminated scallops, contact your health care provider.Somesymptomsof hepatitis A virus infection include:Yellow eyes or skinAbdominal painPale stoolsDark urine\nCDC recommends the following groups be vaccinated for hepatitis A:All children at age 1 yearTravelers to countries that have high rates of hepatitis AFamily members and caregivers of recent adoptees from countries where hepatitis A is commonMen who have sexual contact with other menUsers of injection and non-injection illegal drugsPeople with chronic (lifelong) liver diseases, such as hepatitis B or hepatitis CPeople who are treated with clotting-factor concentratesPeople who work with Hepatitis A infected animals or in a Hepatitis A research laboratory\nHawaii Department of Health: Hepatitis A Outbreak 2016FDA Investigates Outbreak of Hepatitis A Illnesses Linked to Raw ScallopsCDC Hepatitis A Questions and Answers for the PublicCDC Hepatitis A Questions and Answers for Health Professionals\n",
-      "scraped_at": "2026-05-06T11:29:27.700152+00:00"
+      "scraped_at": "2026-05-07T11:30:51.894987+00:00"
     },
     {
       "id": "cdc_salmonella_reading-08-16",
@@ -5043,7 +5043,7 @@
       "states_affected": [],
       "state_count": 36,
       "posted_date": "September 30, 2016",
-      "scraped_at": "2026-05-06T11:29:31.034680+00:00"
+      "scraped_at": "2026-05-07T11:30:55.332434+00:00"
     },
     {
       "id": "cdc_listeria_frozen-vegetables-05-16",
@@ -5057,7 +5057,7 @@
       "states_affected": [],
       "state_count": 9,
       "posted_date": "July 15, 2016",
-      "scraped_at": "2026-05-06T11:29:35.421822+00:00"
+      "scraped_at": "2026-05-07T11:31:01.699814+00:00"
     },
     {
       "id": "cdc_listeria_raw-milk-03-16",
@@ -5071,7 +5071,7 @@
       "states_affected": [],
       "state_count": 2,
       "posted_date": "December 14, 2016",
-      "scraped_at": "2026-05-06T11:29:37.604674+00:00"
+      "scraped_at": "2026-05-07T11:31:05.056396+00:00"
     },
     {
       "id": "cdc_ecoli_o157-02-16",
@@ -5085,7 +5085,7 @@
       "states_affected": [],
       "state_count": 11,
       "posted_date": "March 25, 2016",
-      "scraped_at": "2026-05-06T11:29:43.848483+00:00"
+      "scraped_at": "2026-05-07T11:31:11.550926+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheeses-09-15",
@@ -5100,7 +5100,7 @@
       "states_affected": [],
       "state_count": 10,
       "posted_date": "October 23, 2015",
-      "scraped_at": "2026-05-06T11:30:02.333198+00:00"
+      "scraped_at": "2026-05-07T11:31:33.644755+00:00"
     },
     {
       "id": "cdc_unknown_2015",
@@ -5110,7 +5110,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:30:11.071071+00:00"
+      "scraped_at": "2026-05-07T11:31:42.559887+00:00"
     },
     {
       "id": "cdc_unknown_mmwrhtml",
@@ -5120,7 +5120,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:30:23.875909+00:00"
+      "scraped_at": "2026-05-07T11:31:55.765127+00:00"
     },
     {
       "id": "cdc_listeria_bean-sprouts-11-14",
@@ -5133,7 +5133,7 @@
       "hospitalizations": 4,
       "states_affected": [],
       "posted_date": "January 27, 2015",
-      "scraped_at": "2026-05-06T11:30:30.520903+00:00"
+      "scraped_at": "2026-05-07T11:32:05.553920+00:00"
     },
     {
       "id": "cdc_listeria_cheese-10-14",
@@ -5147,7 +5147,7 @@
       "states_affected": [],
       "state_count": 4,
       "posted_date": "December 4, 2014",
-      "scraped_at": "2026-05-06T11:30:33.619573+00:00"
+      "scraped_at": "2026-05-07T11:32:08.881445+00:00"
     },
     {
       "id": "cdc_unknown_2014",
@@ -5157,7 +5157,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:30:35.924658+00:00"
+      "scraped_at": "2026-05-07T11:32:11.233183+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-08-14",
@@ -5172,7 +5172,7 @@
       "states_affected": [],
       "state_count": 5,
       "posted_date": "October 16, 2014",
-      "scraped_at": "2026-05-06T11:30:38.141385+00:00"
+      "scraped_at": "2026-05-07T11:32:13.381486+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-05-14",
@@ -5187,7 +5187,7 @@
       "states_affected": [],
       "state_count": 4,
       "posted_date": "June 20, 2014",
-      "scraped_at": "2026-05-06T11:30:47.507551+00:00"
+      "scraped_at": "2026-05-07T11:32:22.587292+00:00"
     },
     {
       "id": "cdc_listeria_cheese-02-14",
@@ -5201,7 +5201,7 @@
       "states_affected": [],
       "state_count": 8,
       "posted_date": "April 18, 2014",
-      "scraped_at": "2026-05-06T11:30:49.731151+00:00"
+      "scraped_at": "2026-05-07T11:32:26.166723+00:00"
     },
     {
       "id": "cdc_salmonella_stanley-01-14",
@@ -5215,7 +5215,7 @@
       "states_affected": [],
       "state_count": 17,
       "posted_date": "January 31, 2014",
-      "scraped_at": "2026-05-06T11:30:54.937342+00:00"
+      "scraped_at": "2026-05-07T11:32:33.679126+00:00"
     },
     {
       "id": "cdc_vibrio_investigations",
@@ -5225,7 +5225,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:31:02.718061+00:00"
+      "scraped_at": "2026-05-07T11:32:43.290102+00:00"
     },
     {
       "id": "cdc_unknown_outbreaks",
@@ -5235,7 +5235,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:31:05.111210+00:00"
+      "scraped_at": "2026-05-07T11:32:45.477901+00:00"
     },
     {
       "id": "cdc_unknown_A1b-03-31",
@@ -5246,19 +5246,19 @@
       "status": "unknown",
       "hospitalizations": 71,
       "states_affected": [
-        "CA",
         "HI",
-        "NJ",
-        "CO",
+        "AZ",
+        "CA",
         "NH",
         "WI",
-        "NV",
+        "NJ",
+        "CO",
         "NM",
-        "AZ"
+        "NV"
       ],
       "state_count": 10,
       "posted_date": "October 28, 2013",
-      "scraped_at": "2026-05-06T11:31:10.769785+00:00"
+      "scraped_at": "2026-05-07T11:32:51.967664+00:00"
     },
     {
       "id": "cdc_salmonella_salmonella",
@@ -5268,7 +5268,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-05-06T11:31:13.185477+00:00"
+      "scraped_at": "2026-05-07T11:32:54.303796+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-11-12",
@@ -5282,7 +5282,7 @@
       "states_affected": [],
       "state_count": 33,
       "posted_date": "December 10, 2012",
-      "scraped_at": "2026-05-06T11:31:29.786647+00:00"
+      "scraped_at": "2026-05-07T11:33:08.758185+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -5297,7 +5297,7 @@
       "state_count": 9,
       "posted_date": "March 23, 2012",
       "consumer_advice": "Since this particular outbreak appears to be over, consumers are not being advised to avoid eating any specific foods at this time.Consumers should always practicesafe food handling and preparation measures. At home, keep raw meat, poultry, and seafood separate from produce and ready-to-eat foods. Wash hands, utensils, and surfaces with hot, soapy water before and after handling food.\nE. coliResources for CliniciansFoodSafety.gov\nCDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular, with the Food and Drug Administration of the U.S. Department of Health and Human Services and the Food Safety and Inspection Service of the U.S. Department of Agriculture. CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of March 21, 2012, 58 persons infected with the outbreak strain ofE. coliO157:H7 were reported from 9 states. The number of ill persons identified in each state was as follows: Arizona (1), Arkansas (2), Illinois (9), Indiana (2), Kansas (2), Kentucky (1), Minnesota (2), Missouri (38), and Nebraska (1).\n*n= 58 for whom information was reported as of March 21, 2012",
-      "scraped_at": "2026-05-06T11:32:01.019479+00:00"
+      "scraped_at": "2026-05-07T11:33:40.963924+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -5312,7 +5312,7 @@
       "state_count": 5,
       "posted_date": "November 17, 2011",
       "consumer_advice": "This particular outbreak appears to be over. However,Salmonellais still an important cause of human illness in the United States. More information aboutSalmonella, and steps people can take to reduce their risk of infection, can be found on theCDCSalmonellaWeb Pageand theCDC Vital Signs Web Page.\nConsumers might still have recalled products in their homes if the pine nuts or foods made with pine nuts were frozen.\nConsumers should check their homes, including refrigerators and freezers, for Turkish pine nuts purchased from bulk bins at Wegmans stores between July 1, 2011 and October 18, 2011 and not eat them. Consumers should also not eat any foods prepared with the recalled product, including pesto, salads, and baked goods.Restaurants and food service operators should not serve the recalled product.Consumers, retailers, and others who have any of the recalled product should dispose of it in a closed plastic bag placed in a sealed trash can. This will prevent people or animals from eating it.Persons who think they might have become ill from eating possibly contaminated recalled products should consult their health care providers. Infants, older adults, and persons with impaired immune systems are more likely than others to develop severe illness.\nBadia Spices Recalls Pinenuts Because of Possible Health RiskWegmans Food Markets, Inc. Announces Recall of Bulk Turkish Pine Nuts Due to PossibleSalmonellaContaminationFoodSafety.gov\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nA total of 43 individuals infected with the outbreak strain ofSalmonellaEnteritidis were reported from 5 states. The number of ill persons identified in each state with the outbreak strain was as follows: Maryland (1), New Jersey (2), New York (28), Pennsylvania (8), and Virginia (4).\n*n=43 for whom information was reported as of November 16, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:06.556465+00:00"
+      "scraped_at": "2026-05-07T11:33:46.682922+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -5327,7 +5327,7 @@
       "state_count": 34,
       "posted_date": "November 10, 2011",
       "consumer_advice": "This particular outbreak appears to be over. However,Salmonellais still an important cause of human illness in the United States. More information aboutSalmonella, and steps people can take to reduce their risk of infection, can be found on theCDCSalmonellaWeb Pageand theCDC Vital Signs Web Page.\nWhile the shelf-life of the recalled ground turkey products has been exceeded, consumers might still have recalled products in their homes if the ground turkey was frozen.\nConsumers should check their homes for recalled ground turkey products and not eat them; restaurant and food service operators should not serve it. Consumers with questions about recalled ground turkey products may contact Cargill’s consumer relations toll free telephone number (1-888-812-1646).Wash hands, kitchen work surfaces, and utensils with soap and water immediately after they have been in contact with raw meat or poultry including frozen and fresh ground turkey. Then, disinfect the food contact surfaces using a freshly prepared solution of 1 tablespoon unscented liquid chlorine bleach to 1 gallon of water.Cook poultry thoroughly. Ground turkey and ground turkey dishes should always be cooked to 165 °F internal temperature as measured with a food thermometer; leftovers also should be reheated to 165 °F. The color of cooked poultry is not always a sure sign of its safety. Only by using a food thermometer can one accurately determine that poultry has reached a safe minimum internal temperature of 165 °F throughout the product. Turkey can remain pink even after cooking to a safe minimum internal temperature of 165 °F. The meat of smoked turkey is always pink. Be particularly careful with foods prepared for infants, older adults, and persons with impaired immune systems.If served undercooked poultry in a restaurant, send it back to the kitchen for further cooking.Avoid cross-contaminating other foods. Uncooked meats and poultry should be kept separate from produce, cooked foods, and ready-to-eat foods. Hands, cutting boards, counters, knives, and other utensils should be washed thoroughly after touching uncooked foods. Hands should be washed before handling food, and between handling different food items.Refrigerate raw and cooked meat and poultry within 2 hours after purchase (1 hour if temperatures exceed 90° F). Refrigerate cooked meat and poultry within 2 hours after cooking. Refrigerators should be set to maintain a temperature of 40 °F or below.Persons who think they might have become ill from eating possibly contaminated ground turkey should consult their health care providers. Infants, older adults, and persons with impaired immune systems are more likely than others to develop severe illness.\nFoodSafety.govAskKaren.gov (FSIS virtual representative)1-888-MPHotline (1-888-674-6854), USDA English/Spanish Meat and Poultry Hotline\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nA total of 136 persons infected with the outbreak strain ofSalmonellaHeidelberg were reported from 34 states with illness onset dates between February 27 and September 13, 2011. The number of ill persons identified in each state was as follows: Alabama (1), Arkansas (1), Arizona (3), California (7), Colorado (4), Connecticut (1), Georgia (2), Illinois (16), Indiana (2), Iowa (2), Kansas (3), Kentucky (2), Louisiana (1), Massachusetts (4), Maryland (1), Michigan (12), Minnesota (2), Mississippi (2), Missouri (7), Nebraska (2), Nevada (1), New Jersey (1), New York (3), North Carolina (4), Ohio (12), Oklahoma (2), Oregon (1), Pennsylvania (8), South Dakota (3), Tennessee (2), Texas (18), Utah (1), Vermont (1), and Wisconsin (4).\n*n=134 for whom information was reported as of November 7, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:12.179717+00:00"
+      "scraped_at": "2026-05-07T11:33:53.120109+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -5342,7 +5342,7 @@
       "state_count": 5,
       "posted_date": "July 6, 2011",
       "consumer_advice": "Contaminated products may still be in grocery stores and in consumers’ homes. The alfalfa sprouts and spicy sprouts are sold in plastic bags labeled “Evergreen Produce” or “Evergreen Produce Inc.” The recalled alfalfa sprouts and spicy sprouts were distributed in Washington and Idaho by direct delivery to four distributors and three retail stores. The recalled products are coded with expiration dates from 06 22 through 07 14.  More information about the recalled products is available in theFirm Press Release– “Evergreen Fresh Sprouts, LLC Voluntarily Recalls Alfalfa Sprouts and Spicy Sprouts Because Of Possible Health Risk.”If you have any recalled Evergreen Fresh Sprouts, LLC Alfalfa Sprouts or Spicy Sprouts, return them or dispose of them in a closed plastic bag placed in a sealed trash can. This will prevent people or animals from eating them.Persons who think they might have become ill from eating potentially contaminated sprouts should consult their health care providers.Children, the elderly, pregnant women, and persons with weakened immune systems should avoid eating raw sprouts of any kind (including alfalfa, clover, radish, and mung bean sprouts).Cook sprouts thoroughly to reduce the risk of illness. Cooking thoroughly kills the harmful bacteria.Request that raw sprouts not be added to your food. If you purchase a sandwich or salad at a restaurant or delicatessen, check to make sure that raw sprouts have not been added.More information about illnesses associated with sprouts can be found onFoodsafety.gov.\nCDC Vital Signs: Making Food Safer to EatFirm Press Release – “Evergreen Fresh Sprouts, LLC Voluntarily Recalls Alfalfa Sprouts and Spicy Sprouts Because Of Possible Health Risk“FDA Press Release – “Do not eat Evergreen Produce brand alfalfa sprouts or spicy sprouts“FoodSafety.gov\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of July 5, 2011, a total of 25 persons with the outbreak strain ofSalmonellaEnteritidis have been reported from 5 states: Idaho (3), Montana (10), New Jersey (1), North Dakota (1) and Washington (10).\n*n=25 for whom information was reported as of July 5, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:16.600104+00:00"
+      "scraped_at": "2026-05-07T11:33:57.762989+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -5353,7 +5353,7 @@
       "status": "closed",
       "states_affected": [],
       "posted_date": "July 8, 2011",
-      "scraped_at": "2026-05-06T11:32:19.921743+00:00"
+      "scraped_at": "2026-05-07T11:34:01.336085+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -5367,7 +5367,7 @@
       "states_affected": [],
       "posted_date": "June 23, 2011",
       "consumer_advice": "Consumers and food preparers should wash their hands before and after handling any melon. Wash the surface of melons such as cantaloupes, and dry them with a clean cloth or paper towel before cutting. Promptly refrigerate cut cantaloupe.\nThis particular outbreak appears to be over. However,Salmonellais still an important cause of human illness in the United States. More information aboutSalmonella, and steps people can take to reduce their risk of infection, can be found on the CDCSalmonellaWeb Pageand the CDCVital Signs Web Page.\nDel Monte Press ReleaseFoodSafety.govCDC’sVital Signs Web Page\nCDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular, with the U.S. Food and Drug Administration and USDA-FSIS. CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of June 20, 2011, a total of 20 ill people infected with the outbreak strain ofSalmonellaPanama have been reported from Arizona (1), California (2), Colorado (1), Maryland (1), Montana (1), Nevada (1), Oregon (6), Pennsylvania (1), Utah (1) and Washington (5).\n*n=20 for whom information was reported as of June 20, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:26.549195+00:00"
+      "scraped_at": "2026-05-07T11:34:11.480508+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -5384,7 +5384,7 @@
       "state_count": 1,
       "posted_date": "April 7, 2011",
       "consumer_advice": "Consumers should not eat any of the recalled products, and restaurants and food service operators should not serve them. Consumers, retailers, and others who have any of the recalled products should dispose of them in a closed plastic bag placed in a sealed trash can. This will prevent people or animals from eating them.\nCDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular, with FDA and FSIS.  CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nFDA press releaseCalifornia Department of Public Health press releaseMinnesota Department of Health press releaseDeFranco and Sons Recalls Hazelnuts and Mixed Nuts with Hazelnuts Due to Possible Health RiskE. coliResources for CliniciansFoodSafety.gov\nAs of April 1, 2011, eight persons infected with the outbreak strain ofE. coliserotype O157:H7 were reported from Michigan (1), Minnesota (3), and Wisconsin (4).\n*n=8 for whom information was reported as of April 1, 2011",
-      "scraped_at": "2026-05-06T11:32:28.848353+00:00"
+      "scraped_at": "2026-05-07T11:34:14.738235+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -5399,7 +5399,7 @@
       "state_count": 26,
       "posted_date": "February 10, 2011",
       "consumer_advice": "Consumers should not eat recalled Tiny Greens brand Alfalfa Sprouts or Spicy Sprouts, and restaurant and food service operators should not serve them. Consumers are advised to reviewthe recall announcementfor a list of recalled products. Consumers, retailers, and others who have Tiny Greens Alfalfa Sprouts or Spicy Sprouts should dispose of them in a closed plastic bag placed in a sealed trash can. This will prevent people or animals from eating them.\nBelow are additional recommendations:\nPersons who think they might have become ill from eating potentially contaminated products should consult their health care providers.Children, the elderly, pregnant women, and persons with weakened immune systems should avoid eating raw sprouts of any kind (including alfalfa, clover, radish, and mung bean sprouts).Cook sprouts thoroughly to reduce the risk of illness. Cooking thoroughly kills the harmful bacteria.Request that raw sprouts not be added to your food. If you purchase a sandwich or salad at a restaurant or delicatessen, check to make sure that raw sprouts have not been added.To learn more about illnesses associated with sprouts, visitFoodsafety.gov.\nFDA 483 Inspection Report of the facility[PDF – 4 MB/6 pages]FoodSafety.govGeneral Information:SalmonellaCDC’s Role in Outbreak Investigations\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nFrom November 1, 2010, through February 9, 2011, 140 individuals infected with the outbreak strain ofSalmonellaserotype I 4,[5],12:i:-, whose illnesses began (onset dates) since November 1, were reported from 26 states and the District of Columbia. The number of ill persons identified in each state and the District of Columbia with the outbreak strain is as follows: Arkansas (1), California (1), Colorado (1), Connecticut (1), District of Columbia (1), Georgia (1), Hawaii (1), Iowa (1), Illinois (70), Indiana (13), Kentucky (1), Louisiana (1), Massachusetts (2), Maryland (1), Missouri (23), Nebraska (1), Nevada (1), New Jersey (1), New York (2), North Carolina (1), Oregon (1), Pennsylvania (4), South Carolina (1), South Dakota (1), Tennessee (2), Virginia (2), and Wisconsin (4).\nThis outbreak can be visually described with a chart showing the number of persons who became ill each day. This chart is called an epi curve. Please see theTimeline for Reporting Cases ofSalmonellaInfectionfor more details on the reporting process.\n*n=138 for whom information was reported as of February 9, 2011. Onset data not currently available for all persons with reported illness.",
-      "scraped_at": "2026-05-06T11:32:31.084501+00:00"
+      "scraped_at": "2026-05-07T11:34:17.712260+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -5412,7 +5412,7 @@
       "state_count": 11,
       "posted_date": "December 2, 2010",
       "consumer_advice": "Like other foods, keep eggs refrigerated at â‰¤ 40° F (â‰¤4° C) at all times.Discard cracked or dirty eggs.Wash hands and all food contact surface areas (counter tops, utensils, and cutting boards) with soap and water after contact with raw eggs. Then, disinfect the food contact surfaces using a sanitizing agent, such as bleach, following label instructions.Eggs should be cooked until both the white and the yolk are firm and eaten promptly after cooking.Do not keep eggs warm or at room temperature for more than 2 hours.Refrigerate unused or leftover egg-containing foods promptly.Avoid eating raw eggs.Individuals wishing to further reduce their risk may consider using pasteurized, in-shell eggs.Avoid restaurant dishes made with raw or undercooked, unpasteurized eggs. Restaurants should use pasteurized eggs in any recipe (such as Hollandaise sauce or Caesar salad dressing) that calls for raw eggs.Consumption of raw or undercooked eggs should be avoided, especially by young children, elderly persons, and persons with weakened immune systems or debilitating illness.\nFlock-based SE-control programs that include routine microbiologic testing are mandatory for producers with more than 50,000 hens, as of July 9, 2010, underFDA’s egg safety rule.\nIn retail and food service establishments, pasteurized egg products or pasteurized in-shell eggs are recommended in place of pooled eggs or raw or undercooked shell eggs. If used, raw shell eggs should be fully cooked. If shell eggs are served undercooked, a consumer advisory should be posted in accordance with the local Food Code.In hospitals, nursing homes, adult or childcare facilities, schools, senior centers, and other facilities, pasteurized egg products or pasteurized in-shell eggs should be used in place of pooled eggs or raw or undercooked eggs.Eggs should be purchased or received from a distributor refrigerated and stored refrigerated at â‰¤ 45° F (â‰¤7° C) at all times.\nCDC FAQs:SalmonellaEnteritidisFoodSafety.govMultistate and Nationwide Foodborne Outbreak Investigations: A Step-by-Step GuideCDC’s Role in Outbreak Investigations\nTips to Reduce Your Risk ofSalmonellafrom EggsKeeping Backyard Poultry\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nThis outbreak can be visually described with a chart showing the number of persons who became ill each day. This chart is called an epi curve. Please see theTimeline for Reporting Cases ofSalmonellaInfectionfor more details on the reporting process.\n*Date of isolation by week.\nIn July 2010, CDC identified a nationwide sustained increase in the number ofSalmonellaEnteritidis isolates with PFGE pattern JEGX01.0004 uploaded toPulseNet, the national subtyping network made up of state and local public health laboratories and federal food regulatory laboratories that performs molecular surveillance of foodborne infections. An increase in reports beginning in May, peaking in July, and returning to baseline in November, is evident in the epidemic curve, or epi curve. From May 1 to November 30, 2010, a total of 3,578 illnesses were reported. However, some cases from this period may not have been reported yet, and some of these cases may not be related to this outbreak. Based on the previous 5 years of reports to PulseNet, we would expect approximately 1,639 total illnesses to occur during this same period. This means there are approximately 1,939 reported illnesses that are likely to be associated with this outbreak. Because of the large number of expected cases during this period, standard methods of molecular subtyping alone are not sufficient to determine which reported cases might be outbreak-associated.\nHumanSalmonellaEnteritidis infections that occurred after October 28, 2010 might not yet be reported due to the time it takes between when a person becomes ill and when the illness is reported. This typically takes two to three weeks forSalmonella, but can take up to six weeks. For more details, please see theTimeline for Reporting Cases ofSalmonellaInfection.",
-      "scraped_at": "2026-05-06T11:32:33.318536+00:00"
+      "scraped_at": "2026-05-07T11:34:20.885914+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -5424,29 +5424,29 @@
       "status": "unknown",
       "hospitalizations": 18,
       "states_affected": [
-        "VA",
+        "KY",
+        "IL",
+        "OR",
+        "NC",
+        "GA",
+        "SC",
         "CA",
-        "MO",
+        "OK",
+        "TN",
+        "MA",
+        "UT",
+        "VA",
         "AK",
         "TX",
-        "SC",
-        "MN",
-        "TN",
-        "IL",
-        "OK",
-        "MA",
-        "GA",
-        "NC",
         "CO",
-        "KY",
-        "UT",
         "WA",
-        "OR"
+        "MO",
+        "MN"
       ],
       "state_count": 18,
       "posted_date": "September 9, 2010",
       "consumer_advice": "Salmonellais sometimes present in raw foods (e.g., chicken, produce, and spices) which can be used as ingredients in not-ready-to-eat frozen dinners.Consumers should follow the instructions on the package label of the frozen dinner. Conventional ovens are better at cooking foods thoroughly. Microwave ovens vary in strength and tend to cook foods unevenly.If you choose to cook the frozen dinner using a microwave, be sure to:Cook the food for the time specified for your microwave’s wattage.Let the food “stand” for the stated time, so cooking can continue.Use a food thermometer to make sure that it is fully cooked to an internal temperature of 165 degrees Fahrenheit.Individuals who think they might have become ill from eating a Marie Callender’s frozen dinner should consult their health care providers.Consumers who have Marie Callender’s Cheesy Chicken & Rice single-serve frozen entrées in their freezer should discard them or return them to their retailer for a refund.Consumers are urged to read and follow the preparation instructions on the label ofallfrozen entrees. If the package says “Do Not Microwave,” consumers should follow that instruction and use a conventional oven. Consumers should use a food thermometer to make sure the entrees reach at least 165 degrees Fahrenheit.\nGeneral Information:SalmonellaCDC’s Role in Outbreak Investigations\nTwo Minnesota cases ofSalmonellainfection linked to national recall of frozen meals\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions..\nAs of on August 27, 2010, a total of 44 individuals infected with a matching strain ofSalmonellaChester have been reported from 18 states since April 11, 2010. The number of ill people identified in each state with this strain is as follows: AK (1), CA (5), CO (2), GA (8), IL (1), KY (1), MA (2), MN (2), MO (1), NC (1), OK (1), OR (2), SC (2), TN (1), TX (3), UT (3), VA (4), and WA (4).\nThis outbreak can be visually described with a chart showing the number of persons who became ill each day. This chart is called an epi curve. Please see theTimeline for Reporting Cases ofSalmonellaInfectionfor more details on the reporting process.\n*n=44 for whom information was reported as of 08/27/10. Some illness onset dates have been estimated from other reported information.",
-      "scraped_at": "2026-05-06T11:32:37.746902+00:00"
+      "scraped_at": "2026-05-07T11:34:27.622143+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -5457,13 +5457,13 @@
       "status": "unknown",
       "hospitalizations": 10,
       "states_affected": [
-        "NV",
-        "CA"
+        "CA",
+        "NV"
       ],
       "state_count": 2,
       "posted_date": "August 25, 2010",
       "consumer_advice": "Until further notice, do not eat or drink Goya or La Nuestra brands of frozen mamey fruit pulp.Individuals who think they might have become ill from eating frozen mamey fruit pulp should consult their health care providers.\nTyphoid FeverMultistate and Nationwide Foodborne Outbreak Investigations: A Step-by-Step GuideCDC’s Role in Outbreak Investigations\nUrgent Nationwide Frozen Mamey Fruit Products Recall (August 20, 2010)\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of August 20, 2010, a total of 9 individuals infected with a matching strain ofSalmonellaserotype Typhi have been reported from 2 states since May 25, 2010. The number of ill persons identified in each state with this strain is as follows: CA (5) and NV (4).\n*n=9 for whom information was reported as of August 20, 2010.",
-      "scraped_at": "2026-05-06T11:32:39.972464+00:00"
+      "scraped_at": "2026-05-07T11:34:29.785579+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -5474,32 +5474,32 @@
       "status": "unknown",
       "hospitalizations": 15,
       "states_affected": [
-        "FL",
-        "NJ",
-        "PA",
-        "NC",
-        "NH",
-        "MI",
-        "IL",
-        "MA",
-        "CT",
-        "IN",
-        "OR",
-        "NY",
-        "OH",
         "GA",
-        "CO",
-        "IA",
-        "WI",
         "WA",
-        "MN",
+        "MA",
+        "NJ",
+        "CO",
+        "PA",
         "MT",
-        "KY"
+        "IL",
+        "NC",
+        "OH",
+        "NH",
+        "WI",
+        "MN",
+        "KY",
+        "OR",
+        "IN",
+        "IA",
+        "FL",
+        "NY",
+        "MI",
+        "CT"
       ],
       "state_count": 15,
       "posted_date": "August 4, 2010",
       "consumer_advice": "At this time, consumers are not being advised to avoid eating any specific foods or to avoid eating at any specific restaurants.If a food source is identified for these outbreaks and if there is evidence of continued risk of infection, public health officials will advise the public and take the necessary steps to avoid risk of additional illnesses.\nFoodSafety.govGeneral Information:SalmonellaCDC’s Role in Outbreak Investigations\nAs of August 1, 2010, a total of 75 individuals infected with a matching strain ofSalmonellaHartford have been reported from 15 states since April 1, 2010. The number of ill people identified in each state with this strain is as follows: CO (1), FL (1), GA (1), IL (5), IN (11), KY (23), MA (2), MI (3), MT (1), NC (1), NH (1), NY (1), OH (19), PA (1), and WI (4).\nAs of August 1, 2010, a total of 80 individuals infected with a matching strain ofSalmonellaBaildon have been reported from 15 states since May 1, 2010. The number of ill people identified in each state with this strain is as follows: CT (1), GA (1), IA (1), IL (20), IN (4), KY (5), MA (1), MI (4), MN (5), NJ (6), NY (2), OH (6), OR (1), WA (1) and WI (22).\nThis outbreak can be visually described with a chart showing the number of persons who became ill each day. This chart is called an epi curve. Please see theTimeline for Reporting Cases ofSalmonellaInfectionfor more details on the reporting process.\n*n=75 for whom information was reported as of August 1, 2010. Some illness onset dates have been estimated from other reported information.\n*n=80 for whom information was reported as of August 1, 2010. Date of isolation by week.",
-      "scraped_at": "2026-05-06T11:32:42.195742+00:00"
+      "scraped_at": "2026-05-07T11:34:33.066973+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -5511,22 +5511,22 @@
       "status": "unknown",
       "hospitalizations": 11,
       "states_affected": [
-        "CA",
-        "MO",
         "IL",
-        "ID",
-        "PA",
-        "CO",
-        "WI",
-        "NV",
-        "NM",
         "OR",
-        "AZ"
+        "AZ",
+        "CA",
+        "WI",
+        "ID",
+        "CO",
+        "NM",
+        "MO",
+        "PA",
+        "NV"
       ],
       "state_count": 11,
       "posted_date": "June 29, 2010",
       "consumer_advice": "Recalled products might still be in grocery stores, restaurants, and consumers’ homes. Recalled products should not be consumed. Consumers are advised to reviewFDA’s recall sitefor a list of recalled products.Individuals who think they might have become ill from eating a recalled product should consult their health care providers.Children, the elderly, pregnant women, and persons with weakened immune systems should avoid eating raw sprouts of any kind (including alfalfa, clover, radish, and mung bean sprouts).Cook sprouts thoroughly to reduce the risk of illness. Cooking kills the harmful bacteria.Request that raw sprouts not be added to your food. If you purchase a sandwich or salad at a restaurant or delicatessen, check to make sure that raw sprouts have not been added.\nCDC’s Role in Outbreak InvestigationsSprouts: What You Should Know\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nAs of June 24, 2010, a total of 44 individuals infected with a matching strain ofSalmonellaNewport have been reported from 11 states since March 1, 2010. The number of ill people identified in each state with this strain is as follows: AZ (4), CA (19), CO (1), ID (6), IL (1), MO (2), NM (2), NV (4), OR (2), PA (1), and WI (2).\nThis outbreak can be visually described with a chart showing the number of persons who became ill each day. This chart is called an epi curve. Please see theTimeline for Reporting Cases ofSalmonellaInfectionfor more details on the reporting process.\n*n=44 for whom information was reported as of June 24, 2010. Some illness onset dates have been estimated from other reported information.",
-      "scraped_at": "2026-05-06T11:32:44.411072+00:00"
+      "scraped_at": "2026-05-07T11:34:36.320588+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -5537,16 +5537,16 @@
       "status": "ongoing",
       "hospitalizations": 30,
       "states_affected": [
+        "NY",
         "MI",
-        "TN",
-        "OH",
-        "PA",
         "OR",
-        "NY"
+        "OH",
+        "TN",
+        "PA"
       ],
       "state_count": 5,
       "posted_date": "May 21, 2010",
-      "scraped_at": "2026-05-06T11:32:46.617826+00:00"
+      "scraped_at": "2026-05-07T11:34:38.492454+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -5561,7 +5561,7 @@
       "state_count": 8,
       "posted_date": "November 24, 2009",
       "consumer_advice": "Cook Beef Thoroughly\nEat ground beef or ground beef patties that have been cooked to a safe internal temperature of 160° F.\nUse a food thermometer to measure the internal temperature—it is the only way to be sure ground beef is cooked to a high enough temperature to kill harmful bacteria.Color is NOT a reliable indicator that ground beef or ground beef patties have been cooked to a temperature high enough to kill harmful bacteria such asE. coliO157:H7.\nRefrigerate Meats\nRefrigerate raw meat within two hours after purchase or within one hour if temperatures exceed 90° F.Store ground beef in a refrigerator set at 40° F or below, and cook or freeze it within one or two days of purchaseRefrigerate cooked meat and poultry within two hours after cooking, and use or freeze it within three or four days\nConsumers who have questions about the recalled products can contact USDA-FSIS at “Ask Karen” online atwww.AskKaren.govor call the Meat and Poultry Hotline at 1-888-MPHotline (674-6854).\nThe cluster includes 26 persons from 8 states infected with matching strains ofE. coliO157:H7. The number of ill persons identified in each state is as follows: California (1), Connecticut (6), Massachusetts (8), Maryland (1), Maine (4), New Hampshire (4), New York (1), and Vermont (1). Of these, the genetic associations of 24 human isolates and both of the product isolates have been confirmed by an advanced secondary DNA test; secondary tests are pending on others. Depending on the results of continuing laboratory testing and ongoing case finding, the number of persons determined to be in this cluster may increase or decrease.\n*n=26 for whom information was reported as of November 20, 2009",
-      "scraped_at": "2026-05-06T11:32:54.235506+00:00"
+      "scraped_at": "2026-05-07T11:34:49.066358+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -5576,7 +5576,7 @@
       "state_count": 9,
       "posted_date": "July 1, 2009",
       "consumer_advice": "Cook Beef Thoroughly\nEat ground beef or ground beef patties that have been cooked to a safe internal temperature of 160° F.\nUse a food thermometer to measure the internal temperature—it is the only way to be sure ground beef is cooked to a high enough temperature to kill harmful bacteria.Color is NOT a reliable indicator that ground beef or ground beef patties have been cooked to a temperature high enough to kill harmful bacteria such asE. coliO157:H7.\nRefrigerate Meats\nRefrigerate raw meat within two hours after purchase or within one hour if temperatures exceed 90° F.Store ground beef in a refrigerator set at 40° F or below, and cook or freeze it within one or two days of purchaseRefrigerate cooked meat and poultry within two hours after cooking, and use or freeze it within three or four days\nConsumers who have questions about the recalled products can contact USDA-FSIS at “Ask Karen” online atwww.AskKaren.govor call the Meat and Poultry Hotline at 1-888-MPHotline (674-6854). Because any raw ground beef can contain disease-causing germs, CDC and USDA-FSIS encourage consumers to use good food safety practices and to heed the following advice: To keep food safe, remember toClean, Separate, Cook, and Chill.\nTwenty-three persons infected with a strain ofE. coliO157:H7 with a particular “DNA fingerprint” have been reported from 9 states. Of these, 17 have been confirmed by an advanced DNA test as having the outbreak strain; confirmatory tests are pending on others. The number of ill persons identified in each state is as follows: California (4), Maine (1), Michigan (6), Minnesota (1), New Hampshire (1), New Jersey (2), New Mexico (1), New York (1) and Wisconsin (6).\n*n=23 for whom information was reported as of June 30, 2009. Some illness onset dates have been estimated from other information.",
-      "scraped_at": "2026-05-06T11:32:56.415320+00:00"
+      "scraped_at": "2026-05-07T11:34:52.427711+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -5591,7 +5591,7 @@
       "state_count": 30,
       "posted_date": "June 30, 2009",
       "consumer_advice": "The Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention are warning consumers not to eat any varieties of prepackaged Nestle Toll House refrigerated cookie dough due to the risk of contamination withE. coliO157:H7. If consumers have any prepackaged, refrigerated Nestle Toll House cookie dough products in their home they should throw them away. Cooking the dough is not recommended because consumers might get the bacteria on their hands and on other cooking surfaces. The recall does not include Nestle Toll House morsels, which are used as an ingredient in many home-made baked goods or other already baked cookie products.\nIndividuals who have recently eaten prepackaged, refrigerated Toll House cookie dough and have experienced any of these symptoms should contact their doctor or health care provider immediately. Any such illnesses should be reported to state or local public health authorities.\nConsumers should be reminded they should not eat raw food products that are intended for cooking or baking before consumption. Consumers should use safe food-handling practices when preparing such products, including following package directions for cooking at proper temperatures; washing hands, surfaces, and utensils after contact with these types of products; avoiding cross contamination; and refrigerating products properly.\nRetailers, restaurateurs, and personnel at other food-service operations should not sell or serve any Nestle Toll House prepackaged, refrigerated cookie dough products subject to the recall.\nA Novel Vehicle for Transmission of Escherichia coli O157:H7 to Humans: Multistate Outbreak ofE. coliO157:H7 Infections Associated With Consumption of Ready-to-Bake Commercial Prepackaged Cookie Dough—United States, 2009FDA Warns Consumers Not to Eat Nestle Toll House Prepackaged, Refrigerated Cookie DoughFDA ConfirmsE. ColiO157:H7 in Prepackaged Nestlé Toll House Refrigerated Cookie Dough\nAs of Tuesday, June 30, 2009, 72 persons infected with a strain ofE. coliO157:H7 with a particular DNA fingerprint have been reported from 30 states. Of these, 51 have been confirmed by an advanced DNA test as having the outbreak strain; these confirmatory test results are pending on the others. The number of ill persons identified in each state is as follows: Arizona (2), California (3), Colorado (6), Connecticut (1), Delaware (1), Georgia (1), Iowa (2), Illinois (5), Kentucky (2), Massachusetts (4), Maryland (2), Maine (3), Minnesota (6), Missouri (1), Montana (1), North Carolina (2), New Hampshire (2), New Jersey (1), Nevada (2), New York (1), Ohio (3), Oklahoma (1), Oregon (1), Pennsylvania (2), South Carolina (1), Texas (3), Utah (4), Virginia (2), Washington (6), and Wisconsin (1).\n*n=369 for whom information was reported as of June 30, 2009",
-      "scraped_at": "2026-05-06T11:32:59.927315+00:00"
+      "scraped_at": "2026-05-07T11:34:55.580079+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -5606,7 +5606,7 @@
       "state_count": 46,
       "posted_date": "May 11, 2009",
       "consumer_advice": "Based on available information, CDC and FDA recommendations include:\nFor Consumers\nConsumers should avoid eating recalled products that contain peanut butter, including Austin and Keebler brand peanut butter crackers.Major national brands of jarred peanut butter found in grocery stores are NOT on the Peanut Corporation of America (PCA) recall list.Any product that is on the recall list should be disposed of in a safe manner. Any recalled product should be thrown away to preventSalmonellainfections in humans, pets, or other animals. This product should be disposed of in a closed plastic bag and placed in a sealed trash can to prevent people or animals, including wild animals, from eating it.Consumers also should avoid eating products made with peanut butter, peanut paste, or other peanut-containing products if they are unsure whether these products have been recalled.Consumers with pets should know that some pet foods and pet treats may contain peanut butter, including dog biscuits and bird food. If you have a recalled pet product in your household, do not feed it to your pet or other animals. Consumers also should avoid feeding products made with peanut butter, peanut paste, or other peanut-containing products to their pets if they are unsure whether these products have been recalled.To determine whether a product has been recalled, consumers can search the list of recalled products or telephone the company that distributed the product at the phone number on the package.Consumers without internet access can telephone 1-800-CDC-INFO (1-800-232-4636), 24 hours a day, 7 days a week, for product recall information from the FDA website and for other information on salmonellosis.Persons who think they might have become ill from eating peanut butter or peanut-containing products should consult their health-care providers.Infants, elderly persons, and persons with impaired immune systems are more likely than others to develop severe illness.\nFor Retailers\nStop selling recalled products.\nFor Directors of Institutions and Food Service Establishments\nEnsure that they are not serving recalled products.\nFor Manufacturers\nInform consumers about whether their products could contain peanut butter or other peanut-containing products from Peanut Corporation of America. If a manufacturer knows their products do not contain peanut-containing products from PCA, they should inform consumers of that.\nTo date, no association has been found with major national brand name jars of peanut butter sold in grocery stores. Public health officials will advise the public if more products are identified as being associated with the outbreak.\nMost persons infected withSalmonelladevelop diarrhea, fever, and abdominal cramps 12–72 hours after infection. Infection is usually diagnosed by culture of a stool sample. The illness usually lasts 4 to 7 days. Although most people recover without treatment, severe infections may occur. Infants, elderly persons, and those with impaired immune systems are more likely than others to develop severe illness. When severe infection occurs,Salmonellamay spread from the intestines to the bloodstream and then to other body sites and can cause death unless the person is treated promptly with antibiotics.\nAs an agency within the U.S. Department of Health and Human Services (HHS), CDC leads federal efforts to gather data on foodborne illnesses, investigate foodborne illnesses and outbreaks, and monitor the effectiveness of prevention and control efforts. CDC is not a food safety regulatory agency but works closely with the food safety regulatory agencies, in particular with HHS’s U.S. Food and Drug Administration (FDA) and the Food Safety and Inspection Service within the United States Department of Agriculture (USDA). CDC also plays a key role in building state and local health department epidemiology, laboratory, and environmental health capacity to support foodborne disease surveillance and outbreak response. Notably, CDC data can be used to help document the effectiveness of regulatory interventions.\nTimeline of Infections: Multistate Outbreak of Salmonella Infections Associated with Peanut Butter and Peanut Butter-Containing Products – United States, 2008-2009[PDF – 1.38MB]2008-2009SalmonellaTyphimurium Outbreak Response After Action Report[PDF – 645K]Multistate Outbreak ofSalmonellaInfections Associated with Peanut Butter and Peanut Butter—Containing Products— United States, 2008–2009SalmonellaTyphimurium Infections Associated with Peanut Products",
-      "scraped_at": "2026-05-06T11:33:06.298415+00:00"
+      "scraped_at": "2026-05-07T11:34:59.973842+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -5618,7 +5618,7 @@
       "status": "ongoing",
       "states_affected": [],
       "posted_date": "April 14, 2009",
-      "scraped_at": "2026-05-06T11:33:09.664604+00:00"
+      "scraped_at": "2026-05-07T11:35:03.333392+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -5636,7 +5636,7 @@
       "state_count": 43,
       "posted_date": "August 28, 2008",
       "consumer_advice": "The U.S. Food and Drug Administration (FDA) has lifted itsadviceto consumers to avoid eating jalapeño and serrano peppers grown, harvested or packed in Mexico.\nThe FDA has taken this action consistent with the CDC announcement that theSalmonellaSaintpaul outbreak appears to be over, and that jalapeño peppers and serrano peppers grown in Mexico and associated with theSalmonellaSaintpaul outbreak are no longer in circulation in the U.S. market.\nIn July, the FDA lifted its advice to avoid raw red round, red Roma, and red plum tomatoes.\nThe FDA continues to work with CDC, Mexican authorities, state regulatory agencies and food industry groups to ensure that Americans continue to enjoy one of the safest food supplies in the world.\nConsumers are reminded that vegetables are an important part of a healthy diet and that cooking vegetables kills bacteria, includingSalmonella.\nWhat is salmonellosis? What are the symptoms?\nSalmonellosis is an infection caused by bacteria calledSalmonella. Most people infected withSalmonelladevelop fever, diarrhea, and abdominal cramps 12 – 72 hours after exposure. Although illness usually lasts 4 – 7 days and most people recover without treatment, severe illness may occur that requires medical attention and hospitalization. In these patients, theSalmonellainfection can spread from the intestines to the bloodstream and then to other body sites. In this situation, the infection can cause death unless the patient is treated promptly with antibiotics. Infants, elderly people, and people with impaired immune systems are more likely than other people to become severely ill.\nHow do people get infected withSalmonella?\nSalmonellabacteria live in the intestinal tracts of many animals, including food animals such as cattle and poultry, wild animals, and pets.Salmonellausually are transmitted to humans by eating food contaminated with animal feces. Contaminated foods usually look and smell normal. Contaminated foods are often of animal origin, such as poultry, eggs, pork, and raw milk. However, contaminated fruits and vegetables also cause many illnesses. Thorough cooking killsSalmonella.\nThe feces of some pets, especially reptiles, can containSalmonellawithout causing illness in the animal. Birds commonly carrySalmonella, and outbreaks of illness among young children given baby chicks at Easter have prompted health authorities to advise against this practice. People should always wash hands after being in contact with any animal or its environment. Adults should assure that children practice proper handwashing techniques.More information on proper handwashing.\nFood handlers and others can contaminate food by not washing hands with soap after handling raw poultry, eggs, or meat, or after using the bathroom.\nDoesSalmonellamake foods taste or look different?\nMost products contaminated withSalmonellado not taste or look any different than usual.\nHow isSalmonellainfection diagnosed?\nSalmonellainfection is usually diagnosed by culture of a stool sample. In severe illness, it can sometimes be detected in other parts of the body such as blood.\nHow canSalmonellainfections be treated?\nSalmonellainfections usually resolve in 4 – 7 days and usually do not require treatment other than oral fluids. Persons with severe diarrhea may require rehydration with intravenous fluids. Antibiotics, such as ampicillin, trimethoprim-sulfamethoxazole, or ciprofloxacin, are not usually necessary unless the infection spreads from the intestines.\nAre there long term consequences to aSalmonellainfection?\nPersons with diarrhea usually recover completely, although it may be several months before their bowel habits are entirely normal. A small number of persons withSalmonelladevelop pain in their joints, irritation of the eyes, and painful urination. This is called Reiter’s syndrome. It can last for months or years, and can lead to chronic arthritis which is difficult to treat. Antibiotic treatment does not make a difference in whether or not the person develops arthritis.\nHow common is salmonellosis?\nIn 2004, CDC estimated that there are about 1.4 million illnesses, 15,000 hospitalizations, and 400 deaths fromSalmonellainfection in the United States every year. Approximately 40,000 of those infections are confirmed each year by isolation of theSalmonellastrain. Salmonellosis is more common in summer than in winter.\nChildren are the more likely than adults to get salmonellosis. The rate of diagnosed infections in children less than five years old is about five times higher than the rate in all other persons. Young children, the elderly, and the immunocompromised are the most likely to have severe infections.\nHow can tomatoes become contaminated withSalmonella?\nSalmonellain the environment can contaminate tomatoes.Salmonellacan be found in the feces of many animals (e.g., food animals, reptiles, amphibians, birds) and in some habitats, such as ponds and drainage ditches. Although the exact mechanism by which tomatoes become contaminated is not known, experimental evidence suggests certain possibilities. In experimental studies, the insides of whole tomatoes can be contaminated in at least two ways: (1) if tomatoes are immersed in water that is colder than the tomato, water can enter through the stem scar; if the water is contaminated,Salmonellacan be carried in; (2) if contaminated water touches the stem or flower of a tomato plant, the growing tomato can be contaminated. Contamination on the tomato surface also can be transferred to the inside when it is cut. Food handlers infected withSalmonellawho have not washed their hands may also contaminate tomatoes during preparation. If a cut tomato that is contaminated withSalmonellais kept out of the refrigerator, the bacteria can multiply to much higher numbers.\nWhat is the CDC’s current advice about eating tomatoes?\nAt this time, consumers should avoid eating or handling raw red plum, red Roma, and round red tomatoesunlessthey arefrom the sources listed. If consumers have tomatoes in their homes and are unsure of where they were grown or harvested, they are encouraged to contact the store where they bought the tomatoes. Consumers may continue to buy cherry tomatoes, grape tomatoes, tomatoes with the vine still attached, and tomatoes grown at home — all of which do not appear to be involved in the outbreak.\nConsumers everywhere are advised to:\nRefrigerate within 2 hours or discard cut, peeled, or cooked tomatoes, or products made from tomatoes, such as salsa.Avoid purchasing bruised or damaged tomatoes and discard any that appear spoiled.Thoroughly wash all tomatoes under running water. Do not wash tomatoes in a tub or sink filled with water.Keep tomatoes that will be consumed raw separate from raw meats, raw seafood, and raw produce items.Wash cutting boards, dishes, utensils, and counter tops with hot water and soap when switching between types of food products.\nIs it OK for consumers to eat tomatoes that might be associated with this outbreak if they cook them?\nFDA is recommending that consumers not eat any tomatoes that could be associated with this outbreak, either raw or cooked.\nSalmonellais easily killed by high temperatures. However, when a food is contaminated withSalmonella, people often do not cook it to a high enough temperature or long enough to kill the bacteria. (For example, raw chicken is commonly contaminated withSalmonella. We advise people to use a cooking thermometer to assure that they cook chicken well enough to kill theSalmonellabacteria.)\nAre tomatoes from farmers’ markets included in this outbreak?\nSome farmers’ markets get their tomatoes from sources other than local farms. These other sources may include the same ones that provided the tomatoes implicated in theSalmonellaoutbreak. Consumers should ask retailers at farmers’ markets about the sources of their tomatoes.\nDuring this outbreak, is it safer to eat locally grown tomatoes?\nConsumers should confirm with their retailers that the source of “locally grown” tomatoes is one of thesources listed on the FDA list.",
-      "scraped_at": "2026-05-06T11:33:11.884092+00:00"
+      "scraped_at": "2026-05-07T11:35:05.511304+00:00"
     },
     {
       "id": "cdc_ecoli_2008",
@@ -5649,7 +5649,7 @@
       "hospitalizations": 157,
       "states_affected": [],
       "posted_date": "July 18, 2008",
-      "scraped_at": "2026-05-06T11:33:15.064532+00:00"
+      "scraped_at": "2026-05-07T11:35:07.669423+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -5663,7 +5663,7 @@
       "state_count": 15,
       "posted_date": "May 13, 2008",
       "consumer_advice": "Recalled Malt-O-Meal products may still be in grocery stores and in consumers’ homes. Consumers who have unsweetened Puffed Rice or unsweetened Puffed Wheat cereals should check the “Best If Used By” dates printed on the product. Any cereals with a “Best If Used By” date of April 8, 2008 to March 29, 2009 should not be consumed. Consumers who have a recalled product should contact their local health department.",
-      "scraped_at": "2026-05-06T11:33:17.296421+00:00"
+      "scraped_at": "2026-05-07T11:35:11.065225+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -5678,7 +5678,7 @@
       "state_count": 16,
       "posted_date": "April 2, 2008",
       "consumer_advice": "These products may still be in grocery stores and in consumers’ homes. Consumers who have cantaloupe in their homes can check with the place of purchase to determine if the fruit came from this Honduran company. Cantaloupe from this company should be discarded and not consumed. No illness has been linked to cantaloupe from other sources.",
-      "scraped_at": "2026-05-06T11:33:20.334602+00:00"
+      "scraped_at": "2026-05-07T11:35:14.406359+00:00"
     },
     {
       "id": "cdc_ecoli_2007",
@@ -5692,7 +5692,7 @@
       "states_affected": [],
       "state_count": 10,
       "posted_date": "November 1, 2007",
-      "scraped_at": "2026-05-06T11:33:22.517588+00:00"
+      "scraped_at": "2026-05-07T11:35:17.636299+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -5707,7 +5707,7 @@
       "state_count": 35,
       "posted_date": "October 29, 2007",
       "consumer_advice": "On October 11, 2007, ConAgra Foods issued a voluntary recall of frozen pot pies that may be linked to this outbreak. The following brands of frozen pot pie products are subject to this recall:\nBanquetAlbertson’s (sold at Albertson’s)Food Lion (sold at Food Lion)Great Value (sold at Wal-Mart)Hill Country Fare (sold at HEB)Kirkwood (sold at Aldi)Kroger (sold at Kroger)Meijer (sold at Meijer)Western Family (now discontinued; previously sold at a variety of small retailers)\nThese frozen pot pies include all varieties in 7 oz. single serving packages bearing an establishment number “P-9” or “Est. 1059” printed on the side of the package. These frozen pot pie products were distributed to retail establishments throughout the United States, Puerto Rico, and the Caribbean islands. These products could still be in consumers’ freezers, so it is important that consumers look for and return or discard these products.\nConsumersshould not eatthese products.\nWhat is salmonellosis? What are the symptoms?\nSalmonellosis is an infection caused by bacteria called Salmonella. Most people infected withSalmonelladevelop fever, diarrhea, and abdominal cramps 12–72 hours after exposure. Although illness usually lasts 4–7 days and most people recover without treatment, severe illness may occur that requires medical attention and hospitalization. In these patients, theSalmonellainfection can spread from the intestines to the bloodstream and then to other body sites. In this situation, the infection can cause death unless the patient is treated promptly with antibiotics. Infants, elderly people, and people with impaired immune systems are more likely than other people to become severely ill.\nHow do people get infected withSalmonella?\nSalmonellalive in the intestinal tracts of animals, including birds and reptiles.Salmonellausually are transmitted to humans when we eat food contaminated with animal feces or food contaminated by a food handler who forgot to wash his or her hands with soap after handling raw meat, poultry or eggs, or after using the bathroom.Salmonellais also transmitted when contaminated objects or fingers are put into the mouth. The feces of some pets, especially reptiles, can containSalmonella, and people can be infected if they do not wash their hands after contact with reptiles or their environment. Contaminated food, for example, beef, poultry, milk, and eggs, often originates from animals. However, many foods, including fruits, vegetables, and even flour can become contaminated.\nHow is salmonellosis diagnosed?\nSalmonellainfection is usually diagnosed by culture of a stool sample. In some instances, it can also be cultured from other body sources such as blood.\nDoesSalmonellamake foods taste or look different?\nMost products contaminated withSalmonellado not taste or look any different than normal. Some taste bad because they contain other contaminants.\nI/my household member ate a Banquet Pot pies or a pot pie made by ConAgra Foods product code beginning in “5009” and ending in “P9” or “Est 1059” and I/my household member is ill with diarrhea. What should I do?\nDo not eat any more of these pot pies. If the diarrheal illness is severe, with bloody diarrhea, fever, or symptoms lasting more than three days, you should consult a healthcare provider.Salmonellainfection is diagnosed by culture of a stool specimen. Call your local health department as well, as they may wish to investigate your case further.\nI have a Banquet pot pie or pot pie made by ConAgra Foods with a product code beginning in “5009” and ending in “P9” or “Est 1059” in my freezer at home. What should I do?\nUntil further information is available, CDC and United States Department of Agriculture – Food Safety and Inspection Service (USDA-FSIS)are advising the public to not eat any Banquet pot pies or pot pies made by ConAgra Foods that have a printed product code beginning in “5009” and ending in “P9” or “Est 1059.” Other brands of pot pies made in the ConAgra Foods factory that makes Banquet brand pot pies and sold under otherbrand namesmay also be contaminated with Salmonella. These other pot pie boxes also have a printed code beginning in “5009” and ending in “P9” or “Est 1059.” If you have any of these products at home, the safest thing to do is to discard them.\nHow didSalmonellaget into the Banquet pot pies made by ConAgra Foods?\nIt is not known howSalmonellacontaminated these products. An investigation is underway to determine how contamination might have occurred.\nHave pot pies made by ConAgra Foods that neither are Banquet brand pot pies nor have a printed code beginning in “5009” and ending in “P9” or “Est 1059” been associated with illness?\nCDC is not aware of any human illness associated with brands of pot pies made by ConAgra Foods other than Banquet brand. However, ConAgra Foods has placed a market hold on these products as a precautionary measure.\nHave pot pies made by companies other than ConAgra Foods been associated with illness?\nCDC is not aware of any human illness associated with pot pies made by companies other than ConAgra Foods.\nWhat other advice does CDC have aboutSalmonella?\nBecause foods of animal origin may be contaminated withSalmonella, people should not eat raw or undercooked eggs, poultry, or meat, or drink raw (unpasteurized) milk. Raw eggs may be unrecognized in some foods such as homemade Hollandaise sauce, Caesar and other homemade salad dressings, tiramisu, homemade ice cream, homemade mayonnaise, cookie dough, and frostings. To keep your food safe, remember to Clean, Separate, Cook, and Chill. For more food safety information visitwww.BeFoodSafe.gov.",
-      "scraped_at": "2026-05-06T11:33:24.764890+00:00"
+      "scraped_at": "2026-05-07T11:35:21.056947+00:00"
     },
     {
       "id": "cdc_ecoli_2006",
@@ -5719,15 +5719,15 @@
       "status": "closed",
       "hospitalizations": 12,
       "states_affected": [
+        "NY",
         "SC",
         "NJ",
-        "PA",
         "DE",
-        "NY"
+        "PA"
       ],
       "state_count": 5,
       "posted_date": "December 14, 2006",
-      "scraped_at": "2026-05-06T11:33:37.718926+00:00"
+      "scraped_at": "2026-05-07T11:35:31.116813+00:00"
     },
     {
       "id": "cdc_ecoli_2006",
@@ -5742,8 +5742,8 @@
       "state_count": 26,
       "posted_date": "October 6, 2006",
       "consumer_advice": "The following is advice for consumers about this outbreak:\nConsumers should not eat, retailers should not sell, and restaurants should not serve spinach implicated in theE. coliO157:H7 outbreak. Products implicated in the outbreak include fresh spinach and spinach-containing products from brands processed by Natural Selection Foods.If consumers cannot tell if a brand of fresh spinach was implicated in the outbreak and the package has a “use-by date” of October 1, 2006 or earlier, they should not eat it.E. coliO157:H7 in spinach can be killed by cooking at 160° Fahrenheit for 15 seconds. (Water boils at 212° Fahrenheit.) If spinach is cooked in a frying pan, and all parts do not reach 160° Fahrenheit, all bacteria may not be killed. If consumers choose to cook the spinach, they should not allow the raw spinach to contaminate other foods and food contact surfaces, and they should wash hands, utensils, and surfaces with hot, soapy water before and after handling the spinach.",
-      "scraped_at": "2026-05-06T11:33:43.002869+00:00"
+      "scraped_at": "2026-05-07T11:35:35.672441+00:00"
     }
   ],
-  "generated_at": "2026-05-06T11:33:43.549704+00:00"
+  "generated_at": "2026-05-07T11:35:36.125231+00:00"
 }

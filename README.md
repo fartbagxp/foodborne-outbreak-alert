@@ -6,20 +6,20 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 **Current Coverage:**
 
-- 🏛️ FDA: 73 outbreak investigations (2006-2026)
+- 🏛️ FDA: 76 outbreak investigations (2006-2026)
 - 🔬 CDC: 228 total investigations (2006-2026)
 - 🚨 Active: 33 ongoing investigations
-- 📊 Total: 301 foodborne outbreak investigations
+- 📊 Total: 304 foodborne outbreak investigations
 
 ## Current Statistics
 
 | Metric                    | Count  |
 | ------------------------- | ------ |
-| **Total Outbreaks**       | 301    |
+| **Total Outbreaks**       | 304    |
 | **Active Investigations** | 33     |
-| **Total Cases**           | 40,920 |
-| **Deaths**                | 4,764  |
-| **Hospitalizations**      | 15,684 |
+| **Total Cases**           | 40,911 |
+| **Deaths**                | 5,025  |
+| **Hospitalizations**      | 15,525 |
 | **States Affected**       | 51     |
 
 ## By Source
@@ -27,41 +27,41 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | Source | Outbreaks | Year Range |
 | ------ | --------- | ---------- |
 | CDC    | 228       | 2006-2026  |
-| FDA    | 73        | 2006-2026  |
+| FDA    | 76        | 2006-2026  |
 
 ## By Status
 
 | Status  | Count |
 | ------- | ----- |
-| Unknown | 205   |
-| Closed  | 63    |
+| Unknown | 206   |
+| Closed  | 65    |
 | Ongoing | 33    |
 
 ## By Pathogen (Top 10)
 
 | Pathogen   | Outbreaks |
 | ---------- | --------- |
-| Salmonella | 131       |
+| Salmonella | 132       |
 | Unknown    | 63        |
 | E. coli    | 58        |
-| Listeria   | 43        |
-| Botulism   | 3         |
+| Listeria   | 44        |
+| Botulism   | 4         |
 | Vibrio     | 3         |
 
 ## By Year (Recent)
 
 | Year | Outbreaks |
 | ---- | --------- |
-| 2026 | 4         |
+| 2026 | 7         |
 | 2025 | 13        |
-| 2024 | 11        |
-| 2023 | 13        |
-| 2022 | 23        |
+| 2024 | 13        |
+| 2023 | 15        |
+| 2022 | 24        |
 | 2021 | 22        |
-| 2020 | 20        |
-| 2019 | 27        |
-| 2018 | 20        |
-| 2017 | 7         |
+| 2020 | 19        |
+| 2019 | 26        |
+| 2018 | 18        |
+| 2017 | 6         |
 
 ## Features
 

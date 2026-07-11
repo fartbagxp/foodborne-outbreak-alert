@@ -2402,7 +2402,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:12.476401+00:00"
+      "scraped_at": "2026-07-11T11:07:22.749971+00:00"
     },
     {
       "id": "cdc_botulism_infant-formula-june-2026",
@@ -2412,7 +2412,7 @@
       "pathogen": "botulism",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:14.521038+00:00"
+      "scraped_at": "2026-07-11T11:07:24.803918+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheese-06-26",
@@ -2422,7 +2422,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:16.563417+00:00"
+      "scraped_at": "2026-07-11T11:07:26.857517+00:00"
     },
     {
       "id": "cdc_salmonella_moringa-05-26",
@@ -2432,7 +2432,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:18.644396+00:00"
+      "scraped_at": "2026-07-11T11:07:28.950339+00:00"
     },
     {
       "id": "cdc_ecoli_rawcheese-03-26",
@@ -2442,7 +2442,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:20.678118+00:00"
+      "scraped_at": "2026-07-11T11:07:31.071314+00:00"
     },
     {
       "id": "cdc_salmonella_moringacapsules-02-26",
@@ -2452,7 +2452,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:22.716914+00:00"
+      "scraped_at": "2026-07-11T11:07:33.132496+00:00"
     },
     {
       "id": "cdc_salmonella_supergreenssupplementpowders-1-26",
@@ -2462,7 +2462,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:24.751696+00:00"
+      "scraped_at": "2026-07-11T11:07:35.222305+00:00"
     },
     {
       "id": "cdc_salmonella_oysters-12-25",
@@ -2472,7 +2472,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:26.795749+00:00"
+      "scraped_at": "2026-07-11T11:07:37.315487+00:00"
     },
     {
       "id": "cdc_botulism_infant-formula-nov-2025",
@@ -2482,7 +2482,7 @@
       "pathogen": "botulism",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:28.846971+00:00"
+      "scraped_at": "2026-07-11T11:07:39.376054+00:00"
     },
     {
       "id": "cdc_salmonella_supplement-10-25",
@@ -2492,7 +2492,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:30.882076+00:00"
+      "scraped_at": "2026-07-11T11:07:41.464240+00:00"
     },
     {
       "id": "cdc_salmonella_homedeliverymeals-09-25",
@@ -2502,7 +2502,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:32.927458+00:00"
+      "scraped_at": "2026-07-11T11:07:43.597000+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-08-25",
@@ -2512,7 +2512,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:34.962802+00:00"
+      "scraped_at": "2026-07-11T11:07:45.699365+00:00"
     },
     {
       "id": "cdc_salmonella_sproutedbeans-07-25",
@@ -2522,7 +2522,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:36.997808+00:00"
+      "scraped_at": "2026-07-11T11:07:47.766905+00:00"
     },
     {
       "id": "cdc_listeria_chicken-fettuccine-alfredo-06-25",
@@ -2532,7 +2532,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:39.075677+00:00"
+      "scraped_at": "2026-07-11T11:07:49.867070+00:00"
     },
     {
       "id": "cdc_salmonella_pistachiocream-06-25",
@@ -2542,7 +2542,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:41.120341+00:00"
+      "scraped_at": "2026-07-11T11:07:51.987134+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-06-25",
@@ -2552,7 +2552,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:43.159980+00:00"
+      "scraped_at": "2026-07-11T11:07:54.048579+00:00"
     },
     {
       "id": "cdc_salmonella_whole-cucumbers-05-25",
@@ -2562,7 +2562,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:45.197737+00:00"
+      "scraped_at": "2026-07-11T11:07:56.138602+00:00"
     },
     {
       "id": "cdc_listeria_ready-to-eat-foods-may-2025",
@@ -2572,7 +2572,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:47.249411+00:00"
+      "scraped_at": "2026-07-11T11:07:58.235561+00:00"
     },
     {
       "id": "cdc_listeria_shakes-022025",
@@ -2582,7 +2582,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:49.286925+00:00"
+      "scraped_at": "2026-07-11T11:08:00.299004+00:00"
     },
     {
       "id": "cdc_listeria_meat-and-poultry-products-11-24",
@@ -2592,7 +2592,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:51.327244+00:00"
+      "scraped_at": "2026-07-11T11:08:02.361086+00:00"
     },
     {
       "id": "cdc_salmonella_cucumbers-11-24",
@@ -2602,7 +2602,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:53.404879+00:00"
+      "scraped_at": "2026-07-11T11:08:04.472090+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2612,7 +2612,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:55.438763+00:00"
+      "scraped_at": "2026-07-11T11:08:06.565594+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2622,7 +2622,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:57.472857+00:00"
+      "scraped_at": "2026-07-11T11:08:08.628673+00:00"
     },
     {
       "id": "cdc_listeria_delimeats-7-24",
@@ -2632,7 +2632,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:40:59.511477+00:00"
+      "scraped_at": "2026-07-11T11:08:10.721674+00:00"
     },
     {
       "id": "cdc_unknown_outbreak-investigation-diamond-shruumz-products",
@@ -2642,7 +2642,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:01.564244+00:00"
+      "scraped_at": "2026-07-11T11:08:12.829078+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-09-24",
@@ -2652,7 +2652,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:03.599262+00:00"
+      "scraped_at": "2026-07-11T11:08:14.882923+00:00"
     },
     {
       "id": "cdc_salmonella_africana-06-24",
@@ -2662,7 +2662,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:05.632824+00:00"
+      "scraped_at": "2026-07-11T11:08:16.944924+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2672,7 +2672,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:07.679821+00:00"
+      "scraped_at": "2026-07-11T11:08:19.038660+00:00"
     },
     {
       "id": "cdc_salmonella_basil-04-24",
@@ -2682,7 +2682,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:09.738388+00:00"
+      "scraped_at": "2026-07-11T11:08:21.124483+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2692,7 +2692,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:11.791303+00:00"
+      "scraped_at": "2026-07-11T11:08:23.178879+00:00"
     },
     {
       "id": "cdc_listeria_cheese-02-24",
@@ -2702,7 +2702,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:13.869955+00:00"
+      "scraped_at": "2026-07-11T11:08:25.259128+00:00"
     },
     {
       "id": "cdc_salmonella_charcuterie-meats-01-24",
@@ -2712,7 +2712,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:15.904805+00:00"
+      "scraped_at": "2026-07-11T11:08:27.358721+00:00"
     },
     {
       "id": "cdc_listeria_peaches-11-23",
@@ -2722,7 +2722,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:17.954069+00:00"
+      "scraped_at": "2026-07-11T11:08:29.445009+00:00"
     },
     {
       "id": "cdc_salmonella_sundsvall-11-23",
@@ -2732,7 +2732,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:19.986665+00:00"
+      "scraped_at": "2026-07-11T11:08:31.500476+00:00"
     },
     {
       "id": "cdc_salmonella_thompson-10-23",
@@ -2742,7 +2742,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:22.064392+00:00"
+      "scraped_at": "2026-07-11T11:08:33.608881+00:00"
     },
     {
       "id": "cdc_listeria_ice-cream-08-23",
@@ -2752,7 +2752,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:24.101856+00:00"
+      "scraped_at": "2026-07-11T11:08:35.700366+00:00"
     },
     {
       "id": "cdc_salmonella_saintpaul-07-23",
@@ -2762,7 +2762,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:26.144029+00:00"
+      "scraped_at": "2026-07-11T11:08:37.752897+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-05-23",
@@ -2772,7 +2772,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:28.178857+00:00"
+      "scraped_at": "2026-07-11T11:08:39.845583+00:00"
     },
     {
       "id": "cdc_salmonella_infantis-03-23",
@@ -2782,7 +2782,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:30.211596+00:00"
+      "scraped_at": "2026-07-11T11:08:41.937063+00:00"
     },
     {
       "id": "cdc_unknown_hav-contaminated-food",
@@ -2792,7 +2792,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:32.247332+00:00"
+      "scraped_at": "2026-07-11T11:08:43.988817+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-02-23",
@@ -2802,7 +2802,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:34.331018+00:00"
+      "scraped_at": "2026-07-11T11:08:46.058712+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-12-22",
@@ -2812,7 +2812,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:36.380712+00:00"
+      "scraped_at": "2026-07-11T11:08:48.150844+00:00"
     },
     {
       "id": "cdc_unknown_outbreaks",
@@ -2822,7 +2822,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:38.416494+00:00"
+      "scraped_at": "2026-07-11T11:08:50.243217+00:00"
     },
     {
       "id": "cdc_listeria_enoki-11-22",
@@ -2832,7 +2832,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:40.451738+00:00"
+      "scraped_at": "2026-07-11T11:08:52.296039+00:00"
     },
     {
       "id": "cdc_listeria_deli-11-22",
@@ -2842,7 +2842,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:42.536673+00:00"
+      "scraped_at": "2026-07-11T11:08:54.405087+00:00"
     },
     {
       "id": "cdc_salmonella_litchfield-10-22",
@@ -2852,7 +2852,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:44.569161+00:00"
+      "scraped_at": "2026-07-11T11:08:56.458264+00:00"
     },
     {
       "id": "cdc_ecoli_o121-10-22",
@@ -2862,7 +2862,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:46.607696+00:00"
+      "scraped_at": "2026-07-11T11:08:58.550306+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-09-22",
@@ -2872,7 +2872,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:48.645510+00:00"
+      "scraped_at": "2026-07-11T11:09:00.642963+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-09-22",
@@ -2882,7 +2882,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:50.691468+00:00"
+      "scraped_at": "2026-07-11T11:09:02.695363+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-08-22",
@@ -2892,7 +2892,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:52.728804+00:00"
+      "scraped_at": "2026-07-11T11:09:04.747624+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-06-22",
@@ -2902,7 +2902,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:54.810768+00:00"
+      "scraped_at": "2026-07-11T11:09:06.856517+00:00"
     },
     {
       "id": "cdc_unknown_hav-contaminated-food",
@@ -2912,7 +2912,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:56.855766+00:00"
+      "scraped_at": "2026-07-11T11:09:08.952996+00:00"
     },
     {
       "id": "cdc_salmonella_senftenberg-05-22",
@@ -2922,7 +2922,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:41:58.891931+00:00"
+      "scraped_at": "2026-07-11T11:09:11.006184+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-21",
@@ -2932,7 +2932,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:00.925645+00:00"
+      "scraped_at": "2026-07-11T11:09:13.058663+00:00"
     },
     {
       "id": "cdc_listeria_packaged-salad-12-21-b",
@@ -2942,7 +2942,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:03.014179+00:00"
+      "scraped_at": "2026-07-11T11:09:15.178265+00:00"
     },
     {
       "id": "cdc_listeria_packaged-salad-mix-12-21",
@@ -2952,7 +2952,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:05.051505+00:00"
+      "scraped_at": "2026-07-11T11:09:17.255887+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-21",
@@ -2962,7 +2962,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:07.085911+00:00"
+      "scraped_at": "2026-07-11T11:09:19.345709+00:00"
     },
     {
       "id": "cdc_salmonella_i45-10-21",
@@ -2972,7 +2972,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:09.122410+00:00"
+      "scraped_at": "2026-07-11T11:09:21.406492+00:00"
     },
     {
       "id": "cdc_salmonella_thompson-10-21",
@@ -2982,7 +2982,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:11.159772+00:00"
+      "scraped_at": "2026-07-11T11:09:23.501915+00:00"
     },
     {
       "id": "cdc_salmonella_oranienburg-09-21",
@@ -2992,7 +2992,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:13.194733+00:00"
+      "scraped_at": "2026-07-11T11:09:25.561961+00:00"
     },
     {
       "id": "cdc_salmonella_italian-style-meat-08-21",
@@ -3002,7 +3002,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:15.246438+00:00"
+      "scraped_at": "2026-07-11T11:09:27.662737+00:00"
     },
     {
       "id": "cdc_ecoli_o121-07-21",
@@ -3012,7 +3012,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:17.290888+00:00"
+      "scraped_at": "2026-07-11T11:09:29.740552+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-07-21",
@@ -3022,7 +3022,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:19.324912+00:00"
+      "scraped_at": "2026-07-11T11:09:31.833478+00:00"
     },
     {
       "id": "cdc_listeria_precooked-chicken-07-21",
@@ -3032,7 +3032,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:21.357584+00:00"
+      "scraped_at": "2026-07-11T11:09:33.892171+00:00"
     },
     {
       "id": "cdc_salmonella_weltevreden-06-21",
@@ -3042,7 +3042,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:23.432312+00:00"
+      "scraped_at": "2026-07-11T11:09:36.003104+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-06-21",
@@ -3052,7 +3052,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:25.467600+00:00"
+      "scraped_at": "2026-07-11T11:09:38.095455+00:00"
     },
     {
       "id": "cdc_salmonella_duisburg-04-21",
@@ -3062,7 +3062,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:27.514273+00:00"
+      "scraped_at": "2026-07-11T11:09:40.148790+00:00"
     },
     {
       "id": "cdc_salmonella_hadar-04-21",
@@ -3072,7 +3072,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:29.547996+00:00"
+      "scraped_at": "2026-07-11T11:09:42.203642+00:00"
     },
     {
       "id": "cdc_listeria_hispanic-soft-cheese-02-21",
@@ -3082,7 +3082,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:31.593745+00:00"
+      "scraped_at": "2026-07-11T11:09:44.296383+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-02-21",
@@ -3092,7 +3092,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:33.641077+00:00"
+      "scraped_at": "2026-07-11T11:09:46.389864+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-20",
@@ -3102,7 +3102,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:35.696156+00:00"
+      "scraped_at": "2026-07-11T11:09:48.478357+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-10-20b",
@@ -3112,7 +3112,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:37.742212+00:00"
+      "scraped_at": "2026-07-11T11:09:50.581217+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-10-20a",
@@ -3122,7 +3122,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:39.775767+00:00"
+      "scraped_at": "2026-07-11T11:09:52.634121+00:00"
     },
     {
       "id": "cdc_listeria_delimeat-10-20",
@@ -3132,7 +3132,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:41.833903+00:00"
+      "scraped_at": "2026-07-11T11:09:54.727199+00:00"
     },
     {
       "id": "cdc_salmonella_stanley-09-20",
@@ -3142,7 +3142,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:43.880775+00:00"
+      "scraped_at": "2026-07-11T11:09:56.831317+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-08-20",
@@ -3152,7 +3152,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:45.913324+00:00"
+      "scraped_at": "2026-07-11T11:09:58.885447+00:00"
     },
     {
       "id": "cdc_salmonella_newport-07-20",
@@ -3162,7 +3162,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:47.949153+00:00"
+      "scraped_at": "2026-07-11T11:10:00.949866+00:00"
     },
     {
       "id": "cdc_unknown_2020",
@@ -3172,7 +3172,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:49.996933+00:00"
+      "scraped_at": "2026-07-11T11:10:03.034364+00:00"
     },
     {
       "id": "cdc_listeria_enoki-mushrooms-03-20",
@@ -3182,7 +3182,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:52.029166+00:00"
+      "scraped_at": "2026-07-11T11:10:05.128732+00:00"
     },
     {
       "id": "cdc_ecoli_o103h2-02-20",
@@ -3192,7 +3192,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:54.070945+00:00"
+      "scraped_at": "2026-07-11T11:10:07.182866+00:00"
     },
     {
       "id": "cdc_listeria_eggs-12-19",
@@ -3202,7 +3202,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:56.148989+00:00"
+      "scraped_at": "2026-07-11T11:10:09.295171+00:00"
     },
     {
       "id": "cdc_salmonella_javiana-12-19",
@@ -3212,7 +3212,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:42:58.182129+00:00"
+      "scraped_at": "2026-07-11T11:10:11.357706+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-19",
@@ -3222,7 +3222,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:00.214097+00:00"
+      "scraped_at": "2026-07-11T11:10:13.412493+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-19",
@@ -3232,7 +3232,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:02.249005+00:00"
+      "scraped_at": "2026-07-11T11:10:15.506680+00:00"
     },
     {
       "id": "cdc_salmonella_dublin-11-19",
@@ -3242,7 +3242,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:04.303232+00:00"
+      "scraped_at": "2026-07-11T11:10:17.614640+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-08-19",
@@ -3252,7 +3252,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:06.336465+00:00"
+      "scraped_at": "2026-07-11T11:10:19.680000+00:00"
     },
     {
       "id": "cdc_unknown_weekly",
@@ -3262,7 +3262,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:08.370264+00:00"
+      "scraped_at": "2026-07-11T11:10:21.766013+00:00"
     },
     {
       "id": "cdc_ecoli_bison-07-19",
@@ -3272,7 +3272,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:10.403198+00:00"
+      "scraped_at": "2026-07-11T11:10:23.875362+00:00"
     },
     {
       "id": "cdc_salmonella_uganda-06-19",
@@ -3282,7 +3282,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:12.436689+00:00"
+      "scraped_at": "2026-07-11T11:10:25.935698+00:00"
     },
     {
       "id": "cdc_ecoli_flour-05-19",
@@ -3292,7 +3292,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:14.473887+00:00"
+      "scraped_at": "2026-07-11T11:10:27.999520+00:00"
     },
     {
       "id": "cdc_salmonella_concord-05-19",
@@ -3302,7 +3302,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:16.549385+00:00"
+      "scraped_at": "2026-07-11T11:10:30.101748+00:00"
     },
     {
       "id": "cdc_vibrio_rawoysters-05-19",
@@ -3312,7 +3312,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:18.583684+00:00"
+      "scraped_at": "2026-07-11T11:10:32.195954+00:00"
     },
     {
       "id": "cdc_listeria_deliproducts-04-19",
@@ -3322,7 +3322,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:20.616758+00:00"
+      "scraped_at": "2026-07-11T11:10:34.256062+00:00"
     },
     {
       "id": "cdc_salmonella_newport-04-19",
@@ -3332,7 +3332,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:22.656307+00:00"
+      "scraped_at": "2026-07-11T11:10:36.317969+00:00"
     },
     {
       "id": "cdc_salmonella_carrau-04-19",
@@ -3342,7 +3342,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:24.734982+00:00"
+      "scraped_at": "2026-07-11T11:10:38.426144+00:00"
     },
     {
       "id": "cdc_ecoli_o103-04-19",
@@ -3352,7 +3352,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:26.773146+00:00"
+      "scraped_at": "2026-07-11T11:10:40.512378+00:00"
     },
     {
       "id": "cdc_salmonella_schwarzengrund-03-19",
@@ -3362,7 +3362,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:28.807245+00:00"
+      "scraped_at": "2026-07-11T11:10:42.593249+00:00"
     },
     {
       "id": "cdc_salmonella_concord-11-18",
@@ -3372,7 +3372,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:30.842583+00:00"
+      "scraped_at": "2026-07-11T11:10:44.685492+00:00"
     },
     {
       "id": "cdc_salmonella_agbeni-11-18",
@@ -3382,7 +3382,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:32.876094+00:00"
+      "scraped_at": "2026-07-11T11:10:46.781911+00:00"
     },
     {
       "id": "cdc_listeria_porkproducts-11-18",
@@ -3392,7 +3392,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:34.910251+00:00"
+      "scraped_at": "2026-07-11T11:10:48.847775+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-18",
@@ -3402,7 +3402,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:36.993560+00:00"
+      "scraped_at": "2026-07-11T11:10:50.926284+00:00"
     },
     {
       "id": "cdc_salmonella_infantis-10-18",
@@ -3412,7 +3412,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:39.027592+00:00"
+      "scraped_at": "2026-07-11T11:10:53.019181+00:00"
     },
     {
       "id": "cdc_salmonella_newport-10-18",
@@ -3422,7 +3422,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:41.061561+00:00"
+      "scraped_at": "2026-07-11T11:10:55.105679+00:00"
     },
     {
       "id": "cdc_listeria_countryham-10-18",
@@ -3432,7 +3432,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:43.093036+00:00"
+      "scraped_at": "2026-07-11T11:10:57.175624+00:00"
     },
     {
       "id": "cdc_ecoli_o26-09-18",
@@ -3442,7 +3442,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:45.167557+00:00"
+      "scraped_at": "2026-07-11T11:10:59.283506+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-09-18",
@@ -3452,7 +3452,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:47.199682+00:00"
+      "scraped_at": "2026-07-11T11:11:01.377570+00:00"
     },
     {
       "id": "cdc_salmonella_chicken-08-18",
@@ -3462,7 +3462,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:49.232369+00:00"
+      "scraped_at": "2026-07-11T11:11:03.430274+00:00"
     },
     {
       "id": "cdc_salmonella_reading-07-18",
@@ -3472,7 +3472,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:51.267354+00:00"
+      "scraped_at": "2026-07-11T11:11:05.521881+00:00"
     },
     {
       "id": "cdc_salmonella_sandiego-07-18",
@@ -3482,7 +3482,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:53.300283+00:00"
+      "scraped_at": "2026-07-11T11:11:07.574459+00:00"
     },
     {
       "id": "cdc_unknown_b-071318",
@@ -3492,7 +3492,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:55.332948+00:00"
+      "scraped_at": "2026-07-11T11:11:09.666899+00:00"
     },
     {
       "id": "cdc_unknown_a-062018",
@@ -3502,7 +3502,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:57.381813+00:00"
+      "scraped_at": "2026-07-11T11:11:11.776111+00:00"
     },
     {
       "id": "cdc_vibrio_vibriop-07-18",
@@ -3512,7 +3512,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:43:59.419859+00:00"
+      "scraped_at": "2026-07-11T11:11:13.829276+00:00"
     },
     {
       "id": "cdc_salmonella_mbandaka-06-18",
@@ -3522,7 +3522,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:01.465038+00:00"
+      "scraped_at": "2026-07-11T11:11:15.920991+00:00"
     },
     {
       "id": "cdc_salmonella_adelaide-06-18",
@@ -3532,7 +3532,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:03.498454+00:00"
+      "scraped_at": "2026-07-11T11:11:18.013505+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-04-18",
@@ -3542,7 +3542,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:05.541589+00:00"
+      "scraped_at": "2026-07-11T11:11:20.127907+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-04-18",
@@ -3552,7 +3552,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:07.574075+00:00"
+      "scraped_at": "2026-07-11T11:11:22.188543+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-03-18",
@@ -3562,7 +3562,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:09.606468+00:00"
+      "scraped_at": "2026-07-11T11:11:24.274947+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-02-18",
@@ -3572,7 +3572,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:11.640998+00:00"
+      "scraped_at": "2026-07-11T11:11:26.347625+00:00"
     },
     {
       "id": "cdc_salmonella_kratom-02-18",
@@ -3582,7 +3582,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:13.673252+00:00"
+      "scraped_at": "2026-07-11T11:11:28.452499+00:00"
     },
     {
       "id": "cdc_salmonella_montevideo-01-18",
@@ -3592,7 +3592,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:15.707303+00:00"
+      "scraped_at": "2026-07-11T11:11:30.516565+00:00"
     },
     {
       "id": "cdc_salmonella_coconut-01-18",
@@ -3602,7 +3602,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:17.783552+00:00"
+      "scraped_at": "2026-07-11T11:11:32.621329+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-17",
@@ -3612,7 +3612,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:19.827204+00:00"
+      "scraped_at": "2026-07-11T11:11:34.681747+00:00"
     },
     {
       "id": "cdc_unknown_2017",
@@ -3622,7 +3622,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:21.858499+00:00"
+      "scraped_at": "2026-07-11T11:11:36.781902+00:00"
     },
     {
       "id": "cdc_salmonella_urbana-09-17",
@@ -3632,7 +3632,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:23.902528+00:00"
+      "scraped_at": "2026-07-11T11:11:38.840998+00:00"
     },
     {
       "id": "cdc_salmonella_newport-09-17",
@@ -3642,7 +3642,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:25.979947+00:00"
+      "scraped_at": "2026-07-11T11:11:40.944146+00:00"
     },
     {
       "id": "cdc_salmonella_anatum-9-17",
@@ -3652,7 +3652,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:28.011935+00:00"
+      "scraped_at": "2026-07-11T11:11:43.001949+00:00"
     },
     {
       "id": "cdc_salmonella_kiambu-07-17",
@@ -3662,7 +3662,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:30.054802+00:00"
+      "scraped_at": "2026-07-11T11:11:45.065665+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheese-03-17",
@@ -3672,7 +3672,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:32.087269+00:00"
+      "scraped_at": "2026-07-11T11:11:47.149033+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-03-17",
@@ -3682,7 +3682,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:34.121376+00:00"
+      "scraped_at": "2026-07-11T11:11:49.243184+00:00"
     },
     {
       "id": "cdc_salmonella_oranienburg-10-16",
@@ -3692,7 +3692,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:36.154076+00:00"
+      "scraped_at": "2026-07-11T11:11:51.298102+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -3702,7 +3702,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:38.234309+00:00"
+      "scraped_at": "2026-07-11T11:11:53.376952+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-09-16",
@@ -3712,7 +3712,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:40.266582+00:00"
+      "scraped_at": "2026-07-11T11:11:55.461753+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -3722,7 +3722,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:42.300655+00:00"
+      "scraped_at": "2026-07-11T11:11:57.554946+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -3732,7 +3732,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:44.338898+00:00"
+      "scraped_at": "2026-07-11T11:11:59.609235+00:00"
     },
     {
       "id": "cdc_salmonella_reading-08-16",
@@ -3742,7 +3742,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:46.393186+00:00"
+      "scraped_at": "2026-07-11T11:12:01.715815+00:00"
     },
     {
       "id": "cdc_ecoli_o121-06-16",
@@ -3752,7 +3752,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:48.432489+00:00"
+      "scraped_at": "2026-07-11T11:12:03.776945+00:00"
     },
     {
       "id": "cdc_listeria_frozen-vegetables-05-16",
@@ -3762,7 +3762,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:50.464399+00:00"
+      "scraped_at": "2026-07-11T11:12:05.862153+00:00"
     },
     {
       "id": "cdc_listeria_raw-milk-03-16",
@@ -3772,7 +3772,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:52.507600+00:00"
+      "scraped_at": "2026-07-11T11:12:07.930569+00:00"
     },
     {
       "id": "cdc_salmonella_montevideo-03-16",
@@ -3782,7 +3782,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:54.541430+00:00"
+      "scraped_at": "2026-07-11T11:12:10.021522+00:00"
     },
     {
       "id": "cdc_ecoli_o157-02-16",
@@ -3792,7 +3792,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:56.574039+00:00"
+      "scraped_at": "2026-07-11T11:12:12.091297+00:00"
     },
     {
       "id": "cdc_salmonella_muenchen-02-16",
@@ -3802,7 +3802,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:44:58.651037+00:00"
+      "scraped_at": "2026-07-11T11:12:14.196844+00:00"
     },
     {
       "id": "cdc_salmonella_virchow-02-16",
@@ -3812,7 +3812,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:00.686538+00:00"
+      "scraped_at": "2026-07-11T11:12:16.258334+00:00"
     },
     {
       "id": "cdc_listeria_bagged-salads-01-16",
@@ -3822,7 +3822,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:02.728599+00:00"
+      "scraped_at": "2026-07-11T11:12:18.350514+00:00"
     },
     {
       "id": "cdc_salmonella_paratyphi-b-12-15",
@@ -3832,7 +3832,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:04.775289+00:00"
+      "scraped_at": "2026-07-11T11:12:20.438052+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-15",
@@ -3842,7 +3842,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:06.863128+00:00"
+      "scraped_at": "2026-07-11T11:12:22.547813+00:00"
     },
     {
       "id": "cdc_ecoli_o26-11-15",
@@ -3852,7 +3852,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:08.898005+00:00"
+      "scraped_at": "2026-07-11T11:12:24.603754+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheeses-09-15",
@@ -3862,7 +3862,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:10.934424+00:00"
+      "scraped_at": "2026-07-11T11:12:26.657002+00:00"
     },
     {
       "id": "cdc_salmonella_poona-09-15",
@@ -3872,7 +3872,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:12.968562+00:00"
+      "scraped_at": "2026-07-11T11:12:28.755683+00:00"
     },
     {
       "id": "cdc_salmonella_pork-08-15",
@@ -3882,7 +3882,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:15.006937+00:00"
+      "scraped_at": "2026-07-11T11:12:30.848341+00:00"
     },
     {
       "id": "cdc_unknown_2015",
@@ -3892,7 +3892,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:17.039505+00:00"
+      "scraped_at": "2026-07-11T11:12:32.900847+00:00"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-part2-07-15",
@@ -3902,7 +3902,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:19.079557+00:00"
+      "scraped_at": "2026-07-11T11:12:34.966171+00:00"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-07-15",
@@ -3912,7 +3912,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:21.113037+00:00"
+      "scraped_at": "2026-07-11T11:12:37.058708+00:00"
     },
     {
       "id": "cdc_salmonella_paratyphi-b-05-15",
@@ -3922,7 +3922,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:23.151636+00:00"
+      "scraped_at": "2026-07-11T11:12:39.156546+00:00"
     },
     {
       "id": "cdc_listeria_ice-cream-03-15",
@@ -3932,7 +3932,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:25.184091+00:00"
+      "scraped_at": "2026-07-11T11:12:41.210776+00:00"
     },
     {
       "id": "cdc_unknown_mmwrhtml",
@@ -3942,7 +3942,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:27.233196+00:00"
+      "scraped_at": "2026-07-11T11:12:43.321461+00:00"
     },
     {
       "id": "cdc_listeria_caramel-apples-12-14",
@@ -3952,7 +3952,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:29.267761+00:00"
+      "scraped_at": "2026-07-11T11:12:45.407131+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-11-14",
@@ -3962,7 +3962,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:31.300565+00:00"
+      "scraped_at": "2026-07-11T11:12:47.491963+00:00"
     },
     {
       "id": "cdc_listeria_bean-sprouts-11-14",
@@ -3972,7 +3972,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:33.335281+00:00"
+      "scraped_at": "2026-07-11T11:12:49.553074+00:00"
     },
     {
       "id": "cdc_listeria_cheese-10-14",
@@ -3982,7 +3982,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:35.367493+00:00"
+      "scraped_at": "2026-07-11T11:12:51.647018+00:00"
     },
     {
       "id": "cdc_unknown_2014",
@@ -3992,7 +3992,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:37.401385+00:00"
+      "scraped_at": "2026-07-11T11:12:53.732007+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-08-14",
@@ -4002,7 +4002,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:39.483964+00:00"
+      "scraped_at": "2026-07-11T11:12:55.808827+00:00"
     },
     {
       "id": "cdc_salmonella_newport-05-14",
@@ -4012,7 +4012,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:41.528108+00:00"
+      "scraped_at": "2026-07-11T11:12:57.869541+00:00"
     },
     {
       "id": "cdc_ecoli_O121-05-14",
@@ -4022,7 +4022,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:43.564472+00:00"
+      "scraped_at": "2026-07-11T11:12:59.962056+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-05-14",
@@ -4032,7 +4032,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:45.598058+00:00"
+      "scraped_at": "2026-07-11T11:13:02.050002+00:00"
     },
     {
       "id": "cdc_listeria_cheese-02-14",
@@ -4042,7 +4042,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:47.702921+00:00"
+      "scraped_at": "2026-07-11T11:13:04.158749+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-01-14",
@@ -4052,7 +4052,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:49.735872+00:00"
+      "scraped_at": "2026-07-11T11:13:06.221181+00:00"
     },
     {
       "id": "cdc_salmonella_stanley-01-14",
@@ -4062,7 +4062,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:51.771447+00:00"
+      "scraped_at": "2026-07-11T11:13:08.316166+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-11-13",
@@ -4072,7 +4072,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:53.809218+00:00"
+      "scraped_at": "2026-07-11T11:13:10.370566+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-10-13",
@@ -4082,7 +4082,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:55.847368+00:00"
+      "scraped_at": "2026-07-11T11:13:12.456058+00:00"
     },
     {
       "id": "cdc_vibrio_investigations",
@@ -4092,7 +4092,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:57.895231+00:00"
+      "scraped_at": "2026-07-11T11:13:14.518525+00:00"
     },
     {
       "id": "cdc_unknown_outbreaks",
@@ -4102,7 +4102,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:45:59.961899+00:00"
+      "scraped_at": "2026-07-11T11:13:16.635131+00:00"
     },
     {
       "id": "cdc_listeria_cheese-07-13",
@@ -4112,7 +4112,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:01.997676+00:00"
+      "scraped_at": "2026-07-11T11:13:18.693224+00:00"
     },
     {
       "id": "cdc_unknown_A1b-03-31",
@@ -4122,7 +4122,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:04.035129+00:00"
+      "scraped_at": "2026-07-11T11:13:20.780172+00:00"
     },
     {
       "id": "cdc_salmonella_salmonella",
@@ -4132,7 +4132,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:06.070022+00:00"
+      "scraped_at": "2026-07-11T11:13:22.844022+00:00"
     },
     {
       "id": "cdc_salmonella_saintpaul-04-13",
@@ -4142,7 +4142,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:08.154527+00:00"
+      "scraped_at": "2026-07-11T11:13:24.954816+00:00"
     },
     {
       "id": "cdc_ecoli_O121-03-13",
@@ -4152,7 +4152,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:10.190995+00:00"
+      "scraped_at": "2026-07-11T11:13:27.025967+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-02-13",
@@ -4162,7 +4162,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:12.240240+00:00"
+      "scraped_at": "2026-07-11T11:13:29.111614+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-01-13",
@@ -4172,7 +4172,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:14.281955+00:00"
+      "scraped_at": "2026-07-11T11:13:31.220876+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-11-12",
@@ -4182,7 +4182,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:16.315586+00:00"
+      "scraped_at": "2026-07-11T11:13:33.280207+00:00"
     },
     {
       "id": "cdc_salmonella_bredeney-09-12",
@@ -4192,7 +4192,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:18.351221+00:00"
+      "scraped_at": "2026-07-11T11:13:35.374205+00:00"
     },
     {
       "id": "cdc_listeria_cheese-09-12",
@@ -4202,7 +4202,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:20.391337+00:00"
+      "scraped_at": "2026-07-11T11:13:37.453321+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-08-12",
@@ -4212,7 +4212,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:22.438255+00:00"
+      "scraped_at": "2026-07-11T11:13:39.545609+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-cantaloupe-08-12",
@@ -4222,7 +4222,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:24.481191+00:00"
+      "scraped_at": "2026-07-11T11:13:41.642209+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-07-12",
@@ -4232,7 +4232,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:26.515722+00:00"
+      "scraped_at": "2026-07-11T11:13:43.702219+00:00"
     },
     {
       "id": "cdc_ecoli_O145-06-12",
@@ -4242,7 +4242,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:28.604004+00:00"
+      "scraped_at": "2026-07-11T11:13:45.815169+00:00"
     },
     {
       "id": "cdc_salmonella_bareilly-04-12",
@@ -4252,7 +4252,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:30.636712+00:00"
+      "scraped_at": "2026-07-11T11:13:47.901704+00:00"
     },
     {
       "id": "cdc_ecoli_O26-02-12",
@@ -4262,7 +4262,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:32.671599+00:00"
+      "scraped_at": "2026-07-11T11:13:49.962427+00:00"
     },
     {
       "id": "cdc_salmonella_restaurant-enteriditis",
@@ -4272,7 +4272,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:34.705046+00:00"
+      "scraped_at": "2026-07-11T11:13:52.025967+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4282,7 +4282,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:36.739105+00:00"
+      "scraped_at": "2026-07-11T11:13:54.118479+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4292,7 +4292,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:38.773235+00:00"
+      "scraped_at": "2026-07-11T11:13:56.212872+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4302,7 +4302,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:40.826228+00:00"
+      "scraped_at": "2026-07-11T11:13:58.349900+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4312,7 +4312,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:42.872977+00:00"
+      "scraped_at": "2026-07-11T11:14:00.449572+00:00"
     },
     {
       "id": "cdc_listeria_cantaloupes-jensen-farms",
@@ -4322,7 +4322,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:44.908304+00:00"
+      "scraped_at": "2026-07-11T11:14:02.539093+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4332,7 +4332,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:46.943725+00:00"
+      "scraped_at": "2026-07-11T11:14:04.632491+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4342,7 +4342,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:48.985249+00:00"
+      "scraped_at": "2026-07-11T11:14:06.719553+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4352,7 +4352,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:51.023083+00:00"
+      "scraped_at": "2026-07-11T11:14:08.826332+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4362,7 +4362,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:53.058343+00:00"
+      "scraped_at": "2026-07-11T11:14:10.918993+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4372,7 +4372,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:55.093246+00:00"
+      "scraped_at": "2026-07-11T11:14:12.980604+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4382,7 +4382,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:57.130508+00:00"
+      "scraped_at": "2026-07-11T11:14:15.072657+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4392,7 +4392,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:46:59.180247+00:00"
+      "scraped_at": "2026-07-11T11:14:17.133886+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4402,7 +4402,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:01.255107+00:00"
+      "scraped_at": "2026-07-11T11:14:19.238361+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4412,7 +4412,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:03.292159+00:00"
+      "scraped_at": "2026-07-11T11:14:21.324243+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4422,7 +4422,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:05.330501+00:00"
+      "scraped_at": "2026-07-11T11:14:23.415902+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -4432,7 +4432,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:07.366034+00:00"
+      "scraped_at": "2026-07-11T11:14:25.489762+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4442,7 +4442,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:09.413903+00:00"
+      "scraped_at": "2026-07-11T11:14:27.603910+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4452,7 +4452,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:11.447343+00:00"
+      "scraped_at": "2026-07-11T11:14:29.669969+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4462,7 +4462,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:13.480238+00:00"
+      "scraped_at": "2026-07-11T11:14:31.762894+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4472,7 +4472,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:15.521000+00:00"
+      "scraped_at": "2026-07-11T11:14:33.847532+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -4482,7 +4482,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:17.559307+00:00"
+      "scraped_at": "2026-07-11T11:14:35.901244+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4492,7 +4492,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:19.609939+00:00"
+      "scraped_at": "2026-07-11T11:14:37.963864+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -4502,7 +4502,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:21.686353+00:00"
+      "scraped_at": "2026-07-11T11:14:40.085168+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -4512,7 +4512,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:23.719558+00:00"
+      "scraped_at": "2026-07-11T11:14:42.179169+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -4522,7 +4522,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:25.753929+00:00"
+      "scraped_at": "2026-07-11T11:14:44.242077+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -4532,7 +4532,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:27.794402+00:00"
+      "scraped_at": "2026-07-11T11:14:46.326434+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -4542,7 +4542,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:29.835666+00:00"
+      "scraped_at": "2026-07-11T11:14:48.429839+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -4552,7 +4552,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:31.870336+00:00"
+      "scraped_at": "2026-07-11T11:14:50.528637+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -4562,7 +4562,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:33.906520+00:00"
+      "scraped_at": "2026-07-11T11:14:52.597212+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -4572,7 +4572,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:35.939500+00:00"
+      "scraped_at": "2026-07-11T11:14:54.691052+00:00"
     },
     {
       "id": "cdc_ecoli_2008",
@@ -4582,7 +4582,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:37.974920+00:00"
+      "scraped_at": "2026-07-11T11:14:56.756016+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -4592,7 +4592,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:40.012634+00:00"
+      "scraped_at": "2026-07-11T11:14:58.844872+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -4602,7 +4602,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:42.055953+00:00"
+      "scraped_at": "2026-07-11T11:15:00.985066+00:00"
     },
     {
       "id": "cdc_ecoli_2007",
@@ -4612,7 +4612,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:44.087437+00:00"
+      "scraped_at": "2026-07-11T11:15:03.045735+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -4622,7 +4622,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:46.124822+00:00"
+      "scraped_at": "2026-07-11T11:15:05.106897+00:00"
     },
     {
       "id": "cdc_ecoli_2007",
@@ -4632,7 +4632,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:48.164138+00:00"
+      "scraped_at": "2026-07-11T11:15:07.193016+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -4642,7 +4642,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:50.221799+00:00"
+      "scraped_at": "2026-07-11T11:15:09.293436+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -4652,7 +4652,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:52.255100+00:00"
+      "scraped_at": "2026-07-11T11:15:11.357592+00:00"
     },
     {
       "id": "cdc_ecoli_2006",
@@ -4662,7 +4662,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:54.289920+00:00"
+      "scraped_at": "2026-07-11T11:15:13.455933+00:00"
     },
     {
       "id": "cdc_salmonella_2006",
@@ -4672,7 +4672,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:56.324617+00:00"
+      "scraped_at": "2026-07-11T11:15:15.548167+00:00"
     },
     {
       "id": "cdc_ecoli_2006",
@@ -4682,8 +4682,8 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-10T11:47:58.362153+00:00"
+      "scraped_at": "2026-07-11T11:15:17.601541+00:00"
     }
   ],
-  "generated_at": "2026-07-10T11:47:58.670345+00:00"
+  "generated_at": "2026-07-11T11:15:17.960510+00:00"
 }

@@ -1,11 +1,21 @@
 [
   {
+    "outbreak_id": "cdc_unknown_07-26",
+    "pathogen": "unknown",
+    "url": "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html",
+    "title": "Unknown",
+    "source": "CDC",
+    "scraped_at": "2026-07-15T11:15:00.645001+00:00",
+    "scrape_status": "http_error_403",
+    "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html"
+  },
+  {
     "outbreak_id": "cdc_ecoli_blueberries-07-26",
     "pathogen": "ecoli",
     "url": "https://www.cdc.gov/ecoli/outbreaks/blueberries-07-26/index.html",
     "title": "Frozen Blueberries",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:41.940405+00:00",
+    "scraped_at": "2026-07-15T11:15:02.668813+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/outbreaks/blueberries-07-26/index.html"
   },
@@ -15,7 +25,7 @@
     "url": "https://www.cdc.gov/botulism/outbreaks-investigations/infant-formula-june-2026/index.html",
     "title": "Powdered Infant Formula",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:43.962629+00:00",
+    "scraped_at": "2026-07-15T11:15:04.692749+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/botulism/outbreaks-investigations/infant-formula-june-2026/index.html"
   },
@@ -25,7 +35,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/soft-cheese-06-26/index.html",
     "title": "Requeson/Soft Ricotta Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:45.986376+00:00",
+    "scraped_at": "2026-07-15T11:15:06.716222+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/soft-cheese-06-26/index.html"
   },
@@ -35,7 +45,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/moringa-05-26/index.html",
     "title": "Moringa Capsules",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:48.010930+00:00",
+    "scraped_at": "2026-07-15T11:15:08.755942+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/moringa-05-26/index.html"
   },
@@ -45,7 +55,7 @@
     "url": "https://www.cdc.gov/ecoli/outbreaks/rawcheese-03-26/index.html",
     "title": "Raw Dairy",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:50.100993+00:00",
+    "scraped_at": "2026-07-15T11:15:10.779276+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/outbreaks/rawcheese-03-26/index.html"
   },
@@ -55,7 +65,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/moringacapsules-02-26/index.html",
     "title": "Moringa Powder Capsules",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:52.122630+00:00",
+    "scraped_at": "2026-07-15T11:15:12.802546+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/moringacapsules-02-26/index.html"
   },
@@ -65,7 +75,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/supergreenssupplementpowders-1-26/index.html",
     "title": "Super Greens Supplement Powders",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:54.148863+00:00",
+    "scraped_at": "2026-07-15T11:15:14.825852+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/supergreenssupplementpowders-1-26/index.html"
   },
@@ -75,7 +85,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/oysters-12-25/index.html",
     "title": "Raw Oysters",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:56.171942+00:00",
+    "scraped_at": "2026-07-15T11:15:16.849607+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/oysters-12-25/index.html"
   },
@@ -85,7 +95,7 @@
     "url": "https://www.cdc.gov/botulism/outbreaks-investigations/infant-formula-nov-2025/index.html",
     "title": "Infant Formula",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:12:58.198051+00:00",
+    "scraped_at": "2026-07-15T11:15:18.873051+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/botulism/outbreaks-investigations/infant-formula-nov-2025/index.html"
   },
@@ -95,7 +105,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/supplement-10-25/index.html",
     "title": "Moringa Leaf Powder",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:00.222480+00:00",
+    "scraped_at": "2026-07-15T11:15:20.905074+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/supplement-10-25/index.html"
   },
@@ -105,7 +115,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/homedeliverymeals-09-25/index.html",
     "title": "Home Delivery Meals",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:02.288798+00:00",
+    "scraped_at": "2026-07-15T11:15:22.930340+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/homedeliverymeals-09-25/index.html"
   },
@@ -115,7 +125,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/index.html",
     "title": "Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:04.328272+00:00",
+    "scraped_at": "2026-07-15T11:15:24.953230+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/eggs-08-25/index.html"
   },
@@ -125,7 +135,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/sproutedbeans-07-25/index.html",
     "title": "Frozen Sprouted Beans",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:06.375668+00:00",
+    "scraped_at": "2026-07-15T11:15:26.977747+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/sproutedbeans-07-25/index.html"
   },
@@ -135,7 +145,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/chicken-fettuccine-alfredo-06-25/index.html",
     "title": "Prepared Pasta Meals",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:08.401176+00:00",
+    "scraped_at": "2026-07-15T11:15:29.009800+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/chicken-fettuccine-alfredo-06-25/index.html"
   },
@@ -145,7 +155,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/pistachiocream-06-25/index.html",
     "title": "Pistachio Cream",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:10.459960+00:00",
+    "scraped_at": "2026-07-15T11:15:31.033232+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/pistachiocream-06-25/index.html"
   },
@@ -155,7 +165,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/eggs-06-25/index.html",
     "title": "Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:12.484899+00:00",
+    "scraped_at": "2026-07-15T11:15:33.059559+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/eggs-06-25/index.html"
   },
@@ -165,7 +175,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/whole-cucumbers-05-25/index.html",
     "title": "Whole Cucumbers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:14.506529+00:00",
+    "scraped_at": "2026-07-15T11:15:35.084422+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/whole-cucumbers-05-25/index.html"
   },
@@ -175,7 +185,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/ready-to-eat-foods-may-2025/index.html",
     "title": "Ready-to-Eat Foods",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:16.537686+00:00",
+    "scraped_at": "2026-07-15T11:15:37.107788+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/ready-to-eat-foods-may-2025/index.html"
   },
@@ -185,7 +195,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/shakes-022025/index.html",
     "title": "Supplement Shakes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:18.559834+00:00",
+    "scraped_at": "2026-07-15T11:15:39.132099+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/shakes-022025/index.html"
   },
@@ -195,7 +205,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/meat-and-poultry-products-11-24/index.html",
     "title": "Ready-to-Eat Meat and Poultry Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:20.584596+00:00",
+    "scraped_at": "2026-07-15T11:15:41.160017+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/meat-and-poultry-products-11-24/index.html"
   },
@@ -205,7 +215,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/cucumbers-11-24/index.html",
     "title": "Cucumbers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:22.619083+00:00",
+    "scraped_at": "2026-07-15T11:15:43.183224+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/cucumbers-11-24/index.html"
   },
@@ -215,7 +225,7 @@
     "url": "https://www.cdc.gov/ecoli/outbreaks/e-coli-o121.html",
     "title": "Organic Carrots",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:24.642571+00:00",
+    "scraped_at": "2026-07-15T11:15:45.207718+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/outbreaks/e-coli-o121.html"
   },
@@ -225,7 +235,7 @@
     "url": "https://www.cdc.gov/ecoli/outbreaks/e-coli-O157.html",
     "title": "McDonald's Quarter Pounders",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:26.663988+00:00",
+    "scraped_at": "2026-07-15T11:15:47.230957+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/outbreaks/e-coli-O157.html"
   },
@@ -235,7 +245,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/delimeats-7-24/index.html",
     "title": "Meats Sliced at Delis",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:28.684429+00:00",
+    "scraped_at": "2026-07-15T11:15:49.258625+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/delimeats-7-24/index.html"
   },
@@ -245,7 +255,7 @@
     "url": "https://www.cdc.gov/environmental-health-studies/outbreak-investigation-diamond-shruumz-products/index.html",
     "title": "Diamond Schruumz Chocolate",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:30.729226+00:00",
+    "scraped_at": "2026-07-15T11:15:51.282224+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/environmental-health-studies/outbreak-investigation-diamond-shruumz-products/index.html"
   },
@@ -255,7 +265,7 @@
     "url": "https://www.cdc.gov/salmonella/outbreaks/eggs-09-24/index.html",
     "title": "Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:32.750314+00:00",
+    "scraped_at": "2026-07-15T11:15:53.307632+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/outbreaks/eggs-09-24/index.html"
   },
@@ -265,7 +275,7 @@
     "url": "https://www.cdc.gov/salmonella/africana-06-24/index.html",
     "title": "Cucumbers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:34.777906+00:00",
+    "scraped_at": "2026-07-15T11:15:55.331712+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/africana-06-24/index.html"
   },
@@ -275,7 +285,7 @@
     "url": "https://www.cdc.gov/ecoli/outbreaks/organic-walnuts-04-24.html",
     "title": "Organic Walnuts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:36.800335+00:00",
+    "scraped_at": "2026-07-15T11:15:57.356100+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/outbreaks/organic-walnuts-04-24.html"
   },
@@ -285,7 +295,7 @@
     "url": "https://www.cdc.gov/salmonella/basil-04-24/index.html",
     "title": "Fresh Basil",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:38.823660+00:00",
+    "scraped_at": "2026-07-15T11:15:59.380855+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/basil-04-24/index.html"
   },
@@ -295,7 +305,7 @@
     "url": "https://www.cdc.gov/ecoli/outbreaks/raw-milk-cheese-2-24.html",
     "title": "Raw Cheddar Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:40.850166+00:00",
+    "scraped_at": "2026-07-15T11:16:01.412809+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/outbreaks/raw-milk-cheese-2-24.html"
   },
@@ -305,7 +315,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/cheese-02-24/index.html",
     "title": "Queso Fresco and Cotija Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:42.888170+00:00",
+    "scraped_at": "2026-07-15T11:16:03.436630+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/cheese-02-24/index.html"
   },
@@ -315,7 +325,7 @@
     "url": "https://www.cdc.gov/salmonella/charcuterie-meats-01-24/index.html",
     "title": "Charcuterie Meats",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:44.951301+00:00",
+    "scraped_at": "2026-07-15T11:16:05.460465+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/charcuterie-meats-01-24/index.html"
   },
@@ -325,7 +335,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/peaches-11-23/index.html",
     "title": "Peaches, Nectarines, and Plums",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:46.993185+00:00",
+    "scraped_at": "2026-07-15T11:16:07.484784+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/peaches-11-23/index.html"
   },
@@ -335,7 +345,7 @@
     "url": "https://www.cdc.gov/salmonella/sundsvall-11-23/index.html",
     "title": "Cantaloupes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:49.015222+00:00",
+    "scraped_at": "2026-07-15T11:16:09.518690+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/sundsvall-11-23/index.html"
   },
@@ -345,7 +355,7 @@
     "url": "https://www.cdc.gov/salmonella/thompson-10-23/index.html",
     "title": "Fresh Diced Onions",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:51.050029+00:00",
+    "scraped_at": "2026-07-15T11:16:11.541918+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/thompson-10-23/index.html"
   },
@@ -355,7 +365,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/ice-cream-08-23/index.html",
     "title": "Ice Cream",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:53.093587+00:00",
+    "scraped_at": "2026-07-15T11:16:13.567641+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/ice-cream-08-23/index.html"
   },
@@ -365,7 +375,7 @@
     "url": "https://www.cdc.gov/salmonella/saintpaul-07-23/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:55.115944+00:00",
+    "scraped_at": "2026-07-15T11:16:15.591014+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/saintpaul-07-23/index.html"
   },
@@ -375,7 +385,7 @@
     "url": "https://www.cdc.gov/salmonella/enteritidis-05-23/index.html",
     "title": "Raw Cookie Dough",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:57.144094+00:00",
+    "scraped_at": "2026-07-15T11:16:17.615670+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/enteritidis-05-23/index.html"
   },
@@ -385,7 +395,7 @@
     "url": "https://www.cdc.gov/salmonella/infantis-03-23/index.html",
     "title": "Flour",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:13:59.175454+00:00",
+    "scraped_at": "2026-07-15T11:16:19.641226+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/infantis-03-23/index.html"
   },
@@ -395,7 +405,7 @@
     "url": "https://www.cdc.gov/hepatitis/outbreaks/2023/hav-contaminated-food/index.htm",
     "title": "Frozen Strawberries",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:01.206874+00:00",
+    "scraped_at": "2026-07-15T11:16:21.669924+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/hepatitis/outbreaks/2023/hav-contaminated-food/index.htm"
   },
@@ -405,7 +415,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/monocytogenes-02-23/index.html",
     "title": "Leafy Greens",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:03.230247+00:00",
+    "scraped_at": "2026-07-15T11:16:23.698763+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/monocytogenes-02-23/index.html"
   },
@@ -415,7 +425,7 @@
     "url": "https://www.cdc.gov/salmonella/typhimurium-12-22/index.html",
     "title": "Alfalfa Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:05.269712+00:00",
+    "scraped_at": "2026-07-15T11:16:25.723811+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/typhimurium-12-22/index.html"
   },
@@ -425,7 +435,7 @@
     "url": "https://www.cdc.gov/norovirus/outbreaks/index.html",
     "title": "Raw Oysters",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:07.293157+00:00",
+    "scraped_at": "2026-07-15T11:16:27.747978+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/norovirus/outbreaks/index.html"
   },
@@ -435,7 +445,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/enoki-11-22/index.html",
     "title": "Enoki Mushrooms",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:09.315002+00:00",
+    "scraped_at": "2026-07-15T11:16:29.822535+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/enoki-11-22/index.html"
   },
@@ -445,7 +455,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/deli-11-22/index.html",
     "title": "Deli Meat and Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:11.340355+00:00",
+    "scraped_at": "2026-07-15T11:16:31.848720+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/deli-11-22/index.html"
   },
@@ -455,7 +465,7 @@
     "url": "https://www.cdc.gov/salmonella/litchfield-10-22/index.html",
     "title": "Fish",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:13.409803+00:00",
+    "scraped_at": "2026-07-15T11:16:33.872911+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/litchfield-10-22/index.html"
   },
@@ -465,7 +475,7 @@
     "url": "https://www.cdc.gov/ecoli/2022/o121-10-22/index.html",
     "title": "Frozen Falafel",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:15.433848+00:00",
+    "scraped_at": "2026-07-15T11:16:35.897821+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2022/o121-10-22/index.html"
   },
@@ -475,7 +485,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/monocytogenes-09-22/index.html",
     "title": "Brie and Camembert Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:17.457660+00:00",
+    "scraped_at": "2026-07-15T11:16:37.923649+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/monocytogenes-09-22/index.html"
   },
@@ -485,7 +495,7 @@
     "url": "https://www.cdc.gov/ecoli/2022/o157h7-09-22/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:19.480562+00:00",
+    "scraped_at": "2026-07-15T11:16:39.947816+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2022/o157h7-09-22/index.html"
   },
@@ -495,7 +505,7 @@
     "url": "https://www.cdc.gov/ecoli/2022/o157h7-08-22/index.html",
     "title": "Unknown Food Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:21.505612+00:00",
+    "scraped_at": "2026-07-15T11:16:41.972312+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2022/o157h7-08-22/index.html"
   },
@@ -505,7 +515,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/monocytogenes-06-22/index.html",
     "title": "Ice Cream",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:23.529124+00:00",
+    "scraped_at": "2026-07-15T11:16:44.003784+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/monocytogenes-06-22/index.html"
   },
@@ -515,7 +525,7 @@
     "url": "https://www.cdc.gov/hepatitis/outbreaks/2022/hav-contaminated-food/index.htm",
     "title": "Strawberries",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:25.605273+00:00",
+    "scraped_at": "2026-07-15T11:16:46.029280+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/hepatitis/outbreaks/2022/hav-contaminated-food/index.htm"
   },
@@ -525,7 +535,7 @@
     "url": "https://www.cdc.gov/salmonella/senftenberg-05-22/index.html",
     "title": "Peanut Butter",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:27.628921+00:00",
+    "scraped_at": "2026-07-15T11:16:48.052808+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/senftenberg-05-22/index.html"
   },
@@ -535,7 +545,7 @@
     "url": "https://www.cdc.gov/ecoli/2021/o157h7-12-21/index.html",
     "title": "Power Greens Packaged Salads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:29.653813+00:00",
+    "scraped_at": "2026-07-15T11:16:50.082018+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2021/o157h7-12-21/index.html"
   },
@@ -545,7 +555,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/packaged-salad-12-21-b/index.html",
     "title": "Fresh Express Packaged Salads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:31.676534+00:00",
+    "scraped_at": "2026-07-15T11:16:52.106449+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/packaged-salad-12-21-b/index.html"
   },
@@ -555,7 +565,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/packaged-salad-mix-12-21/index.html",
     "title": "Dole Packaged Salads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:33.741270+00:00",
+    "scraped_at": "2026-07-15T11:16:54.131790+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/packaged-salad-mix-12-21/index.html"
   },
@@ -565,7 +575,7 @@
     "url": "https://www.cdc.gov/ecoli/2021/o157h7-11-21/index.html",
     "title": "Baby Spinach",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:35.766884+00:00",
+    "scraped_at": "2026-07-15T11:16:56.156648+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2021/o157h7-11-21/index.html"
   },
@@ -575,7 +585,7 @@
     "url": "https://www.cdc.gov/salmonella/i45-10-21/index.html",
     "title": "Salami Sticks",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:37.796397+00:00",
+    "scraped_at": "2026-07-15T11:16:58.180714+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/i45-10-21/index.html"
   },
@@ -585,7 +595,7 @@
     "url": "https://www.cdc.gov/salmonella/thompson-10-21/index.html",
     "title": "Seafood",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:39.850512+00:00",
+    "scraped_at": "2026-07-15T11:17:00.203981+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/thompson-10-21/index.html"
   },
@@ -595,7 +605,7 @@
     "url": "https://www.cdc.gov/salmonella/oranienburg-09-21/index.html",
     "title": "Onions",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:41.872423+00:00",
+    "scraped_at": "2026-07-15T11:17:02.229250+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/oranienburg-09-21/index.html"
   },
@@ -605,7 +615,7 @@
     "url": "https://www.cdc.gov/salmonella/italian-style-meat-08-21/index.html",
     "title": "Italian-Style Meats",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:43.895495+00:00",
+    "scraped_at": "2026-07-15T11:17:04.261303+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/italian-style-meat-08-21/index.html"
   },
@@ -615,7 +625,7 @@
     "url": "https://www.cdc.gov/ecoli/2021/o121-07-21/index.html",
     "title": "Cake Mix",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:45.950527+00:00",
+    "scraped_at": "2026-07-15T11:17:06.286980+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2021/o121-07-21/index.html"
   },
@@ -625,7 +635,7 @@
     "url": "https://www.cdc.gov/salmonella/typhimurium-07-21/index.html",
     "title": "Prepackaged Salads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:47.978284+00:00",
+    "scraped_at": "2026-07-15T11:17:08.310290+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/typhimurium-07-21/index.html"
   },
@@ -635,7 +645,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/precooked-chicken-07-21/index.html",
     "title": "Fully Cooked Chicken",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:50.006290+00:00",
+    "scraped_at": "2026-07-15T11:17:10.341179+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/precooked-chicken-07-21/index.html"
   },
@@ -645,7 +655,7 @@
     "url": "https://www.cdc.gov/salmonella/weltevreden-06-21/index.html",
     "title": "Frozen Cooked Shrimp",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:52.028933+00:00",
+    "scraped_at": "2026-07-15T11:17:12.366332+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/weltevreden-06-21/index.html"
   },
@@ -655,7 +665,7 @@
     "url": "https://www.cdc.gov/salmonella/enteritidis-06-21/index.html",
     "title": "Raw Frozen Breaded Stuffed Chicken Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:54.096796+00:00",
+    "scraped_at": "2026-07-15T11:17:14.391205+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/enteritidis-06-21/index.html"
   },
@@ -665,7 +675,7 @@
     "url": "https://www.cdc.gov/salmonella/duisburg-04-21/index.html",
     "title": "Cashew Brie",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:56.120288+00:00",
+    "scraped_at": "2026-07-15T11:17:16.415552+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/duisburg-04-21/index.html"
   },
@@ -675,7 +685,7 @@
     "url": "https://www.cdc.gov/salmonella/hadar-04-21/index.html",
     "title": "Ground Turkey",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:14:58.147097+00:00",
+    "scraped_at": "2026-07-15T11:17:18.441255+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/hadar-04-21/index.html"
   },
@@ -685,7 +695,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/hispanic-soft-cheese-02-21/index.html",
     "title": "Queso Fresco",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:00.175287+00:00",
+    "scraped_at": "2026-07-15T11:17:20.465109+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/hispanic-soft-cheese-02-21/index.html"
   },
@@ -695,7 +705,7 @@
     "url": "https://www.cdc.gov/ecoli/2021/o157h7-02-21/index.html",
     "title": "Unknown Food Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:02.196676+00:00",
+    "scraped_at": "2026-07-15T11:17:22.489888+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2021/o157h7-02-21/index.html"
   },
@@ -705,7 +715,7 @@
     "url": "https://www.cdc.gov/ecoli/2020/o157h7-11-20/index.html",
     "title": "Unknown Source 3",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:04.220574+00:00",
+    "scraped_at": "2026-07-15T11:17:24.527024+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2020/o157h7-11-20/index.html"
   },
@@ -715,7 +725,7 @@
     "url": "https://www.cdc.gov/ecoli/2020/o157h7-10-20b/index.html",
     "title": "Leafy Greens",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:06.269982+00:00",
+    "scraped_at": "2026-07-15T11:17:26.560338+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2020/o157h7-10-20b/index.html"
   },
@@ -725,7 +735,7 @@
     "url": "https://www.cdc.gov/ecoli/2020/o157h7-10-20a/index.html",
     "title": "Unknown Source 1",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:08.292014+00:00",
+    "scraped_at": "2026-07-15T11:17:28.583560+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2020/o157h7-10-20a/index.html"
   },
@@ -735,7 +745,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/delimeat-10-20/index.html",
     "title": "Deli Meats",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:10.316320+00:00",
+    "scraped_at": "2026-07-15T11:17:30.616964+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/delimeat-10-20/index.html"
   },
@@ -745,7 +755,7 @@
     "url": "https://www.cdc.gov/salmonella/stanley-09-20/index.html",
     "title": "Wood Ear Mushrooms",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:12.341077+00:00",
+    "scraped_at": "2026-07-15T11:17:32.641306+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/stanley-09-20/index.html"
   },
@@ -755,7 +765,7 @@
     "url": "https://www.cdc.gov/salmonella/enteritidis-08-20/index.html",
     "title": "Peaches",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:14.442855+00:00",
+    "scraped_at": "2026-07-15T11:17:34.664080+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/enteritidis-08-20/index.html"
   },
@@ -765,7 +775,7 @@
     "url": "https://www.cdc.gov/salmonella/newport-07-20/index.html",
     "title": "Onions",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:16.480633+00:00",
+    "scraped_at": "2026-07-15T11:17:36.687806+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/newport-07-20/index.html"
   },
@@ -775,7 +785,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2020/index.html",
     "title": "Bagged Salad Mix",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:18.507745+00:00",
+    "scraped_at": "2026-07-15T11:17:38.713654+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2020/index.html"
   },
@@ -785,7 +795,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/enoki-mushrooms-03-20/index.html",
     "title": "Enoki Mushrooms",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:20.539292+00:00",
+    "scraped_at": "2026-07-15T11:17:40.738903+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/enoki-mushrooms-03-20/index.html"
   },
@@ -795,7 +805,7 @@
     "url": "https://www.cdc.gov/ecoli/2020/o103h2-02-20/index.html",
     "title": "Clover Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:22.569493+00:00",
+    "scraped_at": "2026-07-15T11:17:42.761301+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2020/o103h2-02-20/index.html"
   },
@@ -805,7 +815,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/eggs-12-19/index.html",
     "title": "Hard-Boiled Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:24.593911+00:00",
+    "scraped_at": "2026-07-15T11:17:44.791442+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/eggs-12-19/index.html"
   },
@@ -815,7 +825,7 @@
     "url": "https://www.cdc.gov/salmonella/javiana-12-19/index.html",
     "title": "Cut Fruit",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:26.643225+00:00",
+    "scraped_at": "2026-07-15T11:17:46.815813+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/javiana-12-19/index.html"
   },
@@ -825,7 +835,7 @@
     "url": "https://www.cdc.gov/ecoli/2019/o157h7-12-19/index.html",
     "title": "Salad Kits",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:28.666660+00:00",
+    "scraped_at": "2026-07-15T11:17:48.840743+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2019/o157h7-12-19/index.html"
   },
@@ -835,7 +845,7 @@
     "url": "https://www.cdc.gov/ecoli/2019/o157h7-11-19/index.html",
     "title": "Romaine Lettuce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:30.689082+00:00",
+    "scraped_at": "2026-07-15T11:17:50.868596+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2019/o157h7-11-19/index.html"
   },
@@ -845,7 +855,7 @@
     "url": "https://www.cdc.gov/salmonella/dublin-11-19/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:32.711990+00:00",
+    "scraped_at": "2026-07-15T11:17:52.891456+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/dublin-11-19/index.html"
   },
@@ -855,7 +865,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/monocytogenes-08-19/index.html",
     "title": "Unknown Food Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:34.749285+00:00",
+    "scraped_at": "2026-07-15T11:17:54.916572+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/monocytogenes-08-19/index.html"
   },
@@ -865,7 +875,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2019/weekly/index.html",
     "title": "Fresh Basil",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:36.834680+00:00",
+    "scraped_at": "2026-07-15T11:17:56.940651+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2019/weekly/index.html"
   },
@@ -875,7 +885,7 @@
     "url": "https://www.cdc.gov/ecoli/2019/bison-07-19/index.html",
     "title": "Ground Bison",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:38.858005+00:00",
+    "scraped_at": "2026-07-15T11:17:58.965528+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2019/bison-07-19/index.html"
   },
@@ -885,7 +895,7 @@
     "url": "https://www.cdc.gov/salmonella/uganda-06-19/index.html",
     "title": "Papayas",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:40.886746+00:00",
+    "scraped_at": "2026-07-15T11:18:00.988548+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/uganda-06-19/index.html"
   },
@@ -895,7 +905,7 @@
     "url": "https://www.cdc.gov/ecoli/2019/flour-05-19/index.html",
     "title": "Flour",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:42.910576+00:00",
+    "scraped_at": "2026-07-15T11:18:03.014853+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2019/flour-05-19/index.html"
   },
@@ -905,7 +915,7 @@
     "url": "https://www.cdc.gov/salmonella/concord-05-19/index.html",
     "title": "Tahini",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:44.930495+00:00",
+    "scraped_at": "2026-07-15T11:18:05.044096+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/concord-05-19/index.html"
   },
@@ -915,7 +925,7 @@
     "url": "https://www.cdc.gov/vibrio/investigations/rawoysters-05-19/index.html",
     "title": "Raw Oysters",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:46.966926+00:00",
+    "scraped_at": "2026-07-15T11:18:07.067814+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/vibrio/investigations/rawoysters-05-19/index.html"
   },
@@ -925,7 +935,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/deliproducts-04-19/index.html",
     "title": "Deli-Sliced Meats and Cheeses",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:48.992669+00:00",
+    "scraped_at": "2026-07-15T11:18:09.095863+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/deliproducts-04-19/index.html"
   },
@@ -935,7 +945,7 @@
     "url": "https://www.cdc.gov/salmonella/newport-04-19/index.html",
     "title": "Frozen Raw Tuna",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:51.018666+00:00",
+    "scraped_at": "2026-07-15T11:18:11.127538+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/newport-04-19/index.html"
   },
@@ -945,7 +955,7 @@
     "url": "https://www.cdc.gov/salmonella/carrau-04-19/index.html",
     "title": "Pre-Cut Melon",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:53.041045+00:00",
+    "scraped_at": "2026-07-15T11:18:13.161042+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/carrau-04-19/index.html"
   },
@@ -955,7 +965,7 @@
     "url": "https://www.cdc.gov/ecoli/2019/o103-04-19/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:55.062690+00:00",
+    "scraped_at": "2026-07-15T11:18:15.183507+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2019/o103-04-19/index.html"
   },
@@ -965,7 +975,7 @@
     "url": "https://www.cdc.gov/salmonella/schwarzengrund-03-19/index.html",
     "title": "Ground Turkey",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:57.109644+00:00",
+    "scraped_at": "2026-07-15T11:18:17.207767+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/schwarzengrund-03-19/index.html"
   },
@@ -975,7 +985,7 @@
     "url": "https://www.cdc.gov/salmonella/concord-11-18/index.html",
     "title": "Tahini",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:15:59.136030+00:00",
+    "scraped_at": "2026-07-15T11:18:19.232395+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/concord-11-18/index.html"
   },
@@ -985,7 +995,7 @@
     "url": "https://www.cdc.gov/salmonella/agbeni-11-18/index.html",
     "title": "Unknown Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:01.157774+00:00",
+    "scraped_at": "2026-07-15T11:18:21.257242+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/agbeni-11-18/index.html"
   },
@@ -995,7 +1005,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/porkproducts-11-18/index.html",
     "title": "Pork Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:03.197578+00:00",
+    "scraped_at": "2026-07-15T11:18:23.281857+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/porkproducts-11-18/index.html"
   },
@@ -1005,7 +1015,7 @@
     "url": "https://www.cdc.gov/ecoli/2018/o157h7-11-18/index.html",
     "title": "Romaine Lettuce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:05.223075+00:00",
+    "scraped_at": "2026-07-15T11:18:25.312417+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2018/o157h7-11-18/index.html"
   },
@@ -1015,7 +1025,7 @@
     "url": "https://www.cdc.gov/salmonella/infantis-10-18/index.html",
     "title": "Raw Chicken Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:07.289952+00:00",
+    "scraped_at": "2026-07-15T11:18:27.335728+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/infantis-10-18/index.html"
   },
@@ -1025,7 +1035,7 @@
     "url": "https://www.cdc.gov/salmonella/newport-10-18/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:09.332871+00:00",
+    "scraped_at": "2026-07-15T11:18:29.360418+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/newport-10-18/index.html"
   },
@@ -1035,7 +1045,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/countryham-10-18/index.html",
     "title": "Deli Ham",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:11.360917+00:00",
+    "scraped_at": "2026-07-15T11:18:31.390061+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/countryham-10-18/index.html"
   },
@@ -1045,7 +1055,7 @@
     "url": "https://www.cdc.gov/ecoli/2018/o26-09-18/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:13.384475+00:00",
+    "scraped_at": "2026-07-15T11:18:33.415567+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2018/o26-09-18/index.html"
   },
@@ -1055,7 +1065,7 @@
     "url": "https://www.cdc.gov/salmonella/enteritidis-09-18/index.html",
     "title": "Shell Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:15.412600+00:00",
+    "scraped_at": "2026-07-15T11:18:35.449873+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/enteritidis-09-18/index.html"
   },
@@ -1065,7 +1075,7 @@
     "url": "https://www.cdc.gov/salmonella/chicken-08-18/index.html",
     "title": "Chicken",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:17.468470+00:00",
+    "scraped_at": "2026-07-15T11:18:37.474665+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/chicken-08-18/index.html"
   },
@@ -1075,7 +1085,7 @@
     "url": "https://www.cdc.gov/salmonella/reading-07-18/index.html",
     "title": "Raw Turkey Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:19.491014+00:00",
+    "scraped_at": "2026-07-15T11:18:39.498525+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/reading-07-18/index.html"
   },
@@ -1085,7 +1095,7 @@
     "url": "https://www.cdc.gov/salmonella/sandiego-07-18/index.html",
     "title": "Pasta Salad",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:21.516145+00:00",
+    "scraped_at": "2026-07-15T11:18:41.523289+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/sandiego-07-18/index.html"
   },
@@ -1095,7 +1105,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2018/b-071318/index.html",
     "title": "Salad Mix",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:23.539086+00:00",
+    "scraped_at": "2026-07-15T11:18:43.547384+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2018/b-071318/index.html"
   },
@@ -1105,7 +1115,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2018/a-062018/index.html",
     "title": "Vegetable Trays",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:25.565350+00:00",
+    "scraped_at": "2026-07-15T11:18:45.580609+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2018/a-062018/index.html"
   },
@@ -1115,7 +1125,7 @@
     "url": "https://www.cdc.gov/vibrio/investigations/vibriop-07-18/index.html",
     "title": "Crab Meat",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:27.638541+00:00",
+    "scraped_at": "2026-07-15T11:18:47.605021+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/vibrio/investigations/vibriop-07-18/index.html"
   },
@@ -1125,7 +1135,7 @@
     "url": "https://www.cdc.gov/salmonella/mbandaka-06-18/index.html",
     "title": "Cereal",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:29.668308+00:00",
+    "scraped_at": "2026-07-15T11:18:49.629153+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/mbandaka-06-18/index.html"
   },
@@ -1135,7 +1145,7 @@
     "url": "https://www.cdc.gov/salmonella/adelaide-06-18/index.html",
     "title": "Pre-Cut Melon",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:31.695304+00:00",
+    "scraped_at": "2026-07-15T11:18:51.657898+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/adelaide-06-18/index.html"
   },
@@ -1145,7 +1155,7 @@
     "url": "https://www.cdc.gov/salmonella/braenderup-04-18/index.html",
     "title": "Shell Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:33.718068+00:00",
+    "scraped_at": "2026-07-15T11:18:53.681973+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/braenderup-04-18/index.html"
   },
@@ -1155,7 +1165,7 @@
     "url": "https://www.cdc.gov/ecoli/2018/o157h7-04-18/index.html",
     "title": "Romaine Lettuce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:35.740186+00:00",
+    "scraped_at": "2026-07-15T11:18:55.706704+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2018/o157h7-04-18/index.html"
   },
@@ -1165,7 +1175,7 @@
     "url": "https://www.cdc.gov/salmonella/typhimurium-03-18/index.html",
     "title": "Dried Coconut",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:37.802919+00:00",
+    "scraped_at": "2026-07-15T11:18:57.731594+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/typhimurium-03-18/index.html"
   },
@@ -1175,7 +1185,7 @@
     "url": "https://www.cdc.gov/salmonella/typhimurium-02-18/index.html",
     "title": "Chicken Salad",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:39.829923+00:00",
+    "scraped_at": "2026-07-15T11:18:59.755371+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/typhimurium-02-18/index.html"
   },
@@ -1185,7 +1195,7 @@
     "url": "https://www.cdc.gov/salmonella/kratom-02-18/index.html",
     "title": "Kratom",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:41.851935+00:00",
+    "scraped_at": "2026-07-15T11:19:01.778050+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/kratom-02-18/index.html"
   },
@@ -1195,7 +1205,7 @@
     "url": "https://www.cdc.gov/salmonella/montevideo-01-18/index.html",
     "title": "Raw Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:43.893061+00:00",
+    "scraped_at": "2026-07-15T11:19:03.804044+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/montevideo-01-18/index.html"
   },
@@ -1205,7 +1215,7 @@
     "url": "https://www.cdc.gov/salmonella/coconut-01-18/index.html",
     "title": "Frozen Shredded Coconut",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:45.922833+00:00",
+    "scraped_at": "2026-07-15T11:19:05.833026+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/coconut-01-18/index.html"
   },
@@ -1215,7 +1225,7 @@
     "url": "https://www.cdc.gov/ecoli/2017/o157h7-12-17/index.html",
     "title": "Leafy Greens",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:47.989199+00:00",
+    "scraped_at": "2026-07-15T11:19:07.856191+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2017/o157h7-12-17/index.html"
   },
@@ -1225,7 +1235,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2017/index.html",
     "title": "Unknown Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:50.011943+00:00",
+    "scraped_at": "2026-07-15T11:19:09.880994+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2017/index.html"
   },
@@ -1235,7 +1245,7 @@
     "url": "https://www.cdc.gov/salmonella/urbana-09-17/index.html",
     "title": "Maradol Papayas",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:52.034960+00:00",
+    "scraped_at": "2026-07-15T11:19:11.908805+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/urbana-09-17/index.html"
   },
@@ -1245,7 +1255,7 @@
     "url": "https://www.cdc.gov/salmonella/newport-09-17/index.html",
     "title": "Maradol Papayas",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:54.057384+00:00",
+    "scraped_at": "2026-07-15T11:19:13.933574+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/newport-09-17/index.html"
   },
@@ -1255,7 +1265,7 @@
     "url": "https://www.cdc.gov/salmonella/anatum-9-17/index.html",
     "title": "Maradol Papayas",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:56.081576+00:00",
+    "scraped_at": "2026-07-15T11:19:15.957430+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/anatum-9-17/index.html"
   },
@@ -1265,7 +1275,7 @@
     "url": "https://www.cdc.gov/salmonella/kiambu-07-17/index.html",
     "title": "Maradol Papayas",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:16:58.154261+00:00",
+    "scraped_at": "2026-07-15T11:19:17.981889+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/kiambu-07-17/index.html"
   },
@@ -1275,7 +1285,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/soft-cheese-03-17/index.html",
     "title": "Soft Raw Milk Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:00.178005+00:00",
+    "scraped_at": "2026-07-15T11:19:20.022708+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/soft-cheese-03-17/index.html"
   },
@@ -1285,7 +1295,7 @@
     "url": "https://www.cdc.gov/ecoli/2017/o157h7-03-17/index.html",
     "title": "SoyNut Butter",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:02.199623+00:00",
+    "scraped_at": "2026-07-15T11:19:22.063503+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2017/o157h7-03-17/index.html"
   },
@@ -1295,7 +1305,7 @@
     "url": "https://www.cdc.gov/salmonella/oranienburg-10-16/index.html",
     "title": "Shell Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:04.224903+00:00",
+    "scraped_at": "2026-07-15T11:19:24.087907+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/oranienburg-10-16/index.html"
   },
@@ -1305,7 +1315,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2016/index.html",
     "title": "Unknown Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:06.248495+00:00",
+    "scraped_at": "2026-07-15T11:19:26.129097+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2016/index.html"
   },
@@ -1315,7 +1325,7 @@
     "url": "https://www.cdc.gov/ecoli/2016/o157h7-09-16/index.html",
     "title": "Beef Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:08.313650+00:00",
+    "scraped_at": "2026-07-15T11:19:28.152211+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2016/o157h7-09-16/index.html"
   },
@@ -1325,7 +1335,7 @@
     "url": "https://www.cdc.gov/hepatitis/outbreaks/2016/hav-strawberries.htm",
     "title": "Frozen Strawberries",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:10.339758+00:00",
+    "scraped_at": "2026-07-15T11:19:30.177502+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/hepatitis/outbreaks/2016/hav-strawberries.htm"
   },
@@ -1335,7 +1345,7 @@
     "url": "https://www.cdc.gov/hepatitis/outbreaks/2016/hav-hawaii.htm",
     "title": "Frozen Scallops",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:12.362767+00:00",
+    "scraped_at": "2026-07-15T11:19:32.204405+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/hepatitis/outbreaks/2016/hav-hawaii.htm"
   },
@@ -1345,7 +1355,7 @@
     "url": "https://www.cdc.gov/salmonella/reading-08-16/index.html",
     "title": "Alfalfa Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:14.384462+00:00",
+    "scraped_at": "2026-07-15T11:19:34.240122+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/reading-08-16/index.html"
   },
@@ -1355,7 +1365,7 @@
     "url": "https://www.cdc.gov/ecoli/2016/o121-06-16/index.html",
     "title": "Flour",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:16.409149+00:00",
+    "scraped_at": "2026-07-15T11:19:36.263519+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2016/o121-06-16/index.html"
   },
@@ -1365,7 +1375,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/frozen-vegetables-05-16/index.html",
     "title": "Frozen Vegetables",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:18.463871+00:00",
+    "scraped_at": "2026-07-15T11:19:38.287066+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/frozen-vegetables-05-16/index.html"
   },
@@ -1375,7 +1385,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/raw-milk-03-16/index.html",
     "title": "Raw Milk",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:20.491294+00:00",
+    "scraped_at": "2026-07-15T11:19:40.313021+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/raw-milk-03-16/index.html"
   },
@@ -1385,7 +1395,7 @@
     "url": "https://www.cdc.gov/salmonella/montevideo-03-16/index.html",
     "title": "Pistachios",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:22.518428+00:00",
+    "scraped_at": "2026-07-15T11:19:42.337584+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/montevideo-03-16/index.html"
   },
@@ -1395,7 +1405,7 @@
     "url": "https://www.cdc.gov/ecoli/2016/o157-02-16/index.html",
     "title": "Alfalfa Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:24.540977+00:00",
+    "scraped_at": "2026-07-15T11:19:44.362214+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2016/o157-02-16/index.html"
   },
@@ -1405,7 +1415,7 @@
     "url": "https://www.cdc.gov/salmonella/muenchen-02-16/index.html",
     "title": "Alfalfa Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:26.570624+00:00",
+    "scraped_at": "2026-07-15T11:19:46.395188+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/muenchen-02-16/index.html"
   },
@@ -1415,7 +1425,7 @@
     "url": "https://www.cdc.gov/salmonella/virchow-02-16/index.html",
     "title": "Shake and Meal Replacement Product",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:28.607034+00:00",
+    "scraped_at": "2026-07-15T11:19:48.419444+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/virchow-02-16/index.html"
   },
@@ -1425,7 +1435,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/bagged-salads-01-16/index.html",
     "title": "Packaged Salads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:30.630406+00:00",
+    "scraped_at": "2026-07-15T11:19:50.442374+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/bagged-salads-01-16/index.html"
   },
@@ -1435,7 +1445,7 @@
     "url": "https://www.cdc.gov/salmonella/paratyphi-b-12-15/index.html",
     "title": "Nut Butter Spreads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:32.653900+00:00",
+    "scraped_at": "2026-07-15T11:19:52.467396+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/paratyphi-b-12-15/index.html"
   },
@@ -1445,7 +1455,7 @@
     "url": "https://www.cdc.gov/ecoli/2015/o157h7-11-15/index.html",
     "title": "Rotisserie Chicken Salad",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:34.675608+00:00",
+    "scraped_at": "2026-07-15T11:19:54.497028+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2015/o157h7-11-15/index.html"
   },
@@ -1455,7 +1465,7 @@
     "url": "https://www.cdc.gov/ecoli/2015/o26-11-15/index.html",
     "title": "Mexican Style Restaurant Chain",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:36.701733+00:00",
+    "scraped_at": "2026-07-15T11:19:56.522273+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2015/o26-11-15/index.html"
   },
@@ -1465,7 +1475,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/soft-cheeses-09-15/index.html",
     "title": "Soft Cheeses",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:38.772062+00:00",
+    "scraped_at": "2026-07-15T11:19:58.545366+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/soft-cheeses-09-15/index.html"
   },
@@ -1475,7 +1485,7 @@
     "url": "https://www.cdc.gov/salmonella/poona-09-15/index.html",
     "title": "Cucumbers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:40.808440+00:00",
+    "scraped_at": "2026-07-15T11:20:00.573956+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/poona-09-15/index.html"
   },
@@ -1485,7 +1495,7 @@
     "url": "https://www.cdc.gov/salmonella/pork-08-15/index.html",
     "title": "Pork",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:42.832647+00:00",
+    "scraped_at": "2026-07-15T11:20:02.598224+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/pork-08-15/index.html"
   },
@@ -1495,7 +1505,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2015/index.html",
     "title": "Unknown Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:44.854931+00:00",
+    "scraped_at": "2026-07-15T11:20:04.621729+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2015/index.html"
   },
@@ -1505,7 +1515,7 @@
     "url": "https://www.cdc.gov/salmonella/frozen-chicken-entrees-part2-07-15/index.html",
     "title": "Raw Frozen Stuffed Chicken Entrees",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:46.879427+00:00",
+    "scraped_at": "2026-07-15T11:20:06.652328+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/frozen-chicken-entrees-part2-07-15/index.html"
   },
@@ -1515,7 +1525,7 @@
     "url": "https://www.cdc.gov/salmonella/frozen-chicken-entrees-07-15/index.html",
     "title": "Raw Frozen Stuffed Chicken Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:48.913468+00:00",
+    "scraped_at": "2026-07-15T11:20:08.684620+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/frozen-chicken-entrees-07-15/index.html"
   },
@@ -1525,7 +1535,7 @@
     "url": "https://www.cdc.gov/salmonella/paratyphi-b-05-15/index.html",
     "title": "Frozen Raw Tuna",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:50.941490+00:00",
+    "scraped_at": "2026-07-15T11:20:10.709053+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/paratyphi-b-05-15/index.html"
   },
@@ -1535,7 +1545,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/ice-cream-03-15/index.html",
     "title": "Ice Cream",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:52.966608+00:00",
+    "scraped_at": "2026-07-15T11:20:12.733164+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/ice-cream-03-15/index.html"
   },
@@ -1545,7 +1555,7 @@
     "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6406a3.htm?s_cid=mm6406a3_e",
     "title": "Cucumbers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:54.994275+00:00",
+    "scraped_at": "2026-07-15T11:20:14.760370+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6406a3.htm?s_cid=mm6406a3_e"
   },
@@ -1555,7 +1565,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/caramel-apples-12-14/index.html",
     "title": "Caramel Apples",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:57.019993+00:00",
+    "scraped_at": "2026-07-15T11:20:16.784294+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/caramel-apples-12-14/index.html"
   },
@@ -1565,7 +1575,7 @@
     "url": "https://www.cdc.gov/salmonella/enteritidis-11-14/index.html",
     "title": "Bean Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:17:59.051565+00:00",
+    "scraped_at": "2026-07-15T11:20:18.809077+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/enteritidis-11-14/index.html"
   },
@@ -1575,7 +1585,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/bean-sprouts-11-14/index.html",
     "title": "Bean Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:01.117581+00:00",
+    "scraped_at": "2026-07-15T11:20:20.831678+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/bean-sprouts-11-14/index.html"
   },
@@ -1585,7 +1595,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/cheese-10-14/index.html",
     "title": "Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:03.145115+00:00",
+    "scraped_at": "2026-07-15T11:20:22.855969+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/cheese-10-14/index.html"
   },
@@ -1595,7 +1605,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2014/index.html",
     "title": "Cilantro",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:05.183872+00:00",
+    "scraped_at": "2026-07-15T11:20:24.881291+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2014/index.html"
   },
@@ -1605,7 +1615,7 @@
     "url": "https://www.cdc.gov/salmonella/braenderup-08-14/index.html",
     "title": "Nut Butter",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:07.206445+00:00",
+    "scraped_at": "2026-07-15T11:20:26.913966+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/braenderup-08-14/index.html"
   },
@@ -1615,7 +1625,7 @@
     "url": "https://www.cdc.gov/salmonella/newport-05-14/index.html",
     "title": "Sprouted Chia Powder",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:09.297353+00:00",
+    "scraped_at": "2026-07-15T11:20:28.941558+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/newport-05-14/index.html"
   },
@@ -1625,7 +1635,7 @@
     "url": "https://www.cdc.gov/ecoli/2014/O121-05-14/index.html",
     "title": "Raw Clover Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:11.320760+00:00",
+    "scraped_at": "2026-07-15T11:20:30.965077+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2014/O121-05-14/index.html"
   },
@@ -1635,7 +1645,7 @@
     "url": "https://www.cdc.gov/ecoli/2014/O157H7-05-14/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:13.341459+00:00",
+    "scraped_at": "2026-07-15T11:20:32.994085+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2014/O157H7-05-14/index.html"
   },
@@ -1645,7 +1655,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/cheese-02-14/index.html",
     "title": "Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:15.365732+00:00",
+    "scraped_at": "2026-07-15T11:20:35.016770+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/cheese-02-14/index.html"
   },
@@ -1655,7 +1665,7 @@
     "url": "https://www.cdc.gov/salmonella/heidelberg-01-14/index.html",
     "title": "Chicken",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:17.411551+00:00",
+    "scraped_at": "2026-07-15T11:20:37.052660+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/heidelberg-01-14/index.html"
   },
@@ -1665,7 +1675,7 @@
     "url": "https://www.cdc.gov/salmonella/stanley-01-14/index.html",
     "title": "Raw Cashew Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:19.437482+00:00",
+    "scraped_at": "2026-07-15T11:20:39.077335+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/stanley-01-14/index.html"
   },
@@ -1675,7 +1685,7 @@
     "url": "https://www.cdc.gov/ecoli/2013/O157H7-11-13/index.html",
     "title": "Ready-to-Eat Salads",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:21.528379+00:00",
+    "scraped_at": "2026-07-15T11:20:41.100400+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2013/O157H7-11-13/index.html"
   },
@@ -1685,7 +1695,7 @@
     "url": "https://www.cdc.gov/salmonella/heidelberg-10-13/index.html",
     "title": "Chicken",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:23.553301+00:00",
+    "scraped_at": "2026-07-15T11:20:43.123976+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/heidelberg-10-13/index.html"
   },
@@ -1695,7 +1705,7 @@
     "url": "https://www.cdc.gov/vibrio/investigations/index.html",
     "title": "Raw Shellfish",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:25.580261+00:00",
+    "scraped_at": "2026-07-15T11:20:45.148505+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/vibrio/investigations/index.html"
   },
@@ -1705,7 +1715,7 @@
     "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/investigation-2013.html",
     "title": "Fresh Produce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:27.602012+00:00",
+    "scraped_at": "2026-07-15T11:20:47.181005+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/investigation-2013.html"
   },
@@ -1715,7 +1725,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/cheese-07-13/index.html",
     "title": "Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:29.676474+00:00",
+    "scraped_at": "2026-07-15T11:20:49.206208+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/cheese-07-13/index.html"
   },
@@ -1725,7 +1735,7 @@
     "url": "https://www.cdc.gov/hepatitis/Outbreaks/2013/A1b-03-31/index.html",
     "title": "Pomegranate Seeds",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:31.700462+00:00",
+    "scraped_at": "2026-07-15T11:20:51.230500+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/hepatitis/Outbreaks/2013/A1b-03-31/index.html"
   },
@@ -1735,7 +1745,7 @@
     "url": "https://www.cdc.gov/salmonella/montevideo-tahini-05-13/",
     "title": "Tahini Sesame Paste",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:33.722166+00:00",
+    "scraped_at": "2026-07-15T11:20:53.259656+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/montevideo-tahini-05-13/"
   },
@@ -1745,7 +1755,7 @@
     "url": "https://www.cdc.gov/salmonella/saintpaul-04-13/index.html",
     "title": "Cucumbers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:35.748090+00:00",
+    "scraped_at": "2026-07-15T11:20:55.284097+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/saintpaul-04-13/index.html"
   },
@@ -1755,7 +1765,7 @@
     "url": "https://www.cdc.gov/ecoli/2013/O121-03-13/index.html",
     "title": "Frozen Food Products",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:37.769915+00:00",
+    "scraped_at": "2026-07-15T11:20:57.309138+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2013/O121-03-13/index.html"
   },
@@ -1765,7 +1775,7 @@
     "url": "https://www.cdc.gov/salmonella/heidelberg-02-13/index.html",
     "title": "Chicken",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:39.793544+00:00",
+    "scraped_at": "2026-07-15T11:20:59.333625+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/heidelberg-02-13/index.html"
   },
@@ -1775,7 +1785,7 @@
     "url": "https://www.cdc.gov/salmonella/typhimurium-01-13/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:41.860005+00:00",
+    "scraped_at": "2026-07-15T11:21:01.369042+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/typhimurium-01-13/index.html"
   },
@@ -1785,7 +1795,7 @@
     "url": "https://www.cdc.gov/ecoli/2012/O157H7-11-12/index.html",
     "title": "Spinach and Spring Mix",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:43.881935+00:00",
+    "scraped_at": "2026-07-15T11:21:03.394090+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2012/O157H7-11-12/index.html"
   },
@@ -1795,7 +1805,7 @@
     "url": "https://www.cdc.gov/salmonella/bredeney-09-12/index.html",
     "title": "Peanut Butter",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:45.910081+00:00",
+    "scraped_at": "2026-07-15T11:21:05.419634+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/bredeney-09-12/index.html"
   },
@@ -1805,7 +1815,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/cheese-09-12/index.html",
     "title": "Ricotta Salata Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:47.939774+00:00",
+    "scraped_at": "2026-07-15T11:21:07.453209+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/cheese-09-12/index.html"
   },
@@ -1815,7 +1825,7 @@
     "url": "https://www.cdc.gov/salmonella/braenderup-08-12/index.html",
     "title": "Mangoes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:49.999790+00:00",
+    "scraped_at": "2026-07-15T11:21:09.477616+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/braenderup-08-12/index.html"
   },
@@ -1825,7 +1835,7 @@
     "url": "https://www.cdc.gov/salmonella/typhimurium-cantaloupe-08-12/index.html",
     "title": "Cantaloupes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:52.023661+00:00",
+    "scraped_at": "2026-07-15T11:21:11.502454+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/typhimurium-cantaloupe-08-12/index.html"
   },
@@ -1835,7 +1845,7 @@
     "url": "https://www.cdc.gov/salmonella/enteritidis-07-12/index.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:54.048333+00:00",
+    "scraped_at": "2026-07-15T11:21:13.532432+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/enteritidis-07-12/index.html"
   },
@@ -1845,7 +1855,7 @@
     "url": "https://www.cdc.gov/ecoli/2012/O145-06-12/index.html",
     "title": "Unknown Source",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:56.075013+00:00",
+    "scraped_at": "2026-07-15T11:21:15.556415+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2012/O145-06-12/index.html"
   },
@@ -1855,7 +1865,7 @@
     "url": "https://www.cdc.gov/salmonella/bareilly-04-12/index.html",
     "title": "Frozen Raw Ground Tuna",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:18:58.128375+00:00",
+    "scraped_at": "2026-07-15T11:21:17.583371+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/bareilly-04-12/index.html"
   },
@@ -1865,7 +1875,7 @@
     "url": "https://www.cdc.gov/ecoli/2012/O26-02-12/index.html",
     "title": "Raw Clover Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:00.152715+00:00",
+    "scraped_at": "2026-07-15T11:21:19.607821+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2012/O26-02-12/index.html"
   },
@@ -1875,7 +1885,7 @@
     "url": "https://www.cdc.gov/salmonella/restaurant-enteriditis/index.html",
     "title": "Mexican Style Restaurant Chain",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:02.209559+00:00",
+    "scraped_at": "2026-07-15T11:21:21.632108+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/restaurant-enteriditis/index.html"
   },
@@ -1885,7 +1895,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/ground-beef-2-1-2012.html",
     "title": "Ground Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:04.233672+00:00",
+    "scraped_at": "2026-07-15T11:21:23.655667+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/ground-beef-2-1-2012.html"
   },
@@ -1895,7 +1905,7 @@
     "url": "https://www.cdc.gov/ecoli/2011/romaine-lettace-3-23-12.html",
     "title": "Romaine Lettuce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:06.255870+00:00",
+    "scraped_at": "2026-07-15T11:21:25.681298+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2011/romaine-lettace-3-23-12.html"
   },
@@ -1905,7 +1915,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/chicken-liver-1-11-2012.html",
     "title": "Chicken Livers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:08.284744+00:00",
+    "scraped_at": "2026-07-15T11:21:27.709892+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/chicken-liver-1-11-2012.html"
   },
@@ -1915,7 +1925,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/pine-nuts-11-17-2011.html",
     "title": "Pine Nuts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:10.358766+00:00",
+    "scraped_at": "2026-07-15T11:21:29.738033+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/pine-nuts-11-17-2011.html"
   },
@@ -1925,7 +1935,7 @@
     "url": "https://www.cdc.gov/listeria/outbreaks/cantaloupes-jensen-farms/index.html",
     "title": "Cantaloupes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:12.388877+00:00",
+    "scraped_at": "2026-07-15T11:21:31.763013+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/listeria/outbreaks/cantaloupes-jensen-farms/index.html"
   },
@@ -1935,7 +1945,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/ground-turkey-11-10-2011.html",
     "title": "Ground Turkey",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:14.411485+00:00",
+    "scraped_at": "2026-07-15T11:21:33.791128+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/ground-turkey-11-10-2011.html"
   },
@@ -1945,7 +1955,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/papayas-8-29-2011.html",
     "title": "Papayas",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:16.438381+00:00",
+    "scraped_at": "2026-07-15T11:21:35.822709+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/papayas-8-29-2011.html"
   },
@@ -1955,7 +1965,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/alfalfa-spicy-sprouts-7-6-2011.html",
     "title": "Alfalfa and Spicy Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:18.462542+00:00",
+    "scraped_at": "2026-07-15T11:21:37.847826+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/alfalfa-spicy-sprouts-7-6-2011.html"
   },
@@ -1965,7 +1975,7 @@
     "url": "https://www.cdc.gov/ecoli/2011/travel-germany-7-8-11.html",
     "title": "Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:20.490879+00:00",
+    "scraped_at": "2026-07-15T11:21:39.872533+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2011/travel-germany-7-8-11.html"
   },
@@ -1975,7 +1985,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/turkey-burger-4-4-2011.html",
     "title": "Turkey Burgers",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:22.558613+00:00",
+    "scraped_at": "2026-07-15T11:21:41.895676+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/turkey-burger-4-4-2011.html"
   },
@@ -1985,7 +1995,7 @@
     "url": "https://www.cdc.gov/ecoli/2011/lebanon-bologna-3-23-11.html",
     "title": "Lebanon Bologna",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:24.596717+00:00",
+    "scraped_at": "2026-07-15T11:21:43.920723+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2011/lebanon-bologna-3-23-11.html"
   },
@@ -1995,7 +2005,7 @@
     "url": "https://www.cdc.gov/salmonella/2011/cantaloupes-6-23-2011.html",
     "title": "Cantaloupes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:26.623956+00:00",
+    "scraped_at": "2026-07-15T11:21:45.944892+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2011/cantaloupes-6-23-2011.html"
   },
@@ -2005,7 +2015,7 @@
     "url": "https://www.cdc.gov/ecoli/2011/hazelnuts-4-7-11.html",
     "title": "Hazelnuts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:28.648355+00:00",
+    "scraped_at": "2026-07-15T11:21:47.972109+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2011/hazelnuts-4-7-11.html"
   },
@@ -2015,7 +2025,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/alfalfa-sprouts-2-10-11.html",
     "title": "Alfalfa Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:30.685900+00:00",
+    "scraped_at": "2026-07-15T11:21:49.998285+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/alfalfa-sprouts-2-10-11.html"
   },
@@ -2025,7 +2035,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/shell-eggs-12-2-10.html",
     "title": "Shell Eggs",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:32.708086+00:00",
+    "scraped_at": "2026-07-15T11:21:52.022441+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/shell-eggs-12-2-10.html"
   },
@@ -2035,7 +2045,7 @@
     "url": "https://www.cdc.gov/ecoli/2010/bravo-farms-cheese-11-24-10.html",
     "title": "Cheese",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:34.733951+00:00",
+    "scraped_at": "2026-07-15T11:21:54.052602+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2010/bravo-farms-cheese-11-24-10.html"
   },
@@ -2045,7 +2055,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/cheesy-chicken-rice-9-9-10.html",
     "title": "Frozen Entrees",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:36.756119+00:00",
+    "scraped_at": "2026-07-15T11:21:56.075560+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/cheesy-chicken-rice-9-9-10.html"
   },
@@ -2055,7 +2065,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/frozen-fruit-pulp-8-25-10.html",
     "title": "Frozen Mamey Fruit Pulp",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:38.794443+00:00",
+    "scraped_at": "2026-07-15T11:21:58.100282+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/frozen-fruit-pulp-8-25-10.html"
   },
@@ -2065,7 +2075,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/restaurant-chain-a-8-4-10.html",
     "title": "Mexican Style Restaurant Chain",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:40.831938+00:00",
+    "scraped_at": "2026-07-15T11:22:00.125670+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/restaurant-chain-a-8-4-10.html"
   },
@@ -2075,7 +2085,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/newport-alfalfa-sprout-6-29-10.html",
     "title": "Alfalfa Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:42.879379+00:00",
+    "scraped_at": "2026-07-15T11:22:02.159626+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/newport-alfalfa-sprout-6-29-10.html"
   },
@@ -2085,7 +2095,7 @@
     "url": "https://www.cdc.gov/ecoli/2010/shredded-romaine-5-21-10.html",
     "title": "Shredded Romaine Lettuce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:44.902500+00:00",
+    "scraped_at": "2026-07-15T11:22:04.183808+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2010/shredded-romaine-5-21-10.html"
   },
@@ -2095,7 +2105,7 @@
     "url": "https://www.cdc.gov/salmonella/2010/montevideo-5-4-2010.html",
     "title": "Red and Black Pepper / Italian-Style Meats",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:46.927196+00:00",
+    "scraped_at": "2026-07-15T11:22:06.209280+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2010/montevideo-5-4-2010.html"
   },
@@ -2105,7 +2115,7 @@
     "url": "https://www.cdc.gov/ecoli/2010/national-steak-poultry-1-6-10.html",
     "title": "Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:48.950940+00:00",
+    "scraped_at": "2026-07-15T11:22:08.256048+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2010/national-steak-poultry-1-6-10.html"
   },
@@ -2115,7 +2125,7 @@
     "url": "https://www.cdc.gov/ecoli/2009/beef-fairbanks-farms-11-24-2009.html",
     "title": "Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:50.994849+00:00",
+    "scraped_at": "2026-07-15T11:22:10.279974+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2009/beef-fairbanks-farms-11-24-2009.html"
   },
@@ -2125,7 +2135,7 @@
     "url": "https://www.cdc.gov/ecoli/2009/beef-jbs-swift-7-1-2009.html",
     "title": "Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:53.021031+00:00",
+    "scraped_at": "2026-07-15T11:22:12.303142+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2009/beef-jbs-swift-7-1-2009.html"
   },
@@ -2135,7 +2145,7 @@
     "url": "https://www.cdc.gov/ecoli/2009/cookie-dough-6-30-2009.html",
     "title": "Prepackaged Cookie Dough",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:55.046673+00:00",
+    "scraped_at": "2026-07-15T11:22:14.331295+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2009/cookie-dough-6-30-2009.html"
   },
@@ -2145,7 +2155,7 @@
     "url": "https://www.cdc.gov/salmonella/2009/raw-alfalfa-sprouts-5-8-2009.html",
     "title": "Alfalfal Sprouts",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:57.069149+00:00",
+    "scraped_at": "2026-07-15T11:22:16.355912+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2009/raw-alfalfa-sprouts-5-8-2009.html"
   },
@@ -2155,7 +2165,7 @@
     "url": "https://www.cdc.gov/salmonella/2009/peanut-butter-2008-2009.html",
     "title": "Peanut Butter",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:19:59.090908+00:00",
+    "scraped_at": "2026-07-15T11:22:18.383711+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2009/peanut-butter-2008-2009.html"
   },
@@ -2165,7 +2175,7 @@
     "url": "https://www.cdc.gov/salmonella/2009/pistachio-nuts-4-14-2009.html",
     "title": "Pistachios",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:01.113506+00:00",
+    "scraped_at": "2026-07-15T11:22:20.408892+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2009/pistachio-nuts-4-14-2009.html"
   },
@@ -2175,7 +2185,7 @@
     "url": "https://www.cdc.gov/salmonella/2008/raw-produce-8-28-2008.html",
     "title": "Raw Produce",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:03.167291+00:00",
+    "scraped_at": "2026-07-15T11:22:22.433400+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2008/raw-produce-8-28-2008.html"
   },
@@ -2185,7 +2195,7 @@
     "url": "https://www.cdc.gov/ecoli/2008/ground-beef-kroger-7-18-2008.html",
     "title": "Beef",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:05.194734+00:00",
+    "scraped_at": "2026-07-15T11:22:24.457773+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2008/ground-beef-kroger-7-18-2008.html"
   },
@@ -2195,7 +2205,7 @@
     "url": "https://www.cdc.gov/salmonella/2008/rice-wheat-puff-cereal-5-13-2008.html",
     "title": "Cereals",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:07.222009+00:00",
+    "scraped_at": "2026-07-15T11:22:26.482667+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2008/rice-wheat-puff-cereal-5-13-2008.html"
   },
@@ -2205,7 +2215,7 @@
     "url": "https://www.cdc.gov/salmonella/2008/cantaloupes-4-2-2008.html",
     "title": "Cantaloupes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:09.244711+00:00",
+    "scraped_at": "2026-07-15T11:22:28.513119+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2008/cantaloupes-4-2-2008.html"
   },
@@ -2215,7 +2225,7 @@
     "url": "https://www.cdc.gov/ecoli/2007/jeno-pizza-11-1-2007.html",
     "title": "Frozen Pizza",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:11.279778+00:00",
+    "scraped_at": "2026-07-15T11:22:30.538663+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2007/jeno-pizza-11-1-2007.html"
   },
@@ -2225,7 +2235,7 @@
     "url": "https://www.cdc.gov/salmonella/2007/pot-pie-10-29-2007.html",
     "title": "Frozen Pot Pies",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:13.304132+00:00",
+    "scraped_at": "2026-07-15T11:22:32.561542+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2007/pot-pie-10-29-2007.html"
   },
@@ -2235,7 +2245,7 @@
     "url": "https://www.cdc.gov/ecoli/2007/ground-beef-patties-10-26-2007.html",
     "title": "Ground Beef Patties",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:15.330622+00:00",
+    "scraped_at": "2026-07-15T11:22:34.586797+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2007/ground-beef-patties-10-26-2007.html"
   },
@@ -2245,7 +2255,7 @@
     "url": "https://www.cdc.gov/salmonella/2007/veggie-booty-7-18-2007.html",
     "title": "Vegetable Flavored Rice and Corn Snack",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:17.353137+00:00",
+    "scraped_at": "2026-07-15T11:22:36.610544+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2007/veggie-booty-7-18-2007.html"
   },
@@ -2255,7 +2265,7 @@
     "url": "https://www.cdc.gov/salmonella/2007/peanut-butter-3-7-2007.html",
     "title": "Peanut Butter",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:19.377003+00:00",
+    "scraped_at": "2026-07-15T11:22:38.639754+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2007/peanut-butter-3-7-2007.html"
   },
@@ -2265,7 +2275,7 @@
     "url": "https://www.cdc.gov/ecoli/2006/taco-bell-12-2006.html",
     "title": "Mexican Stye Restaurant Chain",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:21.403012+00:00",
+    "scraped_at": "2026-07-15T11:22:40.664654+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2006/taco-bell-12-2006.html"
   },
@@ -2275,7 +2285,7 @@
     "url": "https://www.cdc.gov/salmonella/2006/tomatoes-11-2006.html",
     "title": "Tomatoes",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:23.468395+00:00",
+    "scraped_at": "2026-07-15T11:22:42.689433+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/salmonella/2006/tomatoes-11-2006.html"
   },
@@ -2285,7 +2295,7 @@
     "url": "https://www.cdc.gov/ecoli/2006/spinach-10-2006.html",
     "title": "Fresh Spinach",
     "source": "CDC",
-    "scraped_at": "2026-07-14T11:20:25.491724+00:00",
+    "scraped_at": "2026-07-15T11:22:44.712862+00:00",
     "scrape_status": "http_error_403",
     "scrape_error": "403 Client Error: Forbidden for url: https://www.cdc.gov/ecoli/2006/spinach-10-2006.html"
   }

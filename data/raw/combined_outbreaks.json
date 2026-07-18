@@ -1,17 +1,17 @@
 {
   "summary": {
-    "total_outbreaks": 306,
-    "total_cases": 6656,
-    "total_deaths": 1464,
-    "total_hospitalizations": 3873,
+    "total_outbreaks": 307,
+    "total_cases": 6888,
+    "total_deaths": 1538,
+    "total_hospitalizations": 4131,
     "outbreaks_by_source": {
-      "FDA": 76,
+      "FDA": 77,
       "CDC": 230
     },
     "outbreaks_by_pathogen": {
       "Unknown": 46,
       "Salmonella": 17,
-      "E. coli": 5,
+      "E. coli": 6,
       "Listeria monocytogenes": 6,
       "Infant Botulism": 2,
       "unknown": 18,
@@ -22,7 +22,7 @@
       "vibrio": 3
     },
     "outbreaks_by_status": {
-      "unknown": 306
+      "unknown": 307
     },
     "unique_states_affected": 51,
     "states_list": [
@@ -90,20 +90,20 @@
       "deaths": 6,
       "hospitalizations": 241,
       "states_affected": [
-        "GA",
-        "MA",
-        "NY",
-        "RI",
         "MN",
+        "CT",
         "SC",
         "WI",
-        "IA",
+        "GA",
         "OH",
-        "CT",
-        "FL"
+        "IA",
+        "FL",
+        "RI",
+        "NY",
+        "MA"
       ],
       "state_count": 11,
-      "scraped_at": "2026-06-27T08:35:46.705120+00:00"
+      "scraped_at": "2026-07-18T16:37:57.037333+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-oranienburg-whole-fresh-onions-october-2021",
@@ -115,50 +115,50 @@
       "deaths": 260,
       "hospitalizations": 40,
       "states_affected": [
-        "TX",
-        "UT",
-        "MO",
-        "WI",
-        "WA",
-        "NJ",
-        "KS",
-        "VA",
-        "SD",
-        "NM",
-        "FL",
-        "WV",
-        "IL",
-        "OK",
-        "SC",
-        "LA",
-        "CO",
-        "KY",
-        "MA",
         "AL",
+        "WA",
+        "IL",
+        "CO",
+        "TX",
+        "NY",
+        "OR",
+        "LA",
+        "NJ",
+        "KY",
         "NC",
         "GA",
-        "OR",
-        "DC",
-        "MN",
+        "OH",
+        "KS",
+        "FL",
+        "OK",
         "MI",
-        "AR",
-        "IA",
-        "TN",
+        "HI",
+        "MD",
+        "UT",
+        "CA",
+        "MA",
+        "VA",
+        "SD",
         "CT",
+        "IN",
+        "DC",
+        "NM",
+        "SC",
+        "WI",
+        "IA",
+        "AR",
+        "MO",
+        "WV",
+        "MN",
+        "MS",
+        "NE",
         "PA",
         "ND",
-        "IN",
-        "NY",
-        "MS",
-        "HI",
-        "OH",
-        "CA",
-        "MD",
-        "NE"
+        "TN"
       ],
       "state_count": 40,
       "consumer_advice": "CDC has announced the outbreak is over. There are no recommendations for consumers, retailers, or suppliers.\n",
-      "scraped_at": "2026-06-27T08:34:34.482671+00:00"
+      "scraped_at": "2026-07-18T16:37:10.384927+00:00"
     },
     {
       "id": "outbreak-investigation-cyclospora-bagged-salads-june-2020",
@@ -170,24 +170,24 @@
       "deaths": 38,
       "hospitalizations": 701,
       "states_affected": [
-        "GA",
-        "PA",
-        "IL",
         "MN",
-        "MO",
         "WI",
-        "MI",
-        "IA",
-        "OH",
-        "KS",
-        "MA",
         "NE",
+        "IL",
+        "PA",
+        "GA",
+        "OH",
+        "IA",
+        "KS",
+        "MI",
         "ND",
+        "MO",
+        "MA",
         "SD"
       ],
       "state_count": 14,
       "consumer_advice": "On June 27, 2020, Fresh Expressrecalledproducts containing either iceberg lettuce, red cabbage or carrots and displaying the product code Z178, or a lower number. The “Best by” date on the products run through July 14, 2020.\nThe recalled products are now well beyond expiration and likely no longer on the market or in consumers’ homes.\n",
-      "scraped_at": "2026-06-27T08:34:57.828507+00:00"
+      "scraped_at": "2026-07-18T16:37:31.270329+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-cucumbers-june-2024",
@@ -201,46 +201,46 @@
       "deaths": 155,
       "hospitalizations": 551,
       "states_affected": [
-        "TX",
-        "MO",
-        "WI",
-        "NV",
-        "WA",
-        "NJ",
-        "VA",
-        "WV",
-        "FL",
-        "IL",
-        "OK",
-        "RI",
-        "SC",
-        "KY",
-        "MA",
         "AL",
+        "WA",
+        "IL",
+        "TX",
+        "RI",
+        "NY",
+        "NJ",
+        "KY",
         "NC",
         "GA",
-        "DC",
-        "MN",
-        "DE",
-        "MI",
-        "AR",
-        "IA",
-        "TN",
-        "CT",
-        "PA",
-        "VT",
-        "IN",
-        "NY",
-        "MS",
-        "ME",
         "OH",
+        "FL",
+        "OK",
+        "MI",
+        "MD",
         "CA",
-        "MD"
+        "MA",
+        "VA",
+        "ME",
+        "CT",
+        "IN",
+        "DC",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "AR",
+        "NV",
+        "MO",
+        "WV",
+        "MN",
+        "MS",
+        "VT",
+        "PA",
+        "TN"
       ],
       "state_count": 35,
       "posted_date": "June 2024",
       "consumer_advice": "Product of concern is past shelf life.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection.\n",
-      "scraped_at": "2026-06-27T08:33:39.420035+00:00"
+      "scraped_at": "2026-07-18T16:36:18.989154+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-cantaloupes-november-2023",
@@ -254,56 +254,56 @@
       "deaths": 6,
       "hospitalizations": 158,
       "states_affected": [
-        "AK",
-        "TX",
-        "UT",
-        "MO",
-        "WI",
-        "NV",
         "WA",
-        "NJ",
-        "KS",
-        "VA",
-        "SD",
-        "NM",
-        "FL",
-        "WV",
-        "IL",
-        "OK",
-        "RI",
-        "SC",
-        "NH",
-        "AZ",
-        "CO",
-        "KY",
-        "MA",
         "AL",
+        "MT",
+        "AZ",
+        "IL",
+        "CO",
+        "TX",
+        "RI",
+        "NY",
+        "OR",
+        "NJ",
+        "KY",
+        "NH",
         "NC",
         "GA",
-        "OR",
-        "MN",
+        "OH",
+        "KS",
+        "FL",
+        "OK",
         "MI",
-        "AR",
-        "IA",
-        "TN",
-        "MT",
+        "MD",
+        "UT",
+        "CA",
+        "MA",
+        "VA",
+        "AK",
+        "SD",
         "CT",
+        "IN",
+        "NM",
+        "SC",
+        "WI",
+        "IA",
+        "AR",
+        "NV",
+        "WY",
+        "MO",
+        "WV",
+        "MN",
+        "MS",
+        "NE",
+        "VT",
         "PA",
         "ND",
-        "VT",
-        "IN",
-        "NY",
-        "MS",
-        "WY",
-        "OH",
-        "CA",
-        "MD",
-        "NE"
+        "TN"
       ],
       "state_count": 45,
       "posted_date": "November 2023",
       "consumer_advice": "Consumers, restaurants, retailers, and wholesalers should not eat, sell, or serve recalled cantaloupe or recalled products containing cantaloupe.Recalled whole and pre-cut cantaloupes and recalled product containing pre-cut cantaloupes were sold or distributed from September to early December 2023 and should be past shelf-life. Consumers who froze cantaloupe products should check if they are part of the recalls. If you are unsure of where your cantaloupes are from, you should discard them.Anyone who purchased or received recalled cantaloupes should followFDA’s safe handling and cleaning adviceand use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled products to reduce the risk of cross-contamination.Pre-cut fruit manufacturers should ensure proper cleaning and sanitizing of food contact surfaces and evaluate the need to recall additional product due to the potential for cross-contamination in the processing facility.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating recalled cantaloupe.\n",
-      "scraped_at": "2026-06-27T08:33:53.102732+00:00"
+      "scraped_at": "2026-07-18T16:36:31.455905+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-javiana-fruit-mix-december-2019",
@@ -315,23 +315,49 @@
       "deaths": 73,
       "hospitalizations": 165,
       "states_affected": [
-        "GA",
-        "MA",
-        "IL",
-        "PA",
-        "NY",
         "MN",
-        "DE",
+        "CT",
         "WA",
         "NJ",
-        "CO",
-        "CA",
         "VA",
-        "CT",
-        "FL"
+        "DE",
+        "IL",
+        "PA",
+        "GA",
+        "CO",
+        "FL",
+        "NY",
+        "CA",
+        "MA"
       ],
       "state_count": 14,
-      "scraped_at": "2026-06-27T08:35:17.242566+00:00"
+      "scraped_at": "2026-07-18T16:37:43.052045+00:00"
+    },
+    {
+      "id": "outbreak-investigation-e-coli-frozen-blueberries-july-2026",
+      "source": "FDA",
+      "title": "E. coli:Frozen Blueberries (July 2026)",
+      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-frozen-blueberries-july-2026",
+      "pathogen": "E. coli",
+      "food_source": "Frozen Blueberries",
+      "status": "unknown",
+      "case_count": 145,
+      "deaths": 4,
+      "hospitalizations": 12,
+      "states_affected": [
+        "AL",
+        "SC",
+        "KY",
+        "NC",
+        "GA",
+        "FL",
+        "VA",
+        "TN"
+      ],
+      "state_count": 8,
+      "posted_date": "July 2026",
+      "consumer_advice": "Do not eat, sell, or serverecalledfrozen GreenWise-brand organic blueberries.Check your freezers for recalled blueberries and throw them away or return the product to the place of purchase. If you froze a product without the original packaging and can’t tell if it’s part of the recall, throw it away.Consumers, restaurants, retailers, and foodservice customers who purchased or received recalled blueberries, including wholesale products, should carefully clean and sanitize any surfaces or containers that it touched. FollowFDA’s safe handlingand cleaning advice to reduce the risk of cross-contamination.Retailers that received recalled products and repackaged them for individual sale should not sell them and should remove the products from the market.Consult your health care provider immediately if you ate frozen GreenWise-brand organic blueberries and have any symptoms that resemble anE. coliinfection.\n",
+      "scraped_at": "2026-07-18T16:35:31.168202+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-eggs-june-2025",
@@ -345,25 +371,25 @@
       "deaths": 38,
       "hospitalizations": 38,
       "states_affected": [
-        "IL",
         "IN",
-        "UT",
-        "WY",
-        "NV",
         "WA",
         "NJ",
-        "KS",
-        "AZ",
-        "CO",
-        "CA",
         "KY",
+        "NM",
+        "UT",
         "NE",
-        "NM"
+        "AZ",
+        "IL",
+        "KS",
+        "CO",
+        "WY",
+        "NV",
+        "CA"
       ],
       "state_count": 14,
       "posted_date": "June 2025",
       "consumer_advice": "Recalled eggs are past expiration and should no longer be available for sale. Always wash hands, utensils, and surfaces with hot, soapy water before and after handling raw eggs and raw egg-containing foods. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with raw or undercooked eggs to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection, after eating eggs.\n",
-      "scraped_at": "2026-06-27T08:33:18.611093+00:00"
+      "scraped_at": "2026-07-18T16:35:59.271350+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-moringa-leaf-powder-january-2026",
@@ -376,47 +402,47 @@
       "case_count": 119,
       "hospitalizations": 26,
       "states_affected": [
-        "AK",
-        "TX",
-        "UT",
-        "MO",
-        "WI",
-        "WA",
-        "NJ",
-        "VA",
-        "SD",
-        "FL",
-        "IL",
-        "OK",
-        "RI",
-        "SC",
-        "KY",
-        "MA",
         "AL",
+        "WA",
+        "IL",
+        "TX",
+        "RI",
+        "NY",
+        "OR",
+        "NJ",
+        "KY",
         "NC",
         "GA",
-        "OR",
-        "MN",
-        "DE",
+        "OH",
+        "FL",
+        "OK",
         "MI",
-        "AR",
-        "IA",
-        "TN",
+        "UT",
+        "CA",
+        "MA",
+        "VA",
+        "AK",
+        "ME",
+        "SD",
         "CT",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "AR",
+        "MO",
+        "MN",
+        "NE",
+        "VT",
         "PA",
         "ND",
-        "VT",
-        "NY",
         "ID",
-        "ME",
-        "OH",
-        "CA",
-        "NE"
+        "TN"
       ],
       "state_count": 36,
       "posted_date": "January 2026",
-      "consumer_advice": "NEW: Consumers and retailers should not eat, sell, or distributerecalledTNVitamins-brand Ultra Potent Complete Green Superfood Moringa powder capsules or Doctor’s Pride Complete Green Superfood Ultra Potent Moringa capsules. If you purchased or received these recalled products, you should throw the product and its container away and can contact the company to request a refund.Consumers and retailers with recalled Why Not Natural or Live it Up-brand moringa powder products should not eat or sell these products and should throw them away and can contact the company to request a refund.Consumers and retailers who purchased or received recalled dietary supplements should carefully clean and sanitize any surfaces or containers that the products touched. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection after consuming dietary supplements with moringa leaf powder.\n",
-      "scraped_at": "2026-06-27T08:33:02.661818+00:00"
+      "consumer_advice": "NEW: Consumers and retailers should not eat, sell, or distributerecalledTNVitamins-brand Ultra Potent Complete Green Superfood Moringa powder capsules or Doctor’s Pride Complete Green Superfood Ultra Potent Moringa capsules. If you purchased or received these recalled products, you should throw the product and its container away and can contact the company to request a refund.NEW: Consumers and retailers with recalled TNVitamins, Doctor’s Pride, Why Not Natural, or Live it Up-brand moringa powder products should not eat or sell these products and should throw them away and can contact the company to request a refund.Consumers and retailers with recalled Why Not Natural or Live it Up-brand moringa powder products should not eat or sell these products and should throw them away and can contact the company to request a refund.Consumers and retailers who purchased or received recalled dietary supplements should carefully clean and sanitize any surfaces or containers that the products touched. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection after consuming dietary supplements with moringa leaf powder.\n",
+      "scraped_at": "2026-07-18T16:35:44.638268+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-cucumbers-november-2024",
@@ -430,53 +456,53 @@
       "deaths": 28,
       "hospitalizations": 113,
       "states_affected": [
-        "AK",
-        "TX",
-        "UT",
-        "WI",
-        "MO",
-        "NV",
         "WA",
-        "NJ",
-        "KS",
-        "VA",
-        "SD",
-        "NM",
-        "FL",
-        "IL",
-        "OK",
-        "SC",
-        "AZ",
-        "LA",
-        "CO",
-        "MA",
         "AL",
+        "MT",
+        "AZ",
+        "IL",
+        "CO",
+        "TX",
+        "NY",
+        "OR",
+        "LA",
+        "NJ",
         "NC",
         "GA",
-        "OR",
-        "MN",
-        "MI",
-        "DE",
-        "AR",
-        "IA",
-        "TN",
-        "MT",
-        "PA",
-        "CT",
-        "ND",
-        "IN",
-        "NY",
-        "ID",
-        "WY",
         "OH",
-        "CA",
+        "KS",
+        "FL",
+        "OK",
+        "MI",
+        "UT",
         "MD",
-        "NE"
+        "CA",
+        "MA",
+        "VA",
+        "AK",
+        "SD",
+        "CT",
+        "IN",
+        "NM",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "AR",
+        "NV",
+        "WY",
+        "MO",
+        "MN",
+        "NE",
+        "PA",
+        "ND",
+        "ID",
+        "TN"
       ],
       "state_count": 42,
       "posted_date": "November 2024",
       "consumer_advice": "These products are past shelf life and should no longer be available for sale.Consumers, retailers, and distributorsshould check their refrigerators and freezers and should not use or eat recalled cucumbers and recalled cucumber products.Retailers, distributors, and consumersshould followFDA’s safe handling and cleaningand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have symptoms of aSalmonellainfection after eating recalled cucumbers.\n",
-      "scraped_at": "2026-06-27T08:33:30.205047+00:00"
+      "scraped_at": "2026-07-18T16:36:10.003784+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-eggs-august-2025",
@@ -490,25 +516,25 @@
       "deaths": 19,
       "hospitalizations": 19,
       "states_affected": [
-        "GA",
-        "NY",
         "MN",
-        "NV",
-        "HI",
-        "IA",
-        "NC",
         "WA",
-        "AZ",
-        "CA",
-        "PA",
-        "NE",
         "NM",
-        "FL"
+        "NE",
+        "AZ",
+        "PA",
+        "NC",
+        "GA",
+        "IA",
+        "FL",
+        "HI",
+        "NY",
+        "NV",
+        "CA"
       ],
       "state_count": 14,
       "posted_date": "August 2025",
       "consumer_advice": "Product linked to illness should no longer be on the market.Consumers, restaurants, and retailers who purchased or received therecalled eggs, including wholesale eggs, should carefully clean and sanitize any surfaces or containers that the recalled eggs touched.Wash hands, utensils, and surfaces with hot, soapy water before and after handling raw eggs and raw egg-containing foods.FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Read throughFDA’s egg safety informationfor additional advice on how to buy, store, and serve eggs.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection, after eating eggs.\n",
-      "scraped_at": "2026-06-27T08:33:09.501395+00:00"
+      "scraped_at": "2026-07-18T16:35:51.000337+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-onions-october-2024",
@@ -522,28 +548,28 @@
       "deaths": 34,
       "hospitalizations": 104,
       "states_affected": [
-        "OR",
-        "UT",
-        "ID",
-        "OK",
-        "MO",
-        "WI",
-        "WY",
-        "NV",
-        "MI",
-        "IA",
         "WA",
-        "KS",
-        "MT",
-        "CO",
-        "NE",
         "NM",
-        "NC"
+        "MT",
+        "UT",
+        "NE",
+        "WI",
+        "NC",
+        "KS",
+        "CO",
+        "IA",
+        "OK",
+        "MI",
+        "WY",
+        "MO",
+        "NV",
+        "OR",
+        "ID"
       ],
       "state_count": 17,
       "posted_date": "October 2024",
       "consumer_advice": "Food service customers should not sell or serve Taylor Farms recalled yellow onions and should followFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled product to reduce the risk of cross-contamination. Customers should also ensure that they did not freeze recalled onions or foods containing recalled onions.According to available information, it is unlikely that recalled yellow onions were sold to grocery stores or directly to consumers.\n",
-      "scraped_at": "2026-06-27T08:33:34.911790+00:00"
+      "scraped_at": "2026-07-18T16:36:14.563733+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-ground-bison-july-2019",
@@ -555,18 +581,18 @@
       "deaths": 18,
       "hospitalizations": 33,
       "states_affected": [
-        "PA",
-        "IL",
-        "NY",
-        "MO",
-        "MI",
-        "NJ",
         "CT",
-        "FL"
+        "NJ",
+        "IL",
+        "PA",
+        "FL",
+        "MI",
+        "NY",
+        "MO"
       ],
       "state_count": 8,
       "consumer_advice": "Because the product is frozen and may still be in freezers, distributors, retailers and restaurants should not distribute, use or serve ground bison (including bison burgers) recalled by Northfork Bison Distributions Inc.\nConsumers should not eat products prepared using recalled ground bison (including bison burgers) sold under the Northfork Bison label including bison burgers sold to retailers in 4 x 4-ounce packages with expiration dates through October 8, 2020.",
-      "scraped_at": "2026-06-27T08:35:55.075989+00:00"
+      "scraped_at": "2026-07-18T16:37:59.594776+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-enteritidis-peaches-august-2020",
@@ -578,34 +604,34 @@
       "deaths": 28,
       "hospitalizations": 28,
       "states_affected": [
-        "MO",
-        "WI",
-        "NJ",
-        "KS",
-        "VA",
-        "SD",
-        "WV",
-        "FL",
         "IL",
         "RI",
-        "NH",
-        "KY",
-        "MA",
-        "MN",
-        "DE",
-        "MI",
-        "IA",
-        "PA",
-        "CT",
-        "ND",
-        "VT",
         "NY",
+        "NJ",
+        "KY",
+        "NH",
         "OH",
+        "KS",
+        "FL",
+        "MI",
+        "MD",
         "CA",
-        "MD"
+        "VA",
+        "MA",
+        "SD",
+        "CT",
+        "DE",
+        "WI",
+        "IA",
+        "MO",
+        "WV",
+        "MN",
+        "VT",
+        "PA",
+        "ND"
       ],
       "state_count": 25,
-      "scraped_at": "2026-06-27T08:34:55.507783+00:00"
+      "scraped_at": "2026-07-18T16:37:29.207360+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-onions-october-2023",
@@ -619,34 +645,58 @@
       "deaths": 18,
       "hospitalizations": 18,
       "states_affected": [
-        "TX",
-        "UT",
-        "WI",
         "WA",
-        "VA",
-        "IL",
-        "AZ",
-        "CO",
-        "KY",
-        "MA",
-        "GA",
-        "OR",
-        "MI",
-        "IA",
-        "TN",
         "MT",
-        "ND",
-        "IN",
+        "AZ",
+        "IL",
+        "CO",
+        "TX",
         "NY",
-        "ID",
-        "WY",
+        "OR",
+        "KY",
+        "GA",
         "OH",
-        "CA"
+        "MI",
+        "UT",
+        "CA",
+        "MA",
+        "VA",
+        "IN",
+        "WI",
+        "IA",
+        "WY",
+        "ND",
+        "ID",
+        "TN"
       ],
       "state_count": 23,
       "posted_date": "October 2023",
       "consumer_advice": "Consumers should not eat, sell, or serve recalled onions and should check their freezers if they froze recalled products. Full descriptions of recalled products sold to retailers in AZ, CA, ID, MT, OR, and WA can be found in therecall announcement.Direct customers, including restaurants, institutions, and retailers will be contacted by the company and should check their refrigerators and freezers and throw away recalled onions.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating recalled onions.\n",
-      "scraped_at": "2026-06-27T08:33:55.357297+00:00"
+      "scraped_at": "2026-07-18T16:36:33.711697+00:00"
+    },
+    {
+      "id": "outbreak-investigation-salmonella-uganda-fresh-papayas-june-2019",
+      "source": "FDA",
+      "title": "Salmonella- Fresh Papayas (June 2019)",
+      "url": "https://web.archive.org/web/20201126134411/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-uganda-fresh-papayas-june-2019",
+      "status": "unknown",
+      "case_count": 71,
+      "deaths": 27,
+      "hospitalizations": 81,
+      "states_affected": [
+        "CT",
+        "NJ",
+        "DE",
+        "PA",
+        "FL",
+        "TX",
+        "RI",
+        "NY",
+        "MA"
+      ],
+      "state_count": 9,
+      "consumer_advice": "Consumers and distributors no longer need to avoid or withhold Cavi brand whole, fresh papayas imported from Mexico.\nThe papayas that were linked to the illnesses in this outbreak are no longer on the market.",
+      "scraped_at": "2026-07-18T16:38:02.164413+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-cucumbers-may-2025",
@@ -660,32 +710,32 @@
       "deaths": 22,
       "hospitalizations": 69,
       "states_affected": [
-        "NJ",
-        "KS",
-        "VA",
-        "FL",
-        "IL",
-        "SC",
-        "CO",
-        "KY",
-        "MA",
         "AL",
+        "IL",
+        "CO",
+        "NY",
+        "NJ",
+        "KY",
         "NC",
         "GA",
-        "MI",
-        "TN",
-        "PA",
-        "IN",
-        "NY",
-        "MS",
         "OH",
+        "KS",
+        "FL",
+        "MI",
+        "MD",
         "CA",
-        "MD"
+        "MA",
+        "VA",
+        "IN",
+        "SC",
+        "MS",
+        "PA",
+        "TN"
       ],
       "state_count": 21,
       "posted_date": "May 2025",
       "consumer_advice": "Recalled cucumbers should no longer be available on the market.\n",
-      "scraped_at": "2026-06-27T08:33:20.883768+00:00"
+      "scraped_at": "2026-07-18T16:36:01.661748+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-eggs-sept-2024",
@@ -699,23 +749,23 @@
       "deaths": 34,
       "hospitalizations": 93,
       "states_affected": [
-        "IL",
-        "OR",
-        "NY",
-        "UT",
         "MN",
         "WI",
-        "MI",
-        "IA",
         "AZ",
+        "IL",
+        "IA",
         "CO",
+        "MI",
+        "NY",
+        "UT",
         "CA",
-        "VA"
+        "VA",
+        "OR"
       ],
       "state_count": 12,
       "posted_date": "Sept 2024",
       "consumer_advice": "Recalled eggs are past shelf life and should no longer be available for sale. Consumers, restaurants, and retailers who purchased recalled eggs should check their refrigerators and should not eat them. If recalled eggs were previously purchased, surfaces and containers they touched should be carefully cleaned and sanitized.Wash hands, utensils, and surfaces with hot, soapy water before and after handling raw eggs and raw egg-containing foods. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection after eating eggs.\n",
-      "scraped_at": "2026-06-27T08:33:37.173787+00:00"
+      "scraped_at": "2026-07-18T16:36:16.656966+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-sprouts-december-2022",
@@ -727,18 +777,18 @@
       "deaths": 10,
       "hospitalizations": 63,
       "states_affected": [
+        "NH",
+        "NE",
+        "AZ",
+        "KS",
+        "IA",
         "OK",
         "MO",
-        "NH",
-        "IA",
-        "KS",
-        "AZ",
-        "NE",
         "SD"
       ],
       "state_count": 8,
       "consumer_advice": "Recalled products were sold fresh and are now past shelf-life and should no longer be available for sale.\nIn general, FDA recommends that anyone who received recalled products use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.\n",
-      "scraped_at": "2026-06-27T08:34:06.863832+00:00"
+      "scraped_at": "2026-07-18T16:36:44.592083+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o103-clover-sprouts-february-2020",
@@ -751,19 +801,19 @@
       "hospitalizations": 51,
       "states_affected": [
         "IL",
+        "IA",
+        "FL",
         "TX",
         "NY",
-        "ID",
+        "WY",
         "UT",
         "MO",
-        "WY",
-        "IA",
         "VA",
-        "FL"
+        "ID"
       ],
       "state_count": 10,
       "consumer_advice": "Chicago Indoor Gardenrecalledall products containing Red Clover sprouts. FDA recommends that consumers not eat the following recalled items with “Best By” dates between 12/1/2019 and 3/12/2020 that were distributed to Coosemans Chicago Inc., Battaglia Distributing, Living Waters Farms, and Whole Foods throughout the Midwest:\nRed Clover 4oz. clamshellRed Clover 2lb. boxesSprout Salad 6oz. clamshellMixed Greens 4oz. clamshellSpring Salad 6oz. clamshell\nRecalled products are now past their “Best By” dates and should be thrown away.\nRaw and lightly cooked sprouts are a known source of foodborne illness. We recommend that consumers, restaurants, and other retailers always followfood safety practicesto avoid illness from eating sprouts. Generally, it is recommended that children, the elderly, pregnant women, and persons with weakened immune systems should avoid eating raw sprouts of any kind.\n",
-      "scraped_at": "2026-06-27T08:35:04.696332+00:00"
+      "scraped_at": "2026-07-18T16:37:37.540777+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o121h19-organic-carrots-november-2024",
@@ -777,30 +827,30 @@
       "deaths": 20,
       "hospitalizations": 48,
       "states_affected": [
-        "TX",
-        "UT",
-        "MO",
         "WA",
-        "NJ",
-        "VA",
-        "SC",
         "CO",
-        "MA",
-        "NC",
-        "OR",
-        "MN",
-        "MI",
-        "AR",
-        "PA",
+        "TX",
         "NY",
-        "WY",
+        "OR",
+        "NJ",
+        "NC",
         "OH",
-        "CA"
+        "MI",
+        "UT",
+        "CA",
+        "VA",
+        "MA",
+        "SC",
+        "AR",
+        "WY",
+        "MO",
+        "MN",
+        "PA"
       ],
       "state_count": 19,
       "posted_date": "November 2024",
       "consumer_advice": "These products are past shelf life and are no longer available for sale.Consumers, retailers, and distributorsshould check their refrigerators and freezers and should not use or eat recalled organic whole or baby carrots.Retailers, distributors, and consumersshould followFDA’s safe handling and cleaningand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may havesymptomsof an of anE. coliinfection after eating organic carrots.\n",
-      "scraped_at": "2026-06-27T08:33:32.632373+00:00"
+      "scraped_at": "2026-07-18T16:36:12.133687+00:00"
     },
     {
       "id": "outbreak-investigation-scombrotoxin-fish-poisoning-yellowfinahi-tuna-november-2019",
@@ -812,23 +862,23 @@
       "deaths": 1,
       "hospitalizations": 50,
       "states_affected": [
+        "MN",
+        "NJ",
+        "DE",
         "VT",
         "PA",
-        "NY",
-        "RI",
-        "MN",
-        "DE",
-        "NJ",
         "OH",
-        "CA",
+        "FL",
+        "RI",
+        "NY",
         "MD",
+        "CA",
         "MA",
-        "WV",
-        "FL"
+        "WV"
       ],
       "state_count": 13,
       "consumer_advice": "Yellowfin tuna from Truong Phu Xanh Co., LTD with a production date in 2019 should not be consumed because it may have the potential to cause scombrotoxin fish poisoning. Tuna from this supplier could have been sold thawed or frozen; and could have been sold as ground tuna meat, poke cubes, steaks, or loins; this product could still be within its shelf life.­­ Anyone who received tuna from this supplier should not sell, serve, or consume it and should discard it. If you purchased tuna from one of the importers listed below you should confirm that it was not tuna supplied by Truong Phu Xanh Co., LTD with a production date in 2019. The following companies imported tuna from Truong Phu Xanh Co., LTD:\nMical Seafood Inc. (Davie, FL)Northern Fisheries LTD (Little Compton, RI)Alfa International Seafood Inc. (Medley, FL)Aquabest Seafood LLC (Miami, FL)Gamma Seafood Corporation (Medley, FL)J. DeLuca Fish Company, Inc. (San Pedro, CA)Sym-Pac International Inc. (Corona, CA)Worldwide Seafood Products LLC (Perth Amboy, NJ)\nScombrotoxin fish poisoning occurs when fish is not properly chilled or preserved and begins to spoil, resulting in increased histamine levels. Histamine cannot be destroyed by freezing or cooking.\nImporters, Suppliers, and Distributors:\nImporters, suppliers, and distributors should not use and should discard or destroy any yellowfin tuna imported from Truong Phu Xanh Co., LTD with a production date in 2019.\nRestaurants and Retailers:\nRestaurants and retailers should contact their suppliers to confirm the source of their yellowfin tuna because not all product was distributed in packaging that identifies Truong Phu Xanh Co., LTD. Yellowfin tuna imported from this company with a production date in 2019 should not be used, served, repacked, or sold; and should be discarded.\nConsumers:\nWhile restaurants and retailers should have removed yellowfin tuna with a production date in 2019 from the Vietnamese supplier Truong Phu Xanh Co., LTD, consumers should ask if the yellowfin tuna being served or sold was imported from the Vietnamese supplier Truong Phu Xanh Co., LTD and has a production date in 2019.\nThis outbreak appears to be over. The last reported illness for this outbreak was on November 24, 2019. Yellowfin tuna from Truong Phu Xanh Co., LTD with a production date in 2019 should still not be consumed. At this time, Truong Phu Xanh Co., LTD has not shipped product in 2020 and remains on Import Alert, which provides information to FDA field staff that they may detain the firm’s yellowfin tuna without physical examination. Detained product will not enter the United States unless the importer proves that it meets U.S. food safety standards.\nWhen the firm initially declined to recall, the FDA issued public warnings for importers, suppliers, distributors, and consumers. After the FDA public warning, the company recalled some of the product. FDA evaluated the effectiveness of the recalls and determined that the recalls may have not effectively removed all potentially harmful products from the market, so on December 26, 2019, the FDA released a list of importers of Truong Phu Xanh Co., LTD tuna to help suppliers and distributors to identify product. FDA further worked with companies throughout the supply chain to facilitate recalls; and was able to ensure that all importers with tuna still available initiated recalls.\nIn addition, the FDA notified the Vietnamese government after learning that some tuna products had been returned to Truong Phu Xanh Co., LTD in Vietnam. In response, the Vietnamese government issued an official letter to all relevant Vietnamese agencies instructing them to monitor and detain shipments of Truong Phu Xanh Co., LTD tuna upon arrival at ports in Vietnam. This action was taken to prevent the use of this product in Vietnam and its re-export to other countries, including the U.S.",
-      "scraped_at": "2026-06-27T08:35:40.699581+00:00"
+      "scraped_at": "2026-07-18T16:37:54.472356+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-frozen-supplemental-shakes-february-2025",
@@ -842,32 +892,32 @@
       "deaths": 14,
       "hospitalizations": 42,
       "states_affected": [
-        "TX",
-        "MO",
-        "NV",
-        "WA",
-        "WV",
-        "FL",
-        "IL",
-        "OK",
-        "CO",
         "AL",
+        "WA",
+        "IL",
+        "CO",
+        "TX",
+        "NY",
         "NC",
-        "MN",
+        "OH",
+        "FL",
+        "OK",
         "MI",
-        "TN",
-        "PA",
+        "MD",
+        "CA",
         "CT",
         "IN",
-        "NY",
-        "OH",
-        "CA",
-        "MD"
+        "NV",
+        "MO",
+        "WV",
+        "MN",
+        "PA",
+        "TN"
       ],
       "state_count": 21,
       "posted_date": "February 2025",
       "consumer_advice": "The recalled product is no longer available on the market. Distributors and foodservice customers, including hospitals and long-term care facilities who purchased or received recalled Lyons ReadyCare and Sysco Imperial Frozen Supplemental Shakes should not sell or serve these products. Carefully clean and sanitize any surfaces or containers that they touched and followFDA’s safe handling and cleaning adviceto reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.If you or your family member have symptoms of listeriosis you should contact your health care provider to report your symptoms and receive care.\nListeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.Call your healthcare provider right away if you have symptoms of aListeriainfection.\n",
-      "scraped_at": "2026-06-27T08:33:25.538509+00:00"
+      "scraped_at": "2026-07-18T16:36:05.838817+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-seafood-october-2022",
@@ -879,14 +929,14 @@
       "deaths": 15,
       "hospitalizations": 39,
       "states_affected": [
-        "IL",
-        "AZ",
+        "CA",
         "TX",
-        "CA"
+        "AZ",
+        "IL"
       ],
       "state_count": 4,
       "consumer_advice": "According to Mariscos Bahia, Inc., seafood was only sold directly to restaurants in California and Arizona and would not be available for purchase by consumers in retail stores. The firm contacted direct restaurant customers that received recalled product. Recalled seafood was sold fresh and is now past shelf-life unless it was frozen after purchase.\nRestaurants who might have purchased or received recalled fresh, raw salmon, halibut, Chilean seabass, tuna, or swordfish from Mariscos Bahia, Inc. (Pico Rivera, CA, and Phoenix, AZ) between June 14 - October 17, 2022, should check their freezers and throw away recalled product. Restaurants should also be sure to wash and sanitize locations where recalled fish from Mariscos Bahia, Inc. were stored or prepared.\n",
-      "scraped_at": "2026-06-27T08:34:11.409740+00:00"
+      "scraped_at": "2026-07-18T16:36:49.034212+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-organic-basil-april-2024",
@@ -900,41 +950,82 @@
       "deaths": 4,
       "hospitalizations": 36,
       "states_affected": [
-        "TX",
-        "MO",
-        "WI",
-        "NJ",
-        "KS",
-        "VA",
-        "FL",
-        "IL",
-        "RI",
-        "SC",
-        "NH",
-        "KY",
-        "MA",
         "AL",
+        "IL",
+        "TX",
+        "RI",
+        "NY",
+        "NJ",
+        "KY",
+        "NH",
         "NC",
         "GA",
-        "MN",
-        "DE",
-        "MI",
-        "IA",
-        "TN",
-        "CT",
-        "PA",
-        "VT",
-        "IN",
-        "NY",
-        "ME",
         "OH",
+        "KS",
+        "FL",
+        "MI",
         "MD",
-        "NE"
+        "MA",
+        "VA",
+        "ME",
+        "CT",
+        "IN",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "MO",
+        "MN",
+        "NE",
+        "VT",
+        "PA",
+        "TN"
       ],
       "state_count": 30,
       "posted_date": "April 2024",
       "consumer_advice": "Potentially contaminated recalled product is no longer available on the market; however, consumers who purchased recalled organic basil from the stores listed above should check their refrigerators and freezers and should not eat it.This product should no longer be for sale at retail stores and is likely past shelf-life. If you bought recalled organic basil and removed it from the packaging or froze it and cannot tell if it is part of the recall, do not eat or use it and throw it away.FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating basil.\n",
-      "scraped_at": "2026-06-27T08:33:43.942744+00:00"
+      "scraped_at": "2026-07-18T16:36:23.134712+00:00"
+    },
+    {
+      "id": "outbreak-investigation-salmonella-moringa-leaf-powder-may-2026",
+      "source": "FDA",
+      "title": "Salmonella: Moringa Leaf Powder (May 2026)",
+      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-moringa-leaf-powder-may-2026",
+      "pathogen": "Salmonella",
+      "food_source": "Moringa Leaf Powder",
+      "status": "unknown",
+      "case_count": 34,
+      "deaths": 11,
+      "hospitalizations": 34,
+      "states_affected": [
+        "WA",
+        "IL",
+        "TX",
+        "OR",
+        "NH",
+        "NC",
+        "GA",
+        "FL",
+        "OK",
+        "MI",
+        "MD",
+        "CA",
+        "MA",
+        "SC",
+        "WI",
+        "IA",
+        "MO",
+        "MN",
+        "NE",
+        "PA",
+        "ND",
+        "ID",
+        "TN"
+      ],
+      "state_count": 23,
+      "posted_date": "May 2026",
+      "consumer_advice": "Recalled product should no longer be available for sale but does have a long shelf life. Consumers should check their homes for recalled product and throw it away.Consumers and retailers who purchasedrecalledMOGO-brand moringa powder capsules should check the bottle, and if your bottle has lot #15525AA EXP 6/2027 or lot #00926AA EXP 1/2028, you should not eat, sell, or distribute it and should throw this product away. Consumers who purchased recalled products are encouraged to visit thecompany’s official recall information page.Consumers and retailers who purchased or received recalled MOGO-brand moringa powder capsules should carefully clean and sanitize any surfaces or containers that the product touched. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Contact your healthcare provider immediately if you think you may have developedsymptomsof aSalmonellainfection after consuming MOGO-brand moringa powder capsules.\n",
+      "scraped_at": "2026-07-18T16:35:37.624918+00:00"
     },
     {
       "id": "outbreak-investigation-infant-botulism-infant-formula-november-2025",
@@ -948,28 +1039,28 @@
       "deaths": 48,
       "hospitalizations": 20,
       "states_affected": [
-        "PA",
-        "IL",
-        "TX",
-        "OR",
-        "ID",
         "MN",
-        "RI",
-        "WI",
-        "MI",
         "WA",
         "NJ",
-        "AZ",
-        "CA",
         "KY",
         "VA",
+        "WI",
+        "IL",
+        "AZ",
+        "PA",
+        "NC",
+        "TX",
+        "MI",
+        "RI",
+        "CA",
         "MA",
-        "NC"
+        "OR",
+        "ID"
       ],
       "state_count": 17,
       "posted_date": "November 2025",
       "consumer_advice": "Parents and Caregiversshould stop using any ByHeart infant formula products immediately.If your child consumed ByHeart formula and is experiencing symptoms (see below) seek immediate medical attention.If your child consumed ByHeart formula and is not currently showing symptoms, continue monitoring them and seek medical attention if symptoms develop.Wash items and surfacesthat may have touched the formula using hot soapy water or a dishwasher.Retailersshould ensure recalled product is not on store shelves, including product that has been returned by customers.Botulism can be fatal,and you should take action right away. If your child has consumed ByHeart formula and is experiencingsigns and symptomsof botulism such as poor feeding, loss of head control, difficulty swallowing, or decreased facial expression, seek immediate medical attention.If you are a Physicianand suspect an infant patient has botulism,immediatelycall the CDPH clinical support line at510-231-7600for case consultation. Consultation is available 24/7.\n",
-      "scraped_at": "2026-06-27T08:33:04.940845+00:00"
+      "scraped_at": "2026-07-18T16:35:46.774335+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-prepared-pasta-meals-june-2025",
@@ -983,42 +1074,42 @@
       "deaths": 7,
       "hospitalizations": 28,
       "states_affected": [
-        "TX",
-        "UT",
-        "MO",
-        "NV",
         "WA",
-        "NJ",
-        "KS",
-        "VA",
-        "NM",
-        "FL",
-        "IL",
-        "OK",
-        "SC",
-        "AZ",
-        "LA",
-        "CO",
         "AL",
+        "AZ",
+        "IL",
+        "TX",
+        "CO",
+        "OR",
+        "LA",
+        "NJ",
         "NC",
         "GA",
-        "OR",
-        "MN",
-        "MI",
-        "DE",
-        "TN",
-        "PA",
-        "IN",
-        "WY",
-        "HI",
         "OH",
+        "KS",
+        "FL",
+        "OK",
+        "MI",
+        "HI",
+        "UT",
+        "MD",
         "CA",
-        "MD"
+        "VA",
+        "IN",
+        "SC",
+        "NM",
+        "DE",
+        "NV",
+        "WY",
+        "MO",
+        "MN",
+        "PA",
+        "TN"
       ],
       "state_count": 31,
       "posted_date": "June 2025",
       "consumer_advice": "The recalled product should no longer be available for sale on the market. Consumers who purchased or received recalled or affected meals should check their refrigerators and freezers and should not eat or serve these products.If you or your family member has symptoms of listeriosis you should contact your health care provider to report your symptoms and receive care.\nListeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.\n",
-      "scraped_at": "2026-06-27T08:33:14.055616+00:00"
+      "scraped_at": "2026-07-18T16:35:55.119918+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-ice-cream-july-2022",
@@ -1030,22 +1121,22 @@
       "deaths": 27,
       "hospitalizations": 28,
       "states_affected": [
-        "GA",
-        "PA",
-        "IL",
-        "NY",
         "MN",
         "NJ",
-        "KS",
-        "OH",
-        "CO",
-        "MA",
         "NE",
-        "FL"
+        "IL",
+        "PA",
+        "GA",
+        "OH",
+        "KS",
+        "FL",
+        "CO",
+        "NY",
+        "MA"
       ],
       "state_count": 12,
       "consumer_advice": "The recalled ice cream products should no longer be available for sale; however, ice cream has a long shelf life and may still be in consumers’ freezers. Consumers, restaurants, and retailers should not eat, sell, or serve anyrecalledBig Olaf ice cream products with expiration dates through 6/30/2022 and should throw the recalled product away.\nListeriais most likely to sicken pregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.\nCall your healthcare provider right away if you have these symptoms after eating Big Olaf ice cream products:\nPregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.People who are not pregnant may experience headache, stiff neck, confusion, loss of balance, and convulsions, in addition to fever and muscle aches.\nConsumers, restaurants, and retailers who purchased or received anyrecalledBig Olaf ice cream products should throw the products away, followFDA’s safe handling and cleaning adviceand use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Listeriacan survive temperatures at or below freezing and can easily spread to other foods and surfaces.\n",
-      "scraped_at": "2026-06-27T08:34:18.217724+00:00"
+      "scraped_at": "2026-07-18T16:36:55.260439+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-queso-fresco-and-cotija-cheese-february-2024",
@@ -1059,62 +1150,62 @@
       "deaths": 23,
       "hospitalizations": 26,
       "states_affected": [
-        "TX",
-        "AK",
-        "UT",
-        "MO",
-        "WI",
-        "NV",
         "WA",
-        "NJ",
-        "KS",
-        "VA",
-        "SD",
-        "WV",
-        "FL",
-        "NM",
-        "IL",
-        "OK",
-        "RI",
-        "SC",
-        "NH",
-        "AZ",
-        "LA",
-        "CO",
-        "KY",
-        "MA",
         "AL",
+        "MT",
+        "IL",
+        "AZ",
+        "CO",
+        "TX",
+        "RI",
+        "NY",
+        "OR",
+        "LA",
+        "NJ",
+        "KY",
+        "NH",
         "NC",
         "GA",
-        "OR",
-        "DC",
-        "MN",
-        "DE",
-        "MI",
-        "AR",
-        "IA",
-        "TN",
-        "MT",
-        "PA",
-        "CT",
-        "ND",
-        "VT",
-        "IN",
-        "NY",
-        "ID",
-        "MS",
-        "ME",
-        "WY",
-        "HI",
         "OH",
-        "CA",
+        "KS",
+        "FL",
+        "OK",
+        "MI",
+        "HI",
+        "UT",
         "MD",
-        "NE"
+        "CA",
+        "VA",
+        "MA",
+        "AK",
+        "SD",
+        "ME",
+        "CT",
+        "IN",
+        "DC",
+        "NM",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "AR",
+        "NV",
+        "WY",
+        "MO",
+        "WV",
+        "MN",
+        "MS",
+        "NE",
+        "VT",
+        "PA",
+        "ND",
+        "ID",
+        "TN"
       ],
       "state_count": 51,
       "posted_date": "February 2024",
       "consumer_advice": "Potentially contaminated recalled product is no longer available on the market; however, consumers should check your refrigerators and freezers for any recalled products and throw them away. If you froze a product without the original packaging and can’t tell if it is part of the recalls, throw it away.Consumers, restaurants, and retailers who purchased or received recalled products, including wholesale products, should carefully clean and sanitize any surfaces or containers that it touched. FollowFDA’s safe handling and cleaning adviceto reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.If you have symptoms of listeriosis you should contact your health care provider to report your symptoms and receive care.\nListeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.Call your healthcare provider right away if you have symptoms of aListeriainfection.\n",
-      "scraped_at": "2026-06-27T08:33:48.594715+00:00"
+      "scraped_at": "2026-07-18T16:36:27.289105+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-raw-cookie-dough-may-2023",
@@ -1128,17 +1219,17 @@
       "deaths": 4,
       "hospitalizations": 26,
       "states_affected": [
-        "OR",
-        "UT",
-        "ID",
-        "MO",
         "WA",
-        "CA"
+        "UT",
+        "CA",
+        "MO",
+        "OR",
+        "ID"
       ],
       "state_count": 6,
       "posted_date": "May 2023",
       "consumer_advice": "Papa Murphy’s Take ‘N’ Bake Chocolate Chip Cookie and S’mores Bars dough are not meant to be eaten raw.This outbreak appears to be over; however, consumers should check their refrigerators and freezers for Papa Murphy’s Chocolate Chip Cookie and S’mores Bars dough purchased before May 23, 2023 and should throw it away.Contact your healthcare provider if you think you may havesymptomsofSalmonellainfection.\nDue to the potential for contamination, never eat any raw dough that is supposed to be cooked or baked.Always wash hands and clean and sanitize work surfaces and utensils thoroughly after contact with raw dough or batter.Keep raw food or dough separate from other foods while preparing them to prevent any possible contamination from spreading.More information is available on theFDA website.\n",
-      "scraped_at": "2026-06-27T08:33:59.985793+00:00"
+      "scraped_at": "2026-07-18T16:36:38.096128+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o121h19-frozen-falafel-october-2022",
@@ -1151,15 +1242,15 @@
       "hospitalizations": 24,
       "states_affected": [
         "WI",
-        "MI",
-        "IA",
         "OH",
         "KS",
-        "FL"
+        "IA",
+        "FL",
+        "MI"
       ],
       "state_count": 6,
       "consumer_advice": "These items are no longer available for sale but were sold frozen and have a long shelf-life of 18 months, so consumers should check their freezers for any recalled Earth Grown vegan traditional falafel and garlic & herb falafel that was sold by ALDI. If you have recalled frozen falafel in your freezer, do not eat or serve them.\n",
-      "scraped_at": "2026-06-27T08:34:13.675119+00:00"
+      "scraped_at": "2026-07-18T16:36:51.109157+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-jules-cashew-brie-april-2021",
@@ -1172,13 +1263,13 @@
       "hospitalizations": 20,
       "states_affected": [
         "MD",
-        "TN",
+        "CA",
         "FL",
-        "CA"
+        "TN"
       ],
       "state_count": 4,
       "consumer_advice": "CDC announced that the outbreak is over. There are no recommendations for consumers, restaurants, or retailers.\n",
-      "scraped_at": "2026-06-27T08:34:44.137241+00:00"
+      "scraped_at": "2026-07-18T16:37:18.706249+00:00"
     },
     {
       "id": "outbreak-investigation-hepatitis-fresh-conventional-blackberries-december-2019",
@@ -1190,53 +1281,20 @@
       "deaths": 11,
       "hospitalizations": 20,
       "states_affected": [
-        "IL",
-        "IN",
         "MN",
-        "MO",
-        "WI",
-        "MI",
-        "IA",
-        "OH",
+        "IN",
         "KY",
+        "WI",
+        "NE",
+        "IL",
         "PA",
-        "NE"
+        "OH",
+        "IA",
+        "MI",
+        "MO"
       ],
       "state_count": 11,
-      "scraped_at": "2026-06-27T08:35:11.356094+00:00"
-    },
-    {
-      "id": "outbreak-investigation-salmonella-moringa-leaf-powder-may-2026",
-      "source": "FDA",
-      "title": "Salmonella: Moringa Leaf Powder (May 2026)",
-      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-moringa-leaf-powder-may-2026",
-      "pathogen": "Salmonella",
-      "food_source": "Moringa Leaf Powder",
-      "status": "unknown",
-      "case_count": 18,
-      "deaths": 7,
-      "hospitalizations": 7,
-      "states_affected": [
-        "GA",
-        "PA",
-        "IL",
-        "OR",
-        "MN",
-        "MO",
-        "SC",
-        "MI",
-        "WA",
-        "NC",
-        "TN",
-        "CA",
-        "MA",
-        "ND",
-        "FL"
-      ],
-      "state_count": 15,
-      "posted_date": "May 2026",
-      "consumer_advice": "Consumers and retailers who purchasedrecalledMOGO-brand moringa powder capsules should check the bottle, and if your bottle has lot #15525AA EXP 6/2027 or lot #00926AA EXP 1/2028, you should not eat, sell, or distribute it and should throw this product away. Consumers who purchased recalled products are encouraged to visit thecompany’s official recall information page.Consumers and retailers who purchased or received recalled MOGO-brand moringa powder capsules should carefully clean and sanitize any surfaces or containers that the product touched. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Contact your healthcare provider immediately if you think you may have developedsymptomsof aSalmonellainfection after consuming MOGO-brand moringa powder capsules.\n",
-      "scraped_at": "2026-06-27T08:32:55.828973+00:00"
+      "scraped_at": "2026-07-18T16:37:40.451063+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-mini-pastries-january-2025",
@@ -1250,19 +1308,19 @@
       "deaths": 1,
       "hospitalizations": 18,
       "states_affected": [
-        "MA",
-        "IL",
-        "NY",
-        "NC",
         "NJ",
-        "CA",
+        "IL",
         "PA",
-        "FL"
+        "NC",
+        "FL",
+        "NY",
+        "CA",
+        "MA"
       ],
       "state_count": 8,
       "posted_date": "January 2025",
       "consumer_advice": "The recalled product should no longer be available for sale; however, food service customers who received the recalled product should followFDA’s safe handling and cleaningrecommendations and use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developed symptoms of aSalmonellainfection.\n",
-      "scraped_at": "2026-06-27T08:33:27.859615+00:00"
+      "scraped_at": "2026-07-18T16:36:07.917500+00:00"
     },
     {
       "id": "outbreak-investigation-hepatitis-virus-strawberries-may-2022",
@@ -1273,12 +1331,12 @@
       "case_count": 18,
       "states_affected": [
         "MN",
-        "ND",
-        "CA"
+        "CA",
+        "ND"
       ],
       "state_count": 3,
       "consumer_advice": "Currently, the potentially contaminated product is past its shelf life and not available for purchase in stores. Consumers, restaurants, and retailers should not sell, serve, or eat any fresh organic strawberries branded as FreshKampo or HEB if purchased between March 5, 2022, and April 15, 2022. People who purchased the fresh strawberriesand then froze those strawberries for later consumptionshould not eat them. They should be thrown away.  If you are unsure of what brand you purchased, when you purchased your strawberries, or where you purchased them from prior to freezing them, the strawberries should be thrown away.\nIf consumers purchased fresh organic strawberries branded as FreshKampo or HEB between March 5, 2022, and April 15, 2022, ate those berries in the last two weeks, and have not been vaccinated against hepatitis A, they should immediately consult with their healthcare professional to determine whether post exposure prophylaxis (PEP) is needed. PEP is recommended for unvaccinated people who have been exposed to hepatitis A virus in the last two weeks because vaccination can prevent a hepatitis A infection if given within 14 days of exposure. Those with evidence of previous hepatitis A vaccination or previous hepatitis A infection do not require PEP.\nContact your healthcare provider if you think you may havesymptomsof a hepatitis A infection after eating these fresh organic strawberries, or if you believe that you have eaten these strawberries in the last two weeks.\n",
-      "scraped_at": "2026-06-27T08:34:20.458902+00:00"
+      "scraped_at": "2026-07-18T16:36:57.775974+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-dole-packaged-salad-december-2021",
@@ -1290,47 +1348,47 @@
       "deaths": 16,
       "hospitalizations": 18,
       "states_affected": [
-        "TX",
-        "UT",
-        "WI",
-        "MO",
-        "NV",
-        "WA",
-        "KS",
-        "VA",
-        "FL",
-        "IL",
-        "OK",
-        "SC",
-        "AZ",
-        "LA",
-        "CO",
-        "KY",
-        "MA",
         "AL",
+        "WA",
+        "AZ",
+        "IL",
+        "TX",
+        "CO",
+        "NY",
+        "OR",
+        "LA",
+        "KY",
         "NC",
         "GA",
-        "OR",
-        "MN",
+        "OH",
+        "KS",
+        "FL",
+        "OK",
         "MI",
-        "IA",
-        "TN",
+        "HI",
+        "UT",
+        "MD",
+        "CA",
+        "MA",
+        "VA",
         "CT",
+        "IN",
+        "SC",
+        "WI",
+        "IA",
+        "NV",
+        "MO",
+        "MN",
+        "MS",
+        "NE",
         "PA",
         "ND",
-        "IN",
-        "NY",
         "ID",
-        "MS",
-        "HI",
-        "OH",
-        "CA",
-        "MD",
-        "NE"
+        "TN"
       ],
       "state_count": 37,
       "consumer_advice": "On April 4, 2022, CDC announced this outbreak is over. The product is past expiration and is no longer available to consumers. Therefore, there are no specific recommendations for consumers, retailers, or suppliers.\nIn general, FDA recommends that anyone who received recalled products use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.\n",
-      "scraped_at": "2026-06-27T08:34:27.392473+00:00"
+      "scraped_at": "2026-07-18T16:37:04.143654+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-flour-may-2019",
@@ -1342,33 +1400,33 @@
       "deaths": 3,
       "hospitalizations": 21,
       "states_affected": [
-        "UT",
-        "MO",
-        "NJ",
-        "KS",
-        "VA",
-        "WV",
-        "RI",
-        "SC",
-        "NH",
-        "MA",
         "AL",
-        "MN",
+        "RI",
+        "NY",
+        "NJ",
+        "NH",
+        "OH",
+        "KS",
+        "MD",
+        "UT",
+        "CA",
+        "VA",
+        "MA",
+        "ME",
+        "CT",
+        "SC",
         "DE",
         "IA",
-        "PA",
-        "CT",
+        "MO",
+        "WV",
+        "MN",
         "VT",
-        "NY",
-        "ME",
-        "OH",
-        "CA",
-        "MD",
-        "NE"
+        "NE",
+        "PA"
       ],
       "state_count": 23,
       "consumer_advice": "Consumers should not use or eat recalled flour or bake mixes.\nDue to potential contamination, do not eat any raw cake mix, batter, or any other raw dough or batter product that is supposed to be cooked or baked.\nWash hands, work surfaces, and utensils thoroughly after contact with flour and raw batter or dough products.\nKeep raw foods separate from other foods while preparing them to prevent any contamination that may be present from spreading. Be aware that flour or cake mix may spread easily due to its powdery nature.",
-      "scraped_at": "2026-06-27T08:36:11.781566+00:00"
+      "scraped_at": "2026-07-18T16:38:04.755434+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-typhimurium-brightfarms-packaged-salad-greens-july-2021",
@@ -1380,16 +1438,16 @@
       "deaths": 4,
       "hospitalizations": 31,
       "states_affected": [
-        "IL",
         "IN",
         "WI",
-        "MI",
+        "IL",
+        "PA",
         "IA",
-        "PA"
+        "MI"
       ],
       "state_count": 6,
       "consumer_advice": "CDC has declared this outbreak to be over.\n",
-      "scraped_at": "2026-06-27T08:34:38.958563+00:00"
+      "scraped_at": "2026-07-18T16:37:14.540184+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-flour-april-2023",
@@ -1401,23 +1459,23 @@
       "deaths": 3,
       "hospitalizations": 14,
       "states_affected": [
-        "IL",
-        "OR",
-        "NY",
         "MN",
-        "MO",
-        "IA",
         "WA",
-        "TN",
+        "MO",
         "NJ",
+        "NE",
+        "IL",
         "OH",
+        "IA",
+        "NY",
         "CA",
         "VA",
-        "NE"
+        "OR",
+        "TN"
       ],
       "state_count": 13,
       "consumer_advice": "Consumers, restaurants, and retailers should not eat, sell, or serve recalled Gold Medal flour. Recalled products should be thrown away.Check your home for recalled flour. If you cannot tell if your flour is part of the recall, do not use it.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating recalled flour.\nDue to the potential for contamination, never eat any raw flour, dough, or cake mix that is supposed to be cooked or baked.Always wash hands, work surfaces, and utensils thoroughly after contact with flour, raw dough, or batter.Keep raw food or dough separate from other foods while preparing them to prevent any possible contamination from spreading. Be aware that flour or baking mix may spread easily due to its powdery nature.\n",
-      "scraped_at": "2026-06-27T08:34:02.356585+00:00"
+      "scraped_at": "2026-07-18T16:36:40.162656+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-bulk-organic-walnuts-april-2024",
@@ -1431,30 +1489,30 @@
       "deaths": 7,
       "hospitalizations": 13,
       "states_affected": [
-        "AK",
-        "TX",
-        "UT",
-        "NV",
         "WA",
+        "MT",
+        "AZ",
+        "CO",
+        "TX",
+        "OR",
+        "LA",
         "KS",
+        "HI",
+        "UT",
+        "CA",
+        "AK",
         "SD",
         "NM",
-        "AZ",
-        "LA",
-        "CO",
-        "OR",
         "AR",
-        "MT",
-        "ID",
         "WY",
-        "HI",
-        "CA",
-        "NE"
+        "NV",
+        "NE",
+        "ID"
       ],
       "state_count": 19,
       "posted_date": "April 2024",
       "consumer_advice": "This product should no longer be for sale.Consumerswho have not already checked their homes for recalled walnuts, should check their pantries, refrigerators, and freezers. If you have recalled walnuts in your home, do not eat or use them, throw them away and clean and sanitize surfaces they touched.Retailers, distributors, and consumersshould followFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled product to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may havesymptomsof anE. coliinfection after eating organic walnuts.\n",
-      "scraped_at": "2026-06-27T08:33:41.684366+00:00"
+      "scraped_at": "2026-07-18T16:36:21.059695+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-soft-cheese-june-2026",
@@ -1468,20 +1526,20 @@
       "deaths": 10,
       "hospitalizations": 10,
       "states_affected": [
-        "IL",
-        "NY",
-        "MI",
-        "DE",
-        "VA",
-        "NJ",
         "LA",
+        "NJ",
+        "DE",
+        "IL",
+        "NC",
+        "MI",
+        "NY",
         "MD",
-        "NC"
+        "VA"
       ],
       "state_count": 9,
       "posted_date": "June 2026",
       "consumer_advice": "Do not eat, sell, or serverecalledcheese.Check your refrigerators and freezers for any recalled cheese. Do not eat it and return it to the place of purchase or throw it away. If you froze cheese without the original packaging and can’t tell if it is part of the recall, throw it away.Consumers, restaurants, and retailers who purchased or received recalled cheese including wholesale products, should carefully clean and sanitize any surfaces or containers that it touched. FollowFDA’s safe handling and cleaning adviceto reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.If you have symptoms of listeriosis you should contact your health care provider to report your symptoms and receive care.\nIf you are at higher risk for severeListeriaillness (if you are pregnant, aged 65 or older, or have a weakened immune system due to certain medical conditions or treatments) do not eat any queso fresco-type cheese, including soft ricotta/requeson.Listeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.Call your healthcare provider right away if you have symptoms of aListeriainfection.\n",
-      "scraped_at": "2026-06-27T08:32:53.555564+00:00"
+      "scraped_at": "2026-07-18T16:35:35.577438+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-deep-brand-frozen-products-july-2025",
@@ -1495,23 +1553,23 @@
       "deaths": 4,
       "hospitalizations": 12,
       "states_affected": [
-        "MA",
-        "PA",
-        "IL",
-        "TX",
-        "IN",
         "MN",
+        "CT",
+        "IN",
         "WA",
-        "TN",
         "NJ",
         "VA",
-        "CT",
-        "FL"
+        "IL",
+        "PA",
+        "FL",
+        "TX",
+        "MA",
+        "TN"
       ],
       "state_count": 12,
       "posted_date": "July 2025",
       "consumer_advice": "The recalled product should no longer be available for sale on the market. Consumers, restaurants, and retailers should check refrigerators and freezers for the recalled products, should not eat, sell, or serve any recalled products, and throw them away or return them to the place of purchase.Consumers, restaurants, and retailers who purchased or received the recalled products should wash hands, utensils, and surfaces with hot, soapy water before and after handling the recalled products. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection after eating Deep-brand frozen products.\n",
-      "scraped_at": "2026-06-27T08:33:11.772970+00:00"
+      "scraped_at": "2026-07-18T16:35:53.070190+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-moringa-leaf-powder-october-2025",
@@ -1525,19 +1583,19 @@
       "deaths": 3,
       "hospitalizations": 11,
       "states_affected": [
-        "NY",
         "SC",
-        "MI",
-        "FL",
         "NJ",
+        "NC",
         "KS",
-        "VA",
-        "NC"
+        "FL",
+        "MI",
+        "NY",
+        "VA"
       ],
       "state_count": 8,
       "posted_date": "October 2025",
       "consumer_advice": "All product has been recalled and should no longer be for sale. Consumers and retailers should not eat, sell, or serve recalled products and should throw these products away or return them to the place of purchase.Distributors and retailers who received recalled moringa leaf powder manufactured by Vallon Farmdirect should not use, sell, or distribute products or ingredients from lot (Batch No.: VFD/ORG/MORP/L/24 with the BBD of November 2027).Consumers and retailers who purchased or received the recalled products should carefully clean and sanitize any surfaces or containers that they touched. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developedsymptomsof aSalmonellainfection after using the recalled products.\n",
-      "scraped_at": "2026-06-27T08:33:07.248459+00:00"
+      "scraped_at": "2026-07-18T16:35:48.882345+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-february-2024",
@@ -1551,16 +1609,16 @@
       "deaths": 5,
       "hospitalizations": 11,
       "states_affected": [
-        "TX",
-        "UT",
         "NJ",
+        "TX",
         "CO",
+        "UT",
         "CA"
       ],
       "state_count": 5,
       "posted_date": "February 2024",
       "consumer_advice": "Do not eat, sell, or serve all sizes of RAW FARM-brand Raw Cheddar cheese blocks (with best by dates through 10/4/2024) and shredded cheese (with best by dates through 5/10/2024).Check your refrigerators and freezers for all sizes of RAW FARM-brand Raw Cheddar cheese blocks (with best by dates through 10/4/2024) and shredded cheese (with best by dates through 5/10/2024) and throw them away.If you froze a product without the original packaging and can’t identify the brand or best by date, throw it away.Consumers, restaurants, and retailers who purchased or received all sizes of RAW FARM-brand Raw Cheddar cheese blocks (with best by dates through 10/4/2024) and shredded cheese (with best by dates through 5/10/2024), including wholesale products, should carefully clean and sanitize any surfaces or containers that it touched. FollowFDA’s safe handlingand cleaning advice to reduce the risk of cross-contamination.Due to the range in severity of illness, people should consult their health care provider if they suspect that they have developed symptoms that resemble anE. coliinfection.\n",
-      "scraped_at": "2026-06-27T08:33:46.227626+00:00"
+      "scraped_at": "2026-07-18T16:36:25.207241+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-peaches-plums-nectarines-november-2023",
@@ -1575,17 +1633,17 @@
       "hospitalizations": 10,
       "states_affected": [
         "IL",
-        "MI",
         "OH",
         "KS",
         "CO",
-        "CA",
-        "FL"
+        "FL",
+        "MI",
+        "CA"
       ],
       "state_count": 7,
       "posted_date": "November 2023",
       "consumer_advice": "Do not eat, sell, or serve recalled peaches, plums, or nectarines. The recalled fruit is no longer available for sale and any previously purchased fruit should be past shelf life.If you previously purchased fresh peaches, plums, and nectarines and then froze them, you should throw them away if they are part of the recall or if you cannot tell if they are part of the recall.Anyone who received or purchased recalled peaches, plums and nectarines should use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with the recalled fruit to reduce the risk of cross-contamination. This includes baking or canning tools, cutting boards, knives, countertops, refrigerators, freezers, and storage bins.If you have symptoms of listeriosis you should contact your health care provider to report your symptoms and receive care.\nListeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.Call your healthcare provider right away if you have symptoms of aListeriainfection.\n",
-      "scraped_at": "2026-06-27T08:33:50.844644+00:00"
+      "scraped_at": "2026-07-18T16:36:29.371478+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-romaine-salinas-california-november-2019",
@@ -1597,36 +1655,36 @@
       "deaths": 85,
       "hospitalizations": 167,
       "states_affected": [
-        "TX",
-        "WI",
         "WA",
+        "MT",
+        "AZ",
+        "IL",
+        "CO",
+        "TX",
+        "NY",
+        "OR",
         "NJ",
+        "NC",
+        "OH",
+        "FL",
+        "MI",
+        "MD",
+        "CA",
         "VA",
         "SD",
         "NM",
-        "FL",
-        "IL",
         "SC",
-        "AZ",
-        "CO",
-        "NC",
-        "OR",
-        "MN",
         "DE",
-        "MI",
+        "WI",
         "IA",
-        "TN",
-        "MT",
+        "MN",
+        "NE",
         "PA",
-        "NY",
         "ID",
-        "OH",
-        "CA",
-        "MD",
-        "NE"
+        "TN"
       ],
       "state_count": 27,
-      "scraped_at": "2026-06-27T08:35:29.480843+00:00"
+      "scraped_at": "2026-07-18T16:37:48.658328+00:00"
     },
     {
       "id": "outbreak-investigation-extensively-drug-resistant-salmonella-moringa-powder-february-2026",
@@ -1640,19 +1698,19 @@
       "deaths": 3,
       "hospitalizations": 3,
       "states_affected": [
-        "IL",
         "IN",
-        "IA",
         "WA",
-        "TN",
         "AZ",
+        "IL",
+        "IA",
+        "FL",
         "VA",
-        "FL"
+        "TN"
       ],
       "state_count": 8,
       "posted_date": "February 2026",
       "consumer_advice": "Recalled product should no longer be for sale but does have a long shelf life. Consumers should check their homes for recalled product and throw it away.Consumers and retailers who purchased Rosabella-brand moringa powder capsules should check the bottle, and if your bottle has an expiration date in 2027, check for the lot codes listed below. If your bottle has one of these lot codes, it is part of the recall and you should not eat, sell, or distribute it and should throw this product and its container away or return it to the place of purchase.Consumers and retailers who purchased or received recalled Rosabella-brand moringa powder capsules should carefully clean and sanitize any surfaces or containers that the product touched. FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled product to reduce the risk of cross-contamination.Contact your healthcare provider immediately if you think you may have developedsymptomsof aSalmonellainfection after consuming Rosabella-brand moringa powder capsules.For healthcare providers, theSalmonellastrains associated with this outbreak are resistant to all first-line and alternative antibiotics commonly recommended for the treatment ofSalmonellainfections.Learn moreabout each strain’s resistance and get guidance for diagnosing and treating infections.\n",
-      "scraped_at": "2026-06-27T08:33:00.387830+00:00"
+      "scraped_at": "2026-07-18T16:35:42.469325+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-ready-eat-foods-may-2025",
@@ -1666,15 +1724,15 @@
       "deaths": 10,
       "hospitalizations": 10,
       "states_affected": [
-        "WA",
-        "AZ",
         "NV",
-        "CA"
+        "CA",
+        "AZ",
+        "WA"
       ],
       "state_count": 4,
       "posted_date": "May 2025",
       "consumer_advice": "The recalled foods are past shelf life and are no longer available for sale.Foodservice customers, retailers and consumers who purchased or received the recalled products, should carefully clean and sanitize any surfaces or containers that it touched. FollowFDA’s safe handling and cleaning adviceto reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.If you or your family member have symptoms of listeriosis you should contact your health care provider to report your symptoms and receive care.\nListeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.Call your healthcare provider right away if you have symptoms of aListeriainfection.\n",
-      "scraped_at": "2026-06-27T08:33:23.237528+00:00"
+      "scraped_at": "2026-07-18T16:36:03.757598+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-peanut-butter-may-2022",
@@ -1686,28 +1744,28 @@
       "deaths": 4,
       "hospitalizations": 21,
       "states_affected": [
-        "GA",
-        "IL",
-        "TX",
         "IN",
-        "NY",
-        "MO",
-        "SC",
-        "MI",
-        "AR",
         "WA",
-        "NC",
-        "OH",
-        "AZ",
-        "KY",
+        "SC",
         "VA",
+        "KY",
+        "AZ",
+        "IL",
+        "NC",
+        "GA",
+        "OH",
+        "FL",
+        "AR",
+        "MI",
+        "NY",
+        "TX",
+        "MO",
         "MA",
-        "WV",
-        "FL"
+        "WV"
       ],
       "state_count": 18,
       "consumer_advice": "The affected recalled products should no longer be available for sale. However, the product has a long shelf life and could still be in consumers’ homes. Consumers, restaurants, and retailers should not eat, sell, or serve any recalled Jif brand peanut butter, including recalled products that contain the recalled Jif peanut butter. Consumers should also avoid feeding recalled peanut butter to pets or other animals, including wild birds.\nFor Consumers\nFollow these steps:\nCheck if you have Jif peanut butter in your home.Locate the lot code on the back of the jar, under the Best If Used By Date (the lot code may be next to the Best If Used By Date for cups or squeeze pouches).In the lot code, if the first four digits are between 1274 and 2140,andif the next three numbers after that are '425', this product has been recalled and you should not consume this product. An example is below.\nIf you are unsure what to do with your recalled product, you can call or email J.M. Smucker Company for more information:The J.M. Smucker Co. Hotline: 800-828-9980Website:jif.com/contact-us\nFDA recommends that if you have used the recalled Jif brand peanut butter that have lot code numbers 1274425 through 2140425 and the first seven digits end with 425, you should wash and sanitize surfaces and utensils that could have touched the peanut butter. If you or someone in your household ate this peanut butter and havesymptomsof salmonellosis, please contact your healthcare provider.\nFor Retailers, Re-packers, and Manufacturers\nIn addition to the steps above, FDA recommends referring to the firm'srecall pressfor the UPC codes and other retailer information. Do not sell or serve recalled peanut butter or products containing recalled peanut butter.\n",
-      "scraped_at": "2026-06-27T08:34:22.706174+00:00"
+      "scraped_at": "2026-07-18T16:36:59.853146+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-spinach-november-2021",
@@ -1719,20 +1777,20 @@
       "deaths": 4,
       "hospitalizations": 15,
       "states_affected": [
-        "IN",
         "MN",
+        "IN",
         "MO",
-        "MI",
-        "IA",
-        "OH",
-        "CA",
-        "PA",
         "NE",
+        "PA",
+        "OH",
+        "IA",
+        "MI",
+        "CA",
         "SD"
       ],
       "state_count": 10,
       "consumer_advice": "CDC announced the outbreak is over. There are no recommendations for consumers, retailers, or suppliers.\n",
-      "scraped_at": "2026-06-27T08:34:32.011840+00:00"
+      "scraped_at": "2026-07-18T16:37:08.289020+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-hard-boiled-eggs-december-2019",
@@ -1744,15 +1802,15 @@
       "deaths": 5,
       "hospitalizations": 5,
       "states_affected": [
-        "TX",
         "SC",
-        "ME",
         "PA",
-        "FL"
+        "TX",
+        "FL",
+        "ME"
       ],
       "state_count": 5,
       "consumer_advice": "Recalled products are now past their “best by” dates and should be thrown away.\nFDA recommends that food processors, restaurants and retailers who received recalled products use extra vigilance in cleaning and sanitizing any surfaces that may have come in contact with these products, to reduce the risk of cross-contamination.",
-      "scraped_at": "2026-06-27T08:35:23.037036+00:00"
+      "scraped_at": "2026-07-18T16:37:45.565073+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026",
@@ -1767,13 +1825,13 @@
       "hospitalizations": 9,
       "states_affected": [
         "TX",
-        "FL",
-        "CA"
+        "CA",
+        "FL"
       ],
       "state_count": 3,
       "posted_date": "March 2026",
       "consumer_advice": "Do not eat, sell, or serverecalledRAW FARM-brand block and shredded raw cheddar cheeses.Check your refrigerators and freezers for recalled RAW FARM-brand block and shredded raw cheddar cheeses and throw them away if they are part of the recall. If you froze a product without the original packaging and can’t tell if it’s part of the recall, throw it away.Consumers, restaurants, retailers, and foodservice customers who purchased or receivedrecalledRAW FARM-brand raw cheddar cheese, including wholesale products, should carefully clean and sanitize any surfaces or containers that it touched. FollowFDA’s safe handlingand cleaning advice to reduce the risk of cross-contamination.Retailers that receivedrecalledproducts and repackaged them for individual sale should not sell them and should remove the products from the market.Consult your health care provider immediately if you ate RAW FARM-brand cheddar cheese and have any symptoms that resemble anE. coliinfection.\n",
-      "scraped_at": "2026-06-27T08:32:58.107564+00:00"
+      "scraped_at": "2026-07-18T16:35:39.781181+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-romaine-november-2018",
@@ -1785,27 +1843,27 @@
       "deaths": 25,
       "hospitalizations": 62,
       "states_affected": [
-        "GA",
-        "MA",
+        "LA",
+        "CT",
+        "WA",
+        "DC",
+        "NH",
+        "NJ",
+        "WI",
         "IL",
         "PA",
-        "NY",
-        "DC",
-        "RI",
-        "WI",
-        "MI",
-        "NH",
-        "WA",
-        "NJ",
+        "GA",
         "OH",
-        "LA",
-        "CA",
+        "FL",
+        "MI",
+        "NY",
+        "RI",
         "MD",
-        "CT",
-        "FL"
+        "CA",
+        "MA"
       ],
       "state_count": 18,
-      "scraped_at": "2026-06-27T08:36:55.611022+00:00"
+      "scraped_at": "2026-07-18T16:38:19.088389+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-leafy-greens-december-2020",
@@ -1816,29 +1874,29 @@
       "case_count": 4,
       "hospitalizations": 40,
       "states_affected": [
-        "TX",
-        "UT",
-        "MO",
-        "WI",
         "WA",
-        "KS",
-        "VA",
-        "IL",
         "AZ",
+        "IL",
+        "TX",
         "OR",
-        "MN",
+        "OH",
+        "KS",
         "MI",
-        "TN",
+        "UT",
+        "CA",
+        "VA",
+        "IN",
+        "WI",
+        "WY",
+        "MO",
+        "MN",
         "PA",
         "ND",
-        "IN",
-        "WY",
-        "OH",
-        "CA"
+        "TN"
       ],
       "state_count": 19,
       "consumer_advice": "CDC has declared this outbreak to be over. There is no recommendation for consumers, retailers, or suppliers.\n",
-      "scraped_at": "2026-06-27T08:34:48.764948+00:00"
+      "scraped_at": "2026-07-18T16:37:22.907821+00:00"
     },
     {
       "id": "outbreak-investigation-infant-botulism-powdered-infant-formula-june-2026",
@@ -1848,17 +1906,17 @@
       "pathogen": "Infant Botulism",
       "food_source": "Powdered Infant Formula",
       "status": "unknown",
-      "deaths": 3,
-      "hospitalizations": 3,
+      "deaths": 4,
+      "hospitalizations": 4,
       "states_affected": [
+        "CA",
         "WA",
-        "PA",
-        "CA"
+        "PA"
       ],
       "state_count": 3,
       "posted_date": "June 2026",
-      "consumer_advice": "Parents and Caregiversshould stop using Nara Organics Whole Milk Organic Infant Formula immediately. If your child is experiencing symptoms (see below) after consuming Nara Organics Whole Milk Organic Infant Formula seek immediate health care. If you still have the formula in your home, please take a picture and record the lot number and use-by date on the container.Consider retaining any opened cans of formula. If your infant develops signs and symptoms of infant botulism, the state health department may want to testLabel it “DO NOT USE” and keep it stored in a safe place away from other items you feed your baby for at least a month.If no symptoms appear after a month, throw the leftover formula away.Wash items and surfacesthat may have touched the formula using hot soapy water or a dishwasher.Botulism can be fatal.If your child has consumed Nara Organics Whole Milk Organic Infant Formula and is experiencingsigns and symptomsof botulism such as poor feeding, loss of head control, difficulty swallowing, or decreased facial expression, seek immediate health care.If you are a Physicianand suspect an infant patient has botulism,immediatelycall the Infant Botulism Treatment and Prevention Program at510-231-7600for case consultation. Consultation is available 24/7.\n",
-      "scraped_at": "2026-06-27T08:32:51.267317+00:00"
+      "consumer_advice": "Parents and Caregiversshould stop using Nara Organics Whole Milk Organic Infant Formula immediately. If your child is experiencing symptoms after consuming Nara Organics Whole Milk Organic Infant Formula seek immediate health care. If you still have the formula in your home, please take a picture and record the lot number and use-by date on the container.Consider retaining any opened cans of formula. If your infant develops signs and symptoms of infant botulism, the state health department may want to test the product.Label it “DO NOT USE” and keep it stored in a safe place away from other items you feed your baby for at least a month.If no symptoms appear after a month, throw the leftover formula away.Wash items and surfacesthat may have touched the formula using hot soapy water or a dishwasher.Botulism can be fatal.If your child has consumed Nara Organics Whole Milk Organic Infant Formula and is experiencingsigns and symptomsof botulism such as poor feeding, loss of head control, difficulty swallowing, or decreased facial expression, seek immediate health care.If you are a Physicianand suspect an infant patient has botulism,immediatelycall the Infant Botulism Treatment and Prevention Program at510-231-7600for case consultation. Consultation is available 24/7.\n",
+      "scraped_at": "2026-07-18T16:35:33.513592+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-pistachio-cream-june-2025",
@@ -1877,7 +1935,7 @@
       "state_count": 2,
       "posted_date": "June 2025",
       "consumer_advice": "Recalled Emek Spread Pistachio Cacao Cream with Kadayif and Emek Pistachio Cream should no longer be for sale; however, this product has a long shelf life. Consumers should not eat or serve recalled products and should check their homes for recalled product and discard.Retailers, restaurants, distributors, and consumersshould followFDA’s safe handling and cleaningrecommendations and use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Contact your health care provider if you have symptoms of aSalmonellainfection.\n",
-      "scraped_at": "2026-06-27T08:33:16.337755+00:00"
+      "scraped_at": "2026-07-18T16:35:57.192932+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-ice-cream-august-2023",
@@ -1888,30 +1946,30 @@
       "deaths": 2,
       "hospitalizations": 2,
       "states_affected": [
-        "NJ",
-        "VA",
-        "WV",
-        "FL",
         "IL",
-        "NH",
         "CO",
-        "MA",
-        "NC",
-        "OR",
-        "DC",
-        "MN",
-        "DE",
-        "MI",
-        "PA",
-        "CT",
         "NY",
+        "OR",
+        "NJ",
+        "NH",
+        "NC",
         "OH",
+        "FL",
+        "MI",
+        "MD",
         "CA",
-        "MD"
+        "VA",
+        "MA",
+        "CT",
+        "DC",
+        "DE",
+        "WV",
+        "MN",
+        "PA"
       ],
       "state_count": 20,
       "consumer_advice": "This outbreak appears to be over; however, consumers should check their freezers for recalled ice cream and non-dairy [parve] frozen dessert products and should throw the recalled product away. Options to return recalled product can be found in the recall notice fromReal Kosher Ice CreamandIce Cream House.Consumers, restaurants, and retailers who purchased or received any recalled ice cream products should followFDA’s safe handling and cleaning adviceand use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Listeriacan survive temperatures at or below freezing and can easily spread to other foods and surfaces.Since the recall, the company started placing a label that includes a lot code on their products. If consumers have products in their freezers without a lot code, they should be thrown out.\nListeriais most likely to sickenpregnant women and newborns, adults aged 65 or older, and people with weakened immune systems. Other people can be infected withListeria, but they rarely become seriously ill.Pregnant women typically experience only fever, fatigue, and muscle aches. However,Listeriainfection during pregnancy can lead to miscarriage, stillbirth, premature delivery, or life-threatening infection of the newborn.Call your healthcare provider right away if you have symptoms of aListeriainfection.\n",
-      "scraped_at": "2026-06-27T08:33:57.657846+00:00"
+      "scraped_at": "2026-07-18T16:36:35.795293+00:00"
     },
     {
       "id": "outbreak-investigation-hepatitis-virus-infections-frozen-strawberries-february-2023",
@@ -1922,14 +1980,14 @@
       "deaths": 4,
       "hospitalizations": 10,
       "states_affected": [
-        "WA",
+        "CA",
         "OR",
-        "HI",
-        "CA"
+        "WA",
+        "HI"
       ],
       "state_count": 4,
       "consumer_advice": "Consumers, restaurants, and retailers should not sell, serve, or eat recalled frozen strawberries. These recalled products should be thrown away.These items were sold frozen and have a long shelf-life of 18 months to two years. Consumers should check their freezers for any recalled frozen strawberries. If you have recalled frozen strawberries in your freezer, throw them out.If consumers purchased the recalled frozen strawberries and ate those berries in the last two weeks, and have not been vaccinated against hepatitis A, they should immediately consult with their healthcare professional to determine whether post exposure prophylaxis (PEP) is needed. PEP is recommended for unvaccinated people who have been exposed to hepatitis A virus in the last two weeks because vaccination can prevent a hepatitis A virus infection if given within 14 days of exposure. Those with evidence of previous hepatitis A vaccination or previous hepatitis A virus infection do not require PEP.Contact your healthcare provider if you think you may havesymptomsof a hepatitis A virus infection after eating these frozen strawberries, or if you believe that you have eaten these strawberries in the last two weeks.\n",
-      "scraped_at": "2026-06-27T08:34:04.618065+00:00"
+      "scraped_at": "2026-07-18T16:36:42.305037+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-enoki-mushrooms-november-2022",
@@ -1940,17 +1998,17 @@
       "deaths": 5,
       "hospitalizations": 5,
       "states_affected": [
-        "NY",
-        "MI",
-        "NV",
-        "IA",
+        "CT",
         "NJ",
-        "CA",
-        "CT"
+        "IA",
+        "MI",
+        "NY",
+        "NV",
+        "CA"
       ],
       "state_count": 7,
       "consumer_advice": "Although this outbreak investigation has ended, FDA and CDC are working to better understand the risk ofListeria monocytogenescontamination in enoki mushrooms.\nCDC and FDA advise people who are pregnant, aged 65 or older, or have a weakened immune system to cook enoki mushrooms thoroughly, and to:\nAvoid eating enoki mushrooms raw.Keep raw enoki mushrooms separate from foods that won’t be cooked.Wash your hands, items, and surfaces that have touched raw enoki mushrooms.\nRestaurants should cook enoki mushrooms thoroughly before serving to customers, followFDA’s safe handling and cleaning advice, and use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products.\nThis advice is based on the following information:\nTwo recent multistateListeriaoutbreaks have been linked to enoki mushrooms: This outbreak, andthe first knownListeriaoutbreak in the United States linked to enoki mushrooms in 2020.During this investigation, FDA leveraged ongoing surveillance sampling efforts. Several import and retail samples were collected and tested by FDA and/or state and local partners and many were contaminated withListeria. Some samples contained high levels of the bacteria.More than 20 recalls of enoki mushrooms due to potentialListeriacontamination have been conducted since 2020.\n",
-      "scraped_at": "2026-06-27T08:34:09.085861+00:00"
+      "scraped_at": "2026-07-18T16:36:46.682063+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-brie-and-camembert-soft-cheese-products-september-2022",
@@ -1961,16 +2019,16 @@
       "deaths": 5,
       "hospitalizations": 6,
       "states_affected": [
+        "NJ",
         "GA",
         "TX",
         "MI",
-        "NJ",
         "CA",
         "MA"
       ],
       "state_count": 6,
       "consumer_advice": "Recalled products are no longer available for sale, but the recalled baked Brie products may have been sold frozen or purchased and later frozen by consumers, so consumers should check their freezers for any recalled Old Europe Cheese, Inc. products, including baked brie, with Best By Dates ranging from September 28, 2022, to December 14, 2022. If you have recalled frozen Old Europe Cheese products in your freezer, do not eat or serve them and throw them away.\nFollowFDA’s safe handling and cleaning adviceand use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination, including retailers who repackaged bulk recalled cheese.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.\n",
-      "scraped_at": "2026-06-27T08:34:16.000124+00:00"
+      "scraped_at": "2026-07-18T16:36:53.185529+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-power-greens-packaged-salad-january-2022",
@@ -1981,16 +2039,16 @@
       "deaths": 4,
       "hospitalizations": 10,
       "states_affected": [
-        "AK",
-        "OR",
         "WA",
-        "OH",
         "AZ",
-        "CA"
+        "OH",
+        "CA",
+        "OR",
+        "AK"
       ],
       "state_count": 6,
       "consumer_advice": "CDC announced this outbreak is over. The product is past expiration and should no longer be available to consumers. Therefore, there are no recommendations for consumers, retailers, or suppliers.\n",
-      "scraped_at": "2026-06-27T08:34:25.133244+00:00"
+      "scraped_at": "2026-07-18T16:37:01.928091+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-fresh-express-packaged-salad-december-2021",
@@ -2001,18 +2059,18 @@
       "deaths": 10,
       "hospitalizations": 10,
       "states_affected": [
-        "PA",
-        "IL",
-        "NY",
-        "MI",
         "NJ",
-        "OH",
         "VA",
+        "IL",
+        "PA",
+        "OH",
+        "MI",
+        "NY",
         "MA"
       ],
       "state_count": 8,
       "consumer_advice": "On March 8, 2022, CDC announced this outbreak is over. The product is past expiration and should no longer be available to consumers. Therefore, there are no recommendations for consumers, retailers, or suppliers.\nFDA recommends that anyone who received recalled products use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.\n",
-      "scraped_at": "2026-06-27T08:34:29.650896+00:00"
+      "scraped_at": "2026-07-18T16:37:06.215412+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-thompson-seafood-october-2021",
@@ -2023,25 +2081,25 @@
       "deaths": 20,
       "hospitalizations": 115,
       "states_affected": [
-        "PA",
-        "TX",
         "MN",
-        "MO",
-        "WI",
-        "WY",
-        "IA",
-        "WA",
-        "NJ",
-        "AZ",
-        "CO",
-        "CA",
-        "VA",
         "CT",
-        "NE"
+        "WA",
+        "MO",
+        "NJ",
+        "WI",
+        "NE",
+        "AZ",
+        "PA",
+        "IA",
+        "CO",
+        "TX",
+        "WY",
+        "CA",
+        "VA"
       ],
       "state_count": 15,
       "consumer_advice": "Consumers, restaurants, and retailers should not eat, sell, or serve any recalled seafood. Recalled seafood was sold fresh and would be past shelf-life unless it was frozen after purchase. FDA recommends that anyone who might have purchased or received recalled product, check their freezers and throw away recalled product.\nA full list of recalled products is available on FDA’s website.\n",
-      "scraped_at": "2026-06-27T08:34:36.701870+00:00"
+      "scraped_at": "2026-07-18T16:37:12.455089+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-weltevreden-frozen-pre-cooked-shrimp-april-2021",
@@ -2052,14 +2110,14 @@
       "deaths": 3,
       "hospitalizations": 9,
       "states_affected": [
-        "MI",
-        "AZ",
         "NV",
-        "RI"
+        "RI",
+        "AZ",
+        "MI"
       ],
       "state_count": 4,
       "consumer_advice": "Recalled frozen shrimp should no longer be available for sale; however, these products have a long shelf life, and consumers, restaurants, and retailers should check their freezers and should throw away recalled shrimp. The expanded recall from August 17, 2021 includes the following brands:\nBIG RIVER365AHOLDCENSEACOSCWNO BRANDFIRST STREETNATURE’S PROMISEHARBOR BANKSHOSMEIJERSANDBARSEA COVEWATERFRONT BISTROWELLSLEYFARMSWFNOBRANDSFOODLIONHANNAFORD\nPlease check theexpanded recall announcementfor full product descriptions.\nPreviously recalled shrimp should no longer be available for sale; however, these products have a long shelf life, and consumers, restaurants, and retailers should check their freezers and should throw away any previouslyrecalledshrimp. The initial recall includes the following brands:\nCENSEACHICKEN OF THE SEAHONEST CATCHCWNOHANNAFORDWATERFRONT BISTROOPEN ACRES365MEIJER\nPlease check theinitial recall announcementfor full product descriptions.\nAnyone who received recalled shrimp should use extra vigilance in cleaning and sanitizing any surfaces that may have come in contact with the recalled product, to reduce the risk of cross contamination.\n",
-      "scraped_at": "2026-06-27T08:34:41.178698+00:00"
+      "scraped_at": "2026-07-18T16:37:16.623395+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-hispanic-style-fresh-and-soft-cheeses-february-2021",
@@ -2070,36 +2128,36 @@
       "deaths": 12,
       "hospitalizations": 13,
       "states_affected": [
-        "MO",
-        "WI",
-        "NJ",
-        "KS",
-        "VA",
-        "FL",
+        "AL",
         "IL",
         "RI",
-        "SC",
+        "NY",
+        "NJ",
         "KY",
-        "MA",
-        "AL",
         "NC",
         "GA",
-        "MN",
-        "MI",
-        "IA",
-        "TN",
-        "CT",
-        "PA",
-        "IN",
-        "NY",
-        "MS",
         "OH",
+        "KS",
+        "FL",
+        "MI",
         "MD",
-        "NE"
+        "MA",
+        "VA",
+        "CT",
+        "IN",
+        "SC",
+        "WI",
+        "IA",
+        "MO",
+        "MN",
+        "MS",
+        "NE",
+        "PA",
+        "TN"
       ],
       "state_count": 26,
       "consumer_advice": "Recalled Queso Fresco, Quesillo (Oaxaca, string cheese), or Requeson (ricotta) cheeses are past shelf life and should no longer be available.\nFDA recommends that anyone who received recalled products use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.\nPeople who are pregnant, are age 65 or over, or have a weakened immune system should not eat any soft cheeses unless they are made with pasteurized milk. Consumers at higher risk forListeriaillness should be aware that although pasteurization of milk killsListeria, soft cheeses made from pasteurized milk can still become contaminated and have causedListeriaoutbreaks, including this one.\n",
-      "scraped_at": "2026-06-27T08:34:46.382405+00:00"
+      "scraped_at": "2026-07-18T16:37:20.838354+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-o157h7-unknown-food-fall-2020",
@@ -2108,30 +2166,30 @@
       "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-unknown-food-fall-2020",
       "status": "unknown",
       "states_affected": [
-        "AK",
-        "TX",
-        "MO",
-        "WI",
         "WA",
-        "VA",
-        "NM",
         "IL",
-        "OK",
-        "SC",
-        "MA",
-        "NC",
+        "TX",
         "OR",
-        "MI",
-        "AR",
-        "TN",
-        "IN",
+        "NC",
         "OH",
+        "OK",
+        "MI",
         "CA",
-        "NE"
+        "MA",
+        "VA",
+        "AK",
+        "IN",
+        "NM",
+        "SC",
+        "WI",
+        "AR",
+        "MO",
+        "NE",
+        "TN"
       ],
       "state_count": 20,
       "consumer_advice": "Consumers, restaurants, and retailers, were advised not to eat, sell, or serverecalledTanimura & Antle, Inc. brand packaged single head romaine lettuce with a pack date of 10/15/2020 or 10/16/2020.\nThe recalled products are now well beyond expiration and likely no longer on the market or in consumers’ homes.\n",
-      "scraped_at": "2026-06-27T08:34:51.001489+00:00"
+      "scraped_at": "2026-07-18T16:37:24.987635+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-stanley-wood-ear-mushrooms-dried-fungus-september-2020",
@@ -2142,43 +2200,43 @@
       "deaths": 6,
       "hospitalizations": 55,
       "states_affected": [
-        "TX",
-        "MO",
-        "WI",
-        "NV",
         "WA",
-        "NJ",
-        "VA",
-        "FL",
         "IL",
-        "SC",
         "AZ",
-        "LA",
         "CO",
-        "MA",
+        "TX",
+        "NY",
+        "OR",
+        "LA",
+        "NJ",
         "NC",
         "GA",
-        "OR",
-        "DC",
-        "MN",
-        "DE",
-        "MI",
-        "AR",
-        "IA",
-        "TN",
-        "CT",
-        "PA",
-        "IN",
-        "NY",
-        "MS",
-        "HI",
         "OH",
+        "FL",
+        "MI",
+        "HI",
+        "MD",
         "CA",
-        "MD"
+        "MA",
+        "VA",
+        "CT",
+        "IN",
+        "DC",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "AR",
+        "NV",
+        "MO",
+        "MN",
+        "MS",
+        "PA",
+        "TN"
       ],
       "state_count": 33,
       "consumer_advice": "Wood ear mushrooms imported by Wismettac Asian Foods, Inc. were only sold to restaurants and were not available directly to consumers. Although these items have been recalled, restaurants that received recalled products should use extra vigilance in cleaning and sanitizing any surfaces that may have come in contact with the recalled product, to reduce the risk of cross contamination. All recalled product should be thrown out.\n",
-      "scraped_at": "2026-06-27T08:34:53.251948+00:00"
+      "scraped_at": "2026-07-18T16:37:27.101690+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-newport-red-onions-july-2020",
@@ -2189,57 +2247,57 @@
       "deaths": 167,
       "hospitalizations": 127,
       "states_affected": [
-        "AK",
-        "TX",
-        "UT",
-        "MO",
-        "WI",
-        "NV",
-        "WA",
-        "NJ",
-        "KS",
-        "VA",
-        "SD",
-        "NM",
-        "FL",
-        "WV",
-        "IL",
-        "OK",
-        "RI",
-        "SC",
-        "NH",
-        "AZ",
-        "CO",
-        "KY",
-        "MA",
         "AL",
+        "WA",
+        "MT",
+        "AZ",
+        "IL",
+        "CO",
+        "TX",
+        "RI",
+        "NY",
+        "OR",
+        "NJ",
+        "KY",
+        "NH",
         "NC",
         "GA",
-        "OR",
-        "MN",
-        "DE",
+        "OH",
+        "KS",
+        "FL",
+        "OK",
         "MI",
-        "AR",
-        "IA",
-        "TN",
-        "MT",
+        "HI",
+        "MD",
+        "UT",
+        "CA",
+        "MA",
+        "VA",
+        "AK",
+        "ME",
+        "SD",
         "CT",
+        "IN",
+        "NM",
+        "SC",
+        "DE",
+        "WI",
+        "IA",
+        "AR",
+        "NV",
+        "WY",
+        "MO",
+        "WV",
+        "MN",
+        "MS",
+        "NE",
         "PA",
         "ND",
-        "IN",
-        "NY",
         "ID",
-        "MS",
-        "ME",
-        "WY",
-        "HI",
-        "OH",
-        "CA",
-        "MD",
-        "NE"
+        "TN"
       ],
       "state_count": 48,
-      "scraped_at": "2026-06-27T08:35:00.066055+00:00"
+      "scraped_at": "2026-07-18T16:37:33.343437+00:00"
     },
     {
       "id": "outbreak-investigation-listeria-monocytogenes-enoki-mushrooms-march-2020",
@@ -2250,31 +2308,31 @@
       "deaths": 31,
       "hospitalizations": 36,
       "states_affected": [
-        "TX",
-        "MO",
         "WA",
-        "NJ",
-        "VA",
-        "FL",
         "IL",
-        "RI",
         "AZ",
-        "KY",
-        "MA",
-        "NC",
-        "OR",
-        "MI",
-        "TN",
-        "PA",
-        "IN",
+        "TX",
+        "RI",
         "NY",
+        "OR",
+        "NJ",
+        "KY",
+        "NC",
+        "FL",
+        "MI",
         "HI",
+        "MD",
         "CA",
-        "MD"
+        "MA",
+        "VA",
+        "IN",
+        "MO",
+        "PA",
+        "TN"
       ],
       "state_count": 21,
       "consumer_advice": "Recalled enoki mushrooms from Sun Hong Foods, Inc., Guan’s Mushroom Co., and H&C Food, Inc. are past their shelf-life and should no longer be available.\nFDA recommends that anyone who received recalled products use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with these products to reduce the risk of cross-contamination.Listeriacan survive in refrigerated temperatures and can easily spread to other foods and surfaces.\n",
-      "scraped_at": "2026-06-27T08:35:02.337358+00:00"
+      "scraped_at": "2026-07-18T16:37:35.448502+00:00"
     },
     {
       "id": "outbreak-investigation-e-coli-salad-mix-december-2019",
@@ -2285,24 +2343,15 @@
       "deaths": 4,
       "hospitalizations": 10,
       "states_affected": [
-        "GA",
-        "IL",
         "MN",
         "WI",
-        "CA",
-        "ND"
+        "IL",
+        "GA",
+        "ND",
+        "CA"
       ],
       "state_count": 6,
-      "scraped_at": "2026-06-27T08:35:35.304586+00:00"
-    },
-    {
-      "id": "outbreak-investigation-salmonella-uganda-fresh-papayas-june-2019",
-      "source": "FDA",
-      "title": "Salmonella- Fresh Papayas (June 2019)",
-      "url": "https://web.archive.org/web/20201126134411/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-uganda-fresh-papayas-june-2019",
-      "status": "unknown",
-      "states_affected": [],
-      "scraped_at": "2026-06-27T08:36:02.310082+00:00"
+      "scraped_at": "2026-07-18T16:37:51.922528+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-infantis-vegetable-trays-spring-2019",
@@ -2318,7 +2367,7 @@
       ],
       "state_count": 2,
       "consumer_advice": "It is not likely that the trays the Wisconsin Department of Health Services warned against eating onMay 21are still on the market or still in people’s homes.",
-      "scraped_at": "2026-06-27T08:36:20.824087+00:00"
+      "scraped_at": "2026-07-18T16:38:07.563202+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-concord-tahini-may-2019",
@@ -2329,13 +2378,13 @@
       "deaths": 1,
       "hospitalizations": 6,
       "states_affected": [
+        "TX",
         "MA",
-        "NY",
-        "TX"
+        "NY"
       ],
       "state_count": 3,
       "consumer_advice": "The tahini of concern may be labelled as either “Karawan Tahini,” “El-Karawan Tahini,” or “Soco Tahini.” Consumers should avoid eating this tahini. This tahini was sold in bulk to retailers and restaurants and was also available to consumers at retail locations and online. It may have also been used in other food products sold to consumers. Consumers should be aware that this product has a shelf life of two years and should check their homes for tahini with either label. Consumers with this tahini in their home should not eat it and should discard it. Consumers with concerns about tahini consumed outside the home should ask their restaurant or retailer if the product they have purchased contains this tahini. Retailers and restaurants should throw the recalled product out and sanitize any surfaces that may have come in contact with this tahini.\nTahini is made from sesame seeds and can be served on its own or used as an ingredient in Mediterranean and Middle Eastern style dishes, such as hummus, falafel, and baba ganoush.",
-      "scraped_at": "2026-06-27T08:36:28.447178+00:00"
+      "scraped_at": "2026-07-18T16:38:10.144242+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-newport-frozen-ground-tuna-april-2019",
@@ -2346,17 +2395,17 @@
       "deaths": 2,
       "hospitalizations": 13,
       "states_affected": [
-        "IL",
-        "NY",
         "MN",
-        "IA",
-        "WA",
         "CT",
+        "WA",
+        "IL",
+        "IA",
+        "NY",
         "ND"
       ],
       "state_count": 7,
       "consumer_advice": "Restaurants and retailers should check with their suppliers and not sell or serve the recalled ground tuna from Jensen Tuna. They should also be sure to wash and sanitize locations where the recalled ground tuna was stored or prepared.\nIt is unlikely that the recalled ground tuna was sold directly to consumers in grocery stores; rather, it was likely used in food dishes sold by restaurants or retailers. Consumers with concerns should ask their restaurants and retailers whether the tuna dish they are purchasing contains the recalled ground tuna.",
-      "scraped_at": "2026-06-27T08:36:37.976198+00:00"
+      "scraped_at": "2026-07-18T16:38:13.064434+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-carrau-pre-cut-melons-april-2019",
@@ -2364,8 +2413,22 @@
       "title": "Salmonella- Pre-cut Melons (April 2019)",
       "url": "https://web.archive.org/web/20201112041448/http://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-carrau-pre-cut-melons-april-2019",
       "status": "unknown",
-      "states_affected": [],
-      "scraped_at": "2026-06-27T08:36:45.108874+00:00"
+      "deaths": 38,
+      "hospitalizations": 137,
+      "states_affected": [
+        "MN",
+        "IN",
+        "AL",
+        "KY",
+        "WI",
+        "IL",
+        "OH",
+        "IA",
+        "MI",
+        "MO"
+      ],
+      "state_count": 10,
+      "scraped_at": "2026-07-18T16:38:16.599237+00:00"
     },
     {
       "id": "outbreak-investigation-salmonella-concord-tahini-november-2018",
@@ -2378,12 +2441,12 @@
       "states_affected": [
         "MA",
         "MI",
-        "NY",
-        "HI"
+        "HI",
+        "NY"
       ],
       "state_count": 4,
       "consumer_advice": "The FDA is advising consumers not to eat recalled Achva, Achdut, Soom, S&F, and Pepperwood brand tahini and Soom brand Chocolate Sweet Tahini Halva Spread (lot code 071318CH) with expiration dates ranging from April 7, 2020 to May 21, 2020 and Baron’s brand tahini with the expiration date of May 5, 2021. The product lot codes range from 18-097 to 18-141. Consumers should discard the product or return the product to the store for a refund.\nSome brands of tahini manufactured by Achdut Ltd. may lack specific dates or may have labels that are written in Hebrew. Consumers who have purchased a tahini product and are uncertain of where the product was manufactured or cannot identify the brand by lot codes or expiration dates should discard the product or return the food to the store for a refund. More product information and pictures of the recalled product labels can be found inAchdut 's recall announcement. ViewSoom Foods’ recall announcement.\nRetailers and restaurants should not use any of the recalled tahini manufactured by Achdut Ltd. at their establishments. Retailers and restaurants should throw the product out.\nFirms that may have used the recalled tahini (either repacked or used as an ingredient in a food without a kill step) should consider recalling their products. Recalls should be reported to your local FDA office. Alist of recall coordinators can be found in the firm's recall announcement.",
-      "scraped_at": "2026-06-27T08:37:03.476414+00:00"
+      "scraped_at": "2026-07-18T16:38:22.738123+00:00"
     },
     {
       "id": "outbreak-investigation-b-cepacia-complex-linked-medline-remedy-essentials-no-rinse-cleansing-foam",
@@ -2391,8 +2454,11 @@
       "title": "B. cepaciaComplex - Cleansing Foam",
       "url": "https://web.archive.org/web/20190912084459/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-b-cepacia-complex-linked-medline-remedy-essentials-no-rinse-cleansing-foam",
       "status": "unknown",
-      "states_affected": [],
-      "scraped_at": "2026-06-27T08:37:10.815086+00:00"
+      "states_affected": [
+        "CA"
+      ],
+      "state_count": 1,
+      "scraped_at": "2026-07-18T16:38:26.117521+00:00"
     },
     {
       "id": "cdc_unknown_07-26",
@@ -2402,7 +2468,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:37.128229+00:00"
+      "scraped_at": "2026-07-18T16:54:15.517269+00:00"
     },
     {
       "id": "cdc_ecoli_blueberries-07-26",
@@ -2412,7 +2478,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:39.167880+00:00"
+      "scraped_at": "2026-07-18T16:54:17.543824+00:00"
     },
     {
       "id": "cdc_botulism_infant-formula-june-2026",
@@ -2422,7 +2488,7 @@
       "pathogen": "botulism",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:41.207257+00:00"
+      "scraped_at": "2026-07-18T16:54:19.582886+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheese-06-26",
@@ -2432,7 +2498,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:43.244239+00:00"
+      "scraped_at": "2026-07-18T16:54:21.607153+00:00"
     },
     {
       "id": "cdc_salmonella_moringa-05-26",
@@ -2442,7 +2508,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:45.294064+00:00"
+      "scraped_at": "2026-07-18T16:54:23.653429+00:00"
     },
     {
       "id": "cdc_ecoli_rawcheese-03-26",
@@ -2452,7 +2518,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:47.331426+00:00"
+      "scraped_at": "2026-07-18T16:54:25.680074+00:00"
     },
     {
       "id": "cdc_salmonella_moringacapsules-02-26",
@@ -2462,7 +2528,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:49.375869+00:00"
+      "scraped_at": "2026-07-18T16:54:27.704990+00:00"
     },
     {
       "id": "cdc_salmonella_supergreenssupplementpowders-1-26",
@@ -2472,7 +2538,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:51.419135+00:00"
+      "scraped_at": "2026-07-18T16:54:29.730698+00:00"
     },
     {
       "id": "cdc_salmonella_oysters-12-25",
@@ -2482,7 +2548,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:53.457788+00:00"
+      "scraped_at": "2026-07-18T16:54:31.754864+00:00"
     },
     {
       "id": "cdc_botulism_infant-formula-nov-2025",
@@ -2492,7 +2558,7 @@
       "pathogen": "botulism",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:55.492836+00:00"
+      "scraped_at": "2026-07-18T16:54:33.781981+00:00"
     },
     {
       "id": "cdc_salmonella_supplement-10-25",
@@ -2502,7 +2568,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:57.603700+00:00"
+      "scraped_at": "2026-07-18T16:54:35.818250+00:00"
     },
     {
       "id": "cdc_salmonella_homedeliverymeals-09-25",
@@ -2512,7 +2578,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:35:59.640287+00:00"
+      "scraped_at": "2026-07-18T16:54:37.882731+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-08-25",
@@ -2522,7 +2588,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:01.687391+00:00"
+      "scraped_at": "2026-07-18T16:54:39.909373+00:00"
     },
     {
       "id": "cdc_salmonella_sproutedbeans-07-25",
@@ -2532,7 +2598,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:03.728371+00:00"
+      "scraped_at": "2026-07-18T16:54:41.936175+00:00"
     },
     {
       "id": "cdc_listeria_chicken-fettuccine-alfredo-06-25",
@@ -2542,7 +2608,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:05.780706+00:00"
+      "scraped_at": "2026-07-18T16:54:43.972590+00:00"
     },
     {
       "id": "cdc_salmonella_pistachiocream-06-25",
@@ -2552,7 +2618,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:07.828713+00:00"
+      "scraped_at": "2026-07-18T16:54:46.000449+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-06-25",
@@ -2562,7 +2628,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:09.874275+00:00"
+      "scraped_at": "2026-07-18T16:54:48.028880+00:00"
     },
     {
       "id": "cdc_salmonella_whole-cucumbers-05-25",
@@ -2572,7 +2638,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:11.920489+00:00"
+      "scraped_at": "2026-07-18T16:54:50.054349+00:00"
     },
     {
       "id": "cdc_listeria_ready-to-eat-foods-may-2025",
@@ -2582,7 +2648,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:13.959385+00:00"
+      "scraped_at": "2026-07-18T16:54:52.081199+00:00"
     },
     {
       "id": "cdc_listeria_shakes-022025",
@@ -2592,7 +2658,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:15.997284+00:00"
+      "scraped_at": "2026-07-18T16:54:54.107032+00:00"
     },
     {
       "id": "cdc_listeria_meat-and-poultry-products-11-24",
@@ -2602,7 +2668,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:18.043152+00:00"
+      "scraped_at": "2026-07-18T16:54:56.137115+00:00"
     },
     {
       "id": "cdc_salmonella_cucumbers-11-24",
@@ -2612,7 +2678,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:20.078943+00:00"
+      "scraped_at": "2026-07-18T16:54:58.162412+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2622,7 +2688,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:22.133253+00:00"
+      "scraped_at": "2026-07-18T16:55:00.188881+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2632,7 +2698,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:24.172884+00:00"
+      "scraped_at": "2026-07-18T16:55:02.214651+00:00"
     },
     {
       "id": "cdc_listeria_delimeats-7-24",
@@ -2642,7 +2708,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:26.227945+00:00"
+      "scraped_at": "2026-07-18T16:55:04.251867+00:00"
     },
     {
       "id": "cdc_unknown_outbreak-investigation-diamond-shruumz-products",
@@ -2652,7 +2718,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:28.263390+00:00"
+      "scraped_at": "2026-07-18T16:55:06.279369+00:00"
     },
     {
       "id": "cdc_salmonella_eggs-09-24",
@@ -2662,7 +2728,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:30.315682+00:00"
+      "scraped_at": "2026-07-18T16:55:08.305753+00:00"
     },
     {
       "id": "cdc_salmonella_africana-06-24",
@@ -2672,7 +2738,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:32.374926+00:00"
+      "scraped_at": "2026-07-18T16:55:10.352313+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2682,7 +2748,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:34.422951+00:00"
+      "scraped_at": "2026-07-18T16:55:12.398425+00:00"
     },
     {
       "id": "cdc_salmonella_basil-04-24",
@@ -2692,7 +2758,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:36.459412+00:00"
+      "scraped_at": "2026-07-18T16:55:14.482295+00:00"
     },
     {
       "id": "cdc_ecoli_outbreaks",
@@ -2702,7 +2768,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:38.511123+00:00"
+      "scraped_at": "2026-07-18T16:55:16.514696+00:00"
     },
     {
       "id": "cdc_listeria_cheese-02-24",
@@ -2712,7 +2778,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:40.550398+00:00"
+      "scraped_at": "2026-07-18T16:55:18.542520+00:00"
     },
     {
       "id": "cdc_salmonella_charcuterie-meats-01-24",
@@ -2722,7 +2788,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:42.586235+00:00"
+      "scraped_at": "2026-07-18T16:55:20.655175+00:00"
     },
     {
       "id": "cdc_listeria_peaches-11-23",
@@ -2732,7 +2798,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:44.621650+00:00"
+      "scraped_at": "2026-07-18T16:55:22.680085+00:00"
     },
     {
       "id": "cdc_salmonella_sundsvall-11-23",
@@ -2742,7 +2808,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:46.673333+00:00"
+      "scraped_at": "2026-07-18T16:55:24.727099+00:00"
     },
     {
       "id": "cdc_salmonella_thompson-10-23",
@@ -2752,7 +2818,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:48.720864+00:00"
+      "scraped_at": "2026-07-18T16:55:26.768315+00:00"
     },
     {
       "id": "cdc_listeria_ice-cream-08-23",
@@ -2762,7 +2828,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:50.761150+00:00"
+      "scraped_at": "2026-07-18T16:55:28.793753+00:00"
     },
     {
       "id": "cdc_salmonella_saintpaul-07-23",
@@ -2772,7 +2838,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:52.796436+00:00"
+      "scraped_at": "2026-07-18T16:55:30.819912+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-05-23",
@@ -2782,7 +2848,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:54.834775+00:00"
+      "scraped_at": "2026-07-18T16:55:32.847177+00:00"
     },
     {
       "id": "cdc_salmonella_infantis-03-23",
@@ -2792,7 +2858,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:56.887568+00:00"
+      "scraped_at": "2026-07-18T16:55:34.873839+00:00"
     },
     {
       "id": "cdc_unknown_hav-contaminated-food",
@@ -2802,7 +2868,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:36:58.938654+00:00"
+      "scraped_at": "2026-07-18T16:55:36.914129+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-02-23",
@@ -2812,7 +2878,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:00.992393+00:00"
+      "scraped_at": "2026-07-18T16:55:38.940886+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-12-22",
@@ -2822,7 +2888,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:03.043349+00:00"
+      "scraped_at": "2026-07-18T16:55:40.967530+00:00"
     },
     {
       "id": "cdc_unknown_outbreaks",
@@ -2832,7 +2898,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:05.091411+00:00"
+      "scraped_at": "2026-07-18T16:55:42.994888+00:00"
     },
     {
       "id": "cdc_listeria_enoki-11-22",
@@ -2842,7 +2908,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:07.142967+00:00"
+      "scraped_at": "2026-07-18T16:55:45.027223+00:00"
     },
     {
       "id": "cdc_listeria_deli-11-22",
@@ -2852,7 +2918,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:09.189331+00:00"
+      "scraped_at": "2026-07-18T16:55:47.056418+00:00"
     },
     {
       "id": "cdc_salmonella_litchfield-10-22",
@@ -2862,7 +2928,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:11.225685+00:00"
+      "scraped_at": "2026-07-18T16:55:49.083365+00:00"
     },
     {
       "id": "cdc_ecoli_o121-10-22",
@@ -2872,7 +2938,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:13.268949+00:00"
+      "scraped_at": "2026-07-18T16:55:51.114245+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-09-22",
@@ -2882,7 +2948,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:15.305711+00:00"
+      "scraped_at": "2026-07-18T16:55:53.144303+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-09-22",
@@ -2892,7 +2958,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:17.344144+00:00"
+      "scraped_at": "2026-07-18T16:55:55.171709+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-08-22",
@@ -2902,7 +2968,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:19.400806+00:00"
+      "scraped_at": "2026-07-18T16:55:57.202580+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-06-22",
@@ -2912,7 +2978,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:21.437687+00:00"
+      "scraped_at": "2026-07-18T16:55:59.234007+00:00"
     },
     {
       "id": "cdc_unknown_hav-contaminated-food",
@@ -2922,7 +2988,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:23.477217+00:00"
+      "scraped_at": "2026-07-18T16:56:01.264436+00:00"
     },
     {
       "id": "cdc_salmonella_senftenberg-05-22",
@@ -2932,7 +2998,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:25.528141+00:00"
+      "scraped_at": "2026-07-18T16:56:03.292263+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-21",
@@ -2942,7 +3008,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:27.579113+00:00"
+      "scraped_at": "2026-07-18T16:56:05.325454+00:00"
     },
     {
       "id": "cdc_listeria_packaged-salad-12-21-b",
@@ -2952,7 +3018,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:29.614420+00:00"
+      "scraped_at": "2026-07-18T16:56:07.351335+00:00"
     },
     {
       "id": "cdc_listeria_packaged-salad-mix-12-21",
@@ -2962,7 +3028,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:31.670940+00:00"
+      "scraped_at": "2026-07-18T16:56:09.375260+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-21",
@@ -2972,7 +3038,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:33.714092+00:00"
+      "scraped_at": "2026-07-18T16:56:11.401340+00:00"
     },
     {
       "id": "cdc_salmonella_i45-10-21",
@@ -2982,7 +3048,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:35.750194+00:00"
+      "scraped_at": "2026-07-18T16:56:13.424625+00:00"
     },
     {
       "id": "cdc_salmonella_thompson-10-21",
@@ -2992,7 +3058,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:37.790646+00:00"
+      "scraped_at": "2026-07-18T16:56:15.456871+00:00"
     },
     {
       "id": "cdc_salmonella_oranienburg-09-21",
@@ -3002,7 +3068,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:39.855866+00:00"
+      "scraped_at": "2026-07-18T16:56:17.488064+00:00"
     },
     {
       "id": "cdc_salmonella_italian-style-meat-08-21",
@@ -3012,7 +3078,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:41.890945+00:00"
+      "scraped_at": "2026-07-18T16:56:19.512389+00:00"
     },
     {
       "id": "cdc_ecoli_o121-07-21",
@@ -3022,7 +3088,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:43.926151+00:00"
+      "scraped_at": "2026-07-18T16:56:21.539422+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-07-21",
@@ -3032,7 +3098,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:45.961954+00:00"
+      "scraped_at": "2026-07-18T16:56:23.570373+00:00"
     },
     {
       "id": "cdc_listeria_precooked-chicken-07-21",
@@ -3042,7 +3108,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:48.046427+00:00"
+      "scraped_at": "2026-07-18T16:56:25.605763+00:00"
     },
     {
       "id": "cdc_salmonella_weltevreden-06-21",
@@ -3052,7 +3118,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:50.082325+00:00"
+      "scraped_at": "2026-07-18T16:56:27.633113+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-06-21",
@@ -3062,7 +3128,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:52.120164+00:00"
+      "scraped_at": "2026-07-18T16:56:29.662685+00:00"
     },
     {
       "id": "cdc_salmonella_duisburg-04-21",
@@ -3072,7 +3138,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:54.201293+00:00"
+      "scraped_at": "2026-07-18T16:56:31.691512+00:00"
     },
     {
       "id": "cdc_salmonella_hadar-04-21",
@@ -3082,7 +3148,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:56.237810+00:00"
+      "scraped_at": "2026-07-18T16:56:33.723722+00:00"
     },
     {
       "id": "cdc_listeria_hispanic-soft-cheese-02-21",
@@ -3092,7 +3158,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:37:58.274602+00:00"
+      "scraped_at": "2026-07-18T16:56:35.750870+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-02-21",
@@ -3102,7 +3168,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:00.321563+00:00"
+      "scraped_at": "2026-07-18T16:56:37.783202+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-20",
@@ -3112,7 +3178,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:02.364164+00:00"
+      "scraped_at": "2026-07-18T16:56:39.820070+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-10-20b",
@@ -3122,7 +3188,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:04.408722+00:00"
+      "scraped_at": "2026-07-18T16:56:41.848143+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-10-20a",
@@ -3132,7 +3198,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:06.444077+00:00"
+      "scraped_at": "2026-07-18T16:56:43.877248+00:00"
     },
     {
       "id": "cdc_listeria_delimeat-10-20",
@@ -3142,7 +3208,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:08.499070+00:00"
+      "scraped_at": "2026-07-18T16:56:45.907341+00:00"
     },
     {
       "id": "cdc_salmonella_stanley-09-20",
@@ -3152,7 +3218,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:10.535176+00:00"
+      "scraped_at": "2026-07-18T16:56:47.931481+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-08-20",
@@ -3162,7 +3228,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:12.601992+00:00"
+      "scraped_at": "2026-07-18T16:56:49.957437+00:00"
     },
     {
       "id": "cdc_salmonella_newport-07-20",
@@ -3172,7 +3238,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:14.642888+00:00"
+      "scraped_at": "2026-07-18T16:56:51.985119+00:00"
     },
     {
       "id": "cdc_unknown_2020",
@@ -3182,7 +3248,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:16.678929+00:00"
+      "scraped_at": "2026-07-18T16:56:54.045508+00:00"
     },
     {
       "id": "cdc_listeria_enoki-mushrooms-03-20",
@@ -3192,7 +3258,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:18.723692+00:00"
+      "scraped_at": "2026-07-18T16:56:56.071006+00:00"
     },
     {
       "id": "cdc_ecoli_o103h2-02-20",
@@ -3202,7 +3268,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:20.767139+00:00"
+      "scraped_at": "2026-07-18T16:56:58.103629+00:00"
     },
     {
       "id": "cdc_listeria_eggs-12-19",
@@ -3212,7 +3278,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:22.816103+00:00"
+      "scraped_at": "2026-07-18T16:57:00.135261+00:00"
     },
     {
       "id": "cdc_salmonella_javiana-12-19",
@@ -3222,7 +3288,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:24.864676+00:00"
+      "scraped_at": "2026-07-18T16:57:02.161560+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-19",
@@ -3232,7 +3298,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:26.899403+00:00"
+      "scraped_at": "2026-07-18T16:57:04.185889+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-19",
@@ -3242,7 +3308,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:28.957724+00:00"
+      "scraped_at": "2026-07-18T16:57:06.216577+00:00"
     },
     {
       "id": "cdc_salmonella_dublin-11-19",
@@ -3252,7 +3318,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:31.004192+00:00"
+      "scraped_at": "2026-07-18T16:57:08.248103+00:00"
     },
     {
       "id": "cdc_listeria_monocytogenes-08-19",
@@ -3262,7 +3328,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:33.041046+00:00"
+      "scraped_at": "2026-07-18T16:57:10.276827+00:00"
     },
     {
       "id": "cdc_unknown_weekly",
@@ -3272,7 +3338,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:35.076840+00:00"
+      "scraped_at": "2026-07-18T16:57:12.301418+00:00"
     },
     {
       "id": "cdc_ecoli_bison-07-19",
@@ -3282,7 +3348,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:37.111026+00:00"
+      "scraped_at": "2026-07-18T16:57:14.333876+00:00"
     },
     {
       "id": "cdc_salmonella_uganda-06-19",
@@ -3292,7 +3358,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:39.145394+00:00"
+      "scraped_at": "2026-07-18T16:57:16.358249+00:00"
     },
     {
       "id": "cdc_ecoli_flour-05-19",
@@ -3302,7 +3368,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:41.219054+00:00"
+      "scraped_at": "2026-07-18T16:57:18.389114+00:00"
     },
     {
       "id": "cdc_salmonella_concord-05-19",
@@ -3312,7 +3378,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:43.256610+00:00"
+      "scraped_at": "2026-07-18T16:57:20.414665+00:00"
     },
     {
       "id": "cdc_vibrio_rawoysters-05-19",
@@ -3322,7 +3388,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:45.334657+00:00"
+      "scraped_at": "2026-07-18T16:57:22.439283+00:00"
     },
     {
       "id": "cdc_listeria_deliproducts-04-19",
@@ -3332,7 +3398,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:47.369310+00:00"
+      "scraped_at": "2026-07-18T16:57:24.464195+00:00"
     },
     {
       "id": "cdc_salmonella_newport-04-19",
@@ -3342,7 +3408,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:49.426388+00:00"
+      "scraped_at": "2026-07-18T16:57:26.496390+00:00"
     },
     {
       "id": "cdc_salmonella_carrau-04-19",
@@ -3352,7 +3418,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:51.461799+00:00"
+      "scraped_at": "2026-07-18T16:57:28.523648+00:00"
     },
     {
       "id": "cdc_ecoli_o103-04-19",
@@ -3362,7 +3428,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:53.500677+00:00"
+      "scraped_at": "2026-07-18T16:57:30.570668+00:00"
     },
     {
       "id": "cdc_salmonella_schwarzengrund-03-19",
@@ -3372,7 +3438,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:55.536459+00:00"
+      "scraped_at": "2026-07-18T16:57:32.595841+00:00"
     },
     {
       "id": "cdc_salmonella_concord-11-18",
@@ -3382,7 +3448,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:57.572610+00:00"
+      "scraped_at": "2026-07-18T16:57:34.621350+00:00"
     },
     {
       "id": "cdc_salmonella_agbeni-11-18",
@@ -3392,7 +3458,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:38:59.614158+00:00"
+      "scraped_at": "2026-07-18T16:57:36.645376+00:00"
     },
     {
       "id": "cdc_listeria_porkproducts-11-18",
@@ -3402,7 +3468,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:01.675976+00:00"
+      "scraped_at": "2026-07-18T16:57:38.682013+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-18",
@@ -3412,7 +3478,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:03.710895+00:00"
+      "scraped_at": "2026-07-18T16:57:40.728531+00:00"
     },
     {
       "id": "cdc_salmonella_infantis-10-18",
@@ -3422,7 +3488,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:05.753189+00:00"
+      "scraped_at": "2026-07-18T16:57:42.757390+00:00"
     },
     {
       "id": "cdc_salmonella_newport-10-18",
@@ -3432,7 +3498,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:07.790066+00:00"
+      "scraped_at": "2026-07-18T16:57:44.797176+00:00"
     },
     {
       "id": "cdc_listeria_countryham-10-18",
@@ -3442,7 +3508,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:09.834476+00:00"
+      "scraped_at": "2026-07-18T16:57:46.829010+00:00"
     },
     {
       "id": "cdc_ecoli_o26-09-18",
@@ -3452,7 +3518,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:11.869378+00:00"
+      "scraped_at": "2026-07-18T16:57:48.869338+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-09-18",
@@ -3462,7 +3528,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:13.906073+00:00"
+      "scraped_at": "2026-07-18T16:57:50.895517+00:00"
     },
     {
       "id": "cdc_salmonella_chicken-08-18",
@@ -3472,7 +3538,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:15.942820+00:00"
+      "scraped_at": "2026-07-18T16:57:52.921645+00:00"
     },
     {
       "id": "cdc_salmonella_reading-07-18",
@@ -3482,7 +3548,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:17.982047+00:00"
+      "scraped_at": "2026-07-18T16:57:54.946167+00:00"
     },
     {
       "id": "cdc_salmonella_sandiego-07-18",
@@ -3492,7 +3558,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:20.018966+00:00"
+      "scraped_at": "2026-07-18T16:57:56.971621+00:00"
     },
     {
       "id": "cdc_unknown_b-071318",
@@ -3502,7 +3568,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:22.061413+00:00"
+      "scraped_at": "2026-07-18T16:57:59.005047+00:00"
     },
     {
       "id": "cdc_unknown_a-062018",
@@ -3512,7 +3578,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:24.116917+00:00"
+      "scraped_at": "2026-07-18T16:58:01.030845+00:00"
     },
     {
       "id": "cdc_vibrio_vibriop-07-18",
@@ -3522,7 +3588,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:26.192150+00:00"
+      "scraped_at": "2026-07-18T16:58:03.058587+00:00"
     },
     {
       "id": "cdc_salmonella_mbandaka-06-18",
@@ -3532,7 +3598,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:28.227409+00:00"
+      "scraped_at": "2026-07-18T16:58:05.083101+00:00"
     },
     {
       "id": "cdc_salmonella_adelaide-06-18",
@@ -3542,7 +3608,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:30.278026+00:00"
+      "scraped_at": "2026-07-18T16:58:07.111995+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-04-18",
@@ -3552,7 +3618,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:32.314615+00:00"
+      "scraped_at": "2026-07-18T16:58:09.136714+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-04-18",
@@ -3562,7 +3628,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:34.350859+00:00"
+      "scraped_at": "2026-07-18T16:58:11.163099+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-03-18",
@@ -3572,7 +3638,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:36.395701+00:00"
+      "scraped_at": "2026-07-18T16:58:13.210860+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-02-18",
@@ -3582,7 +3648,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:38.432880+00:00"
+      "scraped_at": "2026-07-18T16:58:15.239859+00:00"
     },
     {
       "id": "cdc_salmonella_kratom-02-18",
@@ -3592,7 +3658,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:40.468889+00:00"
+      "scraped_at": "2026-07-18T16:58:17.268308+00:00"
     },
     {
       "id": "cdc_salmonella_montevideo-01-18",
@@ -3602,7 +3668,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:42.528133+00:00"
+      "scraped_at": "2026-07-18T16:58:19.327262+00:00"
     },
     {
       "id": "cdc_salmonella_coconut-01-18",
@@ -3612,7 +3678,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:44.569149+00:00"
+      "scraped_at": "2026-07-18T16:58:21.354087+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-12-17",
@@ -3622,7 +3688,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:46.604222+00:00"
+      "scraped_at": "2026-07-18T16:58:23.385698+00:00"
     },
     {
       "id": "cdc_unknown_2017",
@@ -3632,7 +3698,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:48.688227+00:00"
+      "scraped_at": "2026-07-18T16:58:25.414399+00:00"
     },
     {
       "id": "cdc_salmonella_urbana-09-17",
@@ -3642,7 +3708,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:50.724999+00:00"
+      "scraped_at": "2026-07-18T16:58:27.448318+00:00"
     },
     {
       "id": "cdc_salmonella_newport-09-17",
@@ -3652,7 +3718,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:52.779035+00:00"
+      "scraped_at": "2026-07-18T16:58:29.484855+00:00"
     },
     {
       "id": "cdc_salmonella_anatum-9-17",
@@ -3662,7 +3728,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:54.815723+00:00"
+      "scraped_at": "2026-07-18T16:58:31.508011+00:00"
     },
     {
       "id": "cdc_salmonella_kiambu-07-17",
@@ -3672,7 +3738,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:56.851473+00:00"
+      "scraped_at": "2026-07-18T16:58:33.538164+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheese-03-17",
@@ -3682,7 +3748,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:39:58.893462+00:00"
+      "scraped_at": "2026-07-18T16:58:35.564114+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-03-17",
@@ -3692,7 +3758,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:00.931961+00:00"
+      "scraped_at": "2026-07-18T16:58:37.588093+00:00"
     },
     {
       "id": "cdc_salmonella_oranienburg-10-16",
@@ -3702,7 +3768,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:02.985693+00:00"
+      "scraped_at": "2026-07-18T16:58:39.622527+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -3712,7 +3778,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:05.028658+00:00"
+      "scraped_at": "2026-07-18T16:58:41.647951+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-09-16",
@@ -3722,7 +3788,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:07.067817+00:00"
+      "scraped_at": "2026-07-18T16:58:43.670954+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -3732,7 +3798,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:09.102072+00:00"
+      "scraped_at": "2026-07-18T16:58:45.696321+00:00"
     },
     {
       "id": "cdc_unknown_2016",
@@ -3742,7 +3808,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:11.149791+00:00"
+      "scraped_at": "2026-07-18T16:58:47.737916+00:00"
     },
     {
       "id": "cdc_salmonella_reading-08-16",
@@ -3752,7 +3818,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:13.230011+00:00"
+      "scraped_at": "2026-07-18T16:58:49.778841+00:00"
     },
     {
       "id": "cdc_ecoli_o121-06-16",
@@ -3762,7 +3828,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:15.264656+00:00"
+      "scraped_at": "2026-07-18T16:58:51.816266+00:00"
     },
     {
       "id": "cdc_listeria_frozen-vegetables-05-16",
@@ -3772,7 +3838,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:17.300300+00:00"
+      "scraped_at": "2026-07-18T16:58:53.845073+00:00"
     },
     {
       "id": "cdc_listeria_raw-milk-03-16",
@@ -3782,7 +3848,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:19.336310+00:00"
+      "scraped_at": "2026-07-18T16:58:55.876530+00:00"
     },
     {
       "id": "cdc_salmonella_montevideo-03-16",
@@ -3792,7 +3858,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:21.377611+00:00"
+      "scraped_at": "2026-07-18T16:58:57.905462+00:00"
     },
     {
       "id": "cdc_ecoli_o157-02-16",
@@ -3802,7 +3868,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:23.428187+00:00"
+      "scraped_at": "2026-07-18T16:58:59.940283+00:00"
     },
     {
       "id": "cdc_salmonella_muenchen-02-16",
@@ -3812,7 +3878,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:25.476771+00:00"
+      "scraped_at": "2026-07-18T16:59:02.008390+00:00"
     },
     {
       "id": "cdc_salmonella_virchow-02-16",
@@ -3822,7 +3888,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:27.511942+00:00"
+      "scraped_at": "2026-07-18T16:59:04.098961+00:00"
     },
     {
       "id": "cdc_listeria_bagged-salads-01-16",
@@ -3832,7 +3898,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:29.568207+00:00"
+      "scraped_at": "2026-07-18T16:59:06.138387+00:00"
     },
     {
       "id": "cdc_salmonella_paratyphi-b-12-15",
@@ -3842,7 +3908,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:31.608940+00:00"
+      "scraped_at": "2026-07-18T16:59:08.178473+00:00"
     },
     {
       "id": "cdc_ecoli_o157h7-11-15",
@@ -3852,7 +3918,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:33.661881+00:00"
+      "scraped_at": "2026-07-18T16:59:10.207001+00:00"
     },
     {
       "id": "cdc_ecoli_o26-11-15",
@@ -3862,7 +3928,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:35.695891+00:00"
+      "scraped_at": "2026-07-18T16:59:12.248605+00:00"
     },
     {
       "id": "cdc_listeria_soft-cheeses-09-15",
@@ -3872,7 +3938,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:37.750406+00:00"
+      "scraped_at": "2026-07-18T16:59:14.273543+00:00"
     },
     {
       "id": "cdc_salmonella_poona-09-15",
@@ -3882,7 +3948,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:39.790668+00:00"
+      "scraped_at": "2026-07-18T16:59:16.299872+00:00"
     },
     {
       "id": "cdc_salmonella_pork-08-15",
@@ -3892,7 +3958,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:41.864687+00:00"
+      "scraped_at": "2026-07-18T16:59:18.326520+00:00"
     },
     {
       "id": "cdc_unknown_2015",
@@ -3902,7 +3968,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:43.915891+00:00"
+      "scraped_at": "2026-07-18T16:59:20.356744+00:00"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-part2-07-15",
@@ -3912,7 +3978,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:45.953736+00:00"
+      "scraped_at": "2026-07-18T16:59:22.386194+00:00"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-07-15",
@@ -3922,7 +3988,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:47.987919+00:00"
+      "scraped_at": "2026-07-18T16:59:24.413326+00:00"
     },
     {
       "id": "cdc_salmonella_paratyphi-b-05-15",
@@ -3932,7 +3998,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:50.042705+00:00"
+      "scraped_at": "2026-07-18T16:59:26.439391+00:00"
     },
     {
       "id": "cdc_listeria_ice-cream-03-15",
@@ -3942,7 +4008,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:52.091006+00:00"
+      "scraped_at": "2026-07-18T16:59:28.472383+00:00"
     },
     {
       "id": "cdc_unknown_mmwrhtml",
@@ -3952,7 +4018,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:54.141973+00:00"
+      "scraped_at": "2026-07-18T16:59:30.498328+00:00"
     },
     {
       "id": "cdc_listeria_caramel-apples-12-14",
@@ -3962,7 +4028,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:56.176322+00:00"
+      "scraped_at": "2026-07-18T16:59:32.524982+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-11-14",
@@ -3972,7 +4038,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:40:58.211086+00:00"
+      "scraped_at": "2026-07-18T16:59:34.559310+00:00"
     },
     {
       "id": "cdc_listeria_bean-sprouts-11-14",
@@ -3982,7 +4048,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:00.258300+00:00"
+      "scraped_at": "2026-07-18T16:59:36.585378+00:00"
     },
     {
       "id": "cdc_listeria_cheese-10-14",
@@ -3992,7 +4058,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:02.294109+00:00"
+      "scraped_at": "2026-07-18T16:59:38.609601+00:00"
     },
     {
       "id": "cdc_unknown_2014",
@@ -4002,7 +4068,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:04.349048+00:00"
+      "scraped_at": "2026-07-18T16:59:40.641595+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-08-14",
@@ -4012,7 +4078,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:06.385729+00:00"
+      "scraped_at": "2026-07-18T16:59:42.666500+00:00"
     },
     {
       "id": "cdc_salmonella_newport-05-14",
@@ -4022,7 +4088,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:08.435162+00:00"
+      "scraped_at": "2026-07-18T16:59:44.688924+00:00"
     },
     {
       "id": "cdc_ecoli_O121-05-14",
@@ -4032,7 +4098,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:10.472594+00:00"
+      "scraped_at": "2026-07-18T16:59:46.715610+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-05-14",
@@ -4042,7 +4108,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:12.509080+00:00"
+      "scraped_at": "2026-07-18T16:59:48.750254+00:00"
     },
     {
       "id": "cdc_listeria_cheese-02-14",
@@ -4052,7 +4118,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:14.558475+00:00"
+      "scraped_at": "2026-07-18T16:59:50.778034+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-01-14",
@@ -4062,7 +4128,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:16.612680+00:00"
+      "scraped_at": "2026-07-18T16:59:52.815255+00:00"
     },
     {
       "id": "cdc_salmonella_stanley-01-14",
@@ -4072,7 +4138,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:18.653059+00:00"
+      "scraped_at": "2026-07-18T16:59:54.840042+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-11-13",
@@ -4082,7 +4148,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:20.695568+00:00"
+      "scraped_at": "2026-07-18T16:59:56.864181+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-10-13",
@@ -4092,7 +4158,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:22.759160+00:00"
+      "scraped_at": "2026-07-18T16:59:58.896445+00:00"
     },
     {
       "id": "cdc_vibrio_investigations",
@@ -4102,7 +4168,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:24.833444+00:00"
+      "scraped_at": "2026-07-18T17:00:00.926676+00:00"
     },
     {
       "id": "cdc_unknown_outbreaks",
@@ -4112,7 +4178,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:26.877951+00:00"
+      "scraped_at": "2026-07-18T17:00:02.957363+00:00"
     },
     {
       "id": "cdc_listeria_cheese-07-13",
@@ -4122,7 +4188,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:28.928653+00:00"
+      "scraped_at": "2026-07-18T17:00:04.983429+00:00"
     },
     {
       "id": "cdc_unknown_A1b-03-31",
@@ -4132,7 +4198,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:30.971237+00:00"
+      "scraped_at": "2026-07-18T17:00:07.006887+00:00"
     },
     {
       "id": "cdc_salmonella_salmonella",
@@ -4142,7 +4208,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:33.006729+00:00"
+      "scraped_at": "2026-07-18T17:00:09.039565+00:00"
     },
     {
       "id": "cdc_salmonella_saintpaul-04-13",
@@ -4152,7 +4218,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:35.080333+00:00"
+      "scraped_at": "2026-07-18T17:00:11.107647+00:00"
     },
     {
       "id": "cdc_ecoli_O121-03-13",
@@ -4162,7 +4228,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:37.123593+00:00"
+      "scraped_at": "2026-07-18T17:00:13.147026+00:00"
     },
     {
       "id": "cdc_salmonella_heidelberg-02-13",
@@ -4172,7 +4238,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:39.174630+00:00"
+      "scraped_at": "2026-07-18T17:00:15.174053+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-01-13",
@@ -4182,7 +4248,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:41.209285+00:00"
+      "scraped_at": "2026-07-18T17:00:17.200631+00:00"
     },
     {
       "id": "cdc_ecoli_O157H7-11-12",
@@ -4192,7 +4258,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:43.245315+00:00"
+      "scraped_at": "2026-07-18T17:00:19.228270+00:00"
     },
     {
       "id": "cdc_salmonella_bredeney-09-12",
@@ -4202,7 +4268,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:45.313816+00:00"
+      "scraped_at": "2026-07-18T17:00:21.258250+00:00"
     },
     {
       "id": "cdc_listeria_cheese-09-12",
@@ -4212,7 +4278,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:47.354402+00:00"
+      "scraped_at": "2026-07-18T17:00:23.286489+00:00"
     },
     {
       "id": "cdc_salmonella_braenderup-08-12",
@@ -4222,7 +4288,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:49.394319+00:00"
+      "scraped_at": "2026-07-18T17:00:25.336101+00:00"
     },
     {
       "id": "cdc_salmonella_typhimurium-cantaloupe-08-12",
@@ -4232,7 +4298,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:51.437109+00:00"
+      "scraped_at": "2026-07-18T17:00:27.361552+00:00"
     },
     {
       "id": "cdc_salmonella_enteritidis-07-12",
@@ -4242,7 +4308,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:53.477484+00:00"
+      "scraped_at": "2026-07-18T17:00:29.395107+00:00"
     },
     {
       "id": "cdc_ecoli_O145-06-12",
@@ -4252,7 +4318,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:55.543356+00:00"
+      "scraped_at": "2026-07-18T17:00:31.420674+00:00"
     },
     {
       "id": "cdc_salmonella_bareilly-04-12",
@@ -4262,7 +4328,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:57.591155+00:00"
+      "scraped_at": "2026-07-18T17:00:33.444555+00:00"
     },
     {
       "id": "cdc_ecoli_O26-02-12",
@@ -4272,7 +4338,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:41:59.626152+00:00"
+      "scraped_at": "2026-07-18T17:00:35.471882+00:00"
     },
     {
       "id": "cdc_salmonella_restaurant-enteriditis",
@@ -4282,7 +4348,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:01.663945+00:00"
+      "scraped_at": "2026-07-18T17:00:37.498636+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4292,7 +4358,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:03.704910+00:00"
+      "scraped_at": "2026-07-18T17:00:39.522872+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4302,7 +4368,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:05.772979+00:00"
+      "scraped_at": "2026-07-18T17:00:41.567100+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4312,7 +4378,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:07.811896+00:00"
+      "scraped_at": "2026-07-18T17:00:43.596220+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4322,7 +4388,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:09.853192+00:00"
+      "scraped_at": "2026-07-18T17:00:45.624386+00:00"
     },
     {
       "id": "cdc_listeria_cantaloupes-jensen-farms",
@@ -4332,7 +4398,7 @@
       "pathogen": "listeria",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:11.890343+00:00"
+      "scraped_at": "2026-07-18T17:00:47.650191+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4342,7 +4408,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:13.938477+00:00"
+      "scraped_at": "2026-07-18T17:00:49.687757+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4352,7 +4418,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:15.983367+00:00"
+      "scraped_at": "2026-07-18T17:00:51.721330+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4362,7 +4428,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:18.017873+00:00"
+      "scraped_at": "2026-07-18T17:00:53.750146+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4372,7 +4438,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:20.070025+00:00"
+      "scraped_at": "2026-07-18T17:00:55.786355+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4382,7 +4448,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:22.113823+00:00"
+      "scraped_at": "2026-07-18T17:00:57.812661+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4392,7 +4458,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:24.168281+00:00"
+      "scraped_at": "2026-07-18T17:00:59.837393+00:00"
     },
     {
       "id": "cdc_salmonella_2011",
@@ -4402,7 +4468,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:26.212867+00:00"
+      "scraped_at": "2026-07-18T17:01:01.869174+00:00"
     },
     {
       "id": "cdc_ecoli_2011",
@@ -4412,7 +4478,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:28.246436+00:00"
+      "scraped_at": "2026-07-18T17:01:03.932100+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4422,7 +4488,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:30.289646+00:00"
+      "scraped_at": "2026-07-18T17:01:05.958712+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4432,7 +4498,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:32.327026+00:00"
+      "scraped_at": "2026-07-18T17:01:08.005022+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -4442,7 +4508,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:34.372312+00:00"
+      "scraped_at": "2026-07-18T17:01:10.036755+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4452,7 +4518,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:36.435295+00:00"
+      "scraped_at": "2026-07-18T17:01:12.066395+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4462,7 +4528,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:38.472312+00:00"
+      "scraped_at": "2026-07-18T17:01:14.093746+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4472,7 +4538,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:40.518191+00:00"
+      "scraped_at": "2026-07-18T17:01:16.121911+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4482,7 +4548,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:42.553885+00:00"
+      "scraped_at": "2026-07-18T17:01:18.151334+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -4492,7 +4558,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:44.598705+00:00"
+      "scraped_at": "2026-07-18T17:01:20.181282+00:00"
     },
     {
       "id": "cdc_salmonella_2010",
@@ -4502,7 +4568,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:46.665926+00:00"
+      "scraped_at": "2026-07-18T17:01:22.229443+00:00"
     },
     {
       "id": "cdc_ecoli_2010",
@@ -4512,7 +4578,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:48.711376+00:00"
+      "scraped_at": "2026-07-18T17:01:24.257476+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -4522,7 +4588,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:50.746797+00:00"
+      "scraped_at": "2026-07-18T17:01:26.288606+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -4532,7 +4598,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:52.792076+00:00"
+      "scraped_at": "2026-07-18T17:01:28.318973+00:00"
     },
     {
       "id": "cdc_ecoli_2009",
@@ -4542,7 +4608,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:54.838297+00:00"
+      "scraped_at": "2026-07-18T17:01:30.354125+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -4552,7 +4618,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:56.893196+00:00"
+      "scraped_at": "2026-07-18T17:01:32.387603+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -4562,7 +4628,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:42:58.947509+00:00"
+      "scraped_at": "2026-07-18T17:01:34.411682+00:00"
     },
     {
       "id": "cdc_salmonella_2009",
@@ -4572,7 +4638,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:00.983197+00:00"
+      "scraped_at": "2026-07-18T17:01:36.439565+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -4582,7 +4648,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:03.019492+00:00"
+      "scraped_at": "2026-07-18T17:01:38.462651+00:00"
     },
     {
       "id": "cdc_ecoli_2008",
@@ -4592,7 +4658,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:05.053687+00:00"
+      "scraped_at": "2026-07-18T17:01:40.484696+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -4602,7 +4668,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:07.099102+00:00"
+      "scraped_at": "2026-07-18T17:01:42.520322+00:00"
     },
     {
       "id": "cdc_salmonella_2008",
@@ -4612,7 +4678,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:09.146874+00:00"
+      "scraped_at": "2026-07-18T17:01:44.548828+00:00"
     },
     {
       "id": "cdc_ecoli_2007",
@@ -4622,7 +4688,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:11.204636+00:00"
+      "scraped_at": "2026-07-18T17:01:46.574006+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -4632,7 +4698,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:13.255137+00:00"
+      "scraped_at": "2026-07-18T17:01:48.603899+00:00"
     },
     {
       "id": "cdc_ecoli_2007",
@@ -4642,7 +4708,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:15.292091+00:00"
+      "scraped_at": "2026-07-18T17:01:50.647873+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -4652,7 +4718,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:17.344590+00:00"
+      "scraped_at": "2026-07-18T17:01:52.699874+00:00"
     },
     {
       "id": "cdc_salmonella_2007",
@@ -4662,7 +4728,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:19.416329+00:00"
+      "scraped_at": "2026-07-18T17:01:54.724399+00:00"
     },
     {
       "id": "cdc_ecoli_2006",
@@ -4672,7 +4738,7 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:21.452465+00:00"
+      "scraped_at": "2026-07-18T17:01:56.753731+00:00"
     },
     {
       "id": "cdc_salmonella_2006",
@@ -4682,7 +4748,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:23.500828+00:00"
+      "scraped_at": "2026-07-18T17:01:58.780887+00:00"
     },
     {
       "id": "cdc_ecoli_2006",
@@ -4692,8 +4758,8 @@
       "pathogen": "ecoli",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-07-18T16:43:25.535713+00:00"
+      "scraped_at": "2026-07-18T17:02:00.810983+00:00"
     }
   ],
-  "generated_at": "2026-07-18T16:43:25.842903+00:00"
+  "generated_at": "2026-07-18T17:02:01.104271+00:00"
 }

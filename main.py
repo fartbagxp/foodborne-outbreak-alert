@@ -7,16 +7,58 @@ import argparse
 import csv
 import io
 import json
+import logging
 import re
 import requests
+import sys
 import time
 
 from bs4 import BeautifulSoup
+from collections import Counter
 from datetime import datetime, timezone
 from urllib.parse import urljoin
 from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from typing import List, Dict, Optional
+
+# Module logger. Configured by setup_logging() in main(); if a caller uses the
+# scrapers without configuring logging, messages still surface via this handler.
+log = logging.getLogger("outbreak")
+
+
+def setup_logging(log_dir: str = "logs") -> str:
+    """
+    Configure logging to both the console and a timestamped file.
+
+    The console shows INFO-level progress (a clean running log of what is being
+    gathered and whether each item succeeded). The file additionally captures
+    DEBUG-level detail (individual fetch attempts, archive fallbacks) so there
+    is a complete record to review after a run.
+
+    Returns the path to the log file.
+    """
+    Path(log_dir).mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    log_path = str(Path(log_dir) / f"scrape-{timestamp}.log")
+
+    log.setLevel(logging.DEBUG)
+    log.handlers.clear()  # avoid duplicate handlers if called more than once
+    log.propagate = False
+
+    console = logging.StreamHandler(sys.stdout)
+    console.setLevel(logging.INFO)
+    console.setFormatter(logging.Formatter("%(asctime)s %(levelname)-7s %(message)s", "%H:%M:%S"))
+
+    file_handler = logging.FileHandler(log_path, encoding="utf-8")
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)-7s %(message)s", "%Y-%m-%d %H:%M:%S"))
+
+    log.addHandler(console)
+    log.addHandler(file_handler)
+
+    log.info("Logging to %s", log_path)
+    return log_path
+
 
 class FDAOutbreakScraper:
     def __init__(self):
@@ -32,7 +74,7 @@ class FDAOutbreakScraper:
         Scrape the main listing page for all outbreak links
         Returns a list of outbreak metadata
         """
-        print(f"Fetching listing page: {self.listing_url}")
+        log.info("Fetching FDA listing page: %s", self.listing_url)
         response = self.session.get(self.listing_url)
         response.raise_for_status()
 
@@ -47,7 +89,7 @@ class FDAOutbreakScraper:
             if outbreak_data:
                 outbreaks.append(outbreak_data)
 
-        print(f"Found {len(outbreaks)} outbreaks on listing page")
+        log.info("Found %d outbreaks on FDA listing page", len(outbreaks))
         return outbreaks
 
     def _parse_listing_link(self, link) -> Optional[Dict]:
@@ -102,15 +144,15 @@ class FDAOutbreakScraper:
         """
         Scrape detailed information from an individual outbreak page
         """
-        print(f"Fetching outbreak details: {outbreak_url}")
+        log.debug("Fetching FDA outbreak details: %s", outbreak_url)
 
         try:
             response = self.session.get(outbreak_url, allow_redirects=True)
             response.raise_for_status()
             final_url = response.url
-            print("✓ Successfully fetched")
+            log.debug("Fetched %s", outbreak_url)
         except requests.exceptions.HTTPError as e:
-            print(f"✗ HTTP Error {e.response.status_code}: {outbreak_url}")
+            log.warning("HTTP %s fetching %s", e.response.status_code, outbreak_url)
             return {
                 'url': outbreak_url,
                 'scraped_at': datetime.now(timezone.utc).isoformat(),
@@ -118,7 +160,7 @@ class FDAOutbreakScraper:
                 'scrape_error': str(e)
             }
         except Exception as e:
-            print(f"✗ Error fetching {outbreak_url}: {e}")
+            log.warning("Error fetching %s: %s", outbreak_url, e)
             return {
                 'url': outbreak_url,
                 'scraped_at': datetime.now(timezone.utc).isoformat(),
@@ -240,10 +282,16 @@ class FDAOutbreakScraper:
 
         # Scrape details for each
         detailed_outbreaks = []
+        total = len(outbreaks)
         for i, outbreak in enumerate(outbreaks, 1):
-            print(f"\nScraping {i}/{len(outbreaks)}: {outbreak['title']}")
-
             details = self.scrape_outbreak_details(outbreak['url'])
+            status = details.get('scrape_status', 'unknown')
+            if status == 'success':
+                log.info("[%d/%d] OK   %s (cases=%s, deaths=%s)",
+                         i, total, outbreak['title'],
+                         details.get('case_count', '?'), details.get('deaths', '?'))
+            else:
+                log.warning("[%d/%d] FAIL %s -> %s", i, total, outbreak['title'], status)
 
             # Merge listing data with detailed data
             full_data = {**outbreak, **details}
@@ -262,7 +310,7 @@ class FDAOutbreakScraper:
 
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(outbreaks, f, indent=2, ensure_ascii=False)
-        print(f"\nSaved {len(outbreaks)} outbreaks to {filename}")
+        log.info("Saved %d FDA outbreaks to %s", len(outbreaks), filename)
 
 
 class CDCOutbreakScraper:
@@ -344,11 +392,11 @@ class CDCOutbreakScraper:
 
         # Try to scrape the pathogen page
         if pathogen not in self.pathogen_pages:
-            print(f"Unknown pathogen: {pathogen}")
+            log.warning("Unknown pathogen: %s", pathogen)
             return investigations
 
         url = self.pathogen_pages[pathogen]
-        print(f"Checking {pathogen} outbreaks page: {url}")
+        log.info("Discovering %s investigations from %s", pathogen, url)
 
         try:
             response = self.session.get(url)
@@ -414,10 +462,10 @@ class CDCOutbreakScraper:
                                 'source': 'CDC'
                             })
 
-            print(f"Found {len(investigations)} {pathogen} investigations")
+            log.info("Found %d %s investigations", len(investigations), pathogen)
 
         except Exception as e:
-            print(f"Error discovering {pathogen} investigations: {e}")
+            log.error("Error discovering %s investigations: %s", pathogen, e)
 
         return investigations
 
@@ -425,7 +473,7 @@ class CDCOutbreakScraper:
         """
         Scrape detailed information from a CDC outbreak investigation page
         """
-        print(f"Fetching CDC investigation: {investigation_url}")
+        log.debug("Fetching CDC investigation: %s", investigation_url)
 
         def _error(status, error):
             return {
@@ -455,7 +503,7 @@ class CDCOutbreakScraper:
             try:
                 status, final_url, html = self._fetch_page(try_url)
             except Exception as e:
-                print(f"✗ Error fetching {try_url}: {e}")
+                log.debug("Error fetching %s: %s", try_url, e)
                 html = None
                 if is_last:
                     return _error('error', str(e))
@@ -464,19 +512,19 @@ class CDCOutbreakScraper:
             last_status = status
 
             if status and 200 <= status < 300:
-                print("✓ Successfully fetched from archive" if try_url != investigation_url else "✓ Successfully fetched")
+                log.debug("Fetched %s (status %s)", try_url, status)
                 break
 
             # Non-success status: discard the (likely error) page body.
             html = None
             if status == 404:
                 if not is_last:
-                    print("  Original URL not found, trying CDC archive...")
+                    log.debug("404 at %s, trying CDC archive", try_url)
                     continue
-                print("✗ Not found in archive either")
+                log.debug("404 in archive too for %s", investigation_url)
                 return _error('404_not_found', 'Page not found (tried original and archive)')
 
-            print(f"✗ HTTP Error {status}: {try_url}")
+            log.debug("HTTP %s at %s", status, try_url)
             if is_last:
                 return _error(f'http_error_{status}', f'HTTP {status} for {try_url}')
             continue
@@ -619,7 +667,7 @@ class CDCOutbreakScraper:
         This page lists all currently active investigations
         """
         main_url = "https://www.cdc.gov/foodborne-outbreaks/outbreaks/"
-        print(f"Checking main CDC outbreak page: {main_url}")
+        log.info("Discovering from main CDC outbreak page: %s", main_url)
         investigations = []
 
         try:
@@ -651,10 +699,10 @@ class CDCOutbreakScraper:
                         'source': 'CDC'
                     })
 
-            print(f"Found {len(investigations)} investigations from main page")
+            log.info("Found %d investigations from main page", len(investigations))
 
         except Exception as e:
-            print(f"Error scraping main CDC page: {e}")
+            log.error("Error scraping main CDC page: %s", e)
 
         return investigations
 
@@ -664,7 +712,7 @@ class CDCOutbreakScraper:
         This is faster and more reliable than scraping the paginated JavaScript table
         """
         csv_url = "https://www.cdc.gov/foodborne-outbreaks/media/files/2024/04/full-outbreak-list.csv"
-        print(f"Fetching outbreak data from CSV: {csv_url}")
+        log.info("Fetching outbreak data from CSV: %s", csv_url)
         investigations = []
 
         try:
@@ -694,10 +742,10 @@ class CDCOutbreakScraper:
                     'year': year
                 })
 
-            print(f"Found {len(investigations)} outbreak entries in CSV")
+            log.info("Found %d outbreak entries in CSV", len(investigations))
 
         except Exception as e:
-            print(f"Error fetching CSV file: {e}")
+            log.error("Error fetching CSV file: %s", e)
 
         return investigations
 
@@ -707,7 +755,7 @@ class CDCOutbreakScraper:
         This handles JavaScript-rendered content and pagination
         """
         main_url = "https://www.cdc.gov/foodborne-outbreaks/outbreaks/index.html"
-        print(f"Checking main CDC outbreak page with Playwright: {main_url}")
+        log.info("Discovering from main CDC outbreak page via Playwright: %s", main_url)
         investigations = []
 
         try:
@@ -723,11 +771,11 @@ class CDCOutbreakScraper:
                 page.set_default_timeout(60000)  # 60 seconds
 
                 # Navigate to the page - use 'load' instead of 'networkidle' for faster loading
-                print("Loading page...")
+                log.info("Loading page (this can take up to 60s)...")
                 try:
                     page.goto(main_url, wait_until="load", timeout=60000)
                 except PlaywrightTimeoutError:
-                    print("Page load timeout, trying with domcontentloaded...")
+                    log.warning("Page load timeout, retrying with domcontentloaded...")
                     page.goto(main_url, wait_until="domcontentloaded", timeout=60000)
 
                 # Wait for the table to load - the table has id or class we need to identify
@@ -735,36 +783,36 @@ class CDCOutbreakScraper:
                 try:
                     # Wait for table to appear (adjust selector based on actual page structure)
                     page.wait_for_selector('table', timeout=20000)
-                    print("Table loaded successfully")
+                    log.debug("Outbreak table loaded")
                 except PlaywrightTimeoutError:
-                    print("Warning: Table did not load within timeout, proceeding anyway...")
+                    log.warning("Outbreak table did not load within timeout, proceeding anyway")
 
                 # Give JavaScript more time to fully render the content
-                print("Waiting for JavaScript to render...")
+                log.debug("Waiting for JavaScript to render...")
                 time.sleep(5)
 
                 # Get all links from the table using Playwright directly (more reliable)
-                print("Extracting all outbreak links from table...")
+                log.debug("Extracting outbreak links from table...")
                 links_found = set()  # Use set to avoid duplicates
 
                 # Find all table rows
                 table_rows = page.locator('table tbody tr').all()
-                print(f"Found {len(table_rows)} rows in the initial table view")
+                log.info("Initial table view has %d rows", len(table_rows))
 
                 # Since the table is paginated, we need to get all pages
                 # First, try to get the total number of entries
                 try:
                     pagination_info = page.locator('.dataTables_info').inner_text()
-                    print(f"Pagination info: {pagination_info}")
+                    log.info("Pagination: %s", pagination_info)
 
                     # Try to show all entries by changing the page size to maximum
                     try:
                         # Click on the page size dropdown and select a large number
                         page.select_option('select[name*="DataTables"]', '100')
-                        print("Changed page size to 100")
+                        log.debug("Changed page size to 100")
                         time.sleep(2)  # Wait for table to reload
                     except Exception:
-                        print("Could not change page size, will paginate manually")
+                        log.debug("Could not change page size, will paginate manually")
                 except Exception:
                     pass
 
@@ -810,27 +858,55 @@ class CDCOutbreakScraper:
                     try:
                         next_button = page.locator('#DataTables_Table_0_next')
                         if next_button.get_attribute('class') and 'disabled' not in next_button.get_attribute('class'):
-                            print(f"Going to page {page_num + 1}...")
+                            log.debug("Paginating to page %d (%d links so far)", page_num + 1, len(investigations))
                             next_button.click()
                             page_num += 1
                             time.sleep(2)  # Wait for page to load
                         else:
-                            print("Reached last page")
+                            log.debug("Reached last page of the table")
                             break
                     except Exception:
-                        print("No more pages to paginate")
+                        log.debug("No more pages to paginate")
                         break
 
                 browser.close()
 
-                print(f"Found {len(investigations)} investigations from main page (with Playwright)")
+                log.info("Discovered %d investigations from main page (Playwright)", len(investigations))
 
-        except Exception as e:
-            print(f"Error scraping main CDC page with Playwright: {e}")
-            import traceback
-            traceback.print_exc()
+        except Exception:
+            log.exception("Error scraping main CDC page with Playwright")
 
         return investigations
+
+    def _log_result(self, index: int, total: int, investigation: Dict, details: Dict):
+        """Log a one-line outcome for a single investigation fetch."""
+        label = investigation.get('title') or investigation.get('url', 'Unknown')
+        status = details.get('scrape_status', 'unknown')
+        if status == 'success':
+            log.info("[%d/%d] OK   %s (cases=%s, deaths=%s, status=%s)",
+                     index, total, label,
+                     details.get('case_count', '?'),
+                     details.get('deaths', '?'),
+                     details.get('status', '?'))
+        else:
+            log.warning("[%d/%d] FAIL %s -> %s", index, total, label, status)
+
+    def _log_scrape_summary(self, results: List[Dict]):
+        """Log a summary of how many investigations succeeded vs failed and why."""
+        statuses = Counter(r.get('scrape_status', 'unknown') for r in results)
+        total = len(results)
+        succeeded = statuses.get('success', 0)
+        failed = total - succeeded
+
+        log.info("-" * 60)
+        log.info("CDC scrape summary: %d attempted, %d succeeded, %d failed", total, succeeded, failed)
+        for status, count in statuses.most_common():
+            log.info("  %-16s %d", status, count)
+        if failed:
+            log.info("Failed items:")
+            for r in results:
+                if r.get('scrape_status', 'unknown') != 'success':
+                    log.info("  [%s] %s", r.get('scrape_status', 'unknown'), r.get('url', '?'))
 
     def scrape_known_urls(self, urls: List[str], delay: float = 1.0) -> List[Dict]:
         """
@@ -844,8 +920,6 @@ class CDCOutbreakScraper:
         all_outbreaks = []
 
         for i, url in enumerate(urls, 1):
-            print(f"\nScraping {i}/{len(urls)}: {url}")
-
             # Extract pathogen from URL
             pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella)/', url)
             pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
@@ -863,6 +937,7 @@ class CDCOutbreakScraper:
 
             # Scrape details
             details = self.scrape_investigation_details(url, pathogen)
+            self._log_result(i, len(urls), investigation, details)
 
             # Merge data
             full_data = {**investigation, **details}
@@ -889,12 +964,14 @@ class CDCOutbreakScraper:
         try:
             # If known URLs provided, use those directly
             if known_urls:
-                print(f"\n=== Scraping {len(known_urls)} known CDC outbreak URLs ===")
-                return self.scrape_known_urls(known_urls, delay)
+                log.info("Scraping %d known CDC outbreak URLs", len(known_urls))
+                all_outbreaks = self.scrape_known_urls(known_urls, delay)
+                self._log_scrape_summary(all_outbreaks)
+                return all_outbreaks
 
             # First, try to discover from main CDC page (more reliable)
             if use_main_page:
-                print("\n=== Discovering from main CDC outbreak page ===")
+                log.info("=== Phase 1: discover CDC investigations ===")
 
                 # Use Playwright if requested (better for JavaScript-rendered content)
                 if use_playwright:
@@ -903,49 +980,54 @@ class CDCOutbreakScraper:
                     main_page_investigations = self.discover_from_main_page()
 
                 if main_page_investigations:
+                    total = len(main_page_investigations)
+                    log.info("=== Phase 2: fetch %d investigation pages ===", total)
                     for i, investigation in enumerate(main_page_investigations, 1):
-                        print(f"\nScraping {i}/{len(main_page_investigations)}: {investigation.get('title', 'Unknown')}")
-
                         details = self.scrape_investigation_details(
                             investigation['url'],
                             investigation.get('pathogen', 'unknown')
                         )
+                        self._log_result(i, total, investigation, details)
 
                         # Merge metadata with details
                         full_data = {**investigation, **details}
                         all_outbreaks.append(full_data)
 
                         # Be respectful - add delay
-                        if i < len(main_page_investigations):
+                        if i < total:
                             time.sleep(delay)
 
+                    self._log_scrape_summary(all_outbreaks)
                     return all_outbreaks
 
+                log.warning("Main-page discovery returned no investigations")
+
             # Fallback: Try individual pathogen pages
-            print("\n=== Falling back to individual pathogen pages ===")
+            log.info("=== Falling back to individual pathogen pages ===")
             for pathogen in self.pathogen_pages.keys():
-                print(f"\n=== Processing {pathogen.upper()} outbreaks ===")
+                log.info("Processing %s outbreaks", pathogen.upper())
 
                 # Discover investigations
                 investigations = self.discover_investigation_links(pathogen)
 
                 # Scrape each investigation
+                total = len(investigations)
                 for i, investigation in enumerate(investigations, 1):
-                    print(f"Scraping {i}/{len(investigations)}: {investigation.get('title', 'Unknown')}")
-
                     details = self.scrape_investigation_details(investigation['url'], pathogen)
+                    self._log_result(i, total, investigation, details)
 
                     # Merge metadata with details
                     full_data = {**investigation, **details}
                     all_outbreaks.append(full_data)
 
                     # Be respectful - add delay
-                    if i < len(investigations):
+                    if i < total:
                         time.sleep(delay)
 
                 # Delay between pathogens
                 time.sleep(delay)
 
+            self._log_scrape_summary(all_outbreaks)
             return all_outbreaks
         finally:
             # Always release the shared Playwright browser used for detail fetches.
@@ -958,7 +1040,7 @@ class CDCOutbreakScraper:
 
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(outbreaks, f, indent=2, ensure_ascii=False)
-        print(f"\nSaved {len(outbreaks)} CDC outbreaks to {filename}")
+        log.info("Saved %d CDC outbreaks to %s", len(outbreaks), filename)
 
 
 class OutbreakAggregator:
@@ -982,18 +1064,10 @@ class OutbreakAggregator:
         Returns:
             Dictionary with 'fda' and 'cdc' keys containing outbreak lists
         """
-        print("=" * 60)
-        print("FOODBORNE OUTBREAK ALERT SYSTEM")
-        print("=" * 60)
-
-        # Scrape FDA
-        print("\n[1/2] Scraping FDA Outbreaks...")
-        print("-" * 60)
+        log.info("[1/2] Scraping FDA outbreaks...")
         fda_outbreaks = self.fda_scraper.scrape_all(limit=fda_limit, delay=delay)
 
-        # Scrape CDC
-        print("\n[2/2] Scraping CDC Outbreaks...")
-        print("-" * 60)
+        log.info("[2/2] Scraping CDC outbreaks...")
         cdc_outbreaks = self.cdc_scraper.scrape_all_pathogens(delay=delay, known_urls=cdc_known_urls)
 
         return {
@@ -1101,7 +1175,7 @@ class OutbreakAggregator:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(output, f, indent=2, ensure_ascii=False)
 
-        print(f"\nSaved combined data to {filename}")
+        log.info("Saved combined data (%d outbreaks) to %s", len(combined_data), filename)
 
 
 def build_combined(aggregator: OutbreakAggregator,
@@ -1115,9 +1189,8 @@ def build_combined(aggregator: OutbreakAggregator,
     run), refreshing a single source can never drop the other source from the
     combined output.
     """
-    print("\n" + "=" * 60)
-    print("COMBINING AND NORMALIZING DATA")
-    print("=" * 60)
+    log.info("=" * 60)
+    log.info("COMBINING AND NORMALIZING DATA")
 
     all_data = {'fda': [], 'cdc': []}
     for key, path in (('fda', fda_file), ('cdc', cdc_file)):
@@ -1125,51 +1198,50 @@ def build_combined(aggregator: OutbreakAggregator,
             try:
                 with open(path, 'r', encoding='utf-8') as f:
                     all_data[key] = json.load(f)
-                print(f"Loaded {len(all_data[key])} {key.upper()} outbreaks from {path}")
+                log.info("Loaded %d %s outbreaks from %s", len(all_data[key]), key.upper(), path)
             except Exception as e:
-                print(f"Error loading {key.upper()} data from {path}: {e}")
+                log.error("Error loading %s data from %s: %s", key.upper(), path, e)
         else:
-            print(f"Warning: {path} not found, skipping {key.upper()} data")
+            log.warning("%s not found, skipping %s data", path, key.upper())
 
     combined = aggregator.combine_and_normalize(all_data)
     stats = aggregator.get_summary_stats(combined)
 
     # Display summary
-    print("\n" + "=" * 60)
-    print("SUMMARY STATISTICS")
-    print("=" * 60)
-    print(f"Total Outbreaks: {stats['total_outbreaks']}")
-    print(f"Total Cases: {stats['total_cases']}")
-    print(f"Total Deaths: {stats['total_deaths']}")
-    print(f"Total Hospitalizations: {stats['total_hospitalizations']}")
-    print(f"States Affected: {stats['unique_states_affected']}")
+    log.info("-" * 60)
+    log.info("SUMMARY STATISTICS")
+    log.info("Total Outbreaks: %s", stats['total_outbreaks'])
+    log.info("Total Cases: %s", stats['total_cases'])
+    log.info("Total Deaths: %s", stats['total_deaths'])
+    log.info("Total Hospitalizations: %s", stats['total_hospitalizations'])
+    log.info("States Affected: %s", stats['unique_states_affected'])
 
-    print("\nOutbreaks by Source:")
+    log.info("Outbreaks by Source:")
     for source, count in stats['outbreaks_by_source'].items():
-        print(f"  {source}: {count}")
+        log.info("  %s: %d", source, count)
 
-    print("\nOutbreaks by Pathogen:")
+    log.info("Outbreaks by Pathogen:")
     for pathogen, count in sorted(stats['outbreaks_by_pathogen'].items(), key=lambda x: x[1], reverse=True):
-        print(f"  {pathogen}: {count}")
+        log.info("  %s: %d", pathogen, count)
 
-    print("\nOutbreaks by Status:")
+    log.info("Outbreaks by Status:")
     for status, count in stats['outbreaks_by_status'].items():
-        print(f"  {status}: {count}")
+        log.info("  %s: %d", status, count)
 
     # Show top 5 outbreaks by case count
-    print("\n" + "=" * 60)
-    print("TOP 5 OUTBREAKS BY CASE COUNT")
-    print("=" * 60)
+    log.info("-" * 60)
+    log.info("TOP 5 OUTBREAKS BY CASE COUNT")
     for i, outbreak in enumerate(combined[:5], 1):
-        print(f"\n{i}. {outbreak.get('title', 'Unknown')}")
-        print(f"   Source: {outbreak.get('source')}")
-        print(f"   Pathogen: {outbreak.get('pathogen', 'Unknown')}")
-        print(f"   Food: {outbreak.get('food_source', 'Unknown')}")
-        print(f"   Cases: {outbreak.get('case_count', 'N/A')}")
-        print(f"   Deaths: {outbreak.get('deaths', 'N/A')}")
-        print(f"   States: {outbreak.get('state_count', 'N/A')}")
-        print(f"   Status: {outbreak.get('status', 'unknown')}")
-        print(f"   URL: {outbreak.get('url')}")
+        log.info("%d. %s [%s] pathogen=%s food=%s cases=%s deaths=%s states=%s status=%s",
+                 i,
+                 outbreak.get('title', 'Unknown'),
+                 outbreak.get('source'),
+                 outbreak.get('pathogen', 'Unknown'),
+                 outbreak.get('food_source', 'Unknown'),
+                 outbreak.get('case_count', 'N/A'),
+                 outbreak.get('deaths', 'N/A'),
+                 outbreak.get('state_count', 'N/A'),
+                 outbreak.get('status', 'unknown'))
 
     if combined:
         aggregator.save_combined_data(combined, stats)
@@ -1203,6 +1275,9 @@ Examples:
     parser.add_argument('--use-known-urls', action='store_true', help='Use hardcoded list of known CDC URLs instead of auto-discovery')
 
     args = parser.parse_args()
+
+    # Configure console + file logging so every run leaves a reviewable log.
+    setup_logging()
 
     # If --combine is specified, don't scrape
     if args.combine:
@@ -1244,9 +1319,10 @@ Examples:
         'https://www.cdc.gov/ecoli/outbreaks/details-organic-walnuts-04-24.html',
     ]
 
-    print("=" * 60)
-    print("FOODBORNE OUTBREAK ALERT SYSTEM")
-    print("=" * 60)
+    modes = [m for m, on in (("FDA", scrape_fda), ("CDC", scrape_cdc), ("combine", args.combine)) if on]
+    log.info("=" * 60)
+    log.info("FOODBORNE OUTBREAK ALERT SYSTEM — mode: %s", ", ".join(modes) or "none")
+    log.info("=" * 60)
 
     # Each scrape mode writes ONLY its own source file. The combined file is
     # never touched by a scrape, so FDA and CDC can never clobber each other;
@@ -1254,16 +1330,14 @@ Examples:
     files_created = []
 
     if scrape_fda:
-        print("\n[FDA] Scraping FDA Outbreaks...")
-        print("-" * 60)
+        log.info("[FDA] Scraping FDA outbreaks...")
         fda_outbreaks = aggregator.fda_scraper.scrape_all(limit=None, delay=args.delay)
         if fda_outbreaks:
             aggregator.fda_scraper.save_to_json(fda_outbreaks)
             files_created.append("  - data/raw/fda_outbreaks.json (FDA data only)")
 
     if scrape_cdc:
-        print("\n[CDC] Scraping CDC Outbreaks...")
-        print("-" * 60)
+        log.info("[CDC] Scraping CDC outbreaks...")
         # Determine which URLs to use
         urls_to_use = known_cdc_urls if args.use_known_urls else None
         # Use Playwright unless disabled
@@ -1284,12 +1358,14 @@ Examples:
         build_combined(aggregator)
         files_created.append("  - data/raw/combined_outbreaks.json (unified data with statistics)")
 
-    print("\n" + "=" * 60)
-    print("SCRAPING COMPLETE")
-    print("=" * 60)
-    print("Files created:")
-    for file in files_created:
-        print(file)
+    log.info("=" * 60)
+    log.info("SCRAPING COMPLETE")
+    if files_created:
+        log.info("Files written:")
+        for file in files_created:
+            log.info(file)
+    else:
+        log.warning("No files written (no data scraped or combined)")
 
 
 if __name__ == "__main__":

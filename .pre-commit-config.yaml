@@ -9,9 +9,12 @@ repos:
       - id: trailing-whitespace
         exclude: ^data/raw/
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.22
+    rev: v0.16.0
     hooks:
       - id: ruff
+        args: [--fix]
+        exclude: ^data/raw/
+      - id: ruff-format
         exclude: ^data/raw/
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.30.0

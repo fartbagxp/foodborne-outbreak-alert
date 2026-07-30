@@ -283,6 +283,57 @@ class CDCOutbreakScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         })
+        # Shared Playwright browser used for detail fetches. CDC sits behind
+        # Akamai bot protection that returns 403 to plain HTTP clients (like
+        # `requests`) from datacenter IPs such as GitHub Actions runners, while
+        # a real browser passes. The browser is created lazily and reused across
+        # the run for speed; call close() when finished.
+        self._playwright = None
+        self._browser = None
+        self._context = None
+
+    def _ensure_context(self):
+        """Lazily start a shared Playwright browser context and return it."""
+        if self._context is None:
+            self._playwright = sync_playwright().start()
+            self._browser = self._playwright.chromium.launch(headless=True)
+            self._context = self._browser.new_context(
+                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            )
+            self._context.set_default_timeout(60000)
+        return self._context
+
+    def _fetch_page(self, url: str):
+        """
+        Fetch a page through a real browser (Playwright) so CDC's Akamai bot
+        protection does not 403 us the way it does plain HTTP clients.
+
+        Returns (status_code, final_url, html). Raises on navigation failure.
+        """
+        context = self._ensure_context()
+        page = context.new_page()
+        try:
+            response = page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            status = response.status if response else None
+            final_url = page.url
+            html = page.content()
+            return status, final_url, html
+        finally:
+            page.close()
+
+    def close(self):
+        """Tear down the shared Playwright browser, if one was started."""
+        try:
+            if self._context is not None:
+                self._context.close()
+            if self._browser is not None:
+                self._browser.close()
+            if self._playwright is not None:
+                self._playwright.stop()
+        except Exception:
+            pass
+        finally:
+            self._context = self._browser = self._playwright = None
 
     def discover_investigation_links(self, pathogen: str) -> List[Dict]:
         """
@@ -376,82 +427,64 @@ class CDCOutbreakScraper:
         """
         print(f"Fetching CDC investigation: {investigation_url}")
 
-        response = None
-        final_url = investigation_url
-
-        # Try multiple URL variations if the original fails
-        urls_to_try = [investigation_url]
-
-        # If original URL fails with 404, try the CDC archive
-        # Archive URL format: https://archive.cdc.gov/www_cdc_gov/[path]
-        if investigation_url.startswith('https://www.cdc.gov/'):
-            archive_url = investigation_url.replace('https://www.cdc.gov/', 'https://archive.cdc.gov/www_cdc_gov/')
-            urls_to_try.append(archive_url)
-        elif investigation_url.startswith('http://www.cdc.gov/'):
-            archive_url = investigation_url.replace('http://www.cdc.gov/', 'https://archive.cdc.gov/www_cdc_gov/')
-            urls_to_try.append(archive_url)
-
-        for try_url in urls_to_try:
-            try:
-                response = self.session.get(try_url, allow_redirects=True)
-                response.raise_for_status()
-                final_url = response.url  # Track if we were redirected
-                if try_url != investigation_url:
-                    print("✓ Successfully fetched from archive")
-                else:
-                    print("✓ Successfully fetched")
-                break
-            except requests.exceptions.HTTPError as e:
-                if e.response.status_code == 404:
-                    if try_url == urls_to_try[0] and len(urls_to_try) > 1:
-                        # First URL failed, trying archive
-                        print("  Original URL not found, trying CDC archive...")
-                        continue
-                    elif try_url == urls_to_try[-1]:  # Last attempt
-                        print("✗ Not found in archive either")
-                        return {
-                            'url': investigation_url,
-                            'pathogen': pathogen,
-                            'source': 'CDC',
-                            'scraped_at': datetime.now(timezone.utc).isoformat(),
-                            'scrape_status': '404_not_found',
-                            'scrape_error': 'Page not found (tried original and archive)'
-                        }
-                    # Try next variation
-                    continue
-                else:
-                    print(f"✗ HTTP Error {e.response.status_code}: {try_url}")
-                    return {
-                        'url': investigation_url,
-                        'pathogen': pathogen,
-                        'source': 'CDC',
-                        'scraped_at': datetime.now(timezone.utc).isoformat(),
-                        'scrape_status': f'http_error_{e.response.status_code}',
-                        'scrape_error': str(e)
-                    }
-            except Exception as e:
-                print(f"✗ Error fetching {try_url}: {e}")
-                if try_url == urls_to_try[-1]:  # Last attempt
-                    return {
-                        'url': investigation_url,
-                        'pathogen': pathogen,
-                        'source': 'CDC',
-                        'scraped_at': datetime.now(timezone.utc).isoformat(),
-                        'scrape_status': 'error',
-                        'scrape_error': str(e)
-                    }
-
-        if not response:
+        def _error(status, error):
             return {
                 'url': investigation_url,
                 'pathogen': pathogen,
                 'source': 'CDC',
                 'scraped_at': datetime.now(timezone.utc).isoformat(),
-                'scrape_status': 'error',
-                'scrape_error': 'No response received'
+                'scrape_status': status,
+                'scrape_error': error,
             }
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        # Try multiple URL variations if the original fails.
+        # If the original URL fails, try the CDC archive.
+        # Archive URL format: https://archive.cdc.gov/www_cdc_gov/[path]
+        urls_to_try = [investigation_url]
+        if investigation_url.startswith('https://www.cdc.gov/'):
+            urls_to_try.append(investigation_url.replace('https://www.cdc.gov/', 'https://archive.cdc.gov/www_cdc_gov/'))
+        elif investigation_url.startswith('http://www.cdc.gov/'):
+            urls_to_try.append(investigation_url.replace('http://www.cdc.gov/', 'https://archive.cdc.gov/www_cdc_gov/'))
+
+        html = None
+        final_url = investigation_url
+        last_status = None
+
+        for try_url in urls_to_try:
+            is_last = try_url == urls_to_try[-1]
+            try:
+                status, final_url, html = self._fetch_page(try_url)
+            except Exception as e:
+                print(f"✗ Error fetching {try_url}: {e}")
+                html = None
+                if is_last:
+                    return _error('error', str(e))
+                continue
+
+            last_status = status
+
+            if status and 200 <= status < 300:
+                print("✓ Successfully fetched from archive" if try_url != investigation_url else "✓ Successfully fetched")
+                break
+
+            # Non-success status: discard the (likely error) page body.
+            html = None
+            if status == 404:
+                if not is_last:
+                    print("  Original URL not found, trying CDC archive...")
+                    continue
+                print("✗ Not found in archive either")
+                return _error('404_not_found', 'Page not found (tried original and archive)')
+
+            print(f"✗ HTTP Error {status}: {try_url}")
+            if is_last:
+                return _error(f'http_error_{status}', f'HTTP {status} for {try_url}')
+            continue
+
+        if not html:
+            return _error('error', f'No content received (last status {last_status})')
+
+        soup = BeautifulSoup(html, 'html.parser')
 
         details = {
             'url': final_url,  # Use the final URL (may differ if redirected)
@@ -853,66 +886,70 @@ class CDCOutbreakScraper:
         """
         all_outbreaks = []
 
-        # If known URLs provided, use those directly
-        if known_urls:
-            print(f"\n=== Scraping {len(known_urls)} known CDC outbreak URLs ===")
-            return self.scrape_known_urls(known_urls, delay)
+        try:
+            # If known URLs provided, use those directly
+            if known_urls:
+                print(f"\n=== Scraping {len(known_urls)} known CDC outbreak URLs ===")
+                return self.scrape_known_urls(known_urls, delay)
 
-        # First, try to discover from main CDC page (more reliable)
-        if use_main_page:
-            print("\n=== Discovering from main CDC outbreak page ===")
+            # First, try to discover from main CDC page (more reliable)
+            if use_main_page:
+                print("\n=== Discovering from main CDC outbreak page ===")
 
-            # Use Playwright if requested (better for JavaScript-rendered content)
-            if use_playwright:
-                main_page_investigations = self.discover_from_main_page_playwright()
-            else:
-                main_page_investigations = self.discover_from_main_page()
+                # Use Playwright if requested (better for JavaScript-rendered content)
+                if use_playwright:
+                    main_page_investigations = self.discover_from_main_page_playwright()
+                else:
+                    main_page_investigations = self.discover_from_main_page()
 
-            if main_page_investigations:
-                for i, investigation in enumerate(main_page_investigations, 1):
-                    print(f"\nScraping {i}/{len(main_page_investigations)}: {investigation.get('title', 'Unknown')}")
+                if main_page_investigations:
+                    for i, investigation in enumerate(main_page_investigations, 1):
+                        print(f"\nScraping {i}/{len(main_page_investigations)}: {investigation.get('title', 'Unknown')}")
 
-                    details = self.scrape_investigation_details(
-                        investigation['url'],
-                        investigation.get('pathogen', 'unknown')
-                    )
+                        details = self.scrape_investigation_details(
+                            investigation['url'],
+                            investigation.get('pathogen', 'unknown')
+                        )
+
+                        # Merge metadata with details
+                        full_data = {**investigation, **details}
+                        all_outbreaks.append(full_data)
+
+                        # Be respectful - add delay
+                        if i < len(main_page_investigations):
+                            time.sleep(delay)
+
+                    return all_outbreaks
+
+            # Fallback: Try individual pathogen pages
+            print("\n=== Falling back to individual pathogen pages ===")
+            for pathogen in self.pathogen_pages.keys():
+                print(f"\n=== Processing {pathogen.upper()} outbreaks ===")
+
+                # Discover investigations
+                investigations = self.discover_investigation_links(pathogen)
+
+                # Scrape each investigation
+                for i, investigation in enumerate(investigations, 1):
+                    print(f"Scraping {i}/{len(investigations)}: {investigation.get('title', 'Unknown')}")
+
+                    details = self.scrape_investigation_details(investigation['url'], pathogen)
 
                     # Merge metadata with details
                     full_data = {**investigation, **details}
                     all_outbreaks.append(full_data)
 
                     # Be respectful - add delay
-                    if i < len(main_page_investigations):
+                    if i < len(investigations):
                         time.sleep(delay)
 
-                return all_outbreaks
+                # Delay between pathogens
+                time.sleep(delay)
 
-        # Fallback: Try individual pathogen pages
-        print("\n=== Falling back to individual pathogen pages ===")
-        for pathogen in self.pathogen_pages.keys():
-            print(f"\n=== Processing {pathogen.upper()} outbreaks ===")
-
-            # Discover investigations
-            investigations = self.discover_investigation_links(pathogen)
-
-            # Scrape each investigation
-            for i, investigation in enumerate(investigations, 1):
-                print(f"Scraping {i}/{len(investigations)}: {investigation.get('title', 'Unknown')}")
-
-                details = self.scrape_investigation_details(investigation['url'], pathogen)
-
-                # Merge metadata with details
-                full_data = {**investigation, **details}
-                all_outbreaks.append(full_data)
-
-                # Be respectful - add delay
-                if i < len(investigations):
-                    time.sleep(delay)
-
-            # Delay between pathogens
-            time.sleep(delay)
-
-        return all_outbreaks
+            return all_outbreaks
+        finally:
+            # Always release the shared Playwright browser used for detail fetches.
+            self.close()
 
     def save_to_json(self, outbreaks: List[Dict], filename: str = 'data/raw/cdc_outbreaks.json'):
         """Save scraped data to JSON file"""
@@ -1067,6 +1104,79 @@ class OutbreakAggregator:
         print(f"\nSaved combined data to {filename}")
 
 
+def build_combined(aggregator: OutbreakAggregator,
+                   fda_file: str = 'data/raw/fda_outbreaks.json',
+                   cdc_file: str = 'data/raw/cdc_outbreaks.json'):
+    """
+    Build data/raw/combined_outbreaks.json from the on-disk source files.
+
+    This is the ONLY place the combined file is written. Because it always
+    reads both source files from disk (rather than whatever was scraped this
+    run), refreshing a single source can never drop the other source from the
+    combined output.
+    """
+    print("\n" + "=" * 60)
+    print("COMBINING AND NORMALIZING DATA")
+    print("=" * 60)
+
+    all_data = {'fda': [], 'cdc': []}
+    for key, path in (('fda', fda_file), ('cdc', cdc_file)):
+        if Path(path).exists():
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    all_data[key] = json.load(f)
+                print(f"Loaded {len(all_data[key])} {key.upper()} outbreaks from {path}")
+            except Exception as e:
+                print(f"Error loading {key.upper()} data from {path}: {e}")
+        else:
+            print(f"Warning: {path} not found, skipping {key.upper()} data")
+
+    combined = aggregator.combine_and_normalize(all_data)
+    stats = aggregator.get_summary_stats(combined)
+
+    # Display summary
+    print("\n" + "=" * 60)
+    print("SUMMARY STATISTICS")
+    print("=" * 60)
+    print(f"Total Outbreaks: {stats['total_outbreaks']}")
+    print(f"Total Cases: {stats['total_cases']}")
+    print(f"Total Deaths: {stats['total_deaths']}")
+    print(f"Total Hospitalizations: {stats['total_hospitalizations']}")
+    print(f"States Affected: {stats['unique_states_affected']}")
+
+    print("\nOutbreaks by Source:")
+    for source, count in stats['outbreaks_by_source'].items():
+        print(f"  {source}: {count}")
+
+    print("\nOutbreaks by Pathogen:")
+    for pathogen, count in sorted(stats['outbreaks_by_pathogen'].items(), key=lambda x: x[1], reverse=True):
+        print(f"  {pathogen}: {count}")
+
+    print("\nOutbreaks by Status:")
+    for status, count in stats['outbreaks_by_status'].items():
+        print(f"  {status}: {count}")
+
+    # Show top 5 outbreaks by case count
+    print("\n" + "=" * 60)
+    print("TOP 5 OUTBREAKS BY CASE COUNT")
+    print("=" * 60)
+    for i, outbreak in enumerate(combined[:5], 1):
+        print(f"\n{i}. {outbreak.get('title', 'Unknown')}")
+        print(f"   Source: {outbreak.get('source')}")
+        print(f"   Pathogen: {outbreak.get('pathogen', 'Unknown')}")
+        print(f"   Food: {outbreak.get('food_source', 'Unknown')}")
+        print(f"   Cases: {outbreak.get('case_count', 'N/A')}")
+        print(f"   Deaths: {outbreak.get('deaths', 'N/A')}")
+        print(f"   States: {outbreak.get('state_count', 'N/A')}")
+        print(f"   Status: {outbreak.get('status', 'unknown')}")
+        print(f"   URL: {outbreak.get('url')}")
+
+    if combined:
+        aggregator.save_combined_data(combined, stats)
+
+    return combined, stats
+
+
 def main():
     """
     Main function demonstrating combined FDA and CDC outbreak scraping
@@ -1138,44 +1248,18 @@ Examples:
     print("FOODBORNE OUTBREAK ALERT SYSTEM")
     print("=" * 60)
 
-    # Scrape selected sources
-    all_data = {'fda': [], 'cdc': []}
-
-    # If --combine is specified, load existing JSON files
-    if args.combine:
-        print("\n[COMBINE] Loading existing outbreak data from files...")
-        print("-" * 60)
-
-        fda_file = 'data/raw/fda_outbreaks.json'
-        cdc_file = 'data/raw/cdc_outbreaks.json'
-
-        # Load FDA data if exists
-        if Path(fda_file).exists():
-            try:
-                with open(fda_file, 'r', encoding='utf-8') as f:
-                    all_data['fda'] = json.load(f)
-                print(f"Loaded {len(all_data['fda'])} FDA outbreaks from {fda_file}")
-            except Exception as e:
-                print(f"Error loading FDA data: {e}")
-        else:
-            print(f"Warning: {fda_file} not found, skipping FDA data")
-
-        # Load CDC data if exists
-        if Path(cdc_file).exists():
-            try:
-                with open(cdc_file, 'r', encoding='utf-8') as f:
-                    all_data['cdc'] = json.load(f)
-                print(f"Loaded {len(all_data['cdc'])} CDC outbreaks from {cdc_file}")
-            except Exception as e:
-                print(f"Error loading CDC data: {e}")
-        else:
-            print(f"Warning: {cdc_file} not found, skipping CDC data")
+    # Each scrape mode writes ONLY its own source file. The combined file is
+    # never touched by a scrape, so FDA and CDC can never clobber each other;
+    # it is rebuilt from disk by build_combined() below.
+    files_created = []
 
     if scrape_fda:
         print("\n[FDA] Scraping FDA Outbreaks...")
         print("-" * 60)
         fda_outbreaks = aggregator.fda_scraper.scrape_all(limit=None, delay=args.delay)
-        all_data['fda'] = fda_outbreaks
+        if fda_outbreaks:
+            aggregator.fda_scraper.save_to_json(fda_outbreaks)
+            files_created.append("  - data/raw/fda_outbreaks.json (FDA data only)")
 
     if scrape_cdc:
         print("\n[CDC] Scraping CDC Outbreaks...")
@@ -1189,74 +1273,16 @@ Examples:
             use_playwright=use_pw,
             known_urls=urls_to_use
         )
-        all_data['cdc'] = cdc_outbreaks
+        if cdc_outbreaks:
+            aggregator.cdc_scraper.save_to_json(cdc_outbreaks)
+            files_created.append("  - data/raw/cdc_outbreaks.json (CDC data only)")
 
-    # Combine and normalize the data
-    print("\n" + "=" * 60)
-    print("COMBINING AND NORMALIZING DATA")
-    print("=" * 60)
-    combined = aggregator.combine_and_normalize(all_data)
-
-    # Generate summary statistics
-    stats = aggregator.get_summary_stats(combined)
-
-    # Display summary
-    print("\n" + "=" * 60)
-    print("SUMMARY STATISTICS")
-    print("=" * 60)
-    print(f"Total Outbreaks: {stats['total_outbreaks']}")
-    print(f"Total Cases: {stats['total_cases']}")
-    print(f"Total Deaths: {stats['total_deaths']}")
-    print(f"Total Hospitalizations: {stats['total_hospitalizations']}")
-    print(f"States Affected: {stats['unique_states_affected']}")
-
-    print("\nOutbreaks by Source:")
-    for source, count in stats['outbreaks_by_source'].items():
-        print(f"  {source}: {count}")
-
-    print("\nOutbreaks by Pathogen:")
-    for pathogen, count in sorted(stats['outbreaks_by_pathogen'].items(), key=lambda x: x[1], reverse=True):
-        print(f"  {pathogen}: {count}")
-
-    print("\nOutbreaks by Status:")
-    for status, count in stats['outbreaks_by_status'].items():
-        print(f"  {status}: {count}")
-
-    # Show top 5 outbreaks by case count
-    print("\n" + "=" * 60)
-    print("TOP 5 OUTBREAKS BY CASE COUNT")
-    print("=" * 60)
-    for i, outbreak in enumerate(combined[:5], 1):
-        print(f"\n{i}. {outbreak.get('title', 'Unknown')}")
-        print(f"   Source: {outbreak.get('source')}")
-        print(f"   Pathogen: {outbreak.get('pathogen', 'Unknown')}")
-        print(f"   Food: {outbreak.get('food_source', 'Unknown')}")
-        print(f"   Cases: {outbreak.get('case_count', 'N/A')}")
-        print(f"   Deaths: {outbreak.get('deaths', 'N/A')}")
-        print(f"   States: {outbreak.get('state_count', 'N/A')}")
-        print(f"   Status: {outbreak.get('status', 'unknown')}")
-        print(f"   URL: {outbreak.get('url')}")
-
-    # Save data
-    print("\n" + "=" * 60)
-    print("SAVING DATA")
-    print("=" * 60)
-
-    files_created = []
-
-    # Save combined data if we have any data
-    if combined:
-        aggregator.save_combined_data(combined, stats)
+    # Rebuild the combined file only when explicitly requested (--combine) or
+    # when both sources were refreshed in this run. Never after a single-source
+    # scrape, so the other source's data is preserved.
+    if args.combine or (scrape_fda and scrape_cdc):
+        build_combined(aggregator)
         files_created.append("  - data/raw/combined_outbreaks.json (unified data with statistics)")
-
-    # Save individual source files
-    if scrape_fda and all_data['fda']:
-        aggregator.fda_scraper.save_to_json(all_data['fda'])
-        files_created.append("  - data/raw/fda_outbreaks.json (FDA data only)")
-
-    if scrape_cdc and all_data['cdc']:
-        aggregator.cdc_scraper.save_to_json(all_data['cdc'])
-        files_created.append("  - data/raw/cdc_outbreaks.json (CDC data only)")
 
     print("\n" + "=" * 60)
     print("SCRAPING COMPLETE")

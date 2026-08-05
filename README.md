@@ -19,7 +19,7 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | **Active Investigations** | 33     |
 | **Total Cases**           | 41,253 |
 | **Deaths**                | 5,281  |
-| **Hospitalizations**      | 15,933 |
+| **Hospitalizations**      | 15,901 |
 | **States Affected**       | 51     |
 
 ## By Source
@@ -33,8 +33,8 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 | Status  | Count |
 | ------- | ----- |
-| Unknown | 208   |
-| Closed  | 67    |
+| Unknown | 210   |
+| Closed  | 65    |
 | Ongoing | 33    |
 
 ## By Pathogen (Top 10)
@@ -58,10 +58,10 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | 2023 | 15        |
 | 2022 | 24        |
 | 2021 | 22        |
-| 2020 | 20        |
-| 2019 | 27        |
-| 2018 | 20        |
-| 2017 | 7         |
+| 2020 | 19        |
+| 2019 | 26        |
+| 2018 | 18        |
+| 2017 | 6         |
 
 ## Features
 

@@ -1,0 +1,12 @@
+Port 8888
+Listen 0.0.0.0
+
+Timeout 60
+LogLevel Info
+PidFile "/var/run/tinyproxy/tinyproxy.pid"
+MaxClients 20
+DisableViaHeader Yes
+
+BasicAuth ${BASIC_AUTH_USER} ${BASIC_AUTH_PASS}
+
+Allow 0.0.0.0/0

@@ -1,0 +1,40 @@
+# Persistent tinyproxy instance used to route FDA scraper traffic (in
+# .github/workflows/scrape-outbreaks.yml) through a stable, non-GitHub-Actions
+# egress IP. FDA sits behind Akamai, which blocks/allows GitHub Actions
+# runner IPs inconsistently (the runner IP pool is shared and only some of
+# it is on Akamai's blocklist at any given time) — routing through this fixed
+# IP avoids that flakiness. See fly-proxy/README.md for full context.
+#
+# Set secrets before deploying:
+#   fly secrets set BASIC_AUTH_USER=<random-user> BASIC_AUTH_PASS=<random-pass> --app fda-scrape-proxy
+#
+# Requires a DEDICATED ipv4 (not shared) — shared fly.dev IPv4s only route
+# HTTP(S)/SNI traffic, not the raw TCP CONNECT-tunnel pattern a forward proxy
+# uses:
+#   fly ips allocate-v4 --app fda-scrape-proxy
+
+app = "fda-scrape-proxy"
+primary_region = "sjc"
+
+[build]
+
+[[services]]
+  internal_port = 8888
+  protocol = "tcp"
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[services.ports]]
+    port = 8888
+
+  # No tcp_checks here on purpose: fly counts each health-check probe as
+  # activity, which kept the machine in "started" state indefinitely and
+  # defeated auto_stop_machines. This proxy is only used once a day by the
+  # scrape workflow, so an idle-suspended machine that wakes on first
+  # connection is the desired behavior, not a problem to health-check around.
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256

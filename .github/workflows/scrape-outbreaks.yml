@@ -34,12 +34,37 @@ jobs:
           uv run playwright install --with-deps chromium
 
       - name: Running scrape script on FDA
-        continue-on-error: true # FDA has historically blocked GitHub Actions IPs via Akamai; keep this from failing the job if it starts again.
+        continue-on-error: true # Keep the job going even if FDA/the proxy is unreachable.
+        env:
+          # FDA sits behind Akamai, which blocks GitHub Actions runner IPs
+          # inconsistently (the runner IP pool is shared and only part of it
+          # is blocklisted at a given time). Routing through this fixed
+          # fly.dev egress IP avoids that flakiness — see fly-proxy/README.md.
+          FDA_PROXY_SERVER: 'http://fda-scrape-proxy.fly.dev:8888'
+          FDA_PROXY_USERNAME: ${{ secrets.FDA_PROXY_USERNAME }}
+          FDA_PROXY_PASSWORD: ${{ secrets.FDA_PROXY_PASSWORD }}
         run: |
           # Incremental by default: an outbreak already scraped successfully is reused
           # instead of re-fetched once it's >365 days old, since FDA doesn't update old
           # outbreak pages. Trigger manually with "full" checked to force a complete re-scrape.
           uv run python main.py --fda --max-age-days 365 ${{ inputs.full && '--full' || '' }}
+
+      - name: Install flyctl (to shut down the proxy)
+        if: always() # Even if the FDA step above failed, the proxy machine was still started.
+        uses: superfly/flyctl-actions/setup-flyctl@fc53c09e1bc3be6f54706524e3b82c4f462f77be # 1.5
+
+      - name: Shut down fly.dev proxy
+        # auto_stop_machines in fly-proxy/fly.toml would eventually suspend the
+        # machine on its own (~5 min idle), but stopping it explicitly here means
+        # it's never running longer than this job actually needs it for.
+        if: always()
+        continue-on-error: true # Don't fail the job over cleanup; auto_stop_machines is the backstop.
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_PROXY_API_TOKEN }}
+        run: |
+          for id in $(flyctl machine list --app fda-scrape-proxy -q); do
+            flyctl machine stop "$id" --app fda-scrape-proxy
+          done
 
       - name: Running scrape script on CDC
         continue-on-error: true # If CDC is down, we don't want the whole job to fail.

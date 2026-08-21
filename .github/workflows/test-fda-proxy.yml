@@ -1,0 +1,20 @@
+name: Test FDA proxy reachability (temporary)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-proxy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl FDA direct (expected to be blocked)
+        continue-on-error: true
+        run: |
+          curl -sS -m 20 -o /dev/null -w "direct status: %{http_code}\n" \
+            "https://www.fda.gov/food/outbreaks-foodborne-illness/public-health-advisories-investigations-foodborne-illness-outbreaks" || true
+
+      - name: Curl FDA via tinyproxy on fly.dev
+        run: |
+          curl -sS -m 30 -o /dev/null -w "proxied status: %{http_code}\n" \
+            --proxy "http://${{ secrets.FDA_PROXY_USER }}:${{ secrets.FDA_PROXY_PASS }}@fda-scrape-proxy.fly.dev:8888" \
+            "https://www.fda.gov/food/outbreaks-foodborne-illness/public-health-advisories-investigations-foodborne-illness-outbreaks"

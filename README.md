@@ -8,7 +8,7 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 - 🏛️ FDA: 79 outbreak investigations (2006-2026)
 - 🔬 CDC: 232 total investigations (2006-2026)
-- 🚨 Active: 33 ongoing investigations
+- 🚨 Active: 31 ongoing investigations
 - 📊 Total: 311 foodborne outbreak investigations
 
 ## Current Statistics
@@ -16,10 +16,10 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | Metric                    | Count  |
 | ------------------------- | ------ |
 | **Total Outbreaks**       | 311    |
-| **Active Investigations** | 33     |
-| **Total Cases**           | 41,663 |
-| **Deaths**                | 5,246  |
-| **Hospitalizations**      | 15,784 |
+| **Active Investigations** | 31     |
+| **Total Cases**           | 41,409 |
+| **Deaths**                | 4,876  |
+| **Hospitalizations**      | 15,077 |
 | **States Affected**       | 51     |
 
 ## By Source
@@ -33,9 +33,9 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 | Status  | Count |
 | ------- | ----- |
-| Unknown | 213   |
+| Unknown | 215   |
 | Closed  | 65    |
-| Ongoing | 33    |
+| Ongoing | 31    |
 
 ## By Pathogen (Top 10)
 
@@ -55,8 +55,8 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | 2026 | 10        |
 | 2025 | 13        |
 | 2024 | 11        |
-| 2023 | 13        |
-| 2022 | 23        |
+| 2023 | 12        |
+| 2022 | 24        |
 | 2021 | 22        |
 | 2020 | 20        |
 | 2019 | 27        |

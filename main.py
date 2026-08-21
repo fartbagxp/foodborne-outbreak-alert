@@ -176,10 +176,59 @@ class FDAOutbreakScraper:
     def __init__(self):
         self.base_url = "https://www.fda.gov"
         self.listing_url = "https://www.fda.gov/food/outbreaks-foodborne-illness/public-health-advisories-investigations-foodborne-illness-outbreaks"
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        })
+        # Shared Playwright browser context, reused across the run for speed.
+        # FDA sits behind Akamai bot protection: plain `requests` clients get
+        # redirected to an "abuse detection" page (confirmed in a real GitHub
+        # Actions run), even with a browser-like User-Agent — Akamai appears
+        # to fingerprint at the TLS/HTTP level, not just headers. A real
+        # browser passes, same fix already used for CDC below.
+        self._playwright = None
+        self._browser = None
+        self._context = None
+
+    def _ensure_context(self):
+        """Lazily start a shared Playwright browser context and return it."""
+        if self._context is None:
+            self._playwright = sync_playwright().start()
+            self._browser = self._playwright.chromium.launch(headless=True)
+            self._context = self._browser.new_context(
+                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            )
+            self._context.set_default_timeout(60000)
+        return self._context
+
+    def _fetch_page(self, url: str):
+        """
+        Fetch a page through a real browser (Playwright) so FDA's Akamai bot
+        protection does not redirect us to its abuse-detection page the way
+        it does plain HTTP clients.
+
+        Returns (status_code, final_url, html). Raises on navigation failure.
+        """
+        context = self._ensure_context()
+        page = context.new_page()
+        try:
+            response = page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            status = response.status if response else None
+            final_url = page.url
+            html = page.content()
+            return status, final_url, html
+        finally:
+            page.close()
+
+    def close(self):
+        """Tear down the shared Playwright browser, if one was started."""
+        try:
+            if self._context is not None:
+                self._context.close()
+            if self._browser is not None:
+                self._browser.close()
+            if self._playwright is not None:
+                self._playwright.stop()
+        except Exception:
+            pass
+        finally:
+            self._context = self._browser = self._playwright = None
 
     def scrape_listing_page(self) -> List[Dict]:
         """
@@ -187,10 +236,11 @@ class FDAOutbreakScraper:
         Returns a list of outbreak metadata
         """
         log.info("Fetching FDA listing page: %s", self.listing_url)
-        response = self.session.get(self.listing_url)
-        response.raise_for_status()
+        status, final_url, html = self._fetch_page(self.listing_url)
+        if not status or not (200 <= status < 300):
+            raise RuntimeError(f"HTTP {status} fetching FDA listing page {self.listing_url} (final url {final_url})")
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        soup = BeautifulSoup(html, 'html.parser')
         outbreaks = []
 
         # Find all outbreak links (they're in anchor tags)
@@ -259,18 +309,7 @@ class FDAOutbreakScraper:
         log.debug("Fetching FDA outbreak details: %s", outbreak_url)
 
         try:
-            response = self.session.get(outbreak_url, allow_redirects=True)
-            response.raise_for_status()
-            final_url = response.url
-            log.debug("Fetched %s", outbreak_url)
-        except requests.exceptions.HTTPError as e:
-            log.warning("HTTP %s fetching %s", e.response.status_code, outbreak_url)
-            return {
-                'url': outbreak_url,
-                'scraped_at': datetime.now(timezone.utc).isoformat(),
-                'scrape_status': f'http_error_{e.response.status_code}',
-                'scrape_error': str(e)
-            }
+            status, final_url, html = self._fetch_page(outbreak_url)
         except Exception as e:
             log.warning("Error fetching %s: %s", outbreak_url, e)
             return {
@@ -280,7 +319,17 @@ class FDAOutbreakScraper:
                 'scrape_error': str(e)
             }
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        if not status or not (200 <= status < 300):
+            log.warning("HTTP %s fetching %s", status, outbreak_url)
+            return {
+                'url': outbreak_url,
+                'scraped_at': datetime.now(timezone.utc).isoformat(),
+                'scrape_status': f'http_error_{status}',
+                'scrape_error': f'HTTP {status} for {outbreak_url}'
+            }
+
+        log.debug("Fetched %s", outbreak_url)
+        soup = BeautifulSoup(html, 'html.parser')
 
         details = {
             'url': final_url,
@@ -394,66 +443,70 @@ class FDAOutbreakScraper:
             max_age_days: Skip re-fetching previously-successful outbreaks
                 older than this many days. None disables skipping (full scrape).
         """
-        # Get listing
-        outbreaks = self.scrape_listing_page()
+        try:
+            # Get listing
+            outbreaks = self.scrape_listing_page()
 
-        if limit:
-            outbreaks = outbreaks[:limit]
+            if limit:
+                outbreaks = outbreaks[:limit]
 
-        existing = existing or {}
-        now = datetime.now(timezone.utc)
+            existing = existing or {}
+            now = datetime.now(timezone.utc)
 
-        to_fetch = []
-        skip_map = {}
-        for outbreak in outbreaks:
-            prior = existing.get(outbreak['outbreak_id'])
-            if max_age_days is not None and prior and prior.get('scrape_status') == 'success':
-                outbreak_date = (parse_fda_date_str(prior.get('date_str'))
-                                  or infer_fda_outbreak_date(outbreak['outbreak_id']))
-                if is_stale(outbreak_date, max_age_days, now):
-                    skip_map[outbreak['outbreak_id']] = prior
-                    continue
-            to_fetch.append(outbreak)
+            to_fetch = []
+            skip_map = {}
+            for outbreak in outbreaks:
+                prior = existing.get(outbreak['outbreak_id'])
+                if max_age_days is not None and prior and prior.get('scrape_status') == 'success':
+                    outbreak_date = (parse_fda_date_str(prior.get('date_str'))
+                                      or infer_fda_outbreak_date(outbreak['outbreak_id']))
+                    if is_stale(outbreak_date, max_age_days, now):
+                        skip_map[outbreak['outbreak_id']] = prior
+                        continue
+                to_fetch.append(outbreak)
 
-        if skip_map:
-            log.info("Skipping %d FDA outbreaks already scraped and older than %d days",
-                      len(skip_map), max_age_days)
+            if skip_map:
+                log.info("Skipping %d FDA outbreaks already scraped and older than %d days",
+                          len(skip_map), max_age_days)
 
-        # Scrape details for each remaining outbreak
-        fetched_map = {}
-        total = len(to_fetch)
-        for i, outbreak in enumerate(to_fetch, 1):
-            details = self.scrape_outbreak_details(outbreak['url'])
-            status = details.get('scrape_status', 'unknown')
-            if status == 'success':
-                log.info("[%d/%d] OK   %s (cases=%s, deaths=%s)",
-                         i, total, outbreak['title'],
-                         details.get('case_count', '?'), details.get('deaths', '?'))
-            else:
-                log.warning("[%d/%d] FAIL %s -> %s", i, total, outbreak['title'], status)
+            # Scrape details for each remaining outbreak
+            fetched_map = {}
+            total = len(to_fetch)
+            for i, outbreak in enumerate(to_fetch, 1):
+                details = self.scrape_outbreak_details(outbreak['url'])
+                status = details.get('scrape_status', 'unknown')
+                if status == 'success':
+                    log.info("[%d/%d] OK   %s (cases=%s, deaths=%s)",
+                             i, total, outbreak['title'],
+                             details.get('case_count', '?'), details.get('deaths', '?'))
+                else:
+                    log.warning("[%d/%d] FAIL %s -> %s", i, total, outbreak['title'], status)
 
-            # Merge listing data with detailed data
-            full_data = {**outbreak, **details}
-            fetched_map[outbreak['outbreak_id']] = full_data
+                # Merge listing data with detailed data
+                full_data = {**outbreak, **details}
+                fetched_map[outbreak['outbreak_id']] = full_data
 
-            # Be respectful - add delay
-            if i < total:
-                time.sleep(delay)
+                # Be respectful - add delay
+                if i < total:
+                    time.sleep(delay)
 
-        # Reassemble in the listing page's original (newest-first) order,
-        # rather than the skip/fetch split order used above.
-        detailed_outbreaks = [
-            skip_map.get(o['outbreak_id']) or fetched_map[o['outbreak_id']] for o in outbreaks
-        ]
+            # Reassemble in the listing page's original (newest-first) order,
+            # rather than the skip/fetch split order used above.
+            detailed_outbreaks = [
+                skip_map.get(o['outbreak_id']) or fetched_map[o['outbreak_id']] for o in outbreaks
+            ]
 
-        # Carry forward older outbreaks no longer on the current listing page
-        # (FDA can drop old entries from the listing) so history isn't lost.
-        current_ids = {o['outbreak_id'] for o in outbreaks}
-        for outbreak_id, record in existing.items():
-            if outbreak_id not in current_ids:
-                detailed_outbreaks.append(record)
+            # Carry forward older outbreaks no longer on the current listing page
+            # (FDA can drop old entries from the listing) so history isn't lost.
+            current_ids = {o['outbreak_id'] for o in outbreaks}
+            for outbreak_id, record in existing.items():
+                if outbreak_id not in current_ids:
+                    detailed_outbreaks.append(record)
 
-        return detailed_outbreaks
+            return detailed_outbreaks
+        finally:
+            # Always release the shared Playwright browser used for fetches.
+            self.close()
 
     def save_to_json(self, outbreaks: List[Dict], filename: str = 'data/raw/fda_outbreaks.json'):
         """Save scraped data to JSON file"""

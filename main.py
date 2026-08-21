@@ -8,6 +8,7 @@ import csv
 import io
 import json
 import logging
+import os
 import re
 import requests
 import sys
@@ -177,20 +178,38 @@ class FDAOutbreakScraper:
         self.base_url = "https://www.fda.gov"
         self.listing_url = "https://www.fda.gov/food/outbreaks-foodborne-illness/public-health-advisories-investigations-foodborne-illness-outbreaks"
         # Shared Playwright browser context, reused across the run for speed.
-        # FDA sits behind Akamai bot protection: plain `requests` clients get
-        # redirected to an "abuse detection" page (confirmed in a real GitHub
-        # Actions run), even with a browser-like User-Agent — Akamai appears
-        # to fingerprint at the TLS/HTTP level, not just headers. A real
-        # browser passes, same fix already used for CDC below.
+        # FDA sits behind Akamai, which redirects to an "abuse detection" page
+        # for some requests. Confirmed via real GitHub Actions runs that this
+        # is IP-based, not a bot/fingerprint check: a real headless Chromium
+        # got redirected exactly like plain `requests` did, from a GitHub
+        # Actions runner IP, while the same code passes from other IPs.
+        # GitHub Actions runner IPs are drawn from a large shared pool and
+        # only part of it is on Akamai's blocklist at any given time, so
+        # results vary run to run. FDA_PROXY_SERVER (optionally with
+        # FDA_PROXY_USERNAME / FDA_PROXY_PASSWORD) routes traffic through a
+        # fixed non-GitHub egress IP instead — see fly-proxy/README.md. Unset
+        # locally, where FDA has not been observed to block requests.
         self._playwright = None
         self._browser = None
         self._context = None
+        self._proxy_server = os.environ.get('FDA_PROXY_SERVER')
+        self._proxy_username = os.environ.get('FDA_PROXY_USERNAME')
+        self._proxy_password = os.environ.get('FDA_PROXY_PASSWORD')
 
     def _ensure_context(self):
         """Lazily start a shared Playwright browser context and return it."""
         if self._context is None:
             self._playwright = sync_playwright().start()
-            self._browser = self._playwright.chromium.launch(headless=True)
+            launch_kwargs = {"headless": True}
+            if self._proxy_server:
+                proxy = {"server": self._proxy_server}
+                if self._proxy_username:
+                    proxy["username"] = self._proxy_username
+                if self._proxy_password:
+                    proxy["password"] = self._proxy_password
+                launch_kwargs["proxy"] = proxy
+                log.info("Routing FDA traffic through proxy %s", self._proxy_server)
+            self._browser = self._playwright.chromium.launch(**launch_kwargs)
             self._context = self._browser.new_context(
                 user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
             )

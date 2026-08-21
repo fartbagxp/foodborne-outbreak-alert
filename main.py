@@ -60,6 +60,118 @@ def setup_logging(log_dir: str = "logs") -> str:
     return log_path
 
 
+_MONTH_NAMES = {
+    'jan': 1, 'january': 1, 'feb': 2, 'february': 2, 'mar': 3, 'march': 3,
+    'apr': 4, 'april': 4, 'may': 5, 'jun': 6, 'june': 6, 'jul': 7, 'july': 7,
+    'aug': 8, 'august': 8, 'sep': 9, 'sept': 9, 'september': 9, 'oct': 10,
+    'october': 10, 'nov': 11, 'november': 11, 'dec': 12, 'december': 12,
+}
+_SEASON_MONTHS = {'spring': 3, 'summer': 6, 'fall': 9, 'autumn': 9, 'winter': 12}
+
+
+def parse_fda_date_str(date_str: Optional[str]) -> Optional[datetime]:
+    """
+    Parse FDA's listing-page date, e.g. 'August 2026' or 'Sept 2024', to a
+    UTC datetime. Looked up via _MONTH_NAMES (rather than strptime) so
+    abbreviations like 'Sept' parse too, not just full month names.
+    """
+    if not date_str:
+        return None
+    parts = date_str.strip().split()
+    if len(parts) != 2:
+        return None
+    month_token, year_token = parts
+    month = _MONTH_NAMES.get(month_token.lower())
+    if not month or not year_token.isdigit():
+        return None
+    try:
+        return datetime(int(year_token), month, 1, tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def infer_fda_outbreak_date(outbreak_id: str) -> Optional[datetime]:
+    """
+    Best-effort inference of an outbreak's date from its FDA slug, used when
+    the listing-page title didn't yield a parseable date_str. FDA titles
+    aren't consistently 'Pathogen: Food (Month Year)' — some use a hyphen
+    instead of a colon (e.g. 'E. coli- Packaged Salad (January 2022)'), which
+    skips date extraction in _parse_listing_link entirely. Handles slug
+    endings like '...-january-2022' and season slugs like '...-fall-2020'.
+    """
+    m = re.search(r'-([a-zA-Z]+)-(\d{4})$', outbreak_id)
+    if not m:
+        return None
+    token, year = m.group(1).lower(), int(m.group(2))
+    month = _MONTH_NAMES.get(token) or _SEASON_MONTHS.get(token)
+    if not month:
+        return None
+    try:
+        return datetime(year, month, 1, tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def parse_cdc_posted_date(posted_date: Optional[str]) -> Optional[datetime]:
+    """Parse CDC's extracted 'posted/updated' date, e.g. 'March 15, 2025'."""
+    if not posted_date:
+        return None
+    try:
+        return datetime.strptime(posted_date.strip(), "%B %d, %Y").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def infer_cdc_outbreak_date(outbreak_id: str) -> Optional[datetime]:
+    """
+    Best-effort inference of an outbreak's date from its CDC slug, since CDC
+    investigation pages rarely expose a clean posted date. Handles the site's
+    slug conventions: '...-07-26' (MM-YY), '...-nov-2025' (Mon-YYYY),
+    '...-022025' (MMYYYY run together). Returns None if nothing matches.
+    """
+    for pattern, to_month_year in (
+        (re.compile(r'-(\d{1,2})-(\d{2})$'), lambda mo, yr: (int(mo), 2000 + int(yr))),
+        (re.compile(r'-([a-zA-Z]+)-(\d{4})$'), lambda mo, yr: (_MONTH_NAMES.get(mo.lower()), int(yr))),
+        (re.compile(r'-(\d{2})(\d{4})$'), lambda mo, yr: (int(mo), int(yr))),
+    ):
+        m = pattern.search(outbreak_id)
+        if not m:
+            continue
+        month, year = to_month_year(*m.groups())
+        if not month:
+            continue
+        try:
+            return datetime(year, month, 1, tzinfo=timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+def is_stale(outbreak_date: Optional[datetime], max_age_days: int, now: datetime) -> bool:
+    """
+    True if outbreak_date is known and older than max_age_days. An outbreak
+    whose date can't be determined is never considered stale — when in doubt,
+    re-scrape rather than silently miss an update.
+    """
+    if outbreak_date is None:
+        return False
+    return (now - outbreak_date).days > max_age_days
+
+
+def load_existing_by_id(path: str) -> Dict[str, Dict]:
+    """Load a previously-saved outbreaks JSON file, keyed by outbreak_id."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    try:
+        with open(p, 'r', encoding='utf-8') as f:
+            records = json.load(f)
+    except Exception as e:
+        log.warning("Could not load existing data from %s: %s", path, e)
+        return {}
+    return {r['outbreak_id']: r for r in records if r.get('outbreak_id')}
+
+
 class FDAOutbreakScraper:
     def __init__(self):
         self.base_url = "https://www.fda.gov"
@@ -266,13 +378,21 @@ class FDAOutbreakScraper:
 
         return products
 
-    def scrape_all(self, limit: Optional[int] = None, delay: float = 1.0) -> List[Dict]:
+    def scrape_all(self, limit: Optional[int] = None, delay: float = 1.0,
+                    existing: Optional[Dict[str, Dict]] = None,
+                    max_age_days: Optional[int] = None) -> List[Dict]:
         """
         Scrape all outbreaks with full details
 
         Args:
             limit: Maximum number of outbreaks to scrape (None for all)
             delay: Delay between requests in seconds (be respectful!)
+            existing: Previously-scraped outbreaks, keyed by outbreak_id. When
+                given together with max_age_days, an outbreak already scraped
+                successfully and older than max_age_days is reused instead of
+                re-fetched, since FDA does not update closed outbreak pages.
+            max_age_days: Skip re-fetching previously-successful outbreaks
+                older than this many days. None disables skipping (full scrape).
         """
         # Get listing
         outbreaks = self.scrape_listing_page()
@@ -280,10 +400,29 @@ class FDAOutbreakScraper:
         if limit:
             outbreaks = outbreaks[:limit]
 
-        # Scrape details for each
-        detailed_outbreaks = []
-        total = len(outbreaks)
-        for i, outbreak in enumerate(outbreaks, 1):
+        existing = existing or {}
+        now = datetime.now(timezone.utc)
+
+        to_fetch = []
+        skip_map = {}
+        for outbreak in outbreaks:
+            prior = existing.get(outbreak['outbreak_id'])
+            if max_age_days is not None and prior and prior.get('scrape_status') == 'success':
+                outbreak_date = (parse_fda_date_str(prior.get('date_str'))
+                                  or infer_fda_outbreak_date(outbreak['outbreak_id']))
+                if is_stale(outbreak_date, max_age_days, now):
+                    skip_map[outbreak['outbreak_id']] = prior
+                    continue
+            to_fetch.append(outbreak)
+
+        if skip_map:
+            log.info("Skipping %d FDA outbreaks already scraped and older than %d days",
+                      len(skip_map), max_age_days)
+
+        # Scrape details for each remaining outbreak
+        fetched_map = {}
+        total = len(to_fetch)
+        for i, outbreak in enumerate(to_fetch, 1):
             details = self.scrape_outbreak_details(outbreak['url'])
             status = details.get('scrape_status', 'unknown')
             if status == 'success':
@@ -295,11 +434,24 @@ class FDAOutbreakScraper:
 
             # Merge listing data with detailed data
             full_data = {**outbreak, **details}
-            detailed_outbreaks.append(full_data)
+            fetched_map[outbreak['outbreak_id']] = full_data
 
             # Be respectful - add delay
-            if i < len(outbreaks):
+            if i < total:
                 time.sleep(delay)
+
+        # Reassemble in the listing page's original (newest-first) order,
+        # rather than the skip/fetch split order used above.
+        detailed_outbreaks = [
+            skip_map.get(o['outbreak_id']) or fetched_map[o['outbreak_id']] for o in outbreaks
+        ]
+
+        # Carry forward older outbreaks no longer on the current listing page
+        # (FDA can drop old entries from the listing) so history isn't lost.
+        current_ids = {o['outbreak_id'] for o in outbreaks}
+        for outbreak_id, record in existing.items():
+            if outbreak_id not in current_ids:
+                detailed_outbreaks.append(record)
 
         return detailed_outbreaks
 
@@ -949,7 +1101,10 @@ class CDCOutbreakScraper:
 
         return all_outbreaks
 
-    def scrape_all_pathogens(self, delay: float = 1.0, use_main_page: bool = True, use_playwright: bool = True, known_urls: Optional[List[str]] = None) -> List[Dict]:
+    def scrape_all_pathogens(self, delay: float = 1.0, use_main_page: bool = True, use_playwright: bool = True,
+                              known_urls: Optional[List[str]] = None,
+                              existing: Optional[Dict[str, Dict]] = None,
+                              max_age_days: Optional[int] = None) -> List[Dict]:
         """
         Discover and scrape all outbreak investigations across all pathogens
 
@@ -958,6 +1113,12 @@ class CDCOutbreakScraper:
             use_main_page: Try to discover from main CDC outbreak page first
             use_playwright: Use Playwright for JavaScript-rendered content (recommended)
             known_urls: Optional list of known investigation URLs to scrape directly
+            existing: Previously-scraped investigations, keyed by outbreak_id. When
+                given together with max_age_days, an investigation already scraped
+                successfully that is either marked closed or older than
+                max_age_days is reused instead of re-fetched.
+            max_age_days: Skip re-fetching previously-successful investigations
+                older than this many days. None disables skipping (full scrape).
         """
         all_outbreaks = []
 
@@ -980,9 +1141,32 @@ class CDCOutbreakScraper:
                     main_page_investigations = self.discover_from_main_page()
 
                 if main_page_investigations:
-                    total = len(main_page_investigations)
+                    existing = existing or {}
+                    now = datetime.now(timezone.utc)
+
+                    to_fetch = []
+                    skip_map = {}
+                    for investigation in main_page_investigations:
+                        prior = existing.get(investigation['outbreak_id'])
+                        if max_age_days is not None and prior and prior.get('scrape_status') == 'success':
+                            if prior.get('status') == 'closed':
+                                skip_map[investigation['outbreak_id']] = prior
+                                continue
+                            outbreak_date = (infer_cdc_outbreak_date(investigation['outbreak_id'])
+                                              or parse_cdc_posted_date(prior.get('posted_date')))
+                            if is_stale(outbreak_date, max_age_days, now):
+                                skip_map[investigation['outbreak_id']] = prior
+                                continue
+                        to_fetch.append(investigation)
+
+                    if skip_map:
+                        log.info("Skipping %d CDC investigations already scraped and stable "
+                                  "(closed, or older than %d days)", len(skip_map), max_age_days)
+
+                    fetched_map = {}
+                    total = len(to_fetch)
                     log.info("=== Phase 2: fetch %d investigation pages ===", total)
-                    for i, investigation in enumerate(main_page_investigations, 1):
+                    for i, investigation in enumerate(to_fetch, 1):
                         details = self.scrape_investigation_details(
                             investigation['url'],
                             investigation.get('pathogen', 'unknown')
@@ -991,11 +1175,25 @@ class CDCOutbreakScraper:
 
                         # Merge metadata with details
                         full_data = {**investigation, **details}
-                        all_outbreaks.append(full_data)
+                        fetched_map[investigation['outbreak_id']] = full_data
 
                         # Be respectful - add delay
                         if i < total:
                             time.sleep(delay)
+
+                    # Reassemble in the discovery page's original order,
+                    # rather than the skip/fetch split order used above.
+                    all_outbreaks = [
+                        skip_map.get(i['outbreak_id']) or fetched_map[i['outbreak_id']]
+                        for i in main_page_investigations
+                    ]
+
+                    # Carry forward investigations no longer on the current
+                    # discovery page so history isn't lost.
+                    current_ids = {i['outbreak_id'] for i in main_page_investigations}
+                    for outbreak_id, record in existing.items():
+                        if outbreak_id not in current_ids:
+                            all_outbreaks.append(record)
 
                     self._log_scrape_summary(all_outbreaks)
                     return all_outbreaks
@@ -1260,11 +1458,18 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python main.py                # Scrape both FDA and CDC (default)
-  python main.py --fda          # Scrape FDA only
-  python main.py --cdc          # Scrape CDC only
-  python main.py --fda --cdc    # Scrape both FDA and CDC
-  python main.py --combine      # Combine existing FDA and CDC JSON files
+  python main.py                     # Scrape both, incrementally (default)
+  python main.py --fda               # Scrape FDA only, incrementally
+  python main.py --cdc               # Scrape CDC only, incrementally
+  python main.py --fda --cdc         # Scrape both FDA and CDC
+  python main.py --full              # Re-scrape everything, ignoring prior data
+  python main.py --max-age-days 180  # Treat outbreaks as stable after 180 days
+  python main.py --combine           # Combine existing FDA and CDC JSON files
+
+By default, an outbreak already scraped successfully and older than
+--max-age-days (365 by default) is reused from data/raw/*.json instead of
+being re-fetched, since FDA and CDC don't update old outbreak pages. Pass
+--full to scrape everything regardless of age.
         """
     )
     parser.add_argument('--fda', action='store_true', help='Scrape FDA outbreak data')
@@ -1273,6 +1478,13 @@ Examples:
     parser.add_argument('--delay', type=float, default=2.0, help='Delay between requests in seconds (default: 2.0)')
     parser.add_argument('--no-playwright', action='store_true', help='Disable Playwright and use simple HTTP requests (may find fewer outbreaks)')
     parser.add_argument('--use-known-urls', action='store_true', help='Use hardcoded list of known CDC URLs instead of auto-discovery')
+    parser.add_argument('--full', action='store_true',
+                         help='Re-scrape every outbreak, including old ones already scraped successfully. '
+                              'By default, outbreaks older than --max-age-days are assumed stable and are '
+                              'reused from data/raw/*.json instead of being re-fetched.')
+    parser.add_argument('--max-age-days', type=int, default=365,
+                         help='Skip re-fetching a previously-successful outbreak once it is older than this '
+                              'many days (default: 365). Ignored when --full is given.')
 
     args = parser.parse_args()
 
@@ -1329,23 +1541,31 @@ Examples:
     # it is rebuilt from disk by build_combined() below.
     files_created = []
 
+    max_age_days = None if args.full else args.max_age_days
+
     if scrape_fda:
-        log.info("[FDA] Scraping FDA outbreaks...")
-        fda_outbreaks = aggregator.fda_scraper.scrape_all(limit=None, delay=args.delay)
+        log.info("[FDA] Scraping FDA outbreaks%s...", "" if args.full else f" (incremental, max-age {args.max_age_days}d)")
+        existing_fda = {} if args.full else load_existing_by_id('data/raw/fda_outbreaks.json')
+        fda_outbreaks = aggregator.fda_scraper.scrape_all(
+            limit=None, delay=args.delay, existing=existing_fda, max_age_days=max_age_days
+        )
         if fda_outbreaks:
             aggregator.fda_scraper.save_to_json(fda_outbreaks)
             files_created.append("  - data/raw/fda_outbreaks.json (FDA data only)")
 
     if scrape_cdc:
-        log.info("[CDC] Scraping CDC outbreaks...")
+        log.info("[CDC] Scraping CDC outbreaks%s...", "" if args.full else f" (incremental, max-age {args.max_age_days}d)")
         # Determine which URLs to use
         urls_to_use = known_cdc_urls if args.use_known_urls else None
         # Use Playwright unless disabled
         use_pw = not args.no_playwright
+        existing_cdc = {} if args.full else load_existing_by_id('data/raw/cdc_outbreaks.json')
         cdc_outbreaks = aggregator.cdc_scraper.scrape_all_pathogens(
             delay=args.delay,
             use_playwright=use_pw,
-            known_urls=urls_to_use
+            known_urls=urls_to_use,
+            existing=existing_cdc,
+            max_age_days=max_age_days
         )
         if cdc_outbreaks:
             aggregator.cdc_scraper.save_to_json(cdc_outbreaks)

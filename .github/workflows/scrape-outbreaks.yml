@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: '45 10 * * *'
   workflow_dispatch:
+    inputs:
+      full:
+        description: 'Re-scrape every outbreak, ignoring previously-scraped data (default: incremental)'
+        type: boolean
+        default: false
 
 jobs:
   scrape-outbreaks:
@@ -28,15 +33,22 @@ jobs:
         run: |
           uv run playwright install --with-deps chromium
 
-      # - name: Running scrape script on FDA
-      #   continue-on-error: true # FDA blocks Github action IPs and re-routes traffic.
-      #   run: |
-      #     uv run python main.py --fda
+      - name: Running scrape script on FDA
+        continue-on-error: true # FDA has historically blocked GitHub Actions IPs via Akamai; keep this from failing the job if it starts again.
+        run: |
+          # Incremental by default: an outbreak already scraped successfully is reused
+          # instead of re-fetched once it's >365 days old, since FDA doesn't update old
+          # outbreak pages. Trigger manually with "full" checked to force a complete re-scrape.
+          uv run python main.py --fda --max-age-days 365 ${{ inputs.full && '--full' || '' }}
 
       - name: Running scrape script on CDC
         continue-on-error: true # If CDC is down, we don't want the whole job to fail.
         run: |
-          uv run python main.py --cdc
+          # Incremental by default: an investigation already scraped successfully is
+          # reused instead of re-fetched once it's closed or >365 days old, since CDC
+          # doesn't update old investigation pages. Trigger manually with "full" checked
+          # to force a complete re-scrape (e.g. to recover from a bad scrape).
+          uv run python main.py --cdc --max-age-days 365 ${{ inputs.full && '--full' || '' }}
 
       - name: Combine both FDA and CDC sources
         continue-on-error: true # If either source failed, this may not work properly

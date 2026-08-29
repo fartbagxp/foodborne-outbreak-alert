@@ -8,7 +8,6 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 - 🏛️ FDA: 80 outbreak investigations (2006-2026)
 - 🔬 CDC: 233 total investigations (2006-2026)
-- 🥩 USDA: 1,234 FSIS recalls (2014-2026, tracked separately)
 - 🚨 Active: 31 ongoing investigations
 - 📊 Total: 313 foodborne outbreak investigations
 

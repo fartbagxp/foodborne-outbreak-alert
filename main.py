@@ -6,6 +6,7 @@ Scrapes outbreak data from FDA and CDC public health sources
 import argparse
 import csv
 import io
+import html
 import json
 import logging
 import os
@@ -1313,6 +1314,400 @@ class CDCOutbreakScraper:
         log.info("Saved %d CDC outbreaks to %s", len(outbreaks), filename)
 
 
+_FSIS_RECALL_API = 'https://www.fsis.usda.gov/fsis/api/recall/v/1'
+
+_FSIS_USER_AGENT = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+                    '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+
+# usda.gov sits behind Akamai, like FDA — but it rejects for a different reason,
+# so it needs a different workaround (a real browser, but no proxy). What was
+# actually observed, in order:
+#   - plain `requests`, even sending a byte-identical full desktop-Chrome header
+#     set, is always rejected; the same headers from curl are accepted. So part
+#     of the check is on the TLS/client fingerprint, which headers can't fix.
+#   - a real headless Chromium is ALSO rejected by default, because headless
+#     Chrome names itself in the sec-ch-ua client hint ("HeadlessChrome").
+#   - overriding just sec-ch-ua* on the browser context is accepted. Chromium
+#     supplies every other header correctly on its own.
+# Hence: Playwright, with these three headers overridden. Unlike FDA this is not
+# IP-based, so no fly.dev proxy is involved.
+_FSIS_HEADERS = {
+    'sec-ch-ua': '"Chromium";v="120", "Not(A:Brand";v="24"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+}
+
+_STATE_ABBREV = {
+    'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',
+    'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'District of Columbia': 'DC',
+    'Florida': 'FL', 'Georgia': 'GA', 'Hawaii': 'HI', 'Idaho': 'ID', 'Illinois': 'IL',
+    'Indiana': 'IN', 'Iowa': 'IA', 'Kansas': 'KS', 'Kentucky': 'KY', 'Louisiana': 'LA',
+    'Maine': 'ME', 'Maryland': 'MD', 'Massachusetts': 'MA', 'Michigan': 'MI', 'Minnesota': 'MN',
+    'Mississippi': 'MS', 'Missouri': 'MO', 'Montana': 'MT', 'Nebraska': 'NE', 'Nevada': 'NV',
+    'New Hampshire': 'NH', 'New Jersey': 'NJ', 'New Mexico': 'NM', 'New York': 'NY',
+    'North Carolina': 'NC', 'North Dakota': 'ND', 'Ohio': 'OH', 'Oklahoma': 'OK', 'Oregon': 'OR',
+    'Pennsylvania': 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC', 'South Dakota': 'SD',
+    'Tennessee': 'TN', 'Texas': 'TX', 'Utah': 'UT', 'Vermont': 'VT', 'Virginia': 'VA',
+    'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY',
+    'American Samoa': 'AS', 'Guam': 'GU', 'Puerto Rico': 'PR',
+}
+
+# FSIS mixes distribution reach ('Nationwide', 'Midwest') into the same
+# field_states list as real states. Kept separately so states_affected stays a
+# list of state codes and state counts aren't inflated by a non-state value.
+_DISTRIBUTION_AREAS = {'Nationwide', 'Midwest'}
+
+# Ordered so the more specific organism wins when a notice names more than one.
+_PATHOGEN_PATTERNS = (
+    ('Listeria', r'listeria'),
+    ('Salmonella', r'salmonella'),
+    ('E. coli', r'\be\.?\s*coli\b|\bstec\b|\bo157\b'),
+    ('Botulism', r'clostridium botulinum|botulism'),
+    ('Staphylococcus', r'staphylococc'),
+    ('Campylobacter', r'campylobacter'),
+)
+
+
+def strip_html(value: Optional[str]) -> Optional[str]:
+    """Turn an HTML fragment from the FSIS API into readable plain text."""
+    if not value:
+        return None
+    text = BeautifulSoup(value, 'html.parser').get_text(' ')
+    text = html.unescape(text).replace('\xa0', ' ')
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text or None
+
+
+def detect_pathogen(text: str) -> Optional[str]:
+    """
+    Identify the pathogen a recall notice concerns, from its free text.
+
+    FSIS has no pathogen field — the organism is only ever named in the title,
+    summary or reason ('...Due to Possible Listeria monocytogenes
+    Contamination'), so it has to be read out of the prose. Returns None for
+    the many recalls that are about allergens or misbranding, not a pathogen.
+    """
+    lowered = (text or '').lower()
+    for name, pattern in _PATHOGEN_PATTERNS:
+        if re.search(pattern, lowered):
+            return name
+    return None
+
+
+class USDARecallScraper:
+    """
+    Collects USDA FSIS recalls and public health alerts for meat, poultry and
+    egg products.
+
+    Unlike the FDA and CDC scrapers, this source is a single JSON API that
+    returns the agency's whole recall history in one response, so there is no
+    listing page to walk, no per-record page fetch, and no inter-request delay
+    to respect — one request replaces what would otherwise be ~1,200 of them.
+    That also means there is nothing for --max-age-days to save, so this
+    scraper has no incremental mode; it always refreshes every record.
+    """
+
+    def __init__(self):
+        self.api_url = _FSIS_RECALL_API
+        self._playwright = None
+        self._browser = None
+        self._context = None
+
+    def _ensure_context(self):
+        """Lazily start a Playwright browser context and return it."""
+        if self._context is None:
+            self._playwright = sync_playwright().start()
+            self._browser = self._playwright.chromium.launch(headless=True)
+            self._context = self._browser.new_context(
+                user_agent=_FSIS_USER_AGENT,
+                extra_http_headers=_FSIS_HEADERS
+            )
+            self._context.set_default_timeout(60000)
+        return self._context
+
+    def close(self):
+        """Tear down the Playwright browser, if one was started."""
+        try:
+            if self._context is not None:
+                self._context.close()
+            if self._browser is not None:
+                self._browser.close()
+            if self._playwright is not None:
+                self._playwright.stop()
+        except Exception:
+            pass
+        finally:
+            self._context = self._browser = self._playwright = None
+
+    def fetch_recalls(self) -> List[Dict]:
+        """
+        Fetch every recall record from the FSIS API in a single request.
+
+        Uses the browser context's request API rather than page navigation: it
+        carries the same accepted fingerprint and headers, but hands back the
+        raw JSON instead of a ~13 MB DOM wrapping it.
+        """
+        log.info("Fetching USDA FSIS recalls: %s", self.api_url)
+        context = self._ensure_context()
+        response = context.request.get(self.api_url, timeout=60000)
+        if not response.ok:
+            raise RuntimeError(f"HTTP {response.status} fetching FSIS recall API {self.api_url}")
+        records = response.json()
+        if not isinstance(records, list):
+            raise RuntimeError(f"Expected a JSON list from {self.api_url}, got {type(records).__name__}")
+        log.info("FSIS API returned %d records", len(records))
+        return records
+
+    def normalize_recall(self, record: Dict) -> Dict:
+        """Convert one raw FSIS API record into this project's record shape."""
+        title = html.unescape(record.get('field_title') or '').strip()
+        summary = strip_html(record.get('field_summary'))
+        # Every list field can carry HTML entities and markup, not just the
+        # product blurbs — establishment names arrive as e.g. 'Boar&#039;s Head'.
+        products = [v for v in (strip_html(p) for p in (record.get('field_product_items') or [])) if v]
+        reasons = [v for v in (strip_html(r) for r in (record.get('field_recall_reason') or [])) if v]
+        establishments = [v for v in (strip_html(e) for e in (record.get('field_establishment') or [])) if v]
+        processing = [v for v in (strip_html(p) for p in (record.get('field_processing') or [])) if v]
+
+        raw_states = record.get('field_states') or []
+        states = sorted({_STATE_ABBREV[s] for s in raw_states if s in _STATE_ABBREV})
+        distribution = sorted({s for s in raw_states if s in _DISTRIBUTION_AREAS})
+
+        # The organism is only named in prose, so search every text field.
+        pathogen = detect_pathogen(' '.join([title, summary or '', ' '.join(reasons), ' '.join(products)]))
+
+        url = (record.get('field_recall_url') or '').strip()
+        if url.startswith('http://'):  # FSIS returns http:// but redirects to https
+            url = 'https://' + url[len('http://'):]
+
+        return {
+            'recall_id': (record.get('field_recall_number') or '').strip() or url.rstrip('/').split('/')[-1],
+            'source': 'USDA',
+            'title': title,
+            'url': url,
+            'pathogen': pathogen,
+            'recall_date': record.get('field_recall_date') or None,
+            'last_modified_date': record.get('field_last_modified_date') or None,
+            'year': record.get('field_year') or None,
+            'recall_class': record.get('field_recall_classification') or None,
+            'risk_level': record.get('field_risk_level') or None,
+            'recall_type': record.get('field_recall_type') or None,
+            'reasons': reasons,
+            'products': products,
+            'establishment': establishments,
+            'processing': processing,
+            'states_affected': states,
+            'state_count': len(states),
+            'distribution': distribution,
+            'active': record.get('field_active_notice') == 'True',
+            'archived': record.get('field_archive_recall') == 'True',
+            'related_to_outbreak': record.get('field_related_to_outbreak') == 'True',
+            'summary': summary,
+            'scraped_at': datetime.now(timezone.utc).isoformat()
+        }
+
+    def scrape_all(self, existing: Optional[Dict[str, Dict]] = None) -> List[Dict]:
+        """
+        Fetch and normalize every FSIS recall, newest first.
+
+        Args:
+            existing: Previously-saved recalls keyed by recall_id. Used to carry
+                forward recalls FSIS has dropped from the API, and to preserve
+                the related_outbreaks cross-links that build_combined() writes
+                (they're computed against outbreak data this scraper never sees,
+                so a refresh must not wipe them).
+        """
+        existing = existing or {}
+        try:
+            records = self.fetch_recalls()
+        finally:
+            # Always release the Playwright browser used for the fetch.
+            self.close()
+
+        # FSIS publishes each notice twice, once per language. Keep English so
+        # recall numbers stay unique — the Spanish rows duplicate them exactly.
+        english = [r for r in records if r.get('langcode') == 'English']
+        log.info("Keeping %d English records (dropped %d Spanish duplicates)",
+                 len(english), len(records) - len(english))
+
+        recalls = []
+        for record in english:
+            normalized = self.normalize_recall(record)
+            prior = existing.get(normalized['recall_id'])
+            if prior and prior.get('related_outbreaks'):
+                normalized['related_outbreaks'] = prior['related_outbreaks']
+            recalls.append(normalized)
+
+        # Carry forward anything FSIS no longer returns so history isn't lost.
+        current_ids = {r['recall_id'] for r in recalls}
+        carried = [r for rid, r in existing.items() if rid not in current_ids]
+        if carried:
+            log.info("Carrying forward %d recalls no longer returned by the API", len(carried))
+            recalls.extend(carried)
+
+        recalls.sort(key=lambda r: r.get('recall_date') or '', reverse=True)
+
+        with_pathogen = sum(1 for r in recalls if r.get('pathogen'))
+        outbreak_linked = sum(1 for r in recalls if r.get('related_to_outbreak'))
+        log.info("Collected %d USDA recalls (%d name a pathogen, %d flagged outbreak-related)",
+                 len(recalls), with_pathogen, outbreak_linked)
+        return recalls
+
+    def save_to_json(self, recalls: List[Dict], filename: str = 'data/raw/usda_recalls.json'):
+        """Save scraped data to JSON file"""
+        # Ensure directory exists
+        Path(filename).parent.mkdir(parents=True, exist_ok=True)
+
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(recalls, f, indent=2, ensure_ascii=False)
+        log.info("Saved %d USDA recalls to %s", len(recalls), filename)
+
+
+def load_existing_recalls_by_id(path: str) -> Dict[str, Dict]:
+    """Load a previously-saved recalls JSON file, keyed by recall_id."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    try:
+        with open(p, 'r', encoding='utf-8') as f:
+            records = json.load(f)
+    except Exception as e:
+        log.warning("Could not load existing recalls from %s: %s", path, e)
+        return {}
+    return {r['recall_id']: r for r in records if r.get('recall_id')}
+
+
+# Food vehicles shared between a recall notice and an outbreak investigation.
+# Deliberately a short, specific vocabulary rather than generic word overlap:
+# matching on any common token linked unrelated events, since almost every
+# record contains words like 'products' or 'ready-to-eat'.
+_FOOD_TERMS = {
+    'charcuterie': r'charcuterie',
+    'liverwurst': r'liverwurst',
+    'deli meat': r'deli[- ]?(?:sliced )?meat|meats sliced at deli',
+    'ground beef': r'ground beef',
+    'ground turkey': r'ground turkey',
+    'salami': r'salam[ei]',
+    'poultry': r'poultry',
+    'chicken': r'chicken',
+    'onion': r'onion',
+    'walnut': r'walnut',
+    'cantaloupe': r'cantaloupe',
+    'queso fresco': r'queso fresco',
+}
+
+
+def food_terms(text: str) -> set:
+    """Food vehicles named in a piece of text, from the _FOOD_TERMS vocabulary."""
+    lowered = (text or '').lower()
+    return {term for term, pattern in _FOOD_TERMS.items() if re.search(pattern, lowered)}
+
+
+def infer_record_year(record: Dict) -> Optional[int]:
+    """
+    Best-effort year for an outbreak record, checked title-first.
+
+    Title before posted_date is deliberate: CDC titles lead with the outbreak's
+    own year ('2022E. coliOutbreak Linked to Ground Beef') while posted_date is
+    when the page was last published, which can be a year or more later. Using
+    posted_date first mis-dated that outbreak to 2023 and produced a false link.
+    Note the regex has no trailing \\b — CDC runs the year straight into the next
+    word, so '2019SalmonellaInfections' has no word boundary after the digits.
+    """
+    for field in ('title', 'posted_date', 'url', 'id'):
+        match = re.search(r'\b(20\d{2})', str(record.get(field) or ''))
+        if match:
+            return int(match.group(1))
+    return None
+
+
+def link_recalls_to_outbreaks(outbreaks: List[Dict], recalls: List[Dict]) -> int:
+    """
+    Cross-reference FSIS recalls against the combined outbreak records, adding
+    'related_recalls' to outbreaks and 'related_outbreaks' to recalls.
+
+    Only recalls FSIS itself flags as outbreak-related are considered, so this
+    never invents a link where the agency doesn't already assert one; all it
+    does is work out *which* investigation the flagged recall belongs to, which
+    FSIS does not say. A pair is linked when the pathogen matches and both name
+    the same food vehicle. Confidence records how well the dates agree:
+
+      'corroborated' - both years known and within a year of each other
+      'weak'         - the outbreak record has no determinable year
+
+    'weak' exists because many CDC records carry no date at all; requiring a
+    year dropped correct 2024 links (Boar's Head, Yu Shang), while allowing
+    them recovers those at the cost of occasionally reaching across years.
+    Consumers that want only firm links should filter to 'corroborated'.
+    """
+    flagged = [r for r in recalls if r.get('related_to_outbreak')]
+    if not flagged:
+        return 0
+
+    # Clear prior links so a rerun can't accumulate stale duplicates.
+    for outbreak in outbreaks:
+        outbreak.pop('related_recalls', None)
+    for recall in recalls:
+        recall.pop('related_outbreaks', None)
+
+    indexed = []
+    for outbreak in outbreaks:
+        indexed.append((
+            outbreak,
+            detect_pathogen(outbreak.get('pathogen') or ''),
+            food_terms(f"{outbreak.get('title') or ''} {outbreak.get('food_source') or ''}"),
+            infer_record_year(outbreak)
+        ))
+
+    link_count = 0
+    for recall in flagged:
+        recall_foods = food_terms(f"{recall.get('title') or ''} {' '.join(recall.get('products') or [])}")
+        recall_year = int(recall['year']) if str(recall.get('year') or '').isdigit() else None
+        if not recall.get('pathogen') or not recall_foods:
+            continue
+
+        for outbreak, pathogen, foods, outbreak_year in indexed:
+            if pathogen != recall['pathogen'] or not (recall_foods & foods):
+                continue
+            if outbreak_year is None:
+                confidence = 'weak'
+            elif recall_year is not None and abs(outbreak_year - recall_year) <= 1:
+                confidence = 'corroborated'
+            else:
+                continue
+
+            recall_link = {
+                'recall_id': recall['recall_id'],
+                'title': recall['title'],
+                'url': recall['url'],
+                'recall_date': recall.get('recall_date'),
+                'match_confidence': confidence
+            }
+            outbreak_link = {
+                'id': outbreak.get('id'),
+                'source': outbreak.get('source'),
+                'title': outbreak.get('title'),
+                'url': outbreak.get('url'),
+                'match_confidence': confidence
+            }
+            # Skip an identical entry rather than deduplicating by id alone:
+            # the combined data holds distinct investigations that share an id,
+            # and separate CDC pages for one outbreak (e.g. a '-part2' follow-up)
+            # are genuinely separate links worth keeping.
+            existing_links = outbreak.setdefault('related_recalls', [])
+            if recall_link not in existing_links:
+                existing_links.append(recall_link)
+            existing_back_links = recall.setdefault('related_outbreaks', [])
+            if outbreak_link not in existing_back_links:
+                existing_back_links.append(outbreak_link)
+            link_count += 1
+
+    linked_recalls = sum(1 for r in flagged if r.get('related_outbreaks'))
+    log.info("Cross-linked %d of %d outbreak-related recalls to outbreak records (%d links)",
+             linked_recalls, len(flagged), link_count)
+    return link_count
+
+
 class OutbreakAggregator:
     """
     Combines outbreak data from multiple sources (FDA, CDC) into a unified format
@@ -1321,6 +1716,7 @@ class OutbreakAggregator:
     def __init__(self):
         self.fda_scraper = FDAOutbreakScraper()
         self.cdc_scraper = CDCOutbreakScraper()
+        self.usda_scraper = USDARecallScraper()
 
     def scrape_all_sources(self, fda_limit: Optional[int] = None, delay: float = 1.5, cdc_known_urls: Optional[List[str]] = None) -> Dict[str, List[Dict]]:
         """
@@ -1450,7 +1846,8 @@ class OutbreakAggregator:
 
 def build_combined(aggregator: OutbreakAggregator,
                    fda_file: str = 'data/raw/fda_outbreaks.json',
-                   cdc_file: str = 'data/raw/cdc_outbreaks.json'):
+                   cdc_file: str = 'data/raw/cdc_outbreaks.json',
+                   usda_file: str = 'data/raw/usda_recalls.json'):
     """
     Build data/raw/combined_outbreaks.json from the on-disk source files.
 
@@ -1458,6 +1855,13 @@ def build_combined(aggregator: OutbreakAggregator,
     reads both source files from disk (rather than whatever was scraped this
     run), refreshing a single source can never drop the other source from the
     combined output.
+
+    USDA recalls are deliberately NOT combined in: a recall is a different kind
+    of event from an outbreak investigation and carries no case, death or
+    hospitalization counts, so folding ~1,200 of them into 313 outbreaks would
+    swamp every headline figure and breakdown. They keep their own file, and
+    are joined to outbreaks only by the cross-links written here — which is why
+    this function also rewrites usda_file with the recall side of those links.
     """
     log.info("=" * 60)
     log.info("COMBINING AND NORMALIZING DATA")
@@ -1513,6 +1917,24 @@ def build_combined(aggregator: OutbreakAggregator,
                  outbreak.get('state_count', 'N/A'),
                  outbreak.get('status', 'unknown'))
 
+    # Cross-link FSIS recalls to the outbreaks they belong to, writing both
+    # sides: the outbreak side into the combined file saved below, the recall
+    # side back into usda_file.
+    recalls = []
+    if Path(usda_file).exists():
+        try:
+            with open(usda_file, 'r', encoding='utf-8') as f:
+                recalls = json.load(f)
+            log.info("Loaded %d USDA recalls from %s", len(recalls), usda_file)
+        except Exception as e:
+            log.error("Error loading USDA recalls from %s: %s", usda_file, e)
+    else:
+        log.warning("%s not found, skipping recall cross-linking", usda_file)
+
+    if recalls:
+        link_recalls_to_outbreaks(combined, recalls)
+        aggregator.usda_scraper.save_to_json(recalls, usda_file)
+
     if combined:
         aggregator.save_combined_data(combined, stats)
 
@@ -1521,32 +1943,39 @@ def build_combined(aggregator: OutbreakAggregator,
 
 def main():
     """
-    Main function demonstrating combined FDA and CDC outbreak scraping
-    Supports command-line arguments to scrape FDA only, CDC only, or both
+    Main function demonstrating combined FDA, CDC and USDA scraping
+    Supports command-line arguments to scrape any subset of the sources
     """
     # Parse command-line arguments
     parser = argparse.ArgumentParser(
-        description='Scrape foodborne outbreak data from FDA and/or CDC',
+        description='Scrape foodborne outbreak data from FDA and/or CDC, and food recalls from USDA FSIS',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python main.py                     # Scrape both, incrementally (default)
+  python main.py                     # Scrape all sources, incrementally (default)
   python main.py --fda               # Scrape FDA only, incrementally
   python main.py --cdc               # Scrape CDC only, incrementally
+  python main.py --usda              # Fetch USDA FSIS recalls only
   python main.py --fda --cdc         # Scrape both FDA and CDC
   python main.py --full              # Re-scrape everything, ignoring prior data
   python main.py --max-age-days 180  # Treat outbreaks as stable after 180 days
-  python main.py --combine           # Combine existing FDA and CDC JSON files
+  python main.py --combine           # Combine existing JSON files, no scraping
 
 By default, an outbreak already scraped successfully and older than
 --max-age-days (365 by default) is reused from data/raw/*.json instead of
 being re-fetched, since FDA and CDC don't update old outbreak pages. Pass
---full to scrape everything regardless of age.
+--full to scrape everything regardless of age. USDA is one API request for
+the full recall history, so it has no incremental mode and ignores both flags.
+
+USDA recalls are written to their own data/raw/usda_recalls.json and are not
+merged into combined_outbreaks.json; the two datasets are joined by the
+cross-links --combine writes between them.
         """
     )
     parser.add_argument('--fda', action='store_true', help='Scrape FDA outbreak data')
     parser.add_argument('--cdc', action='store_true', help='Scrape CDC outbreak data')
-    parser.add_argument('--combine', action='store_true', help='Combine existing FDA and CDC JSON files without scraping')
+    parser.add_argument('--usda', action='store_true', help='Fetch USDA FSIS recall data')
+    parser.add_argument('--combine', action='store_true', help='Combine existing JSON files without scraping')
     parser.add_argument('--delay', type=float, default=2.0, help='Delay between requests in seconds (default: 2.0)')
     parser.add_argument('--no-playwright', action='store_true', help='Disable Playwright and use simple HTTP requests (may find fewer outbreaks)')
     parser.add_argument('--use-known-urls', action='store_true', help='Use hardcoded list of known CDC URLs instead of auto-discovery')
@@ -1565,12 +1994,13 @@ being re-fetched, since FDA and CDC don't update old outbreak pages. Pass
 
     # If --combine is specified, don't scrape
     if args.combine:
-        scrape_fda = False
-        scrape_cdc = False
+        scrape_fda = scrape_cdc = scrape_usda = False
     else:
-        # If no flags specified, scrape both
-        scrape_fda = args.fda or (not args.fda and not args.cdc)
-        scrape_cdc = args.cdc or (not args.fda and not args.cdc)
+        # If no source flags specified, scrape every source
+        no_source_selected = not (args.fda or args.cdc or args.usda)
+        scrape_fda = args.fda or no_source_selected
+        scrape_cdc = args.cdc or no_source_selected
+        scrape_usda = args.usda or no_source_selected
 
     # Initialize scrapers
     aggregator = OutbreakAggregator()
@@ -1603,7 +2033,8 @@ being re-fetched, since FDA and CDC don't update old outbreak pages. Pass
         'https://www.cdc.gov/ecoli/outbreaks/details-organic-walnuts-04-24.html',
     ]
 
-    modes = [m for m, on in (("FDA", scrape_fda), ("CDC", scrape_cdc), ("combine", args.combine)) if on]
+    modes = [m for m, on in (("FDA", scrape_fda), ("CDC", scrape_cdc),
+                             ("USDA", scrape_usda), ("combine", args.combine)) if on]
     log.info("=" * 60)
     log.info("FOODBORNE OUTBREAK ALERT SYSTEM — mode: %s", ", ".join(modes) or "none")
     log.info("=" * 60)
@@ -1643,9 +2074,21 @@ being re-fetched, since FDA and CDC don't update old outbreak pages. Pass
             aggregator.cdc_scraper.save_to_json(cdc_outbreaks)
             files_created.append("  - data/raw/cdc_outbreaks.json (CDC data only)")
 
+    if scrape_usda:
+        log.info("[USDA] Fetching USDA FSIS recalls (single API request, full history)...")
+        existing_usda = {} if args.full else load_existing_recalls_by_id('data/raw/usda_recalls.json')
+        try:
+            usda_recalls = aggregator.usda_scraper.scrape_all(existing=existing_usda)
+        except Exception as e:
+            log.error("[USDA] Failed to fetch FSIS recalls: %s", e)
+            usda_recalls = []
+        if usda_recalls:
+            aggregator.usda_scraper.save_to_json(usda_recalls)
+            files_created.append("  - data/raw/usda_recalls.json (USDA FSIS recalls only)")
+
     # Rebuild the combined file only when explicitly requested (--combine) or
-    # when both sources were refreshed in this run. Never after a single-source
-    # scrape, so the other source's data is preserved.
+    # when both outbreak sources were refreshed in this run. Never after a
+    # single-source scrape, so the other source's data is preserved.
     if args.combine or (scrape_fda and scrape_cdc):
         build_combined(aggregator)
         files_created.append("  - data/raw/combined_outbreaks.json (unified data with statistics)")

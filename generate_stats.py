@@ -5,7 +5,7 @@ Generate outbreak statistics and markdown tables for README.md
 import json
 import re
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 def extract_year(outbreak):
     """Extract year from outbreak data."""
@@ -94,12 +94,45 @@ def generate_statistics(data_path="data/raw/combined_outbreaks.json"):
 
     return {
         "summary": summary,
+        "recalls": generate_recall_statistics(),
         "by_year": dict(sorted(by_year.items(), reverse=True)),
         "by_status": dict(by_status),
         "by_pathogen": dict(sorted(by_pathogen.items(), key=lambda x: x[1], reverse=True)),
         "active_count": active_count,
         "year_range": year_range,
         "total_outbreaks": summary.get("total_outbreaks", len(outbreaks)),
+    }
+
+
+def generate_recall_statistics(data_path="data/raw/usda_recalls.json"):
+    """
+    Generate statistics from USDA FSIS recall data.
+
+    Kept separate from the outbreak statistics on purpose: recalls are a
+    different kind of event and carry no case/death counts, so they are
+    reported alongside the outbreak tables rather than folded into them.
+    Returns None when the recall file hasn't been fetched yet.
+    """
+    try:
+        with open(data_path, 'r') as f:
+            recalls = json.load(f)
+    except FileNotFoundError:
+        return None
+
+    years = sorted({int(r["year"]) for r in recalls if str(r.get("year") or "").isdigit()})
+    by_class = Counter(r.get("risk_level") or "Unknown" for r in recalls)
+    by_pathogen = Counter(r["pathogen"] for r in recalls if r.get("pathogen"))
+    by_year = Counter(int(r["year"]) for r in recalls if str(r.get("year") or "").isdigit())
+
+    return {
+        "total": len(recalls),
+        "by_class": dict(by_class.most_common()),
+        "by_pathogen": dict(by_pathogen.most_common()),
+        "by_year": dict(sorted(by_year.items(), reverse=True)),
+        "outbreak_related": sum(1 for r in recalls if r.get("related_to_outbreak")),
+        "linked_to_outbreaks": sum(1 for r in recalls if r.get("related_outbreaks")),
+        "active": sum(1 for r in recalls if r.get("active")),
+        "year_range": f"{years[0]}-{years[-1]}" if years else "N/A",
     }
 
 
@@ -179,6 +212,27 @@ def generate_section_tables(stats):
         rows.append([year, count])
     sections["## By Year (Recent)"] = format_table(headers, rows)
 
+    # USDA FSIS recalls — reported separately from the outbreak tables above.
+    recall_stats = stats.get('recalls')
+    if recall_stats:
+        headers = ["Metric", "Count"]
+        rows = [
+            ["**Total Recalls**", f"{recall_stats['total']:,}"],
+            ["**Outbreak-Related**", recall_stats['outbreak_related']],
+            ["**Linked to an Investigation**", recall_stats['linked_to_outbreaks']],
+            ["**Active Notices**", recall_stats['active']],
+            ["**Year Range**", recall_stats['year_range']],
+        ]
+        sections["## USDA Recalls"] = format_table(headers, rows)
+
+        headers = ["Risk Level", "Recalls"]
+        rows = [[level, count] for level, count in recall_stats['by_class'].items()]
+        sections["## Recalls by Risk Level"] = format_table(headers, rows)
+
+        headers = ["Pathogen", "Recalls"]
+        rows = [[p, c] for p, c in list(recall_stats['by_pathogen'].items())[:10]]
+        sections["## Recalls by Pathogen"] = format_table(headers, rows)
+
     return sections
 
 
@@ -222,9 +276,15 @@ def update_readme_stats(section_tables, readme_path="README.md"):
 
     # Update the Current Coverage bullet points only
     coverage_pattern = r'(\*\*Current Coverage:\*\*\s*\n\n)(- 🏛️.*?- 📊.*?\n)(\n*)'
+    recall_stats = stats.get('recalls')
+    recall_bullet = ""
+    if recall_stats:
+        recall_bullet = (f"- 🥩 USDA: {recall_stats['total']:,} FSIS recalls "
+                         f"({recall_stats['year_range']}, tracked separately)\n")
+
     coverage_bullets = f"""- 🏛️ FDA: {fda_count} outbreak investigations ({year_range})
 - 🔬 CDC: {cdc_count} total investigations ({year_range})
-- 🚨 Active: {active_count} ongoing investigations
+{recall_bullet}- 🚨 Active: {active_count} ongoing investigations
 - 📊 Total: {total_count} foodborne outbreak investigations
 """
 
@@ -244,6 +304,9 @@ def update_readme_stats(section_tables, readme_path="README.md"):
     print(f"  - Total outbreaks: {total_count}")
     print(f"  - FDA: {fda_count}, CDC: {cdc_count}")
     print(f"  - Active investigations: {active_count}")
+    if recall_stats:
+        print(f"  - USDA recalls: {recall_stats['total']} "
+              f"({recall_stats['linked_to_outbreaks']} linked to an investigation)")
 
 
 def main():

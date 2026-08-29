@@ -100,9 +100,20 @@ jobs:
           # to force a complete re-scrape (e.g. to recover from a bad scrape).
           uv run python main.py --cdc --max-age-days 365 ${{ inputs.full && '--full' || '' }}
 
-      - name: Combine both FDA and CDC sources
+      - name: Running scrape script on USDA
+        continue-on-error: true # If FSIS is down, we don't want the whole job to fail.
+        run: |
+          # One API request returns the full FSIS recall history, so there's nothing
+          # incremental to do here and --max-age-days/--full don't apply. Writes only
+          # data/raw/usda_recalls.json; the cross-links to outbreaks are added by the
+          # combine step below.
+          uv run python main.py --usda
+
+      - name: Combine sources and cross-link recalls
         continue-on-error: true # If either source failed, this may not work properly
         run: |
+          # Rebuilds combined_outbreaks.json (FDA + CDC only) and writes the
+          # recall/outbreak cross-links into both that file and usda_recalls.json.
           uv run python main.py --combine
 
       - name: Summarize using README

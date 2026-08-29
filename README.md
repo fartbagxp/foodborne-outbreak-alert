@@ -2,12 +2,13 @@
 
 # Foodborne Outbreak Alert System
 
-A real-time foodborne outbreak monitoring system that aggregates and analyzes outbreak data from both FDA and CDC sources.
+A real-time foodborne outbreak monitoring system that aggregates and analyzes outbreak data from FDA and CDC, alongside food recalls from USDA FSIS.
 
 **Current Coverage:**
 
 - 🏛️ FDA: 80 outbreak investigations (2006-2026)
 - 🔬 CDC: 233 total investigations (2006-2026)
+- 🥩 USDA: 1,234 FSIS recalls (2014-2026, tracked separately)
 - 🚨 Active: 31 ongoing investigations
 - 📊 Total: 313 foodborne outbreak investigations
 
@@ -63,13 +64,77 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | 2018 | 20        |
 | 2017 | 7         |
 
+## USDA Recalls
+
+| Metric                         | Count     |
+| ------------------------------ | --------- |
+| **Total Recalls**              | 1,234     |
+| **Outbreak-Related**           | 12        |
+| **Linked to an Investigation** | 11        |
+| **Active Notices**             | 1         |
+| **Year Range**                 | 2014-2026 |
+
+## Recalls by Risk Level
+
+| Risk Level           | Recalls |
+| -------------------- | ------- |
+| High - Class I       | 834     |
+| Low - Class II       | 188     |
+| Public Health Alert  | 169     |
+| Marginal - Class III | 43      |
+
+## Recalls by Pathogen
+
+| Pathogen       | Recalls |
+| -------------- | ------- |
+| Listeria       | 125     |
+| E. coli        | 82      |
+| Salmonella     | 48      |
+| Staphylococcus | 5       |
+| Botulism       | 2       |
+
+## Data Sources
+
+All sources are public `.gov` endpoints. FDA and CDC are scraped from HTML; USDA is a JSON API.
+
+| Source    | What it provides                           | Endpoint                                                                                    | Access                |
+| --------- | ------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------- |
+| FDA       | Public health advisories & investigations  | [Outbreak listing][fda-listing]                                                             | HTML, browser + proxy |
+| CDC       | Investigation updates, per pathogen        | [Salmonella][cdc-sal] · [Listeria][cdc-lis] · [E. coli][cdc-eco] · [Campylobacter][cdc-cam] | HTML, browser         |
+| CDC       | Investigation discovery                    | [Outbreak index][cdc-index] · [full-outbreak-list.csv][cdc-csv]                             | HTML + CSV            |
+| USDA FSIS | Recalls & public health alerts (reference) | [fsis.usda.gov/recalls][fsis-page]                                                          | HTML, not scraped     |
+| USDA FSIS | Full recall history, every field           | [`/fsis/api/recall/v/1`][fsis-api]                                                          | JSON, one request     |
+
+[fda-listing]: https://www.fda.gov/food/outbreaks-foodborne-illness/public-health-advisories-investigations-foodborne-illness-outbreaks
+[cdc-sal]: https://www.cdc.gov/salmonella/outbreaks/index.html
+[cdc-lis]: https://www.cdc.gov/listeria/outbreaks/index.html
+[cdc-eco]: https://www.cdc.gov/ecoli/outbreaks/index.html
+[cdc-cam]: https://www.cdc.gov/campylobacter/outbreaks/index.html
+[cdc-index]: https://www.cdc.gov/foodborne-outbreaks/outbreaks/
+[cdc-csv]: https://www.cdc.gov/foodborne-outbreaks/media/files/2024/04/full-outbreak-list.csv
+[fsis-page]: https://www.fsis.usda.gov/recalls
+[fsis-api]: https://www.fsis.usda.gov/fsis/api/recall/v/1
+
+The FSIS recalls page and the API return the same notices; only the API is collected, since one
+request yields the full history with every field already structured.
+
+**Access notes:** all three agencies sit behind Akamai, each rejecting for a different reason. FDA
+blocks by IP (GitHub Actions runners), so it routes through a fly.dev proxy — see
+[`fly-proxy/README.md`](fly-proxy/README.md). CDC blocks plain HTTP clients but accepts a real
+browser. USDA rejects non-browser TLS fingerprints _and_ headless Chromium's own `sec-ch-ua`
+header, so it uses Playwright with that header overridden — no proxy needed.
+
 ## Features
 
 - **Multi-Source Scraping**: Combines outbreak data from:
-  - FDA Public Health Advisories (70 investigations, 2006-2025)
-  - CDC Investigation Updates (219 investigations, 2006-2025)
+  - FDA Public Health Advisories (2006-2026)
+  - CDC Investigation Updates (2006-2026)
   - Salmonella, Listeria, E. coli, and other pathogens
-- **Command-Line Interface**: Run FDA and CDC scrapers separately or together with `--fda` and `--cdc` flags
+- **USDA FSIS Recalls**: Meat, poultry and egg product recalls and public health alerts (2014-2026),
+  collected from the FSIS recall API in a single request and kept in their own dataset
+- **Recall Cross-Linking**: Recalls FSIS flags as outbreak-related are matched to the investigation
+  they belong to, and the link is written to both datasets
+- **Command-Line Interface**: Run each source separately or together with `--fda`, `--cdc` and `--usda` flags
 - **Unified Data Format**: Normalizes data from different sources into a consistent structure
 - **Rich Metadata Extraction**:
   - Case counts, deaths, and hospitalizations
@@ -90,12 +155,13 @@ uv sync
 ## Quick Start
 
 ```bash
-# Scrape both FDA and CDC data
+# Scrape every source
 uv run python main.py
 
 # Or scrape selectively
-uv run python main.py --fda  # FDA only (faster, ~70 outbreaks)
-uv run python main.py --cdc  # CDC only (18 investigations)
+uv run python main.py --fda   # FDA only
+uv run python main.py --cdc   # CDC only
+uv run python main.py --usda  # USDA FSIS recalls only (one API request)
 ```
 
 This will create JSON files in `data/raw/` with outbreak data, statistics, and normalized formats ready for analysis.
@@ -104,20 +170,26 @@ This will create JSON files in `data/raw/` with outbreak data, statistics, and n
 
 ### Command Line Interface
 
-The scraper supports command-line arguments to run FDA and CDC scrapers separately or together:
+The scraper supports command-line arguments to run each source separately or together:
 
 ```bash
-# Scrape both FDA and CDC (default - 88 total outbreaks)
+# Scrape every source (default)
 uv run python main.py
 
-# Scrape FDA only (70 outbreaks from 2011-2025)
+# Scrape FDA only
 uv run python main.py --fda
 
-# Scrape CDC only (18 investigations from 2024-2025)
+# Scrape CDC only
 uv run python main.py --cdc
 
-# Scrape both with custom delay
+# Fetch USDA FSIS recalls only
+uv run python main.py --usda
+
+# Scrape FDA and CDC with a custom delay
 uv run python main.py --fda --cdc --delay 3.0
+
+# Rebuild combined data and recall cross-links without scraping
+uv run python main.py --combine
 
 # Show help and available options
 uv run python main.py --help
@@ -125,16 +197,22 @@ uv run python main.py --help
 
 **Output files generated:**
 
-- `data/raw/combined_outbreaks.json` - Unified data with summary statistics
+- `data/raw/combined_outbreaks.json` - Unified FDA + CDC outbreak data with summary statistics
 - `data/raw/fda_outbreaks.json` - FDA data only (when `--fda` is used)
 - `data/raw/cdc_outbreaks.json` - CDC data only (when `--cdc` is used)
+- `data/raw/usda_recalls.json` - USDA FSIS recalls only (when `--usda` is used)
 
 **Command-line options:**
 
 - `--fda` - Scrape FDA outbreak data only
 - `--cdc` - Scrape CDC outbreak data only
+- `--usda` - Fetch USDA FSIS recall data only
+- `--combine` - Rebuild combined data and cross-links from existing files, without scraping
 - `--delay DELAY` - Delay between requests in seconds (default: 2.0)
 - `--help` - Show help message
+
+USDA is a single API request that returns the full recall history, so it has no
+incremental mode and ignores `--delay`, `--max-age-days` and `--full`.
 
 ### Python API
 
@@ -217,6 +295,19 @@ outbreaks = scraper.scrape_all_pathogens(delay=2.0)
 scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
 ```
 
+**USDA FSIS Recall Scraper:**
+
+```python
+from main import USDARecallScraper, link_recalls_to_outbreaks
+
+scraper = USDARecallScraper()
+recalls = scraper.scrape_all()   # One API request for the full recall history
+scraper.save_to_json(recalls)    # Saves to data/raw/usda_recalls.json
+
+# Cross-link against already-combined outbreak records
+link_recalls_to_outbreaks(outbreaks, recalls)
+```
+
 ## Output Format
 
 ### Combined Output Structure
@@ -254,6 +345,8 @@ scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
 
 ## Data Fields
 
+### Outbreaks (`combined_outbreaks.json`)
+
 - `id`: Unique outbreak identifier
 - `source`: Data source (FDA or CDC)
 - `title`: Outbreak title/description
@@ -267,7 +360,46 @@ scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
 - `state_count`: Number of affected states
 - `states_affected`: List of state abbreviations
 - `consumer_advice`: Public health recommendations
+- `related_recalls`: USDA recalls matched to this outbreak (see Recall Cross-Linking below)
 - `scraped_at`: Timestamp of data collection
+
+### USDA Recalls (`usda_recalls.json`)
+
+- `recall_id`: FSIS recall number, e.g. `018-2026` or `PHA-01182024-02`
+- `source`: Always `USDA`
+- `title`, `url`, `summary`: Recall notice headline, link and press-release text
+- `pathogen`: Organism named in the notice, or `null` for allergen/misbranding recalls
+- `recall_date`, `last_modified_date`, `year`: Notice dates
+- `recall_class`: `Class I`, `Class II` or `Class III`
+- `risk_level`: FSIS risk wording, e.g. `High - Class I`, or `Public Health Alert`
+- `recall_type`: `Active Recall`, `Closed Recall` or `Public Health Alert`
+- `reasons`: Why the product was recalled, e.g. `Product Contamination`
+- `products`, `establishment`, `processing`: Product descriptions and plant details
+- `states_affected`, `state_count`: Distribution states, as abbreviations
+- `distribution`: Non-state reach FSIS lists, e.g. `Nationwide`
+- `active`, `archived`: Notice lifecycle flags
+- `related_to_outbreak`: FSIS's own flag that this recall stems from an outbreak
+- `related_outbreaks`: Investigations matched to this recall (see below)
+- `scraped_at`: Timestamp of data collection
+
+### Recall Cross-Linking
+
+USDA recalls are kept out of `combined_outbreaks.json` on purpose: a recall is a
+different kind of event and carries no case, death or hospitalization counts, so
+folding ~1,200 of them into 313 outbreaks would swamp every headline figure.
+
+Instead the two datasets are joined by cross-links, written by `--combine`. Only
+recalls FSIS itself flags as outbreak-related are considered, so the matching
+never invents a link the agency doesn't already assert — it only works out
+_which_ investigation the flagged recall belongs to, which FSIS does not say. A
+pair is linked when the pathogen matches and both name the same food vehicle,
+and each link records how well the dates agree:
+
+- `corroborated` - both years are known and within a year of each other
+- `weak` - the outbreak record carries no determinable date, so only the
+  pathogen and food vehicle back the match
+
+Filter to `corroborated` if you need firm links only.
 
 ## Best Practices
 
@@ -282,6 +414,8 @@ scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
 - CDC pages load content dynamically, so automatic discovery may not find all investigations
 - Scrapers use heuristic pattern matching, which may miss some data points
 - Relies on consistent HTML structure from FDA and CDC websites
+- USDA recall cross-links are heuristic; `weak` matches rest on pathogen and food vehicle alone
+- FSIS names the pathogen only in prose, so `pathogen` is read out of the notice text
 - No real-time notifications (runs on-demand only)
 
 ## Future Enhancements
@@ -290,7 +424,7 @@ scraper.save_to_json(outbreaks)  # Saves to data/raw/cdc_outbreaks.json
 - Email/SMS alerting system
 - Geographic visualization of outbreaks
 - Time-series analysis and trending
-- Integration with additional data sources (USDA, state health departments)
+- Integration with additional data sources (state health departments)
 - Database storage for historical data
 
 ## Contributing

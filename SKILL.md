@@ -29,7 +29,7 @@ main.py  # Main code
 ## Important Notes
 
 - Always support a CLI interface
-- Use CDC and FDA government resources from .gov domains
+- Use CDC, FDA and USDA FSIS government resources from .gov domains
 - Use uv best practices
 
 ## Configuration Files

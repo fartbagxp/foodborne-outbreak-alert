@@ -17,9 +17,9 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | ------------------------- | ------ |
 | **Total Outbreaks**       | 313    |
 | **Active Investigations** | 31     |
-| **Total Cases**           | 41,471 |
-| **Deaths**                | 4,933  |
-| **Hospitalizations**      | 15,136 |
+| **Total Cases**           | 41,379 |
+| **Deaths**                | 4,947  |
+| **Hospitalizations**      | 15,149 |
 | **States Affected**       | 51     |
 
 ## By Source
@@ -33,8 +33,8 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 | Status  | Count |
 | ------- | ----- |
-| Unknown | 217   |
-| Closed  | 65    |
+| Unknown | 216   |
+| Closed  | 66    |
 | Ongoing | 31    |
 
 ## By Pathogen (Top 10)

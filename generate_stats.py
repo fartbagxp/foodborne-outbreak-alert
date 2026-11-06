@@ -181,12 +181,18 @@ def generate_section_tables(stats):
     sections["## Current Statistics"] = format_table(headers, rows)
 
     # By Source section
+    # An outbreak reported by both CDC and FDA counts once in the totals but
+    # appears under each agency here, so the overlap is shown explicitly.
     headers = ["Source", "Outbreaks", "Year Range"]
     rows = []
     by_source = stats['summary'].get('outbreaks_by_source', {})
     for source in sorted(by_source.keys()):
         count = by_source[source]
         rows.append([source, count, stats['year_range']])
+    overlap = stats['summary'].get('outbreaks_by_source_overlap', {})
+    for label in sorted(overlap.keys()):
+        if ' and ' in label:
+            rows.append([f"Reported by both ({label})", overlap[label], stats['year_range']])
     sections["## By Source"] = format_table(headers, rows)
 
     # By Status section
@@ -282,10 +288,13 @@ def update_readme_stats(section_tables, readme_path="README.md"):
         recall_bullet = (f"- 🥩 USDA: {recall_stats['total']:,} FSIS recalls "
                          f"({recall_stats['year_range']}, tracked separately)\n")
 
+    both = sum(v for k, v in summary.get('outbreaks_by_source_overlap', {}).items() if ' and ' in k)
+    overlap_note = f" ({both} reported by both CDC and FDA, counted once)" if both else ""
+
     coverage_bullets = f"""- 🏛️ FDA: {fda_count} outbreak investigations ({year_range})
 - 🔬 CDC: {cdc_count} total investigations ({year_range})
 {recall_bullet}- 🚨 Active: {active_count} ongoing investigations
-- 📊 Total: {total_count} foodborne outbreak investigations
+- 📊 Total: {total_count} unique foodborne outbreaks{overlap_note}
 """
 
     coverage_match = re.search(coverage_pattern, content, re.DOTALL)

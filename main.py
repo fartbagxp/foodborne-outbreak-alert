@@ -14,14 +14,15 @@ import re
 import requests
 import sys
 import time
+import zlib
 
 from bs4 import BeautifulSoup
 from collections import Counter
 from datetime import datetime, timezone
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 
 # Module logger. Configured by setup_logging() in main(); if a caller uses the
 # scrapers without configuring logging, messages still surface via this handler.
@@ -160,6 +161,288 @@ def is_stale(outbreak_date: Optional[datetime], max_age_days: int, now: datetime
     return (now - outbreak_date).days > max_age_days
 
 
+# Explicit status fields. CDC pages: "Investigation status:\nOpen|Closed".
+# FDA pages: "Status\nEnded|Ongoing|<sentence>" (the value is checked below).
+_CDC_STATUS_FIELD = re.compile(r'Investigation status:\s*(Open|Closed|Active|Ongoing)\b', re.IGNORECASE)
+_FDA_STATUS_FIELD = re.compile(r'(?:^|\n)Status\n([^\n]+)')
+
+_CLOSED_PHRASES = re.compile(
+    r'outbreak (?:is|was|appears to be|has been declared|now appears to be) over'
+    r'|declare[sd]? (?:the |this )?outbreak (?:to be )?over'
+    r'|outbreak (?:has )?ended'
+    r'|end of (?:the |this )?outbreak'
+    r'|\boutbreak over\b'
+    r'|investigation (?:is|has been|was) (?:now )?(?:complete|completed|closed|over)\b'
+    r'|investigation has (?:ended|concluded|closed)'
+    r'|final update'
+    r'|investigated (?:a (?:multistate )?outbreak|reports of)',
+    re.IGNORECASE,
+)
+_ONGOING_PHRASES = re.compile(
+    r'investigation is (?:ongoing|active|continuing)'
+    r'|(?:is|are) investigating'
+    r'|investigation (?:is )?(?:still )?(?:under ?way|in progress)'
+    r'|continu(?:es|ing) to investigate',
+    re.IGNORECASE,
+)
+# The lead summary sits near the top of both CDC and FDA pages (FDA's is the
+# line right under the title, after which comes ~1k chars of nav boilerplate).
+_STATUS_LEAD_CHARS = 1500
+# With no clear signal, an outbreak older than this is assumed closed: CDC/FDA
+# investigations essentially never stay open this long.
+STATUS_ASSUME_CLOSED_DAYS = 365
+
+
+def classify_status(full_text: Optional[str], outbreak_date: Optional[datetime] = None,
+                    now: Optional[datetime] = None) -> str:
+    """
+    Classify an outbreak page as 'closed', 'ongoing' or 'unknown'.
+
+    Signals, strongest first:
+      1. A "closed" phrase in the lead summary (CDC occasionally leaves the
+         status field at "Open" after posting "This outbreak is over.").
+      2. The page's explicit status field (CDC or FDA).
+      3. An "ongoing" phrase in the lead summary.
+      4. A "closed" phrase anywhere in the current text.
+      5. An "ongoing" phrase anywhere in the current text.
+    For 3-5 (and no signal at all), an outbreak with no date newer than
+    STATUS_ASSUME_CLOSED_DAYS becomes 'closed': many pages are frozen archive
+    snapshots that still read "is investigating" years later. The explicit
+    status field (2) is trusted regardless of age.
+    Text after "Previous Updates" is ignored: it is history, not status.
+    """
+    if not full_text:
+        text = ''
+    else:
+        text = full_text.split('\nPrevious Updates\n', 1)[0]
+    flat = re.sub(r'\s+', ' ', text)
+    lead = flat[:_STATUS_LEAD_CHARS]
+
+    if _CLOSED_PHRASES.search(lead):
+        return 'closed'
+
+    m = _CDC_STATUS_FIELD.search(flat)
+    if m:
+        return 'closed' if m.group(1).lower() == 'closed' else 'ongoing'
+    m = _FDA_STATUS_FIELD.search(text)
+    if m:
+        value = m.group(1).strip().lower()
+        if value.startswith('ended') or _CLOSED_PHRASES.search(value):
+            return 'closed'
+        if value.startswith(('ongoing', 'active', 'open')):
+            return 'ongoing'
+
+    if _ONGOING_PHRASES.search(lead):
+        status = 'ongoing'
+    elif _CLOSED_PHRASES.search(flat):
+        return 'closed'
+    elif _ONGOING_PHRASES.search(flat):
+        status = 'ongoing'
+    else:
+        status = 'unknown'
+
+    # Age check against the most recent known date (outbreak start from the
+    # URL/listing, or the page's own posted/updated date), so a long-running
+    # investigation that is still being updated isn't closed prematurely.
+    dates = [d for d in (outbreak_date, first_text_date(text)) if d]
+    now = now or datetime.now(timezone.utc)
+    if dates and (now - max(dates)).days > STATUS_ASSUME_CLOSED_DAYS:
+        return 'closed'
+    return status
+
+
+_TEXT_DATE = re.compile(r'\b([A-Z][a-z]{2,8})\.? (\d{1,2}), (\d{4})\b')
+
+
+def first_text_date(text: Optional[str]) -> Optional[datetime]:
+    """First 'Month D, YYYY' / 'Oct. 30, 2026' date in the page, usually the posted date."""
+    for m in _TEXT_DATE.finditer(text or ''):
+        month = _MONTH_NAMES.get(m.group(1).lower())
+        if month:
+            try:
+                return datetime(int(m.group(3)), month, int(m.group(2)), tzinfo=timezone.utc)
+            except ValueError:
+                continue
+    return None
+
+
+# --- Case / hospitalization / death / state counts -------------------------
+#
+# Both sites publish labeled counts, e.g. CDC "Cases : 28 (1 new)
+# Hospitalizations : 5 Deaths : 0 States : 13" or "At A Glance Case Count: 26
+# Jurisdictions: 8", and FDA "Total Illnesses: 13 Hospitalizations: 8 HUS: 3
+# Deaths: 0 ... States with Cases: CA, CO, GA". Those are parsed first. Only
+# older archive pages without labels fall back to prose, and the prose
+# patterns are deliberately narrow: a missing count is better than a wrong one
+# (the old "(\d+)\s+death" read "Hospitalizations : 5 Deaths" as 5 deaths).
+
+_NUM = r'(\d[\d,]*)'
+_LABELS = {
+    'case_count': re.compile(
+        r'\b(?:Total Illnesses|Total cases|Reported Cases|Case Count|Illnesses|Cases)\s?:\s?' + _NUM),
+    'hospitalizations': re.compile(r'\bHospitalizations\s?:\s?' + _NUM),
+    'deaths': re.compile(r'\b(?:Associated deaths|Deaths)\s?:\s?' + _NUM),
+    'state_count': re.compile(r'\b(?:States|Jurisdictions)\s?:\s?' + _NUM),
+}
+_STATE_CODES = {
+    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL',
+    'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT',
+    'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI',
+    'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'DC', 'PR',
+    'GU', 'VI', 'AS', 'MP',
+}
+# "States with Cases: CA, CO, GA" or "AZ (1), IA (6), ..."
+_STATES_WITH_CASES = re.compile(r'States with Cases\s?:\s?((?:[A-Z]{2}(?:\s?\(\d+\))?\s?,?\s?(?:and\s)?)+)')
+
+_UNITS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+          'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen',
+          'sixteen', 'seventeen', 'eighteen', 'nineteen']
+_TENS = {'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60,
+         'seventy': 70, 'eighty': 80, 'ninety': 90}
+_WORD_NUM_RE = (r'(?:(?:' + '|'.join(_TENS) + r')(?:[- ](?:' + '|'.join(_UNITS[1:10]) + r'))?'
+                r'|' + '|'.join(sorted(_UNITS, key=len, reverse=True)) + r'|no|none)')
+# Numbers may be capitalized ("No deaths", "Sixty-two people"); the keywords
+# after them are matched lowercase only, so capitalized labels ("Hospitalizations
+# : 5 Deaths : 0") are never read as prose ("5 Deaths"). The lookbehind stops
+# "Sixty-two" from being read as "two".
+_PNUM = r'(?<![\w-])((?i:\d[\d,]*|' + _WORD_NUM_RE + r'))'
+_PEOPLE = r'(?:ill |sick |confirmed |additional )?(?:people|persons|cases|illnesses|patients)'
+_PROSE = {
+    'case_count': [
+        re.compile(r'\b(?i:total of) ' + _PNUM + r' ' + _PEOPLE),
+        re.compile(_PNUM + r' ' + _PEOPLE + r' (?:infected with (?:the |an |a )?(?:outbreak )?strain'
+                   r'|(?:have been|had been|were|was) (?:reported|linked))'),
+    ],
+    'hospitalizations': [
+        re.compile(_PNUM + r' (?:\(\d+%\) )?(?:people |persons |ill people |of them )?'
+                   r'(?:have been|had been|were|was) hospitalized'),
+        re.compile(_PNUM + r' (?:\(\d+%\) )?of (?:the )?[\d,]+ (?:ill )?(?:people|persons) '
+                   r'(?:with available information )?(?:were |have been |had been )?hospitalized\b'),
+        re.compile(_PNUM + r' hospitalizations\b'),
+    ],
+    'deaths': [
+        re.compile(_PNUM + r' deaths?\b'),
+        re.compile(_PNUM + r' (?:people |persons |ill people |of them )?(?:have |has )?died\b'),
+    ],
+    'state_count': [
+        re.compile(r'\b(?:reported from|in) ' + _PNUM + r' states\b'),
+    ],
+}
+
+
+def _to_int(token: str) -> Optional[int]:
+    token = token.strip().lower()
+    if token in ('no', 'none'):
+        return 0
+    if token in _UNITS:
+        return _UNITS.index(token)
+    parts = re.split(r'[- ]', token)
+    if parts[0] in _TENS:
+        return _TENS[parts[0]] + (_UNITS.index(parts[1]) if len(parts) > 1 else 0)
+    try:
+        return int(token.replace(',', ''))
+    except ValueError:
+        return None
+
+
+def _looks_like_year(n: int) -> bool:
+    return 1900 <= n <= 2100
+
+
+def extract_counts(full_text: Optional[str]) -> Dict:
+    """
+    Extract case_count, hospitalizations, deaths, state_count and (when the
+    page lists them) states_affected. Keys with no reliable value are omitted.
+    The current section (before "Previous Updates") is searched first, so the
+    latest figures win over historical ones.
+    """
+    if not full_text:
+        return {}
+    current = re.sub(r'\s+', ' ', full_text.split('\nPrevious Updates\n', 1)[0])
+    whole = re.sub(r'\s+', ' ', full_text)
+    out: Dict = {}
+
+    for key, pattern in _LABELS.items():
+        for text in (current, whole):
+            m = pattern.search(text)
+            if m:
+                out[key] = int(m.group(1).replace(',', ''))
+                break
+
+    m = _STATES_WITH_CASES.search(current) or _STATES_WITH_CASES.search(whole)
+    if m:
+        states = sorted({s for s in re.findall(r'\b[A-Z]{2}\b', m.group(1)) if s in _STATE_CODES})
+        if states:
+            out['states_affected'] = states
+            out.setdefault('state_count', len(states))
+
+    for key, patterns in _PROSE.items():
+        if key in out:
+            continue
+        for pattern in patterns:
+            m = pattern.search(current)
+            if not m:
+                continue
+            n = _to_int(m.group(1))
+            if n is not None and not _looks_like_year(n):
+                out[key] = n
+                break
+
+    # Sanity checks: drop values that can't be right rather than keep them.
+    cases = out.get('case_count')
+    if cases is not None:
+        for key in ('hospitalizations', 'deaths'):
+            if out.get(key) is not None and out[key] > cases:
+                del out[key]
+    if out.get('state_count') is not None and out['state_count'] > len(_STATE_CODES):
+        del out['state_count']
+    return out
+
+
+_COUNT_KEYS = ('case_count', 'hospitalizations', 'deaths', 'state_count')
+
+
+def apply_counts(record: Dict) -> Dict:
+    """
+    Replace a record's counts with freshly-extracted ones from its full_text.
+    Stale values from the old extractor are removed when nothing reliable is
+    found. states_affected is only replaced when the page lists states
+    explicitly (otherwise the existing best-effort list is kept).
+    """
+    if not record.get('full_text'):
+        return record
+    counts = extract_counts(record['full_text'])
+    for key in _COUNT_KEYS:
+        if key in counts:
+            record[key] = counts[key]
+        else:
+            record.pop(key, None)
+    if 'states_affected' in counts:
+        record['states_affected'] = counts['states_affected']
+    return record
+
+
+def apply_derived_fields(records: List[Dict], source: str, now: Optional[datetime] = None) -> List[Dict]:
+    """
+    (Re)compute 'status' and the case/hospitalization/death/state counts for
+    every successfully-scraped record in place, from its stored full_text.
+    Run on reused/skipped records too, so parsing improvements reach
+    outbreaks that are no longer re-fetched.
+    """
+    now = now or datetime.now(timezone.utc)
+    for r in records:
+        if r.get('scrape_status') != 'success':
+            continue
+        oid = r.get('outbreak_id') or ''
+        if source == 'FDA':
+            date = parse_fda_date_str(r.get('date_str')) or infer_fda_outbreak_date(oid)
+        else:
+            date = infer_cdc_outbreak_date(oid) or parse_cdc_posted_date(r.get('posted_date'))
+        r['status'] = classify_status(r.get('full_text'), date, now)
+        apply_counts(r)
+    return records
+
+
 def load_existing_by_id(path: str) -> Dict[str, Dict]:
     """Load a previously-saved outbreaks JSON file, keyed by outbreak_id."""
     p = Path(path)
@@ -172,6 +455,76 @@ def load_existing_by_id(path: str) -> Dict[str, Dict]:
         log.warning("Could not load existing data from %s: %s", path, e)
         return {}
     return {r['outbreak_id']: r for r in records if r.get('outbreak_id')}
+
+
+# Path segments that don't identify an outbreak on their own.
+_GENERIC_CDC_SEGMENTS = {
+    'index', 'investigation', 'investigations', 'outbreak', 'outbreaks',
+    'outbreaks-investigations', 'weekly', 'map', 'details', 'timeline',
+}
+
+
+def cdc_outbreak_slug(url: str) -> str:
+    """
+    Stable, outbreak-specific slug for a CDC investigation URL.
+
+    Uses the page's own name -- the folder for '.../oysters-10-26/index.html',
+    the file for '.../2011/cantaloupes-6-23-2011.html' -- and walks up past
+    generic or year-only segments ('2020', 'weekly', 'outbreaks') until it
+    reaches a distinguishing one. Taking the parent folder unconditionally
+    (the old behavior) gave every '/salmonella/2011/*.html' page the same ID.
+    archive.cdc.gov URLs map to the same slug as the live page they mirror.
+    """
+    path = urlparse(url).path
+    path = re.sub(r'^/www_cdc_gov(?=/)', '', path)
+    segs = [s for s in path.split('/') if s]
+    if segs:
+        segs[-1] = re.sub(r'\.html?$', '', segs[-1], flags=re.IGNORECASE)
+    segs = [s for s in segs if s.lower() not in ('index', 'investigation')]
+    if not segs:
+        return 'unknown'
+    i = len(segs) - 1
+    while i > 0 and (segs[i].lower() in _GENERIC_CDC_SEGMENTS or segs[i].isdigit()):
+        i -= 1
+    return '-'.join(segs[i:])
+
+
+def cdc_outbreak_id(url: str, pathogen: str) -> str:
+    return f'cdc_{pathogen}_{cdc_outbreak_slug(url)}'
+
+
+def rekey_existing_cdc(existing: Dict[str, Dict]) -> Dict[str, Dict]:
+    """
+    Re-key previously-saved CDC records under the current ID scheme. Records
+    saved under a colliding old ID (several outbreaks sharing one record)
+    collapse into a single entry for the page they actually contain, so the
+    other outbreaks are re-fetched instead of inheriting the wrong data.
+    """
+    rekeyed = {}
+    for record in existing.values():
+        url = record.get('original_url') or record.get('url')
+        if not url:
+            continue
+        new_id = cdc_outbreak_id(url, record.get('pathogen') or 'unknown')
+        rekeyed[new_id] = {**record, 'outbreak_id': new_id}
+    return rekeyed
+
+
+def dedupe_by_id(investigations: List[Dict]) -> List[Dict]:
+    """Drop repeat listings of the same page; disambiguate true ID collisions."""
+    seen: Dict[str, str] = {}
+    result = []
+    for inv in investigations:
+        oid, url = inv['outbreak_id'], inv['url']
+        if oid in seen:
+            if seen[oid] == url:
+                continue
+            log.warning("Outbreak ID collision: %s for %s and %s", oid, seen[oid], url)
+            oid = f"{oid}-{zlib.crc32(urlparse(url).path.encode()):08x}"
+            inv = {**inv, 'outbreak_id': oid}
+        seen[oid] = url
+        result.append(inv)
+    return result
 
 
 class FDAOutbreakScraper:
@@ -373,25 +726,14 @@ class FDAOutbreakScraper:
             # Look for specific information patterns
             text = details['full_text']
 
-            # Extract case counts
-            case_match = re.search(r'(\d+)\s+(?:people|individuals|cases|illnesses)', text, re.IGNORECASE)
-            if case_match:
-                details['case_count'] = int(case_match.group(1))
-
-            # Extract deaths
-            death_match = re.search(r'(\d+)\s+death', text, re.IGNORECASE)
-            if death_match:
-                details['deaths'] = int(death_match.group(1))
-
-            # Extract hospitalizations
-            hosp_match = re.search(r'(\d+)\s+(?:hospitalized|hospitalizations)', text, re.IGNORECASE)
-            if hosp_match:
-                details['hospitalizations'] = int(hosp_match.group(1))
-
-            # Extract states mentioned
+            # Best-effort states list; replaced below when the page has an
+            # explicit "States with Cases:" list.
             states = self._extract_states(text)
             if states:
                 details['states_affected'] = states
+
+            # Cases, hospitalizations, deaths, state count
+            details.update(extract_counts(text))
 
             # Look for "What to do" or "Advice" sections
             advice_section = main_content.find(['h2', 'h3'], string=re.compile(r'what.*do|advice|recommendation', re.IGNORECASE))
@@ -523,7 +865,7 @@ class FDAOutbreakScraper:
                 if outbreak_id not in current_ids:
                     detailed_outbreaks.append(record)
 
-            return detailed_outbreaks
+            return apply_derived_fields(detailed_outbreaks, 'FDA')
         finally:
             # Always release the shared Playwright browser used for fetches.
             self.close()
@@ -636,12 +978,8 @@ class CDCOutbreakScraper:
                     full_url = urljoin(self.base_url, href)
                     title = link.get_text(strip=True)
 
-                    # Extract identifier from URL
-                    match = re.search(rf'/{pathogen}/outbreaks/([^/]+)/investigation\.html', href)
-                    outbreak_id = match.group(1) if match else href.split('/')[-2]
-
                     investigations.append({
-                        'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                        'outbreak_id': cdc_outbreak_id(full_url, pathogen),
                         'pathogen': pathogen,
                         'url': full_url,
                         'title': title,
@@ -660,7 +998,7 @@ class CDCOutbreakScraper:
 
                         if outbreak_id and outbreak_id != 'investigation':
                             investigations.append({
-                                'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                                'outbreak_id': cdc_outbreak_id(full_url, pathogen),
                                 'pathogen': pathogen,
                                 'url': full_url,
                                 'title': title or f'{pathogen.title()} outbreak',
@@ -677,10 +1015,9 @@ class CDCOutbreakScraper:
                         if href and 'investigation' in href.lower():
                             full_url = urljoin(self.base_url, href)
                             title = link.get_text(strip=True) or card.get_text(strip=True)[:100]
-                            outbreak_id = href.split('/')[-2] if '/' in href else 'unknown'
 
                             investigations.append({
-                                'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                                'outbreak_id': cdc_outbreak_id(full_url, pathogen),
                                 'pathogen': pathogen,
                                 'url': full_url,
                                 'title': title,
@@ -784,51 +1121,17 @@ class CDCOutbreakScraper:
             details['full_text'] = full_text
 
             # Extract investigation status
-            if re.search(r'investigation.*(?:closed|ended|over)', full_text, re.IGNORECASE):
-                details['status'] = 'closed'
-            elif re.search(r'investigation.*ongoing|active', full_text, re.IGNORECASE):
-                details['status'] = 'ongoing'
-            else:
-                details['status'] = 'unknown'
+            # (text-only here; apply_derived_fields() refines it with the outbreak date)
+            details['status'] = classify_status(full_text)
 
-            # Extract case count - CDC often says "X people" or "X cases"
-            case_patterns = [
-                r'(\d+)\s+people?\s+(?:infected|reported|ill)',
-                r'(\d+)\s+cases?',
-                r'total.*?(\d+)\s+people'
-            ]
-            for pattern in case_patterns:
-                match = re.search(pattern, full_text, re.IGNORECASE)
-                if match:
-                    details['case_count'] = int(match.group(1))
-                    break
-
-            # Extract deaths
-            death_match = re.search(r'(\d+)\s+death', full_text, re.IGNORECASE)
-            if death_match:
-                details['deaths'] = int(death_match.group(1))
-
-            # Extract hospitalizations - CDC often gives "X of Y" format
-            hosp_patterns = [
-                r'(\d+)\s+of\s+\d+.*?hospitalized',
-                r'(\d+).*?hospitalized',
-                r'hospitalizations?:\s*(\d+)'
-            ]
-            for pattern in hosp_patterns:
-                match = re.search(pattern, full_text, re.IGNORECASE)
-                if match:
-                    details['hospitalizations'] = int(match.group(1))
-                    break
-
-            # Extract states - CDC often says "X states"
-            state_count_match = re.search(r'(\d+)\s+states?', full_text, re.IGNORECASE)
-            if state_count_match:
-                details['state_count'] = int(state_count_match.group(1))
-
-            # Extract specific states
+            # Best-effort states list; replaced below when the page has an
+            # explicit "States with Cases:" list.
             states = self._extract_states(full_text)
             if states:
                 details['states_affected'] = states
+
+            # Cases, hospitalizations, deaths, state count
+            details.update(extract_counts(full_text))
 
             # Extract posted/updated date
             date_match = re.search(r'(?:posted|updated).*?(\w+\s+\d+,\s+\d{4})', full_text, re.IGNORECASE)
@@ -913,11 +1216,8 @@ class CDCOutbreakScraper:
                     pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella)/', href)
                     pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
 
-                    # Extract identifier
-                    outbreak_id = href.split('/')[-2] if '/' in href else 'unknown'
-
                     investigations.append({
-                        'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                        'outbreak_id': cdc_outbreak_id(full_url, pathogen),
                         'pathogen': pathogen,
                         'url': full_url,
                         'title': title or f'{pathogen.title()} outbreak',
@@ -1067,12 +1367,8 @@ class CDCOutbreakScraper:
                                         pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella|botulism)/', href)
                                         pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
 
-                                        # Extract identifier from URL
-                                        parts = href.rstrip('/').split('/')
-                                        outbreak_id = parts[-2] if len(parts) > 1 else 'unknown'
-
                                         investigations.append({
-                                            'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                                            'outbreak_id': cdc_outbreak_id(full_url, pathogen),
                                             'pathogen': pathogen,
                                             'url': full_url,
                                             'title': title or f'{pathogen.title()} outbreak',
@@ -1149,12 +1445,9 @@ class CDCOutbreakScraper:
             pathogen_match = re.search(r'/(salmonella|listeria|ecoli|campylobacter|cyclospora|vibrio|shigella)/', url)
             pathogen = pathogen_match.group(1) if pathogen_match else 'unknown'
 
-            # Extract identifier
-            outbreak_id = url.split('/')[-2] if '/' in url else 'unknown'
-
             # Create investigation metadata
             investigation = {
-                'outbreak_id': f'cdc_{pathogen}_{outbreak_id}',
+                'outbreak_id': cdc_outbreak_id(url, pathogen),
                 'pathogen': pathogen,
                 'url': url,
                 'source': 'CDC'
@@ -1212,9 +1505,10 @@ class CDCOutbreakScraper:
                     main_page_investigations = self.discover_from_main_page_playwright()
                 else:
                     main_page_investigations = self.discover_from_main_page()
+                main_page_investigations = dedupe_by_id(main_page_investigations)
 
                 if main_page_investigations:
-                    existing = existing or {}
+                    existing = rekey_existing_cdc(existing or {})
                     now = datetime.now(timezone.utc)
 
                     to_fetch = []
@@ -1268,6 +1562,7 @@ class CDCOutbreakScraper:
                         if outbreak_id not in current_ids:
                             all_outbreaks.append(record)
 
+                    apply_derived_fields(all_outbreaks, 'CDC')
                     self._log_scrape_summary(all_outbreaks)
                     return all_outbreaks
 
@@ -1298,6 +1593,8 @@ class CDCOutbreakScraper:
                 # Delay between pathogens
                 time.sleep(delay)
 
+            all_outbreaks = dedupe_by_id(all_outbreaks)
+            apply_derived_fields(all_outbreaks, 'CDC')
             self._log_scrape_summary(all_outbreaks)
             return all_outbreaks
         finally:
@@ -1708,6 +2005,173 @@ def link_recalls_to_outbreaks(outbreaks: List[Dict], recalls: List[Dict]) -> int
     return link_count
 
 
+# --- CDC <-> FDA de-duplication ---------------------------------------------
+#
+# CDC and FDA each post a page for most multistate outbreaks (CDC tracks the
+# illnesses, FDA the food), so concatenating the two sources counted most
+# outbreaks twice. Neither page carries an ID for the other, so pairs are
+# matched on pathogen, posting month, the food named in the title, and case
+# counts (FDA republishes CDC's numbers, so equal counts are strong evidence).
+
+_PATHOGEN_FAMILIES = (
+    ('salmonella', r'salmonella'),
+    ('ecoli', r'e\.?\s*coli|ecoli|\bstec\b|o157|o26|o103|o121|o145|shiga'),
+    ('listeria', r'listeria'),
+    ('botulism', r'botulism|botulinum'),
+    ('hepatitis_a', r'hepatitis|\bhav\b|/hav-'),
+    ('cyclospora', r'cyclospor'),
+    ('vibrio', r'vibrio'),
+    ('norovirus', r'norovirus'),
+    ('campylobacter', r'campylobacter'),
+    ('shigella', r'shigella'),
+    ('scombrotoxin', r'scombro'),
+)
+
+# Words in outbreak titles that don't identify the food.
+_TITLE_STOPWORDS = set(
+    'outbreak outbreaks linked to of and the a an in with infections infection salmonella listeria '
+    'ecoli coli monocytogenes investigation multistate product products brand from by for illnesses '
+    'produced sold made various certain recalled stec shiga toxin producing virus hepatitis cyclospora '
+    'extensively drug resistant unknown food source september october november december january '
+    'february march april may june july august sept spring summer fall winter'.split()
+)
+
+
+def pathogen_families(record: Dict) -> set:
+    """Pathogen families named by a record's pathogen field, title or URL."""
+    text = ' '.join(str(record.get(k) or '') for k in ('pathogen', 'title', 'url')).lower()
+    return {name for name, pattern in _PATHOGEN_FAMILIES if re.search(pattern, text)}
+
+
+def title_food_words(title: Optional[str]) -> set:
+    """Food words from an outbreak title, singularized ('Sprouts' -> 'sprout')."""
+    title = re.sub(r'\([^)]*\)', ' ', title or '')           # FDA's '(August 2026)'
+    title = re.sub(r'([a-z])([A-Z])', r'\1 \2', title)      # CDC's 'SalmonellaOutbreak'
+    words = set()
+    for w in re.findall(r'[a-z]+', title.lower()):
+        if len(w) <= 2 or w in _TITLE_STOPWORDS:
+            continue
+        w = re.sub(r'ies$', 'y', w)
+        w = re.sub(r'(?<![s])s$', '', w)
+        if w not in _TITLE_STOPWORDS:
+            words.add(w)
+    return words
+
+
+def _record_month(record: Dict, source: str) -> Optional[int]:
+    oid = record.get('outbreak_id') or ''
+    if source == 'FDA':
+        d = parse_fda_date_str(record.get('date_str')) or infer_fda_outbreak_date(oid)
+    else:
+        d = infer_cdc_outbreak_date(oid) or first_text_date(record.get('full_text'))
+    return d.year * 12 + d.month if d else None
+
+
+def _url_year(url: Optional[str]) -> Optional[int]:
+    m = re.search(r'/(20\d{2})/', urlparse(url or '').path)
+    return int(m.group(1)) if m else None
+
+
+def match_cdc_fda(cdc_records: List[Dict], fda_records: List[Dict]) -> List[Tuple[Dict, Dict, str]]:
+    """
+    Pair FDA records with the CDC record for the same outbreak, one-to-one.
+
+    A candidate pair needs a shared pathogen family and posting months at most
+    3 apart (or, for CDC URLs dated only by a '/2020/' folder, the same year
+    and a shared food word), plus either a shared food word in the titles or identical case
+    counts within a month (e.g. FDA "Seafood" vs CDC "Fish", both 39 cases).
+    Candidates are taken best-score first, so when one month has two
+    outbreaks of the same kind (the two Dec 2021 packaged-salad Listeria
+    outbreaks) the case counts decide which goes with which.
+
+    CDC records whose page failed to load are still matched on their listing
+    title and URL date, so an FDA page can stand in for a CDC page that 404s.
+    Returns (fda, cdc, confidence) with confidence 'strong' (shared food word
+    and case counts within 10%) or 'probable'.
+    """
+    cdc_index = [(r, pathogen_families(r), _record_month(r, 'CDC'), title_food_words(r.get('title')),
+                  _url_year(r.get('original_url') or r.get('url')))
+                 for r in cdc_records]
+    candidates = []
+    for f in fda_records:
+        f_fams, f_month, f_words = pathogen_families(f), _record_month(f, 'FDA'), title_food_words(f.get('title'))
+        if not f_fams or f_month is None:
+            continue
+        for c, c_fams, c_month, c_words, c_year in cdc_index:
+            if not (f_fams & c_fams):
+                continue
+            shared = f_words & c_words
+            if c_month is not None:
+                gap = abs(f_month - c_month)
+                if gap > 3:
+                    continue
+            elif c_year is not None and c_year == (f_month - 1) // 12 and shared:
+                gap = 2  # year-only CDC URL ('/cyclosporiasis/outbreaks/2020/'): needs a food match
+            else:
+                continue
+            a, b = f.get('case_count'), c.get('case_count')
+            ratio = min(a, b) / max(a, b) if a and b else None
+            if not shared and not (a and a == b and gap <= 1):
+                continue
+            if ratio is not None and ratio < 0.3:
+                continue  # same food, very different size: a different outbreak
+            score = (2 * len(shared) + (2 if gap == 0 else 1 if gap == 1 else 0)
+                     + (3 if ratio is not None and ratio >= 0.9 else 1 if ratio is not None and ratio >= 0.7 else 0))
+            confidence = 'strong' if shared and ratio is not None and ratio >= 0.9 else 'probable'
+            candidates.append((score, f, c, confidence))
+
+    candidates.sort(key=lambda x: -x[0])
+    used_f, used_c, pairs = set(), set(), []
+    for _, f, c, confidence in candidates:
+        if id(f) in used_f or id(c) in used_c:
+            continue
+        used_f.add(id(f))
+        used_c.add(id(c))
+        pairs.append((f, c, confidence))
+    return pairs
+
+
+_MERGE_COUNT_FIELDS = ('case_count', 'hospitalizations', 'deaths', 'state_count', 'states_affected')
+
+
+def merge_outbreak_records(cdc: Dict, fda: Dict, confidence: str) -> Dict:
+    """
+    Merge a normalized FDA record into the normalized CDC record for the same
+    outbreak. The CDC record is the base (id, title, url); both source pages
+    are kept under 'source_records'.
+
+    Counts are taken as a set from whichever page reports more cases -- counts
+    only grow during an outbreak, so the larger figure is the more recent
+    update -- and any count that page lacks is filled from the other. Status
+    is CDC's (CDC declares outbreaks over) unless CDC's is unknown, e.g. when
+    the CDC page failed to load.
+    """
+    merged = dict(cdc)
+    a, b = cdc.get('case_count'), fda.get('case_count')
+    primary, secondary = (fda, cdc) if (b or 0) > (a or 0) else (cdc, fda)
+    for key in _MERGE_COUNT_FIELDS:
+        value = primary.get(key)
+        if value in (None, []):
+            value = secondary.get(key)
+        if value in (None, []):
+            merged.pop(key, None)
+        else:
+            merged[key] = value
+    if merged.get('status', 'unknown') == 'unknown' and fda.get('status'):
+        merged['status'] = fda['status']
+    for key in ('food_source', 'consumer_advice', 'posted_date', 'pathogen'):
+        if merged.get(key) in (None, '', 'unknown') and fda.get(key):
+            merged[key] = fda[key]
+    if not merged.get('title') and fda.get('title'):
+        merged['title'] = fda['title']
+    merged['sources'] = ['CDC', 'FDA']
+    merged['source_records'] = [
+        {k: r.get(k) for k in ('source', 'id', 'title', 'url') if r.get(k)} for r in (cdc, fda)
+    ]
+    merged['match_confidence'] = confidence
+    return merged
+
+
 class OutbreakAggregator:
     """
     Combines outbreak data from multiple sources (FDA, CDC) into a unified format
@@ -1770,12 +2234,41 @@ class OutbreakAggregator:
         """
         Combine all outbreak data and normalize to common format
         """
-        combined = []
+        cdc = all_data.get('cdc', [])
+        fda = all_data.get('fda', [])
 
-        for source, outbreaks in all_data.items():
-            for outbreak in outbreaks:
+        # Count each outbreak once: merge an FDA record into the CDC record for
+        # the same outbreak rather than listing both.
+        pairs = match_cdc_fda(cdc, fda)
+        fda_partner = {id(c): (f, conf) for f, c, conf in pairs}
+        merged_fda = {id(f) for f, _, _ in pairs}
+
+        combined = []
+        for outbreak in cdc:
+            normalized = self.normalize_outbreak(outbreak)
+            partner = fda_partner.get(id(outbreak))
+            if partner:
+                normalized = merge_outbreak_records(normalized, self.normalize_outbreak(partner[0]), partner[1])
+            else:
+                normalized['sources'] = [normalized.get('source', 'CDC')]
+            combined.append(normalized)
+        for outbreak in fda:
+            if id(outbreak) not in merged_fda:
                 normalized = self.normalize_outbreak(outbreak)
+                normalized['sources'] = [normalized.get('source', 'FDA')]
                 combined.append(normalized)
+        # Any other source keys are passed through unmerged.
+        for key, outbreaks in all_data.items():
+            if key not in ('cdc', 'fda'):
+                for outbreak in outbreaks:
+                    normalized = self.normalize_outbreak(outbreak)
+                    normalized['sources'] = [normalized.get('source', 'Unknown')]
+                    combined.append(normalized)
+
+        log.info("Merged %d FDA records into matching CDC records (%d strong, %d probable); "
+                 "%d outbreaks after de-duplication, from %d CDC + %d FDA records",
+                 len(pairs), sum(1 for p in pairs if p[2] == 'strong'),
+                 sum(1 for p in pairs if p[2] == 'probable'), len(combined), len(cdc), len(fda))
 
         # Sort by case count (descending) for priority
         combined.sort(key=lambda x: x.get('case_count', 0), reverse=True)
@@ -1791,11 +2284,17 @@ class OutbreakAggregator:
         total_deaths = sum(o.get('deaths', 0) for o in combined_data)
         total_hospitalizations = sum(o.get('hospitalizations', 0) for o in combined_data)
 
-        # Count by source
+        # Count by source: how many of the (de-duplicated) outbreaks each agency
+        # reported. An outbreak both agencies posted counts for each, so these
+        # sum to more than total_outbreaks; the overlap is broken out below.
         by_source = {}
+        by_source_overlap = {}
         for outbreak in combined_data:
-            source = outbreak.get('source', 'Unknown')
-            by_source[source] = by_source.get(source, 0) + 1
+            sources = outbreak.get('sources') or [outbreak.get('source', 'Unknown')]
+            for source in sources:
+                by_source[source] = by_source.get(source, 0) + 1
+            label = ' and '.join(sources) if len(sources) > 1 else f'{sources[0]} only'
+            by_source_overlap[label] = by_source_overlap.get(label, 0) + 1
 
         # Count by pathogen
         by_pathogen = {}
@@ -1821,6 +2320,7 @@ class OutbreakAggregator:
             'total_deaths': total_deaths,
             'total_hospitalizations': total_hospitalizations,
             'outbreaks_by_source': by_source,
+            'outbreaks_by_source_overlap': by_source_overlap,
             'outbreaks_by_pathogen': by_pathogen,
             'outbreaks_by_status': by_status,
             'unique_states_affected': len(all_states),

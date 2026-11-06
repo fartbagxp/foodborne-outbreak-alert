@@ -8,59 +8,60 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 
 - 🏛️ FDA: 82 outbreak investigations (2006-2026)
 - 🔬 CDC: 236 total investigations (2006-2026)
-- 🚨 Active: 31 ongoing investigations
-- 📊 Total: 318 foodborne outbreak investigations
+- 🚨 Active: 3 ongoing investigations
+- 📊 Total: 245 unique foodborne outbreaks (73 reported by both CDC and FDA, counted once)
 
 ## Current Statistics
 
 | Metric                    | Count  |
 | ------------------------- | ------ |
-| **Total Outbreaks**       | 318    |
-| **Active Investigations** | 31     |
-| **Total Cases**           | 41,500 |
-| **Deaths**                | 5,170  |
-| **Hospitalizations**      | 15,155 |
+| **Total Outbreaks**       | 245    |
+| **Active Investigations** | 3      |
+| **Total Cases**           | 35,786 |
+| **Deaths**                | 552    |
+| **Hospitalizations**      | 7,506  |
 | **States Affected**       | 51     |
 
 ## By Source
 
-| Source | Outbreaks | Year Range |
-| ------ | --------- | ---------- |
-| CDC    | 236       | 2006-2026  |
-| FDA    | 82        | 2006-2026  |
+| Source                         | Outbreaks | Year Range |
+| ------------------------------ | --------- | ---------- |
+| CDC                            | 236       | 2006-2026  |
+| FDA                            | 82        | 2006-2026  |
+| Reported by both (CDC and FDA) | 73        | 2006-2026  |
 
 ## By Status
 
 | Status  | Count |
 | ------- | ----- |
-| Unknown | 219   |
-| Closed  | 68    |
-| Ongoing | 31    |
+| Closed  | 210   |
+| Unknown | 32    |
+| Ongoing | 3     |
 
 ## By Pathogen (Top 10)
 
 | Pathogen   | Outbreaks |
 | ---------- | --------- |
-| Salmonella | 140       |
-| Unknown    | 64        |
-| E. coli    | 63        |
-| Listeria   | 44        |
-| Botulism   | 4         |
+| Salmonella | 120       |
+| E. coli    | 56        |
+| Listeria   | 38        |
+| Unknown    | 26        |
 | Vibrio     | 3         |
+| Botulism   | 2         |
 
 ## By Year (Recent)
 
 | Year | Outbreaks |
 | ---- | --------- |
-| 2026 | 13        |
-| 2025 | 13        |
-| 2024 | 11        |
-| 2023 | 12        |
-| 2022 | 24        |
-| 2021 | 22        |
-| 2020 | 20        |
-| 2019 | 27        |
-| 2018 | 20        |
+| 2026 | 12        |
+| 2025 | 11        |
+| 2024 | 9         |
+| 2023 | 9         |
+| 2022 | 14        |
+| 2021 | 13        |
+| 2020 | 14        |
+| 2019 | 17        |
+| 2018 | 19        |
 | 2017 | 7         |
 
 ## USDA Recalls

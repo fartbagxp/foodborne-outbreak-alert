@@ -35,7 +35,7 @@ jobs:
 
       - name: Install flyctl (for the FDA proxy)
         continue-on-error: true # A failure here must not skip CDC/combine/commit below.
-        uses: superfly/flyctl-actions/setup-flyctl@fc53c09e1bc3be6f54706524e3b82c4f462f77be # 1.5
+        uses: superfly/flyctl-actions/setup-flyctl@ed8efb33836e8b2096c7fd3ba1c8afe303ebbff1 # main line for Node24
 
       - name: Allocate fly.dev proxy IP
         # The dedicated IPv4 fda-scrape-proxy needs (for raw TCP passthrough — see

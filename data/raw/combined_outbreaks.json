@@ -1,34 +1,34 @@
 {
   "summary": {
-    "total_outbreaks": 245,
-    "total_cases": 35786,
-    "total_deaths": 552,
-    "total_hospitalizations": 7506,
+    "total_outbreaks": 242,
+    "total_cases": 33951,
+    "total_deaths": 179,
+    "total_hospitalizations": 5785,
     "outbreaks_by_source": {
       "CDC": 236,
       "FDA": 82
     },
     "outbreaks_by_source_overlap": {
-      "CDC only": 163,
-      "CDC and FDA": 73,
-      "FDA only": 9
+      "CDC only": 160,
+      "CDC and FDA": 76,
+      "FDA only": 6
     },
     "outbreaks_by_pathogen": {
       "unknown": 18,
       "salmonella": 119,
       "ecoli": 56,
       "listeria": 38,
+      "Unknown": 5,
       "botulism": 2,
-      "Unknown": 8,
       "vibrio": 3,
       "Salmonella": 1
     },
     "outbreaks_by_status": {
-      "closed": 210,
-      "unknown": 32,
-      "ongoing": 3
+      "closed": 227,
+      "ongoing": 3,
+      "unknown": 12
     },
-    "unique_states_affected": 51,
+    "unique_states_affected": 52,
     "states_list": [
       "AK",
       "AL",
@@ -69,6 +69,7 @@
       "OK",
       "OR",
       "PA",
+      "PR",
       "RI",
       "SC",
       "SD",
@@ -121,51 +122,6 @@
       ]
     },
     {
-      "id": "cdc_unknown_cyclosporiasis-outbreaks-2019-weekly",
-      "source": "CDC",
-      "title": "Fresh Basil",
-      "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2019/weekly/index.html",
-      "pathogen": "unknown",
-      "status": "unknown",
-      "states_affected": [
-        "IA",
-        "CT",
-        "GA",
-        "NY",
-        "SC",
-        "WI",
-        "FL",
-        "RI",
-        "MN",
-        "OH",
-        "MA"
-      ],
-      "scraped_at": "2026-11-06T18:47:00.963485+00:00",
-      "case_count": 2019,
-      "hospitalizations": 241,
-      "deaths": 6,
-      "state_count": 11,
-      "sources": [
-        "CDC",
-        "FDA"
-      ],
-      "source_records": [
-        {
-          "source": "CDC",
-          "id": "cdc_unknown_cyclosporiasis-outbreaks-2019-weekly",
-          "title": "Fresh Basil",
-          "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2019/weekly/index.html"
-        },
-        {
-          "source": "FDA",
-          "id": "outbreak-investigation-cyclospora-imported-fresh-basil-july-2019",
-          "title": "Cyclospora- Imported Fresh Basil (July 2019)",
-          "url": "https://web.archive.org/web/20201024213158/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-cyclospora-imported-fresh-basil-july-2019"
-        }
-      ],
-      "match_confidence": "probable"
-    },
-    {
       "id": "cdc_salmonella_newport-07-20",
       "source": "CDC",
       "title": "2020SalmonellaOutbreak Linked to Onions",
@@ -176,54 +132,54 @@
       "deaths": 0,
       "hospitalizations": 167,
       "states_affected": [
+        "AK",
+        "AL",
+        "AR",
+        "AZ",
+        "CA",
+        "CO",
         "CT",
-        "UT",
-        "WY",
+        "DE",
+        "FL",
+        "GA",
+        "HI",
+        "IA",
+        "ID",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
         "NM",
         "NV",
-        "IL",
-        "KY",
-        "ME",
-        "OR",
-        "RI",
-        "WA",
-        "TN",
-        "AZ",
-        "MA",
-        "DE",
-        "CA",
-        "KS",
-        "IN",
         "NY",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "AK",
-        "HI",
-        "NE",
-        "OK",
-        "VA",
-        "WV",
-        "MT",
-        "AL",
-        "CO",
-        "MN",
-        "NH",
-        "SD",
-        "IA",
-        "NC",
-        "MD",
-        "GA",
-        "NJ",
-        "SC",
-        "MS",
-        "MO",
-        "PA",
         "OH",
-        "ID",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
         "TX",
-        "AR"
+        "UT",
+        "VA",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
       ],
       "state_count": 48,
       "posted_date": "October 8, 2020",
@@ -246,7 +202,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-newport-red-onions-july-2020"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_oranienburg-09-21",
@@ -260,46 +216,47 @@
       "deaths": 0,
       "hospitalizations": 260,
       "states_affected": [
-        "CT",
-        "UT",
-        "NM",
-        "OR",
-        "IL",
-        "KY",
-        "WA",
-        "TN",
-        "LA",
-        "DC",
-        "MA",
-        "CA",
-        "KS",
-        "IN",
-        "NY",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "NE",
-        "HI",
-        "OK",
-        "WV",
-        "VA",
         "AL",
+        "AR",
+        "CA",
         "CO",
-        "MN",
-        "SD",
-        "IA",
-        "NC",
-        "MD",
+        "CT",
+        "DC",
+        "FL",
         "GA",
-        "NJ",
-        "SC",
-        "MS",
+        "HI",
+        "IA",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "LA",
+        "MA",
+        "MD",
+        "MI",
+        "MN",
         "MO",
-        "PA",
+        "MS",
+        "NC",
+        "ND",
+        "NE",
+        "NJ",
+        "NM",
+        "NY",
         "OH",
+        "OK",
+        "OR",
+        "PA",
+        "PR",
+        "SC",
+        "SD",
+        "TN",
         "TX",
-        "AR"
+        "UT",
+        "VA",
+        "WA",
+        "WI",
+        "WV"
       ],
       "state_count": 39,
       "posted_date": "February 2, 2022",
@@ -368,27 +325,27 @@
       "title": "Bagged Salad Mix",
       "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2020/index.html",
       "pathogen": "unknown",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
-        "IA",
         "GA",
-        "KS",
-        "PA",
+        "IA",
         "IL",
-        "MO",
-        "WI",
-        "ND",
+        "KS",
+        "MA",
         "MI",
         "MN",
+        "MO",
+        "ND",
         "NE",
         "OH",
+        "PA",
         "SD",
-        "MA"
+        "WI"
       ],
-      "scraped_at": "2026-11-06T18:46:58.348998+00:00",
-      "case_count": 690,
-      "hospitalizations": 701,
-      "deaths": 38,
+      "scraped_at": "2026-11-07T16:38:56.489263+00:00",
+      "case_count": 701,
+      "hospitalizations": 38,
+      "deaths": 0,
       "state_count": 14,
       "consumer_advice": "On June 27, 2020, Fresh Expressrecalledproducts containing either iceberg lettuce, red cabbage or carrots and displaying the product code Z178, or a lower number. The “Best by” date on the products run through July 14, 2020.\nThe recalled products are now well beyond expiration and likely no longer on the market or in consumers’ homes.\n",
       "sources": [
@@ -435,48 +392,48 @@
       "title": "Cucumbers",
       "url": "https://www.cdc.gov/salmonella/africana-06-24/index.html",
       "pathogen": "salmonella",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
+        "AL",
+        "AR",
+        "CA",
         "CT",
-        "NV",
-        "IL",
-        "KY",
-        "ME",
-        "RI",
-        "WA",
-        "TN",
-        "MA",
         "DC",
         "DE",
-        "CA",
-        "IN",
-        "NY",
-        "WI",
         "FL",
-        "MI",
-        "OK",
-        "WV",
-        "VA",
-        "AL",
-        "MN",
-        "IA",
-        "NC",
-        "MD",
         "GA",
-        "NJ",
-        "SC",
-        "MS",
+        "IA",
+        "IL",
+        "IN",
+        "KY",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
         "MO",
-        "PA",
-        "VT",
+        "MS",
+        "NC",
+        "NJ",
+        "NV",
+        "NY",
         "OH",
+        "OK",
+        "PA",
+        "RI",
+        "SC",
+        "TN",
         "TX",
-        "AR"
+        "VA",
+        "VT",
+        "WA",
+        "WI",
+        "WV"
       ],
-      "scraped_at": "2026-11-06T18:46:26.776422+00:00",
+      "scraped_at": "2026-11-07T16:38:26.385010+00:00",
       "case_count": 551,
-      "hospitalizations": 551,
-      "deaths": 155,
+      "hospitalizations": 155,
+      "deaths": 0,
       "state_count": 35,
       "food_source": "Cucumbers",
       "consumer_advice": "Product of concern is past shelf life.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection.\n",
@@ -513,46 +470,40 @@
       "deaths": 0,
       "hospitalizations": 65,
       "states_affected": [
-        "IA",
-        "MI",
-        "VA",
-        "NJ",
-        "NH",
-        "MT",
-        "MO",
-        "ME",
-        "MS",
-        "NM",
-        "OH",
-        "KY",
-        "LA",
-        "CA",
         "AL",
-        "NY",
-        "WA",
-        "MN",
-        "GA",
-        "UT",
         "AR",
-        "KS",
-        "TN",
+        "CA",
+        "CO",
+        "FL",
+        "GA",
+        "HI",
+        "IA",
         "IL",
         "IN",
-        "CO",
-        "WY",
-        "VT",
-        "OK",
-        "PA",
-        "WI",
-        "NE",
-        "TX",
-        "FL",
-        "MA",
-        "SC",
-        "WV",
+        "KS",
+        "KY",
+        "LA",
+        "MI",
+        "MN",
+        "MO",
+        "MT",
         "NC",
         "ND",
-        "HI"
+        "NE",
+        "NJ",
+        "NM",
+        "OH",
+        "OK",
+        "PA",
+        "SC",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
       ],
       "state_count": 34,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
@@ -621,59 +572,58 @@
       "title": "Cantaloupes",
       "url": "https://www.cdc.gov/salmonella/sundsvall-11-23/index.html",
       "pathogen": "salmonella",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
-        "CT",
-        "UT",
-        "WY",
-        "NM",
-        "NV",
-        "IL",
-        "KY",
-        "OR",
-        "RI",
-        "WA",
-        "TN",
-        "MA",
+        "AK",
+        "AR",
         "AZ",
         "CA",
-        "KS",
-        "IN",
-        "NY",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "AK",
-        "NE",
-        "OK",
-        "WV",
-        "VA",
-        "MT",
-        "AL",
         "CO",
-        "MN",
-        "NH",
-        "SD",
-        "IA",
-        "NC",
-        "MD",
+        "CT",
+        "FL",
         "GA",
-        "NJ",
-        "SC",
-        "MS",
+        "IA",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "MA",
+        "MD",
+        "MI",
+        "MN",
         "MO",
-        "PA",
-        "VT",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
+        "NM",
+        "NV",
+        "NY",
         "OH",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
         "TX",
-        "AR"
+        "UT",
+        "VA",
+        "VT",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
       ],
-      "scraped_at": "2026-11-06T18:46:37.001501+00:00",
+      "scraped_at": "2026-11-07T16:38:34.398537+00:00",
       "case_count": 407,
       "hospitalizations": 158,
       "deaths": 6,
-      "state_count": 45,
+      "state_count": 44,
       "food_source": "Cantaloupes",
       "consumer_advice": "Consumers, restaurants, retailers, and wholesalers should not eat, sell, or serve recalled cantaloupe or recalled products containing cantaloupe.Recalled whole and pre-cut cantaloupes and recalled product containing pre-cut cantaloupes were sold or distributed from September to early December 2023 and should be past shelf-life. Consumers who froze cantaloupe products should check if they are part of the recalls. If you are unsure of where your cantaloupes are from, you should discard them.Anyone who purchased or received recalled cantaloupes should followFDA’s safe handling and cleaning adviceand use extra vigilance in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled products to reduce the risk of cross-contamination.Pre-cut fruit manufacturers should ensure proper cleaning and sanitizing of food contact surfaces and evaluate the need to recall additional product due to the potential for cross-contamination in the processing facility.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating recalled cantaloupe.\n",
       "posted_date": "November 2023",
@@ -770,6 +720,51 @@
       "sources": [
         "CDC"
       ]
+    },
+    {
+      "id": "cdc_unknown_cyclosporiasis-outbreaks-2019-weekly",
+      "source": "CDC",
+      "title": "Fresh Basil",
+      "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2019/weekly/index.html",
+      "pathogen": "unknown",
+      "status": "closed",
+      "states_affected": [
+        "CT",
+        "FL",
+        "GA",
+        "IA",
+        "MA",
+        "MN",
+        "NY",
+        "OH",
+        "RI",
+        "SC",
+        "WI"
+      ],
+      "scraped_at": "2026-11-07T16:38:59.397525+00:00",
+      "case_count": 241,
+      "hospitalizations": 6,
+      "deaths": 0,
+      "state_count": 11,
+      "sources": [
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_unknown_cyclosporiasis-outbreaks-2019-weekly",
+          "title": "Fresh Basil",
+          "url": "https://www.cdc.gov/parasites/cyclosporiasis/outbreaks/2019/weekly/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-cyclospora-imported-fresh-basil-july-2019",
+          "title": "Cyclospora- Imported Fresh Basil (July 2019)",
+          "url": "https://web.archive.org/web/20201024213158/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-cyclospora-imported-fresh-basil-july-2019"
+        }
+      ],
+      "match_confidence": "probable"
     },
     {
       "id": "cdc_salmonella_kiambu-07-17",
@@ -986,13 +981,57 @@
       "case_count": 167,
       "deaths": 0,
       "hospitalizations": 85,
-      "states_affected": [],
+      "states_affected": [
+        "AZ",
+        "CA",
+        "CO",
+        "DE",
+        "FL",
+        "IA",
+        "ID",
+        "IL",
+        "MD",
+        "MI",
+        "MN",
+        "MT",
+        "NC",
+        "NE",
+        "NJ",
+        "NM",
+        "NY",
+        "OH",
+        "OR",
+        "PA",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "VA",
+        "WA",
+        "WI"
+      ],
       "state_count": 27,
       "posted_date": "January 15, 2020",
       "scraped_at": "2026-08-21T14:00:07.584330+00:00",
       "sources": [
-        "CDC"
-      ]
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_ecoli_o157h7-11-19",
+          "title": "2019E. coliOutbreak Linked to Romaine Lettuce",
+          "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2019/o157h7-11-19/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-e-coli-romaine-salinas-california-november-2019",
+          "title": "E. coli- Romaine (November 2019)",
+          "url": "https://web.archive.org/web/20201112035254/http://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-romaine-salinas-california-november-2019"
+        }
+      ],
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_javiana-12-19",
@@ -1005,20 +1044,20 @@
       "deaths": 0,
       "hospitalizations": 73,
       "states_affected": [
-        "DE",
-        "CT",
         "CA",
+        "CO",
+        "CT",
+        "DE",
+        "FL",
         "GA",
+        "IL",
+        "MA",
+        "MN",
         "NJ",
         "NY",
         "PA",
-        "IL",
-        "WA",
-        "CO",
-        "FL",
-        "MN",
         "VA",
-        "MA"
+        "WA"
       ],
       "state_count": 14,
       "scraped_at": "2026-08-21T14:00:00.258142+00:00",
@@ -1089,16 +1128,16 @@
       "deaths": 0,
       "hospitalizations": 38,
       "states_affected": [
-        "IA",
         "AL",
-        "IN",
+        "IA",
         "IL",
+        "IN",
         "KY",
-        "MO",
-        "WI",
         "MI",
         "MN",
-        "OH"
+        "MO",
+        "OH",
+        "WI"
       ],
       "state_count": 10,
       "scraped_at": "2026-08-21T14:00:44.190162+00:00",
@@ -1120,7 +1159,7 @@
           "url": "https://web.archive.org/web/20201112041448/http://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-carrau-pre-cut-melons-april-2019"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_ground-turkey-11-10-2011",
@@ -1173,23 +1212,23 @@
       "hospitalizations": 34,
       "states_affected": [
         "AR",
-        "LA",
-        "MI",
         "AZ",
-        "IL",
-        "SC",
         "CA",
         "CO",
+        "GA",
+        "IL",
+        "LA",
+        "MI",
+        "MO",
+        "MS",
+        "NC",
+        "NM",
         "NV",
         "NY",
-        "WV",
-        "NC",
-        "MO",
         "OK",
-        "MS",
-        "NM",
-        "GA",
-        "TX"
+        "SC",
+        "TX",
+        "WV"
       ],
       "state_count": 18,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
@@ -1226,20 +1265,16 @@
       "deaths": 1,
       "hospitalizations": 38,
       "states_affected": [
+        "AZ",
         "CA",
-        "UT",
-        "WY",
-        "NM",
-        "KS",
-        "NJ",
-        "IN",
-        "NV",
-        "IL",
-        "KY",
         "CO",
-        "WA",
+        "KS",
+        "KY",
         "NE",
-        "AZ"
+        "NJ",
+        "NV",
+        "UT",
+        "WA"
       ],
       "state_count": 10,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.\nSeparate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.\nCook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -1296,44 +1331,44 @@
       "deaths": 0,
       "hospitalizations": 36,
       "states_affected": [
-        "IA",
-        "MI",
-        "VA",
-        "DE",
-        "NJ",
-        "MO",
-        "ME",
-        "NM",
-        "OH",
-        "KY",
-        "CA",
-        "AL",
-        "NY",
-        "WA",
-        "MN",
-        "GA",
-        "UT",
-        "ID",
-        "AR",
         "AK",
-        "TN",
-        "IL",
+        "AL",
+        "AR",
+        "CA",
         "CO",
-        "VT",
-        "OK",
-        "PA",
-        "WI",
-        "NE",
-        "TX",
-        "RI",
-        "FL",
         "CT",
+        "DE",
+        "FL",
+        "GA",
+        "IA",
+        "ID",
+        "IL",
+        "KY",
         "MA",
-        "SD",
-        "SC",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
         "NC",
         "ND",
-        "OR"
+        "NE",
+        "NJ",
+        "NM",
+        "NY",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "VT",
+        "WA",
+        "WI"
       ],
       "state_count": 38,
       "consumer_advice": "Check your home and throw out any of the recalled products if you still have them. They have a long shelf-life.\nAlways follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
@@ -1428,21 +1463,21 @@
       "deaths": 0,
       "hospitalizations": 20,
       "states_affected": [
-        "IA",
-        "CT",
+        "AZ",
         "CA",
-        "WY",
+        "CO",
+        "CT",
+        "IA",
+        "MN",
+        "MO",
+        "NE",
         "NJ",
         "PA",
-        "MO",
-        "WA",
-        "CO",
-        "WI",
-        "MN",
-        "NE",
-        "VA",
         "TX",
-        "AZ"
+        "VA",
+        "WA",
+        "WI",
+        "WY"
       ],
       "state_count": 15,
       "posted_date": "December 6, 2021",
@@ -1466,7 +1501,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-thompson-seafood-october-2021"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_enteritidis-11-14",
@@ -1498,48 +1533,29 @@
       "deaths": 0,
       "hospitalizations": 28,
       "states_affected": [
-        "CT",
-        "UT",
-        "WY",
+        "AK",
+        "AZ",
+        "CA",
+        "CO",
+        "IA",
+        "IL",
+        "MA",
+        "MI",
+        "MT",
+        "NE",
+        "NJ",
         "NM",
         "NV",
-        "IL",
-        "OR",
-        "WA",
-        "TN",
-        "MA",
-        "AZ",
-        "LA",
-        "DE",
-        "CA",
-        "KS",
         "NY",
-        "IN",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "NE",
-        "AK",
-        "OK",
-        "VA",
-        "MT",
-        "AL",
-        "CO",
-        "MN",
-        "SD",
-        "IA",
-        "NC",
-        "MD",
-        "GA",
-        "NJ",
-        "SC",
-        "PA",
-        "MO",
         "OH",
-        "ID",
+        "OR",
+        "PA",
+        "SD",
         "TX",
-        "AR"
+        "UT",
+        "WA",
+        "WI",
+        "WY"
       ],
       "state_count": 23,
       "consumer_advice": "Follow thesefour food safety stepsto prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -1633,23 +1649,20 @@
       "deaths": 1,
       "hospitalizations": 34,
       "states_affected": [
-        "MT",
-        "IA",
-        "UT",
-        "WY",
-        "NC",
-        "NM",
-        "KS",
-        "NV",
-        "MO",
-        "OK",
         "CO",
-        "OR",
-        "WA",
+        "IA",
+        "KS",
         "MI",
-        "WI",
+        "MO",
+        "MT",
+        "NC",
         "NE",
-        "ID"
+        "NM",
+        "OR",
+        "UT",
+        "WA",
+        "WI",
+        "WY"
       ],
       "state_count": 14,
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromE. coli.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -1676,51 +1689,6 @@
       "match_confidence": "strong"
     },
     {
-      "id": "cdc_ecoli_bison-07-19",
-      "source": "CDC",
-      "title": "2019E. coliOutbreak Linked to Ground Bison Produced by Northfork Bison Distributions, Inc.",
-      "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2019/bison-07-19/index.html",
-      "pathogen": "ecoli",
-      "food_source": "Ground Bison Produced by Northfork Bison Distributions, Inc",
-      "status": "closed",
-      "case_count": 103,
-      "deaths": 18,
-      "hospitalizations": 33,
-      "states_affected": [
-        "CT",
-        "NJ",
-        "NY",
-        "PA",
-        "IL",
-        "MO",
-        "FL",
-        "MI"
-      ],
-      "state_count": 8,
-      "posted_date": "September 13, 2019",
-      "scraped_at": "2026-08-21T14:00:21.254748+00:00",
-      "consumer_advice": "Because the product is frozen and may still be in freezers, distributors, retailers and restaurants should not distribute, use or serve ground bison (including bison burgers) recalled by Northfork Bison Distributions Inc.\nConsumers should not eat products prepared using recalled ground bison (including bison burgers) sold under the Northfork Bison label including bison burgers sold to retailers in 4 x 4-ounce packages with expiration dates through October 8, 2020.",
-      "sources": [
-        "CDC",
-        "FDA"
-      ],
-      "source_records": [
-        {
-          "source": "CDC",
-          "id": "cdc_ecoli_bison-07-19",
-          "title": "2019E. coliOutbreak Linked to Ground Bison Produced by Northfork Bison Distributions, Inc.",
-          "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2019/bison-07-19/index.html"
-        },
-        {
-          "source": "FDA",
-          "id": "outbreak-investigation-e-coli-ground-bison-july-2019",
-          "title": "E. coli- Ground Bison (July 2019)",
-          "url": "https://web.archive.org/web/20201022095311/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-ground-bison-july-2019"
-        }
-      ],
-      "match_confidence": "probable"
-    },
-    {
       "id": "cdc_salmonella_enteritidis-08-20",
       "source": "CDC",
       "title": "2020SalmonellaOutbreak Linked to Peaches",
@@ -1731,31 +1699,22 @@
       "deaths": 0,
       "hospitalizations": 28,
       "states_affected": [
-        "CT",
-        "IL",
-        "KY",
-        "RI",
-        "MA",
-        "DE",
         "CA",
-        "KS",
-        "NY",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "WV",
-        "VA",
-        "MN",
-        "NH",
-        "SD",
+        "CT",
         "IA",
+        "KS",
+        "KY",
         "MD",
-        "NJ",
-        "PA",
+        "MI",
+        "MN",
         "MO",
+        "NJ",
+        "NY",
+        "OH",
+        "PA",
+        "VA",
         "VT",
-        "OH"
+        "WI"
       ],
       "state_count": 17,
       "posted_date": "October 16, 2020",
@@ -1810,18 +1769,18 @@
       "deaths": 0,
       "hospitalizations": 34,
       "states_affected": [
-        "IA",
+        "AZ",
         "CA",
-        "UT",
-        "NY",
-        "OR",
-        "IL",
-        "WI",
         "CO",
+        "IA",
+        "IL",
         "MI",
         "MN",
+        "NY",
+        "OR",
+        "UT",
         "VA",
-        "AZ"
+        "WI"
       ],
       "state_count": 12,
       "consumer_advice": "Always followfour food safety stepsto prevent getting sick from Salmonella:\nClean:Wash your hands, utensils, and surfaces often.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -1845,7 +1804,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-eggs-sept-2024"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_saintpaul-04-13",
@@ -1876,15 +1835,15 @@
       "deaths": 0,
       "hospitalizations": 27,
       "states_affected": [
-        "DE",
         "CT",
+        "DE",
+        "FL",
+        "MA",
         "NJ",
         "NY",
         "PA",
-        "FL",
         "RI",
-        "TX",
-        "MA"
+        "TX"
       ],
       "state_count": 9,
       "scraped_at": "2026-08-21T14:00:25.163613+00:00",
@@ -1907,7 +1866,7 @@
           "url": "https://web.archive.org/web/20201126134411/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-uganda-fresh-papayas-june-2019"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_oysters-12-25",
@@ -1934,36 +1893,36 @@
       "title": "Fresh Diced Onions",
       "url": "https://www.cdc.gov/salmonella/thompson-10-23/index.html",
       "pathogen": "salmonella",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
-        "UT",
-        "WY",
-        "OR",
-        "IL",
-        "WA",
-        "KY",
-        "TN",
-        "MA",
         "AZ",
         "CA",
-        "IN",
-        "NY",
-        "WI",
-        "ND",
-        "MI",
-        "VA",
-        "MT",
         "CO",
-        "IA",
         "GA",
-        "OH",
+        "IA",
         "ID",
-        "TX"
+        "IL",
+        "IN",
+        "KY",
+        "MA",
+        "MI",
+        "MT",
+        "ND",
+        "NY",
+        "OH",
+        "OR",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "WA",
+        "WI",
+        "WY"
       ],
-      "scraped_at": "2026-11-06T18:46:39.515157+00:00",
+      "scraped_at": "2026-11-07T16:38:37.174376+00:00",
       "case_count": 80,
       "hospitalizations": 18,
-      "deaths": 18,
+      "deaths": 1,
       "state_count": 23,
       "food_source": "Onions",
       "consumer_advice": "Consumers should not eat, sell, or serve recalled onions and should check their freezers if they froze recalled products. Full descriptions of recalled products sold to retailers in AZ, CA, ID, MT, OR, and WA can be found in therecall announcement.Direct customers, including restaurants, institutions, and retailers will be contacted by the company and should check their refrigerators and freezers and throw away recalled onions.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating recalled onions.\n",
@@ -2018,55 +1977,26 @@
       "deaths": 0,
       "hospitalizations": 6,
       "states_affected": [
-        "IA",
-        "MI",
-        "VA",
-        "DE",
-        "NH",
-        "MT",
-        "MO",
-        "ME",
-        "MS",
-        "NM",
-        "OH",
-        "KY",
-        "CA",
-        "AL",
-        "WA",
-        "MN",
-        "UT",
-        "ID",
-        "MD",
-        "AR",
-        "KS",
-        "AK",
-        "TN",
-        "IL",
-        "IN",
-        "CO",
-        "WY",
-        "VT",
-        "OK",
-        "PA",
-        "WI",
-        "NE",
-        "TX",
         "FL",
-        "SD",
-        "CT",
-        "MA",
-        "AZ",
-        "SC",
-        "WV",
+        "IA",
+        "IN",
+        "KS",
+        "MI",
+        "MN",
         "NC",
-        "NY",
         "ND",
-        "HI",
-        "OR"
+        "NH",
+        "NY",
+        "OR",
+        "PA",
+        "SC",
+        "SD",
+        "WA",
+        "WI"
       ],
       "state_count": 16,
       "consumer_advice": "Do not eat anyrecalledsprouts.Throw them away or return them.Wash items and surfacesthat may have touched the recalled sprouts using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-11-06T18:46:02.326141+00:00",
+      "scraped_at": "2026-11-07T16:38:23.297624+00:00",
       "posted_date": "August 2026",
       "sources": [
         "CDC",
@@ -2119,27 +2049,27 @@
       "deaths": 0,
       "hospitalizations": 22,
       "states_affected": [
-        "IL",
-        "KY",
-        "TN",
-        "MA",
-        "CA",
-        "KS",
-        "IN",
-        "NY",
-        "FL",
-        "MI",
-        "VA",
         "AL",
+        "CA",
         "CO",
-        "NC",
-        "MD",
+        "FL",
         "GA",
-        "NJ",
-        "SC",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "MA",
+        "MD",
+        "MI",
         "MS",
+        "NC",
+        "NJ",
+        "NY",
+        "OH",
         "PA",
-        "OH"
+        "SC",
+        "TN",
+        "VA"
       ],
       "state_count": 21,
       "consumer_advice": "Follow thesefour food safety stepsto prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -2196,14 +2126,14 @@
       "deaths": 0,
       "hospitalizations": 10,
       "states_affected": [
+        "AZ",
         "IA",
         "KS",
         "MO",
-        "OK",
         "NE",
         "NH",
-        "SD",
-        "AZ"
+        "OK",
+        "SD"
       ],
       "state_count": 8,
       "posted_date": "February 28, 2023",
@@ -2257,14 +2187,48 @@
       "case_count": 62,
       "deaths": 0,
       "hospitalizations": 25,
-      "states_affected": [],
+      "states_affected": [
+        "CA",
+        "CT",
+        "DC",
+        "FL",
+        "GA",
+        "IL",
+        "LA",
+        "MA",
+        "MD",
+        "MI",
+        "NH",
+        "NJ",
+        "NY",
+        "OH",
+        "PA",
+        "RI",
+        "WI"
+      ],
       "state_count": 16,
       "posted_date": "January 9, 2019",
       "consumer_advice": "Antibiotics are not recommendedfor patients withE. coliO157 infections. Antibiotics are also not recommended for patients in whomE.coliO157 infection is suspected, until diagnostic testing rules out this infection.Some studies have shown that administering antibiotics to patients withE. coliO157 infections might increase their risk of developing hemolytic uremic syndrome (a type of kidney failure), and the benefit of antibiotic treatment has not been clearly demonstrated.",
       "scraped_at": "2026-08-21T14:01:03.907367+00:00",
       "sources": [
-        "CDC"
-      ]
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_ecoli_o157h7-11-18",
+          "title": "2018E. coliOutbreak Linked to Romaine Lettuce B",
+          "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2018/o157h7-11-18/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-e-coli-romaine-november-2018",
+          "title": "E. coli- Romaine (November 2018)",
+          "url": "https://web.archive.org/web/20201116113829/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-romaine-november-2018"
+        }
+      ],
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_delimeats-7-24",
@@ -2315,39 +2279,18 @@
       "deaths": 0,
       "hospitalizations": 6,
       "states_affected": [
-        "CT",
-        "NV",
-        "IL",
-        "OR",
-        "WA",
-        "TN",
-        "LA",
-        "DC",
-        "MA",
         "AZ",
-        "DE",
         "CA",
-        "IN",
-        "NY",
-        "WI",
-        "FL",
-        "MI",
-        "HI",
-        "VA",
-        "CO",
-        "MN",
-        "IA",
-        "NC",
-        "MD",
+        "CT",
         "GA",
+        "IL",
+        "LA",
         "NJ",
-        "SC",
-        "MS",
-        "MO",
+        "NY",
+        "OR",
         "PA",
-        "OH",
-        "TX",
-        "AR"
+        "WA",
+        "WI"
       ],
       "state_count": 12,
       "posted_date": "November 4, 2020",
@@ -2371,7 +2314,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-stanley-wood-ear-mushrooms-dried-fungus-september-2020"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_o26-11-15",
@@ -2402,16 +2345,16 @@
       "deaths": 0,
       "hospitalizations": 3,
       "states_affected": [
+        "FL",
         "IA",
-        "UT",
-        "WY",
-        "NY",
+        "ID",
         "IL",
         "MO",
-        "FL",
+        "NY",
+        "TX",
+        "UT",
         "VA",
-        "ID",
-        "TX"
+        "WY"
       ],
       "state_count": 10,
       "posted_date": "April 22, 2020",
@@ -2436,6 +2379,35 @@
         }
       ],
       "match_confidence": "strong"
+    },
+    {
+      "id": "outbreak-investigation-scombrotoxin-fish-poisoning-yellowfinahi-tuna-november-2019",
+      "source": "FDA",
+      "title": "Scombrotoxin Fish Poisoning - Yellowfin/Ahi Tuna (November 2019)",
+      "url": "https://web.archive.org/web/20201021163414/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-scombrotoxin-fish-poisoning-yellowfinahi-tuna-november-2019",
+      "status": "closed",
+      "case_count": 50,
+      "deaths": 0,
+      "hospitalizations": 1,
+      "states_affected": [
+        "DE",
+        "MA",
+        "MD",
+        "MN",
+        "NJ",
+        "NY",
+        "OH",
+        "PA",
+        "RI",
+        "VT",
+        "WV"
+      ],
+      "state_count": 11,
+      "consumer_advice": "Yellowfin tuna from Truong Phu Xanh Co., LTD with a production date in 2019 should not be consumed because it may have the potential to cause scombrotoxin fish poisoning. Tuna from this supplier could have been sold thawed or frozen; and could have been sold as ground tuna meat, poke cubes, steaks, or loins; this product could still be within its shelf life.­­ Anyone who received tuna from this supplier should not sell, serve, or consume it and should discard it. If you purchased tuna from one of the importers listed below you should confirm that it was not tuna supplied by Truong Phu Xanh Co., LTD with a production date in 2019. The following companies imported tuna from Truong Phu Xanh Co., LTD:\nMical Seafood Inc. (Davie, FL)Northern Fisheries LTD (Little Compton, RI)Alfa International Seafood Inc. (Medley, FL)Aquabest Seafood LLC (Miami, FL)Gamma Seafood Corporation (Medley, FL)J. DeLuca Fish Company, Inc. (San Pedro, CA)Sym-Pac International Inc. (Corona, CA)Worldwide Seafood Products LLC (Perth Amboy, NJ)\nScombrotoxin fish poisoning occurs when fish is not properly chilled or preserved and begins to spoil, resulting in increased histamine levels. Histamine cannot be destroyed by freezing or cooking.\nImporters, Suppliers, and Distributors:\nImporters, suppliers, and distributors should not use and should discard or destroy any yellowfin tuna imported from Truong Phu Xanh Co., LTD with a production date in 2019.\nRestaurants and Retailers:\nRestaurants and retailers should contact their suppliers to confirm the source of their yellowfin tuna because not all product was distributed in packaging that identifies Truong Phu Xanh Co., LTD. Yellowfin tuna imported from this company with a production date in 2019 should not be used, served, repacked, or sold; and should be discarded.\nConsumers:\nWhile restaurants and retailers should have removed yellowfin tuna with a production date in 2019 from the Vietnamese supplier Truong Phu Xanh Co., LTD, consumers should ask if the yellowfin tuna being served or sold was imported from the Vietnamese supplier Truong Phu Xanh Co., LTD and has a production date in 2019.\nThis outbreak appears to be over. The last reported illness for this outbreak was on November 24, 2019. Yellowfin tuna from Truong Phu Xanh Co., LTD with a production date in 2019 should still not be consumed. At this time, Truong Phu Xanh Co., LTD has not shipped product in 2020 and remains on Import Alert, which provides information to FDA field staff that they may detain the firm’s yellowfin tuna without physical examination. Detained product will not enter the United States unless the importer proves that it meets U.S. food safety standards.\nWhen the firm initially declined to recall, the FDA issued public warnings for importers, suppliers, distributors, and consumers. After the FDA public warning, the company recalled some of the product. FDA evaluated the effectiveness of the recalls and determined that the recalls may have not effectively removed all potentially harmful products from the market, so on December 26, 2019, the FDA released a list of importers of Truong Phu Xanh Co., LTD tuna to help suppliers and distributors to identify product. FDA further worked with companies throughout the supply chain to facilitate recalls; and was able to ensure that all importers with tuna still available initiated recalls.\nIn addition, the FDA notified the Vietnamese government after learning that some tuna products had been returned to Truong Phu Xanh Co., LTD in Vietnam. In response, the Vietnamese government issued an official letter to all relevant Vietnamese agencies instructing them to monitor and detain shipments of Truong Phu Xanh Co., LTD tuna upon arrival at ports in Vietnam. This action was taken to prevent the use of this product in Vietnam and its re-export to other countries, including the U.S.",
+      "scraped_at": "2026-08-21T13:15:49.351206+00:00",
+      "sources": [
+        "FDA"
+      ]
     },
     {
       "id": "cdc_ecoli_ground-beef-kroger-7-18-2008",
@@ -2467,23 +2439,23 @@
       "deaths": 0,
       "hospitalizations": 48,
       "states_affected": [
-        "WI",
         "AZ",
-        "NJ",
-        "PA",
-        "MI",
-        "VA",
-        "IL",
-        "ID",
-        "MA",
-        "NC",
-        "WA",
-        "TX",
-        "MN",
         "CA",
+        "ID",
+        "IL",
         "KY",
+        "MA",
+        "MI",
+        "MN",
+        "NC",
+        "NJ",
+        "OR",
+        "PA",
         "RI",
-        "OR"
+        "TX",
+        "VA",
+        "WA",
+        "WI"
       ],
       "state_count": 17,
       "consumer_advice": "Symptoms of infant botulismcan take as long as several weeks to develop, so parents should remain vigilant if they used ByHeart Whole Nutrition infant formula.",
@@ -2507,7 +2479,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-infant-botulism-infant-formula-november-2025"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_e-coli-o121",
@@ -2521,25 +2493,25 @@
       "deaths": 1,
       "hospitalizations": 20,
       "states_affected": [
-        "UT",
-        "WY",
-        "OR",
-        "WA",
-        "MA",
+        "AR",
         "CA",
-        "NY",
-        "MI",
-        "VA",
         "CO",
+        "MA",
+        "MI",
         "MN",
+        "MO",
         "NC",
         "NJ",
-        "SC",
-        "PA",
-        "MO",
+        "NY",
         "OH",
+        "OR",
+        "PA",
+        "SC",
         "TX",
-        "AR"
+        "UT",
+        "VA",
+        "WA",
+        "WY"
       ],
       "state_count": 19,
       "consumer_advice": "Follow thesefour stepsto prevent getting sick fromE. coli.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.Separate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.Cook:Use a food thermometer to make sure you have cooked your food to atemperature high enough to kill germs.Chill:Refrigerate perishable food (food that goes bad) within 2 hours. If the outside temperature is hotter than 90°F, refrigerate within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -2564,37 +2536,6 @@
         }
       ],
       "match_confidence": "strong"
-    },
-    {
-      "id": "outbreak-investigation-scombrotoxin-fish-poisoning-yellowfinahi-tuna-november-2019",
-      "source": "FDA",
-      "title": "Scombrotoxin Fish Poisoning - Yellowfin/Ahi Tuna (November 2019)",
-      "url": "https://web.archive.org/web/20201021163414/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-scombrotoxin-fish-poisoning-yellowfinahi-tuna-november-2019",
-      "status": "unknown",
-      "case_count": 47,
-      "deaths": 1,
-      "hospitalizations": 50,
-      "states_affected": [
-        "DE",
-        "CA",
-        "MD",
-        "NJ",
-        "NY",
-        "PA",
-        "FL",
-        "RI",
-        "MN",
-        "VT",
-        "OH",
-        "WV",
-        "MA"
-      ],
-      "state_count": 13,
-      "consumer_advice": "Yellowfin tuna from Truong Phu Xanh Co., LTD with a production date in 2019 should not be consumed because it may have the potential to cause scombrotoxin fish poisoning. Tuna from this supplier could have been sold thawed or frozen; and could have been sold as ground tuna meat, poke cubes, steaks, or loins; this product could still be within its shelf life.­­ Anyone who received tuna from this supplier should not sell, serve, or consume it and should discard it. If you purchased tuna from one of the importers listed below you should confirm that it was not tuna supplied by Truong Phu Xanh Co., LTD with a production date in 2019. The following companies imported tuna from Truong Phu Xanh Co., LTD:\nMical Seafood Inc. (Davie, FL)Northern Fisheries LTD (Little Compton, RI)Alfa International Seafood Inc. (Medley, FL)Aquabest Seafood LLC (Miami, FL)Gamma Seafood Corporation (Medley, FL)J. DeLuca Fish Company, Inc. (San Pedro, CA)Sym-Pac International Inc. (Corona, CA)Worldwide Seafood Products LLC (Perth Amboy, NJ)\nScombrotoxin fish poisoning occurs when fish is not properly chilled or preserved and begins to spoil, resulting in increased histamine levels. Histamine cannot be destroyed by freezing or cooking.\nImporters, Suppliers, and Distributors:\nImporters, suppliers, and distributors should not use and should discard or destroy any yellowfin tuna imported from Truong Phu Xanh Co., LTD with a production date in 2019.\nRestaurants and Retailers:\nRestaurants and retailers should contact their suppliers to confirm the source of their yellowfin tuna because not all product was distributed in packaging that identifies Truong Phu Xanh Co., LTD. Yellowfin tuna imported from this company with a production date in 2019 should not be used, served, repacked, or sold; and should be discarded.\nConsumers:\nWhile restaurants and retailers should have removed yellowfin tuna with a production date in 2019 from the Vietnamese supplier Truong Phu Xanh Co., LTD, consumers should ask if the yellowfin tuna being served or sold was imported from the Vietnamese supplier Truong Phu Xanh Co., LTD and has a production date in 2019.\nThis outbreak appears to be over. The last reported illness for this outbreak was on November 24, 2019. Yellowfin tuna from Truong Phu Xanh Co., LTD with a production date in 2019 should still not be consumed. At this time, Truong Phu Xanh Co., LTD has not shipped product in 2020 and remains on Import Alert, which provides information to FDA field staff that they may detain the firm’s yellowfin tuna without physical examination. Detained product will not enter the United States unless the importer proves that it meets U.S. food safety standards.\nWhen the firm initially declined to recall, the FDA issued public warnings for importers, suppliers, distributors, and consumers. After the FDA public warning, the company recalled some of the product. FDA evaluated the effectiveness of the recalls and determined that the recalls may have not effectively removed all potentially harmful products from the market, so on December 26, 2019, the FDA released a list of importers of Truong Phu Xanh Co., LTD tuna to help suppliers and distributors to identify product. FDA further worked with companies throughout the supply chain to facilitate recalls; and was able to ensure that all importers with tuna still available initiated recalls.\nIn addition, the FDA notified the Vietnamese government after learning that some tuna products had been returned to Truong Phu Xanh Co., LTD in Vietnam. In response, the Vietnamese government issued an official letter to all relevant Vietnamese agencies instructing them to monitor and detain shipments of Truong Phu Xanh Co., LTD tuna upon arrival at ports in Vietnam. This action was taken to prevent the use of this product in Vietnam and its re-export to other countries, including the U.S.",
-      "scraped_at": "2026-08-21T13:15:49.351206+00:00",
-      "sources": [
-        "FDA"
-      ]
     },
     {
       "id": "cdc_salmonella_enteritidis-07-12",
@@ -2661,27 +2602,27 @@
       "deaths": 14,
       "hospitalizations": 41,
       "states_affected": [
-        "CT",
-        "NV",
-        "IL",
-        "WA",
-        "TN",
-        "CA",
-        "IN",
-        "NY",
-        "FL",
-        "MI",
-        "OK",
-        "WV",
         "AL",
+        "CA",
         "CO",
-        "MN",
-        "NC",
+        "CT",
+        "FL",
+        "IL",
+        "IN",
         "MD",
-        "PA",
+        "MI",
+        "MN",
         "MO",
+        "NC",
+        "NV",
+        "NY",
         "OH",
-        "TX"
+        "OK",
+        "PA",
+        "TN",
+        "TX",
+        "WA",
+        "WV"
       ],
       "state_count": 21,
       "consumer_advice": "Stay healthy and preventListeria\nFind out if you are athigher riskfor getting sick withListeria.\nLearn which foods are more likely to containListeriaand take steps toprevent getting sick.\nStay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
@@ -2755,13 +2696,50 @@
       "case_count": 40,
       "deaths": 0,
       "hospitalizations": 20,
-      "states_affected": [],
+      "states_affected": [
+        "AZ",
+        "CA",
+        "IL",
+        "IN",
+        "KS",
+        "MI",
+        "MN",
+        "MO",
+        "ND",
+        "OH",
+        "OR",
+        "PA",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "WA",
+        "WI",
+        "WY"
+      ],
       "state_count": 19,
       "posted_date": "December 22, 2020",
       "scraped_at": "2026-08-21T13:59:26.629450+00:00",
+      "consumer_advice": "CDC has declared this outbreak to be over. There is no recommendation for consumers, retailers, or suppliers.\n",
       "sources": [
-        "CDC"
-      ]
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_ecoli_o157h7-10-20b",
+          "title": "2020E. coliOutbreak Linked to Leafy Greens",
+          "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2020/o157h7-10-20b/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-e-coli-leafy-greens-december-2020",
+          "title": "E. coli- Leafy Greens (December 2020)",
+          "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-leafy-greens-december-2020"
+        }
+      ],
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_litchfield-10-22",
@@ -2775,10 +2753,10 @@
       "deaths": 0,
       "hospitalizations": 15,
       "states_affected": [
-        "IL",
-        "TX",
+        "AZ",
         "CA",
-        "AZ"
+        "IL",
+        "TX"
       ],
       "state_count": 4,
       "posted_date": "December 14, 2022",
@@ -2835,44 +2813,28 @@
       "title": "Fresh Basil",
       "url": "https://www.cdc.gov/salmonella/basil-04-24/index.html",
       "pathogen": "salmonella",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
         "CT",
-        "IL",
-        "KY",
-        "ME",
-        "RI",
-        "TN",
-        "MA",
-        "DE",
-        "KS",
-        "IN",
-        "NY",
-        "WI",
         "FL",
-        "MI",
-        "NE",
-        "VA",
-        "AL",
-        "MN",
-        "NH",
-        "IA",
-        "NC",
-        "MD",
         "GA",
-        "NJ",
-        "SC",
-        "PA",
+        "IL",
+        "KS",
+        "MA",
+        "MI",
+        "MN",
         "MO",
-        "VT",
-        "OH",
-        "TX"
+        "NC",
+        "NJ",
+        "RI",
+        "TX",
+        "WI"
       ],
-      "scraped_at": "2026-11-06T18:46:31.851853+00:00",
+      "scraped_at": "2026-11-07T16:38:29.330256+00:00",
       "case_count": 36,
-      "hospitalizations": 36,
-      "deaths": 4,
-      "state_count": 30,
+      "hospitalizations": 4,
+      "deaths": 0,
+      "state_count": 14,
       "food_source": "Basil",
       "consumer_advice": "Potentially contaminated recalled product is no longer available on the market; however, consumers who purchased recalled organic basil from the stores listed above should check their refrigerators and freezers and should not eat it.This product should no longer be for sale at retail stores and is likely past shelf-life. If you bought recalled organic basil and removed it from the packaging or froze it and cannot tell if it is part of the recall, do not eat or use it and throw it away.FollowFDA’s safe handling and cleaning adviceand use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with this product to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating basil.\n",
       "posted_date": "April 2024",
@@ -2925,27 +2887,23 @@
       "deaths": 4,
       "hospitalizations": 31,
       "states_affected": [
-        "OR",
-        "IL",
-        "WA",
-        "KY",
-        "RI",
-        "TN",
-        "MA",
         "AZ",
         "CA",
-        "NY",
-        "IN",
         "FL",
-        "MI",
         "HI",
-        "VA",
-        "NC",
+        "IN",
+        "KY",
+        "MA",
         "MD",
-        "NJ",
-        "PA",
+        "MI",
         "MO",
-        "TX"
+        "NC",
+        "NJ",
+        "NY",
+        "RI",
+        "TN",
+        "VA",
+        "WA"
       ],
       "state_count": 17,
       "posted_date": "June 9, 2020",
@@ -2969,7 +2927,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-monocytogenes-enoki-mushrooms-march-2020"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_reading-08-16",
@@ -3038,14 +2996,12 @@
       "deaths": 0,
       "hospitalizations": 3,
       "states_affected": [
-        "WY",
-        "WA",
-        "MT",
-        "NC",
+        "ID",
         "MN",
-        "UT",
+        "MT",
         "OR",
-        "ID"
+        "UT",
+        "WA"
       ],
       "state_count": 6,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
@@ -3082,29 +3038,28 @@
       "deaths": 0,
       "hospitalizations": 11,
       "states_affected": [
-        "IA",
-        "MI",
-        "NH",
-        "MO",
         "CA",
-        "WA",
-        "MN",
-        "GA",
-        "ID",
-        "MD",
-        "TN",
-        "IL",
-        "OK",
-        "PA",
-        "WI",
-        "NE",
-        "TX",
         "FL",
+        "GA",
+        "IA",
+        "ID",
+        "IL",
         "MA",
-        "SC",
+        "MD",
+        "MI",
+        "MN",
         "NC",
         "ND",
-        "OR"
+        "NE",
+        "NH",
+        "OK",
+        "OR",
+        "PA",
+        "SC",
+        "TN",
+        "TX",
+        "WA",
+        "WI"
       ],
       "state_count": 22,
       "consumer_advice": "Check your home and throw out any of the recalled products if you still have them. They have a long shelf-life.\nAlways follow thefour stepsto food safety to prevent getting sick fromSalmonella.",
@@ -3168,6 +3123,51 @@
       "sources": [
         "CDC"
       ]
+    },
+    {
+      "id": "cdc_ecoli_bison-07-19",
+      "source": "CDC",
+      "title": "2019E. coliOutbreak Linked to Ground Bison Produced by Northfork Bison Distributions, Inc.",
+      "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2019/bison-07-19/index.html",
+      "pathogen": "ecoli",
+      "food_source": "Ground Bison Produced by Northfork Bison Distributions, Inc",
+      "status": "closed",
+      "case_count": 33,
+      "deaths": 0,
+      "hospitalizations": 18,
+      "states_affected": [
+        "CT",
+        "FL",
+        "IL",
+        "MI",
+        "MO",
+        "NJ",
+        "NY",
+        "PA"
+      ],
+      "state_count": 8,
+      "posted_date": "September 13, 2019",
+      "scraped_at": "2026-08-21T14:00:21.254748+00:00",
+      "consumer_advice": "Because the product is frozen and may still be in freezers, distributors, retailers and restaurants should not distribute, use or serve ground bison (including bison burgers) recalled by Northfork Bison Distributions Inc.\nConsumers should not eat products prepared using recalled ground bison (including bison burgers) sold under the Northfork Bison label including bison burgers sold to retailers in 4 x 4-ounce packages with expiration dates through October 8, 2020.",
+      "sources": [
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_ecoli_bison-07-19",
+          "title": "2019E. coliOutbreak Linked to Ground Bison Produced by Northfork Bison Distributions, Inc.",
+          "url": "https://archive.cdc.gov/www_cdc_gov/ecoli/2019/bison-07-19/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-e-coli-ground-bison-july-2019",
+          "title": "E. coli- Ground Bison (July 2019)",
+          "url": "https://web.archive.org/web/20201022095311/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-ground-bison-july-2019"
+        }
+      ],
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_virchow-02-16",
@@ -3272,12 +3272,10 @@
       "deaths": 0,
       "hospitalizations": 4,
       "states_affected": [
-        "IA",
-        "IN",
-        "PA",
         "IL",
-        "WI",
-        "MI"
+        "MI",
+        "PA",
+        "WI"
       ],
       "state_count": 4,
       "posted_date": "October 6, 2021",
@@ -3301,7 +3299,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-typhimurium-brightfarms-packaged-salad-greens-july-2021"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_newport-05-14",
@@ -3374,7 +3372,7 @@
       ],
       "state_count": 13,
       "consumer_advice": "Recalled oysters are past their shelf life. If you froze oyster meat, check to see if it's part of the recall and do not eat it.Throw it away or return it.Wash items and surfacesthat may have touched the recalled oysters using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-11-06T18:45:57.396569+00:00",
+      "scraped_at": "2026-11-07T16:38:18.074453+00:00",
       "sources": [
         "CDC"
       ]
@@ -3391,37 +3389,25 @@
       "deaths": 7,
       "hospitalizations": 27,
       "states_affected": [
-        "UT",
-        "WY",
-        "NM",
-        "NV",
-        "IL",
-        "OR",
-        "WA",
-        "TN",
-        "LA",
         "AZ",
-        "DE",
         "CA",
-        "KS",
-        "IN",
         "FL",
-        "MI",
-        "OK",
         "HI",
-        "VA",
-        "AL",
-        "CO",
+        "IL",
+        "IN",
+        "LA",
+        "MI",
         "MN",
-        "NC",
-        "MD",
-        "GA",
-        "NJ",
-        "SC",
-        "PA",
         "MO",
+        "NC",
+        "NV",
         "OH",
-        "TX"
+        "OR",
+        "SC",
+        "TX",
+        "UT",
+        "VA",
+        "WA"
       ],
       "state_count": 19,
       "consumer_advice": "Stay healthy and preventListeria\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeriaand take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
@@ -3458,18 +3444,17 @@
       "deaths": 1,
       "hospitalizations": 27,
       "states_affected": [
-        "GA",
-        "KS",
-        "NJ",
-        "NY",
-        "PA",
-        "IL",
-        "FL",
         "CO",
+        "FL",
+        "GA",
+        "IL",
+        "KS",
+        "MA",
         "MN",
         "NE",
-        "OH",
-        "MA"
+        "NJ",
+        "NY",
+        "PA"
       ],
       "state_count": 11,
       "consumer_advice": "Check your freezer for recalled ice cream. If you have any left:\nDo not eat the recalled products. Throw them away or return them to where you bought them.Follow thesesteps to cleanany areas, containers, and surfaces that may have touched the recalled products.Listeriacan survive in the freezer and can easily spread to other foods and surfaces.Call your healthcare provider right away if you have these symptoms after eating recalled products.Pregnant women: Fever, muscle aches and tiredness. Your illness may be mild, butListeriacan cause pregnancy loss or premature birth. It can also cause serious illness or death in newborns.Other people may have: Headache, stiff neck, confusion, loss of balance, and convulsions, in addition to fever, muscle aches and tiredness.\nStay Healthy and PreventListeria\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeria, and take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
@@ -3524,57 +3509,17 @@
       "deaths": 2,
       "hospitalizations": 23,
       "states_affected": [
-        "CT",
-        "UT",
-        "WY",
-        "NM",
-        "OR",
-        "IL",
-        "NV",
-        "WA",
-        "KY",
-        "ME",
-        "RI",
-        "TN",
-        "LA",
-        "DC",
         "AZ",
-        "MA",
-        "DE",
         "CA",
-        "KS",
-        "NY",
-        "IN",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "NE",
-        "OK",
-        "HI",
-        "WV",
-        "VA",
-        "AK",
-        "MT",
-        "AL",
         "CO",
-        "MN",
-        "NH",
-        "SD",
-        "IA",
-        "NC",
-        "MD",
+        "FL",
         "GA",
-        "NJ",
-        "SC",
-        "MS",
-        "MO",
-        "PA",
-        "VT",
-        "OH",
-        "ID",
+        "NC",
+        "NV",
+        "OR",
+        "TN",
         "TX",
-        "AR"
+        "WA"
       ],
       "state_count": 11,
       "consumer_advice": "Know yourListeriarisk.If you are pregnant, aged 65 or older, or have a weakened immune system due to certain medical conditions or treatments,Listeriacan be more harmful to you.Choosesafer foods.Find out which foods are more likely to be contaminated withListeriaand ways you can protect your health.Be aware that fresh soft cheeses made with pasteurized milk have causedListeriaoutbreaks, including this one.Although pasteurization of milk killsListeria,soft cheeses made from pasteurized milk can still get contaminated during cheese-making.",
@@ -3606,19 +3551,19 @@
       "title": "Raw Cookie Dough",
       "url": "https://www.cdc.gov/salmonella/enteritidis-05-23/index.html",
       "pathogen": "salmonella",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
         "CA",
-        "UT",
-        "OR",
+        "ID",
         "MO",
-        "WA",
-        "ID"
+        "OR",
+        "UT",
+        "WA"
       ],
-      "scraped_at": "2026-11-06T18:46:44.610855+00:00",
+      "scraped_at": "2026-11-07T16:38:42.829407+00:00",
       "case_count": 26,
-      "hospitalizations": 26,
-      "deaths": 4,
+      "hospitalizations": 4,
+      "deaths": 0,
       "state_count": 6,
       "food_source": "Raw Cookie Dough",
       "consumer_advice": "Papa Murphy’s Take ‘N’ Bake Chocolate Chip Cookie and S’mores Bars dough are not meant to be eaten raw.This outbreak appears to be over; however, consumers should check their refrigerators and freezers for Papa Murphy’s Chocolate Chip Cookie and S’mores Bars dough purchased before May 23, 2023 and should throw it away.Contact your healthcare provider if you think you may havesymptomsofSalmonellainfection.\nDue to the potential for contamination, never eat any raw dough that is supposed to be cooked or baked.Always wash hands and clean and sanitize work surfaces and utensils thoroughly after contact with raw dough or batter.Keep raw food or dough separate from other foods while preparing them to prevent any possible contamination from spreading.More information is available on theFDA website.\n",
@@ -3765,12 +3710,12 @@
       "deaths": 0,
       "hospitalizations": 5,
       "states_affected": [
+        "FL",
         "IA",
         "KS",
-        "WI",
-        "FL",
         "MI",
-        "OH"
+        "OH",
+        "WI"
       ],
       "state_count": 6,
       "posted_date": "December 1, 2022",
@@ -3919,24 +3864,23 @@
       "deaths": 0,
       "hospitalizations": 4,
       "states_affected": [
-        "MA",
-        "NC",
-        "GA",
-        "IN",
-        "NY",
-        "SC",
-        "IL",
-        "MO",
-        "FL",
         "AR",
-        "WA",
+        "AZ",
+        "FL",
+        "GA",
+        "IL",
+        "IN",
+        "MA",
         "MI",
-        "KY",
+        "MO",
+        "NC",
+        "NY",
         "OH",
-        "WV",
-        "VA",
+        "SC",
         "TX",
-        "AZ"
+        "VA",
+        "WA",
+        "WV"
       ],
       "state_count": 17,
       "posted_date": "July 27, 2022",
@@ -3960,7 +3904,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-peanut-butter-may-2022"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_flour-05-19",
@@ -3973,29 +3917,15 @@
       "deaths": 0,
       "hospitalizations": 3,
       "states_affected": [
-        "CT",
-        "UT",
-        "RI",
-        "ME",
-        "MA",
-        "DE",
         "CA",
-        "KS",
-        "NY",
-        "NE",
-        "WV",
-        "VA",
-        "AL",
-        "MN",
-        "NH",
-        "IA",
-        "MD",
-        "NJ",
-        "SC",
-        "PA",
+        "CT",
+        "MA",
         "MO",
-        "VT",
-        "OH"
+        "NJ",
+        "NY",
+        "OH",
+        "PA",
+        "RI"
       ],
       "state_count": 9,
       "scraped_at": "2026-08-21T14:00:28.943189+00:00",
@@ -4018,7 +3948,7 @@
           "url": "https://web.archive.org/web/20201108020740/http://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-flour-may-2019"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_national-steak-poultry-1-6-10",
@@ -4067,9 +3997,9 @@
       "deaths": 0,
       "hospitalizations": 5,
       "states_affected": [
-        "MD",
-        "FL",
         "CA",
+        "FL",
+        "MD",
         "TN"
       ],
       "state_count": 4,
@@ -4166,24 +4096,20 @@
       "source": "FDA",
       "title": "Hepatitis A - Blackberries (December 2019)",
       "url": "https://web.archive.org/web/20201125193406/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-hepatitis-fresh-conventional-blackberries-december-2019",
-      "status": "unknown",
+      "status": "closed",
       "case_count": 20,
-      "deaths": 11,
-      "hospitalizations": 20,
+      "deaths": 0,
+      "hospitalizations": 11,
       "states_affected": [
-        "IA",
         "IN",
-        "PA",
-        "IL",
-        "KY",
-        "MO",
-        "WI",
         "MI",
         "MN",
+        "MO",
         "NE",
-        "OH"
+        "PA",
+        "WI"
       ],
-      "state_count": 11,
+      "state_count": 7,
       "scraped_at": "2026-08-21T13:15:09.086189+00:00",
       "sources": [
         "FDA"
@@ -4267,14 +4193,16 @@
       "title": "Strawberries",
       "url": "https://www.cdc.gov/hepatitis/outbreaks/2022/hav-contaminated-food/index.htm",
       "pathogen": "unknown",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
-        "ND",
+        "CA",
         "MN",
-        "CA"
+        "ND"
       ],
-      "scraped_at": "2026-11-06T18:46:55.633006+00:00",
+      "scraped_at": "2026-11-07T16:38:53.535033+00:00",
       "case_count": 18,
+      "hospitalizations": 13,
+      "deaths": 0,
       "state_count": 3,
       "consumer_advice": "Currently, the potentially contaminated product is past its shelf life and not available for purchase in stores. Consumers, restaurants, and retailers should not sell, serve, or eat any fresh organic strawberries branded as FreshKampo or HEB if purchased between March 5, 2022, and April 15, 2022. People who purchased the fresh strawberriesand then froze those strawberries for later consumptionshould not eat them. They should be thrown away.  If you are unsure of what brand you purchased, when you purchased your strawberries, or where you purchased them from prior to freezing them, the strawberries should be thrown away.\nIf consumers purchased fresh organic strawberries branded as FreshKampo or HEB between March 5, 2022, and April 15, 2022, ate those berries in the last two weeks, and have not been vaccinated against hepatitis A, they should immediately consult with their healthcare professional to determine whether post exposure prophylaxis (PEP) is needed. PEP is recommended for unvaccinated people who have been exposed to hepatitis A virus in the last two weeks because vaccination can prevent a hepatitis A infection if given within 14 days of exposure. Those with evidence of previous hepatitis A vaccination or previous hepatitis A infection do not require PEP.\nContact your healthcare provider if you think you may havesymptomsof a hepatitis A infection after eating these fresh organic strawberries, or if you believe that you have eaten these strawberries in the last two weeks.\n",
       "sources": [
@@ -4308,43 +4236,19 @@
       "deaths": 3,
       "hospitalizations": 16,
       "states_affected": [
-        "CT",
-        "UT",
-        "NV",
-        "OR",
-        "IL",
-        "KY",
-        "WA",
-        "TN",
-        "AZ",
-        "LA",
-        "MA",
-        "CA",
-        "KS",
-        "IN",
-        "NY",
-        "WI",
-        "FL",
-        "ND",
-        "MI",
-        "NE",
-        "HI",
-        "OK",
-        "VA",
-        "AL",
-        "CO",
-        "MN",
         "IA",
-        "NC",
-        "MD",
-        "GA",
-        "SC",
-        "PA",
-        "MO",
-        "MS",
-        "OH",
         "ID",
-        "TX"
+        "MD",
+        "MI",
+        "MN",
+        "NC",
+        "NV",
+        "OH",
+        "OR",
+        "PA",
+        "TX",
+        "UT",
+        "WI"
       ],
       "state_count": 13,
       "posted_date": "April 4, 2022",
@@ -4431,21 +4335,20 @@
       "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-mini-pastries-january-2025",
       "pathogen": "Salmonella",
       "food_source": "Mini Pastries",
-      "status": "unknown",
+      "status": "closed",
       "case_count": 18,
-      "deaths": 1,
-      "hospitalizations": 18,
+      "deaths": 0,
+      "hospitalizations": 1,
       "states_affected": [
         "CA",
+        "IL",
+        "MA",
         "NC",
         "NJ",
         "NY",
-        "PA",
-        "IL",
-        "FL",
-        "MA"
+        "PA"
       ],
-      "state_count": 8,
+      "state_count": 7,
       "posted_date": "January 2025",
       "consumer_advice": "The recalled product should no longer be available for sale; however, food service customers who received the recalled product should followFDA’s safe handling and cleaningrecommendations and use extra care in cleaning and sanitizing any surfaces and containers that may have come in contact with recalled products to reduce the risk of cross-contamination.Contact your healthcare provider if you think you may have developed symptoms of aSalmonellainfection.\n",
       "scraped_at": "2026-08-21T13:13:32.102250+00:00",
@@ -4465,32 +4368,8 @@
       "deaths": 0,
       "hospitalizations": 6,
       "states_affected": [
-        "IA",
-        "MI",
-        "VA",
-        "MO",
-        "MS",
-        "OH",
-        "KY",
-        "LA",
-        "AL",
-        "MN",
-        "GA",
-        "AR",
-        "KS",
-        "TN",
-        "IL",
-        "IN",
-        "OK",
-        "WI",
-        "NE",
-        "TX",
         "FL",
-        "SD",
-        "SC",
-        "WV",
-        "NC",
-        "ND"
+        "GA"
       ],
       "state_count": 2,
       "consumer_advice": "Do not eat any recalled frozenberries.Throw them away or return them to where you bought them.\nFollow thesefour stepsto prevent getting sick fromE. coli.",
@@ -4619,15 +4498,10 @@
       "deaths": 1,
       "hospitalizations": 14,
       "states_affected": [
-        "MD",
-        "LA",
-        "MI",
-        "VA",
         "IL",
-        "DE",
-        "NJ",
-        "NC",
-        "NY"
+        "MD",
+        "NY",
+        "VA"
       ],
       "state_count": 4,
       "consumer_advice": "Stay Healthy and PreventListeria\nFind out if you are athigher riskfor getting sick withListeria.\nLearn which foods are more likely to containListeriaand take steps toprevent getting sick.\nStay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.\nBe aware thatfresh soft cheesesmade with pasteurized milk have causedListeriaoutbreaks, including this one. Although pasteurization of milk killsListeria,soft cheeses made from pasteurized milk can still get contaminated during cheese-making.",
@@ -4664,15 +4538,15 @@
       "deaths": 0,
       "hospitalizations": 4,
       "states_affected": [
-        "IA",
         "CA",
+        "IA",
         "IN",
-        "PA",
-        "MO",
         "MI",
         "MN",
+        "MO",
         "NE",
         "OH",
+        "PA",
         "SD"
       ],
       "state_count": 10,
@@ -4697,7 +4571,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-spinach-november-2021"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_newport-04-19",
@@ -4710,13 +4584,13 @@
       "deaths": 0,
       "hospitalizations": 2,
       "states_affected": [
-        "IA",
         "CT",
-        "NY",
+        "IA",
         "IL",
-        "WA",
+        "MN",
         "ND",
-        "MN"
+        "NY",
+        "WA"
       ],
       "state_count": 8,
       "posted_date": "May 22, 2019",
@@ -4766,26 +4640,26 @@
       "title": "Flour",
       "url": "https://www.cdc.gov/salmonella/infantis-03-23/index.html",
       "pathogen": "salmonella",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
-        "IA",
         "CA",
+        "IA",
+        "IL",
+        "MN",
+        "MO",
+        "NE",
         "NJ",
         "NY",
-        "OR",
-        "IL",
-        "MO",
-        "WA",
-        "MN",
-        "NE",
         "OH",
+        "OR",
         "TN",
-        "VA"
+        "VA",
+        "WA"
       ],
-      "scraped_at": "2026-11-06T18:46:47.440079+00:00",
+      "scraped_at": "2026-11-07T16:38:45.460243+00:00",
       "case_count": 14,
-      "hospitalizations": 14,
-      "deaths": 3,
+      "hospitalizations": 3,
+      "deaths": 0,
       "state_count": 13,
       "consumer_advice": "Consumers, restaurants, and retailers should not eat, sell, or serve recalled Gold Medal flour. Recalled products should be thrown away.Check your home for recalled flour. If you cannot tell if your flour is part of the recall, do not use it.Contact your healthcare provider if you think you may havesymptomsof aSalmonellainfection after eating recalled flour.\nDue to the potential for contamination, never eat any raw flour, dough, or cake mix that is supposed to be cooked or baked.Always wash hands, work surfaces, and utensils thoroughly after contact with flour, raw dough, or batter.Keep raw food or dough separate from other foods while preparing them to prevent any possible contamination from spreading. Be aware that flour or baking mix may spread easily due to its powdery nature.\n",
       "sources": [
@@ -4838,19 +4712,19 @@
       "deaths": 0,
       "hospitalizations": 8,
       "states_affected": [
-        "TN",
-        "KY",
-        "MI",
         "CA",
         "CO",
-        "NV",
-        "UT",
         "GA",
-        "OR"
+        "KY",
+        "MI",
+        "NV",
+        "OR",
+        "TN",
+        "UT"
       ],
       "state_count": 9,
       "consumer_advice": "Do not eat anyrecalled cheeses. Throw them away or return them.Consider washing items and surfacesthat may have touched the recalled cheeses using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-11-06T18:46:00.097269+00:00",
+      "scraped_at": "2026-11-07T16:38:20.763359+00:00",
       "posted_date": "September 2026",
       "sources": [
         "CDC",
@@ -4870,7 +4744,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o26h11-raw-milk-cheese-september-2026"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_organic-walnuts-04-24",
@@ -4964,7 +4838,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-monocytogenes-hispanic-style-fresh-and-soft-cheeses-february-2021"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_dublin-11-19",
@@ -5036,17 +4910,16 @@
       "hospitalizations": 4,
       "states_affected": [
         "CT",
-        "NJ",
-        "IN",
-        "PA",
-        "IL",
-        "WA",
         "FL",
+        "IL",
+        "MA",
         "MN",
+        "NJ",
+        "PA",
         "TN",
-        "VA",
         "TX",
-        "MA"
+        "VA",
+        "WA"
       ],
       "state_count": 11,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.\nSeparate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.\nCook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -5140,12 +5013,11 @@
       "hospitalizations": 3,
       "states_affected": [
         "FL",
-        "MI",
         "KS",
-        "SC",
-        "NJ",
-        "NY",
+        "MI",
         "NC",
+        "NY",
+        "SC",
         "VA"
       ],
       "state_count": 7,
@@ -5185,10 +5057,10 @@
       "hospitalizations": 5,
       "states_affected": [
         "CA",
-        "UT",
-        "NJ",
         "CO",
-        "TX"
+        "NJ",
+        "TX",
+        "UT"
       ],
       "state_count": 5,
       "consumer_advice": "Be aware that unpasteurized dairy products are more likely to contain germs than pasteurized dairy products.Check your refrigerators and freezersfor Raw Farm brand raw cheddar cheese products with the best by dates listed above and throw them away.Wash items and surfacesthat may have touched the contaminated cheese using hot soapy water or a dishwasher.",
@@ -5227,10 +5099,10 @@
       "hospitalizations": 10,
       "states_affected": [
         "CA",
-        "KS",
-        "IL",
         "CO",
         "FL",
+        "IL",
+        "KS",
         "MI",
         "OH"
       ],
@@ -5313,50 +5185,6 @@
       ]
     },
     {
-      "id": "outbreak-investigation-e-coli-romaine-salinas-california-november-2019",
-      "source": "FDA",
-      "title": "E. coli- Romaine (November 2019)",
-      "url": "https://web.archive.org/web/20201112035254/http://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-romaine-salinas-california-november-2019",
-      "status": "unknown",
-      "case_count": 11,
-      "deaths": 85,
-      "hospitalizations": 167,
-      "states_affected": [
-        "WA",
-        "CO",
-        "OR",
-        "PA",
-        "NC",
-        "IL",
-        "NJ",
-        "MI",
-        "DE",
-        "TX",
-        "IA",
-        "AZ",
-        "MN",
-        "FL",
-        "TN",
-        "VA",
-        "MT",
-        "NE",
-        "ID",
-        "MD",
-        "CA",
-        "NM",
-        "OH",
-        "SD",
-        "WI",
-        "NY",
-        "SC"
-      ],
-      "state_count": 27,
-      "scraped_at": "2026-08-21T14:56:29.364377+00:00",
-      "sources": [
-        "FDA"
-      ]
-    },
-    {
       "id": "cdc_salmonella_moringacapsules-02-26",
       "source": "CDC",
       "title": "Extensively Drug-Resistant Salmonella Outbreak Linked to Moringa Powder Capsules",
@@ -5368,13 +5196,13 @@
       "deaths": 0,
       "hospitalizations": 3,
       "states_affected": [
+        "AZ",
         "FL",
         "IA",
-        "TN",
-        "AZ",
-        "VA",
         "IL",
         "IN",
+        "TN",
+        "VA",
         "WA"
       ],
       "state_count": 8,
@@ -5412,8 +5240,6 @@
       "deaths": 1,
       "hospitalizations": 10,
       "states_affected": [
-        "AZ",
-        "WA",
         "CA",
         "NV"
       ],
@@ -5443,6 +5269,45 @@
       "match_confidence": "strong"
     },
     {
+      "id": "cdc_unknown_hav-contaminated-food",
+      "source": "CDC",
+      "title": "Frozen Strawberries",
+      "url": "https://www.cdc.gov/hepatitis/outbreaks/2023/hav-contaminated-food/index.htm",
+      "pathogen": "unknown",
+      "status": "closed",
+      "states_affected": [
+        "CA",
+        "HI",
+        "OR",
+        "WA"
+      ],
+      "scraped_at": "2026-11-07T16:38:48.201075+00:00",
+      "case_count": 10,
+      "hospitalizations": 4,
+      "deaths": 0,
+      "state_count": 4,
+      "consumer_advice": "Consumers, restaurants, and retailers should not sell, serve, or eat recalled frozen strawberries. These recalled products should be thrown away.These items were sold frozen and have a long shelf-life of 18 months to two years. Consumers should check their freezers for any recalled frozen strawberries. If you have recalled frozen strawberries in your freezer, throw them out.If consumers purchased the recalled frozen strawberries and ate those berries in the last two weeks, and have not been vaccinated against hepatitis A, they should immediately consult with their healthcare professional to determine whether post exposure prophylaxis (PEP) is needed. PEP is recommended for unvaccinated people who have been exposed to hepatitis A virus in the last two weeks because vaccination can prevent a hepatitis A virus infection if given within 14 days of exposure. Those with evidence of previous hepatitis A vaccination or previous hepatitis A virus infection do not require PEP.Contact your healthcare provider if you think you may havesymptomsof a hepatitis A virus infection after eating these frozen strawberries, or if you believe that you have eaten these strawberries in the last two weeks.\n",
+      "sources": [
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_unknown_hav-contaminated-food",
+          "title": "Frozen Strawberries",
+          "url": "https://www.cdc.gov/hepatitis/outbreaks/2023/hav-contaminated-food/index.htm"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-hepatitis-virus-infections-frozen-strawberries-february-2023",
+          "title": "Hepatitis A Virus - Frozen Strawberries (February 2023)",
+          "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-hepatitis-virus-infections-frozen-strawberries-february-2023"
+        }
+      ],
+      "match_confidence": "probable"
+    },
+    {
       "id": "cdc_ecoli_o157h7-12-21",
       "source": "CDC",
       "title": "2021E. coliOutbreak Linked to Packaged Salads",
@@ -5454,12 +5319,10 @@
       "deaths": 1,
       "hospitalizations": 4,
       "states_affected": [
-        "CA",
-        "OR",
-        "WA",
         "AK",
         "OH",
-        "AZ"
+        "OR",
+        "WA"
       ],
       "state_count": 4,
       "posted_date": "March 3, 2022",
@@ -5483,7 +5346,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-power-greens-packaged-salad-january-2022"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_packaged-salad-12-21-b",
@@ -5496,14 +5359,14 @@
       "deaths": 1,
       "hospitalizations": 10,
       "states_affected": [
+        "IL",
+        "MA",
+        "MI",
         "NJ",
         "NY",
-        "PA",
-        "IL",
-        "MI",
         "OH",
-        "VA",
-        "MA"
+        "PA",
+        "VA"
       ],
       "state_count": 8,
       "posted_date": "March 8, 2022",
@@ -5527,7 +5390,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-monocytogenes-fresh-express-packaged-salad-december-2021"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_o157h7-12-19",
@@ -5540,12 +5403,11 @@
       "deaths": 0,
       "hospitalizations": 4,
       "states_affected": [
-        "CA",
         "GA",
         "IL",
-        "WI",
+        "MN",
         "ND",
-        "MN"
+        "WI"
       ],
       "state_count": 5,
       "posted_date": "January 15, 2020",
@@ -5568,7 +5430,7 @@
           "url": "https://web.archive.org/web/20201205135914/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-salad-mix-december-2019"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_deliproducts-04-19",
@@ -5662,7 +5524,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_weltevreden-06-21",
@@ -5676,10 +5538,10 @@
       "deaths": 0,
       "hospitalizations": 3,
       "states_affected": [
-        "NV",
-        "RI",
+        "AZ",
         "MI",
-        "AZ"
+        "NV",
+        "RI"
       ],
       "state_count": 4,
       "posted_date": "September 21, 2021",
@@ -5703,7 +5565,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-weltevreden-frozen-pre-cooked-shrimp-april-2021"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_frozen-vegetables-05-16",
@@ -5751,10 +5613,10 @@
       "deaths": 1,
       "hospitalizations": 5,
       "states_affected": [
-        "SC",
-        "PA",
         "FL",
         "ME",
+        "PA",
+        "SC",
         "TX"
       ],
       "state_count": 5,
@@ -5794,9 +5656,9 @@
       "hospitalizations": 0,
       "states_affected": [
         "HI",
-        "NY",
+        "MA",
         "MI",
-        "MA"
+        "NY"
       ],
       "state_count": 4,
       "posted_date": "February 27, 2019",
@@ -5820,7 +5682,7 @@
           "url": "https://web.archive.org/web/20201221213912/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-concord-tahini-november-2018"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_soft-cheese-03-17",
@@ -5971,41 +5833,6 @@
       ]
     },
     {
-      "id": "outbreak-investigation-e-coli-romaine-november-2018",
-      "source": "FDA",
-      "title": "E. coli- Romaine (November 2018)",
-      "url": "https://web.archive.org/web/20201116113829/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-romaine-november-2018",
-      "status": "unknown",
-      "case_count": 7,
-      "deaths": 25,
-      "hospitalizations": 62,
-      "states_affected": [
-        "DC",
-        "CT",
-        "CA",
-        "MA",
-        "MD",
-        "GA",
-        "NJ",
-        "NY",
-        "PA",
-        "IL",
-        "WI",
-        "FL",
-        "RI",
-        "WA",
-        "MI",
-        "OH",
-        "NH",
-        "LA"
-      ],
-      "state_count": 18,
-      "scraped_at": "2026-08-21T13:17:14.019327+00:00",
-      "sources": [
-        "FDA"
-      ]
-    },
-    {
       "id": "cdc_listeria_monocytogenes-09-22",
       "source": "CDC",
       "title": "ListeriaOutbreak Linked to Brie and Camembert Cheese - September 2022",
@@ -6019,10 +5846,10 @@
       "states_affected": [
         "CA",
         "GA",
-        "NJ",
+        "MA",
         "MI",
-        "TX",
-        "MA"
+        "NJ",
+        "TX"
       ],
       "state_count": 6,
       "consumer_advice": "Check your freezer forrecalled baked brie.\nIf you have any, do not eat it. Throw it away.\nStay healthy and preventListeria:\nFind out if you are athigher riskfor getting sick withListeria.Learn which foods are more likely to containListeria, and take steps toprevent getting sick.Stay up to date on foodrecallsandoutbreaksto avoid getting sick from eating contaminated food.",
@@ -6043,6 +5870,44 @@
           "id": "outbreak-investigation-listeria-monocytogenes-brie-and-camembert-soft-cheese-products-september-2022",
           "title": "Listeria monocytogenes- Brie and Camembert Soft Cheese Products (September 2022)",
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-monocytogenes-brie-and-camembert-soft-cheese-products-september-2022"
+        }
+      ],
+      "match_confidence": "strong"
+    },
+    {
+      "id": "cdc_salmonella_concord-05-19",
+      "source": "CDC",
+      "title": "Tahini",
+      "url": "https://www.cdc.gov/salmonella/concord-05-19/index.html",
+      "pathogen": "salmonella",
+      "status": "closed",
+      "states_affected": [
+        "MA",
+        "NY",
+        "TX"
+      ],
+      "scraped_at": "2026-11-07T16:39:02.204570+00:00",
+      "case_count": 6,
+      "hospitalizations": 1,
+      "deaths": 0,
+      "state_count": 3,
+      "consumer_advice": "The tahini of concern may be labelled as either “Karawan Tahini,” “El-Karawan Tahini,” or “Soco Tahini.” Consumers should avoid eating this tahini. This tahini was sold in bulk to retailers and restaurants and was also available to consumers at retail locations and online. It may have also been used in other food products sold to consumers. Consumers should be aware that this product has a shelf life of two years and should check their homes for tahini with either label. Consumers with this tahini in their home should not eat it and should discard it. Consumers with concerns about tahini consumed outside the home should ask their restaurant or retailer if the product they have purchased contains this tahini. Retailers and restaurants should throw the recalled product out and sanitize any surfaces that may have come in contact with this tahini.\nTahini is made from sesame seeds and can be served on its own or used as an ingredient in Mediterranean and Middle Eastern style dishes, such as hummus, falafel, and baba ganoush.",
+      "sources": [
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_salmonella_concord-05-19",
+          "title": "Tahini",
+          "url": "https://www.cdc.gov/salmonella/concord-05-19/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-salmonella-concord-tahini-may-2019",
+          "title": "Salmonella- Tahini (May 2019)",
+          "url": "https://web.archive.org/web/20201031122313/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-concord-tahini-may-2019"
         }
       ],
       "match_confidence": "probable"
@@ -6119,7 +5984,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-monocytogenes-enoki-mushrooms-november-2022"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_salmonella_frozen-chicken-entrees-part2-07-15",
@@ -6177,6 +6042,26 @@
       ]
     },
     {
+      "id": "outbreak-investigation-salmonella-infantis-vegetable-trays-spring-2019",
+      "source": "FDA",
+      "title": "Salmonella- Vegetable Trays (Spring 2019)",
+      "url": "https://web.archive.org/web/20201021145114/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-infantis-vegetable-trays-spring-2019",
+      "status": "closed",
+      "case_count": 5,
+      "deaths": 0,
+      "hospitalizations": 0,
+      "states_affected": [
+        "MN",
+        "WI"
+      ],
+      "state_count": 2,
+      "consumer_advice": "It is not likely that the trays the Wisconsin Department of Health Services warned against eating onMay 21are still on the market or still in people’s homes.",
+      "scraped_at": "2026-08-21T13:16:45.463712+00:00",
+      "sources": [
+        "FDA"
+      ]
+    },
+    {
       "id": "cdc_botulism_infant-formula-june-2026",
       "source": "CDC",
       "title": "Infant Botulism Outbreak Linked to Powdered Infant Formula, June 2026",
@@ -6228,8 +6113,8 @@
       "deaths": 0,
       "hospitalizations": 1,
       "states_affected": [
-        "NJ",
-        "MN"
+        "MN",
+        "NJ"
       ],
       "state_count": 2,
       "consumer_advice": "Always follow thefour stepsto food safety to prevent getting sick fromSalmonella.\nClean:Wash your hands, utensils, and surfaces often. Rinse fruits and vegetables under running water before eating, cutting, or peeling.\nSeparate:Keep food that won't be cooked separate from raw meat, poultry, and seafood.\nCook:Use a food thermometer to make sure you have cooked your food toa temperature high enough to kill germs.\nChill:Refrigerate perishable food (food that goes bad) within 2 hours. If the food is exposed to temperatures above 90°F (like a hot car or picnic), refrigerate it within 1 hour. Thaw food in the refrigerator, not on the counter.",
@@ -6253,7 +6138,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-pistachio-cream-june-2025"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_porkproducts-11-18",
@@ -6310,42 +6195,6 @@
       ]
     },
     {
-      "id": "outbreak-investigation-e-coli-leafy-greens-december-2020",
-      "source": "FDA",
-      "title": "E. coli- Leafy Greens (December 2020)",
-      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-leafy-greens-december-2020",
-      "status": "unknown",
-      "case_count": 4,
-      "hospitalizations": 40,
-      "states_affected": [
-        "UT",
-        "WY",
-        "OR",
-        "IL",
-        "WA",
-        "TN",
-        "AZ",
-        "CA",
-        "KS",
-        "IN",
-        "WI",
-        "ND",
-        "MI",
-        "VA",
-        "MN",
-        "PA",
-        "MO",
-        "OH",
-        "TX"
-      ],
-      "state_count": 19,
-      "consumer_advice": "CDC has declared this outbreak to be over. There is no recommendation for consumers, retailers, or suppliers.\n",
-      "scraped_at": "2026-08-21T13:14:47.777866+00:00",
-      "sources": [
-        "FDA"
-      ]
-    },
-    {
       "id": "cdc_listeria_precooked-chicken-07-21",
       "source": "CDC",
       "title": "2021 Outbreak ofListeriaInfections Linked to Pre-cooked Chicken",
@@ -6399,7 +6248,7 @@
           "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-ice-cream-august-2023"
         }
       ],
-      "match_confidence": "probable"
+      "match_confidence": "strong"
     },
     {
       "id": "cdc_listeria_raw-milk-03-16",
@@ -6427,7 +6276,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:46:34.561296+00:00",
+      "scraped_at": "2026-11-07T16:38:31.817869+00:00",
       "sources": [
         "CDC"
       ]
@@ -6440,48 +6289,10 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:46:42.066744+00:00",
+      "scraped_at": "2026-11-07T16:38:39.854846+00:00",
       "sources": [
         "CDC"
       ]
-    },
-    {
-      "id": "cdc_unknown_hav-contaminated-food",
-      "source": "CDC",
-      "title": "Frozen Strawberries",
-      "url": "https://www.cdc.gov/hepatitis/outbreaks/2023/hav-contaminated-food/index.htm",
-      "pathogen": "unknown",
-      "status": "unknown",
-      "states_affected": [
-        "HI",
-        "WA",
-        "CA",
-        "OR"
-      ],
-      "scraped_at": "2026-11-06T18:46:50.378799+00:00",
-      "hospitalizations": 10,
-      "deaths": 4,
-      "state_count": 4,
-      "consumer_advice": "Consumers, restaurants, and retailers should not sell, serve, or eat recalled frozen strawberries. These recalled products should be thrown away.These items were sold frozen and have a long shelf-life of 18 months to two years. Consumers should check their freezers for any recalled frozen strawberries. If you have recalled frozen strawberries in your freezer, throw them out.If consumers purchased the recalled frozen strawberries and ate those berries in the last two weeks, and have not been vaccinated against hepatitis A, they should immediately consult with their healthcare professional to determine whether post exposure prophylaxis (PEP) is needed. PEP is recommended for unvaccinated people who have been exposed to hepatitis A virus in the last two weeks because vaccination can prevent a hepatitis A virus infection if given within 14 days of exposure. Those with evidence of previous hepatitis A vaccination or previous hepatitis A virus infection do not require PEP.Contact your healthcare provider if you think you may havesymptomsof a hepatitis A virus infection after eating these frozen strawberries, or if you believe that you have eaten these strawberries in the last two weeks.\n",
-      "sources": [
-        "CDC",
-        "FDA"
-      ],
-      "source_records": [
-        {
-          "source": "CDC",
-          "id": "cdc_unknown_hav-contaminated-food",
-          "title": "Frozen Strawberries",
-          "url": "https://www.cdc.gov/hepatitis/outbreaks/2023/hav-contaminated-food/index.htm"
-        },
-        {
-          "source": "FDA",
-          "id": "outbreak-investigation-hepatitis-virus-infections-frozen-strawberries-february-2023",
-          "title": "Hepatitis A Virus - Frozen Strawberries (February 2023)",
-          "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-hepatitis-virus-infections-frozen-strawberries-february-2023"
-        }
-      ],
-      "match_confidence": "probable"
     },
     {
       "id": "cdc_unknown_norovirus-outbreaks",
@@ -6491,47 +6302,10 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:46:52.913142+00:00",
+      "scraped_at": "2026-11-07T16:38:50.919769+00:00",
       "sources": [
         "CDC"
       ]
-    },
-    {
-      "id": "cdc_salmonella_concord-05-19",
-      "source": "CDC",
-      "title": "Tahini",
-      "url": "https://www.cdc.gov/salmonella/concord-05-19/index.html",
-      "pathogen": "salmonella",
-      "status": "unknown",
-      "states_affected": [
-        "TX",
-        "NY",
-        "MA"
-      ],
-      "scraped_at": "2026-11-06T18:47:03.771990+00:00",
-      "hospitalizations": 6,
-      "deaths": 1,
-      "state_count": 3,
-      "consumer_advice": "The tahini of concern may be labelled as either “Karawan Tahini,” “El-Karawan Tahini,” or “Soco Tahini.” Consumers should avoid eating this tahini. This tahini was sold in bulk to retailers and restaurants and was also available to consumers at retail locations and online. It may have also been used in other food products sold to consumers. Consumers should be aware that this product has a shelf life of two years and should check their homes for tahini with either label. Consumers with this tahini in their home should not eat it and should discard it. Consumers with concerns about tahini consumed outside the home should ask their restaurant or retailer if the product they have purchased contains this tahini. Retailers and restaurants should throw the recalled product out and sanitize any surfaces that may have come in contact with this tahini.\nTahini is made from sesame seeds and can be served on its own or used as an ingredient in Mediterranean and Middle Eastern style dishes, such as hummus, falafel, and baba ganoush.",
-      "sources": [
-        "CDC",
-        "FDA"
-      ],
-      "source_records": [
-        {
-          "source": "CDC",
-          "id": "cdc_salmonella_concord-05-19",
-          "title": "Tahini",
-          "url": "https://www.cdc.gov/salmonella/concord-05-19/index.html"
-        },
-        {
-          "source": "FDA",
-          "id": "outbreak-investigation-salmonella-concord-tahini-may-2019",
-          "title": "Salmonella- Tahini (May 2019)",
-          "url": "https://web.archive.org/web/20201031122313/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-concord-tahini-may-2019"
-        }
-      ],
-      "match_confidence": "probable"
     },
     {
       "id": "cdc_unknown_b-071318",
@@ -6541,7 +6315,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:06.542565+00:00",
+      "scraped_at": "2026-11-07T16:39:05.345624+00:00",
       "sources": [
         "CDC"
       ]
@@ -6554,7 +6328,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:09.322644+00:00",
+      "scraped_at": "2026-11-07T16:39:07.982045+00:00",
       "sources": [
         "CDC"
       ]
@@ -6567,7 +6341,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:11.890272+00:00",
+      "scraped_at": "2026-11-07T16:39:10.886460+00:00",
       "sources": [
         "CDC"
       ]
@@ -6580,7 +6354,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:14.645432+00:00",
+      "scraped_at": "2026-11-07T16:39:13.506395+00:00",
       "sources": [
         "CDC"
       ]
@@ -6608,7 +6382,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:20.369878+00:00",
+      "scraped_at": "2026-11-07T16:39:16.310085+00:00",
       "sources": [
         "CDC"
       ]
@@ -6621,7 +6395,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:22.896576+00:00",
+      "scraped_at": "2026-11-07T16:39:19.022191+00:00",
       "sources": [
         "CDC"
       ]
@@ -6634,7 +6408,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:25.656811+00:00",
+      "scraped_at": "2026-11-07T16:39:21.855346+00:00",
       "sources": [
         "CDC"
       ]
@@ -6647,7 +6421,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:28.175255+00:00",
+      "scraped_at": "2026-11-07T16:39:24.752591+00:00",
       "sources": [
         "CDC"
       ]
@@ -6660,7 +6434,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-06T18:47:31.015384+00:00",
+      "scraped_at": "2026-11-07T16:39:27.811037+00:00",
       "sources": [
         "CDC"
       ]
@@ -7208,7 +6982,7 @@
       "source": "FDA",
       "title": "E. coli- Unknown Food (November 2020)",
       "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-unknown-food-fall-2020",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
         "NM",
         "OR",
@@ -7231,28 +7005,9 @@
         "TX",
         "AR"
       ],
-      "state_count": 20,
+      "state_count": 9,
       "consumer_advice": "Consumers, restaurants, and retailers, were advised not to eat, sell, or serverecalledTanimura & Antle, Inc. brand packaged single head romaine lettuce with a pack date of 10/15/2020 or 10/16/2020.\nThe recalled products are now well beyond expiration and likely no longer on the market or in consumers’ homes.\n",
       "scraped_at": "2026-08-21T13:14:49.857117+00:00",
-      "sources": [
-        "FDA"
-      ]
-    },
-    {
-      "id": "outbreak-investigation-salmonella-infantis-vegetable-trays-spring-2019",
-      "source": "FDA",
-      "title": "Salmonella- Vegetable Trays (Spring 2019)",
-      "url": "https://web.archive.org/web/20201021145114/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-infantis-vegetable-trays-spring-2019",
-      "status": "unknown",
-      "deaths": 0,
-      "hospitalizations": 5,
-      "states_affected": [
-        "WI",
-        "MN"
-      ],
-      "state_count": 2,
-      "consumer_advice": "It is not likely that the trays the Wisconsin Department of Health Services warned against eating onMay 21are still on the market or still in people’s homes.",
-      "scraped_at": "2026-08-21T13:16:45.463712+00:00",
       "sources": [
         "FDA"
       ]
@@ -7262,16 +7017,16 @@
       "source": "FDA",
       "title": "B. cepaciaComplex - Cleansing Foam",
       "url": "https://web.archive.org/web/20190912084459/https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-b-cepacia-complex-linked-medline-remedy-essentials-no-rinse-cleansing-foam",
-      "status": "unknown",
+      "status": "closed",
       "states_affected": [
         "CA"
       ],
-      "state_count": 1,
-      "scraped_at": "2026-11-06T17:41:28.349131+00:00",
+      "state_count": 3,
+      "scraped_at": "2026-11-07T16:38:03.123075+00:00",
       "sources": [
         "FDA"
       ]
     }
   ],
-  "generated_at": "2026-11-06T18:49:10.223629+00:00"
+  "generated_at": "2026-11-07T16:39:28.849439+00:00"
 }

@@ -9,18 +9,18 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 - 🏛️ FDA: 82 outbreak investigations (2006-2026)
 - 🔬 CDC: 236 total investigations (2006-2026)
 - 🚨 Active: 3 ongoing investigations
-- 📊 Total: 245 unique foodborne outbreaks (73 reported by both CDC and FDA, counted once)
+- 📊 Total: 242 unique foodborne outbreaks (76 reported by both CDC and FDA, counted once)
 
 ## Current Statistics
 
 | Metric                    | Count  |
 | ------------------------- | ------ |
-| **Total Outbreaks**       | 245    |
+| **Total Outbreaks**       | 242    |
 | **Active Investigations** | 3      |
-| **Total Cases**           | 35,786 |
-| **Deaths**                | 552    |
-| **Hospitalizations**      | 7,506  |
-| **States Affected**       | 51     |
+| **Total Cases**           | 33,951 |
+| **Deaths**                | 179    |
+| **Hospitalizations**      | 5,785  |
+| **States Affected**       | 52     |
 
 ## By Source
 
@@ -28,14 +28,14 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | ------------------------------ | --------- | ---------- |
 | CDC                            | 236       | 2006-2026  |
 | FDA                            | 82        | 2006-2026  |
-| Reported by both (CDC and FDA) | 73        | 2006-2026  |
+| Reported by both (CDC and FDA) | 76        | 2006-2026  |
 
 ## By Status
 
 | Status  | Count |
 | ------- | ----- |
-| Closed  | 210   |
-| Unknown | 32    |
+| Closed  | 227   |
+| Unknown | 12    |
 | Ongoing | 3     |
 
 ## By Pathogen (Top 10)
@@ -45,7 +45,7 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | Salmonella | 120       |
 | E. coli    | 56        |
 | Listeria   | 38        |
-| Unknown    | 26        |
+| Unknown    | 23        |
 | Vibrio     | 3         |
 | Botulism   | 2         |
 
@@ -59,9 +59,9 @@ A real-time foodborne outbreak monitoring system that aggregates and analyzes ou
 | 2023 | 9         |
 | 2022 | 14        |
 | 2021 | 13        |
-| 2020 | 14        |
-| 2019 | 17        |
-| 2018 | 19        |
+| 2020 | 13        |
+| 2019 | 16        |
+| 2018 | 18        |
 | 2017 | 7         |
 
 ## USDA Recalls

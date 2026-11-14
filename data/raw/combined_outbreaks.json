@@ -1,9 +1,9 @@
 {
   "summary": {
     "total_outbreaks": 242,
-    "total_cases": 33952,
+    "total_cases": 33957,
     "total_deaths": 179,
-    "total_hospitalizations": 5785,
+    "total_hospitalizations": 5786,
     "outbreaks_by_source": {
       "CDC": 236,
       "FDA": 82
@@ -24,8 +24,8 @@
       "Salmonella": 1
     },
     "outbreaks_by_status": {
-      "closed": 228,
-      "ongoing": 2,
+      "closed": 229,
+      "ongoing": 1,
       "unknown": 12
     },
     "unique_states_affected": 52,
@@ -342,7 +342,7 @@
         "SD",
         "WI"
       ],
-      "scraped_at": "2026-11-13T18:04:46.266337+00:00",
+      "scraped_at": "2026-11-14T16:45:09.670165+00:00",
       "case_count": 701,
       "hospitalizations": 38,
       "deaths": 0,
@@ -430,7 +430,7 @@
         "WI",
         "WV"
       ],
-      "scraped_at": "2026-11-13T18:04:15.362252+00:00",
+      "scraped_at": "2026-11-14T16:44:39.956947+00:00",
       "case_count": 551,
       "hospitalizations": 155,
       "deaths": 0,
@@ -619,7 +619,7 @@
         "WV",
         "WY"
       ],
-      "scraped_at": "2026-11-13T18:04:23.427604+00:00",
+      "scraped_at": "2026-11-14T16:44:47.864453+00:00",
       "case_count": 407,
       "hospitalizations": 158,
       "deaths": 6,
@@ -741,7 +741,7 @@
         "SC",
         "WI"
       ],
-      "scraped_at": "2026-11-13T18:04:49.093248+00:00",
+      "scraped_at": "2026-11-14T16:45:12.409688+00:00",
       "case_count": 241,
       "hospitalizations": 6,
       "deaths": 0,
@@ -1919,7 +1919,7 @@
         "WI",
         "WY"
       ],
-      "scraped_at": "2026-11-13T18:04:26.299865+00:00",
+      "scraped_at": "2026-11-14T16:44:50.418249+00:00",
       "case_count": 80,
       "hospitalizations": 18,
       "deaths": 1,
@@ -2830,7 +2830,7 @@
         "TX",
         "WI"
       ],
-      "scraped_at": "2026-11-13T18:04:18.140466+00:00",
+      "scraped_at": "2026-11-14T16:44:42.688793+00:00",
       "case_count": 36,
       "hospitalizations": 4,
       "deaths": 0,
@@ -3372,7 +3372,7 @@
       ],
       "state_count": 13,
       "consumer_advice": "Recalled oysters are past their shelf life. If you froze oyster meat, check to see if it's part of the recall and do not eat it.Throw it away or return it.Wash items and surfacesthat may have touched the recalled oysters using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-11-13T18:04:10.000342+00:00",
+      "scraped_at": "2026-11-14T16:44:34.742652+00:00",
       "sources": [
         "CDC"
       ]
@@ -3560,7 +3560,7 @@
         "UT",
         "WA"
       ],
-      "scraped_at": "2026-11-13T18:04:31.865617+00:00",
+      "scraped_at": "2026-11-14T16:44:55.710589+00:00",
       "case_count": 26,
       "hospitalizations": 4,
       "deaths": 0,
@@ -4188,6 +4188,53 @@
       ]
     },
     {
+      "id": "cdc_ecoli_raw-milk-cheese-09-26",
+      "source": "CDC",
+      "title": "E. coliOutbreak Linked to Raw Milk Cheese",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/raw-milk-cheese-09-26/index.html",
+      "pathogen": "ecoli",
+      "food_source": "Raw Milk Cheese\nFor Everyone\nNov",
+      "status": "closed",
+      "case_count": 18,
+      "deaths": 0,
+      "hospitalizations": 9,
+      "states_affected": [
+        "CA",
+        "CO",
+        "GA",
+        "KY",
+        "MI",
+        "NM",
+        "NV",
+        "OR",
+        "TN",
+        "UT"
+      ],
+      "state_count": 10,
+      "consumer_advice": "Do not eat anyrecalled cheeses. Throw them away or return them.Wash items and surfacesthat may have touched the recalled cheeses using hot soapy water or a dishwasher.",
+      "scraped_at": "2026-11-14T16:44:36.960164+00:00",
+      "posted_date": "September 2026",
+      "sources": [
+        "CDC",
+        "FDA"
+      ],
+      "source_records": [
+        {
+          "source": "CDC",
+          "id": "cdc_ecoli_raw-milk-cheese-09-26",
+          "title": "E. coliOutbreak Linked to Raw Milk Cheese",
+          "url": "https://www.cdc.gov/ecoli/outbreaks/raw-milk-cheese-09-26/index.html"
+        },
+        {
+          "source": "FDA",
+          "id": "outbreak-investigation-e-coli-o26h11-raw-milk-cheese-september-2026",
+          "title": "E. coliO26:H11: Raw Milk Cheese (September 2026)",
+          "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o26h11-raw-milk-cheese-september-2026"
+        }
+      ],
+      "match_confidence": "strong"
+    },
+    {
       "id": "cdc_unknown_hav-contaminated-food-0586a849",
       "source": "CDC",
       "title": "Strawberries",
@@ -4199,7 +4246,7 @@
         "MN",
         "ND"
       ],
-      "scraped_at": "2026-11-13T18:04:43.143673+00:00",
+      "scraped_at": "2026-11-14T16:45:06.967624+00:00",
       "case_count": 18,
       "hospitalizations": 13,
       "deaths": 0,
@@ -4656,7 +4703,7 @@
         "VA",
         "WA"
       ],
-      "scraped_at": "2026-11-13T18:04:34.408867+00:00",
+      "scraped_at": "2026-11-14T16:44:58.545396+00:00",
       "case_count": 14,
       "hospitalizations": 3,
       "deaths": 0,
@@ -4699,52 +4746,6 @@
       "sources": [
         "CDC"
       ]
-    },
-    {
-      "id": "cdc_ecoli_raw-milk-cheese-09-26",
-      "source": "CDC",
-      "title": "E. coliOutbreak Linked to Raw Milk Cheese",
-      "url": "https://www.cdc.gov/ecoli/outbreaks/raw-milk-cheese-09-26/index.html",
-      "pathogen": "ecoli",
-      "food_source": "Raw Milk Cheese\nFor Everyone\nSept",
-      "status": "ongoing",
-      "case_count": 13,
-      "deaths": 0,
-      "hospitalizations": 8,
-      "states_affected": [
-        "CA",
-        "CO",
-        "GA",
-        "KY",
-        "MI",
-        "NV",
-        "OR",
-        "TN",
-        "UT"
-      ],
-      "state_count": 9,
-      "consumer_advice": "Do not eat anyrecalled cheeses. Throw them away or return them.Consider washing items and surfacesthat may have touched the recalled cheeses using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-11-13T18:04:12.334420+00:00",
-      "posted_date": "September 2026",
-      "sources": [
-        "CDC",
-        "FDA"
-      ],
-      "source_records": [
-        {
-          "source": "CDC",
-          "id": "cdc_ecoli_raw-milk-cheese-09-26",
-          "title": "E. coliOutbreak Linked to Raw Milk Cheese",
-          "url": "https://www.cdc.gov/ecoli/outbreaks/raw-milk-cheese-09-26/index.html"
-        },
-        {
-          "source": "FDA",
-          "id": "outbreak-investigation-e-coli-o26h11-raw-milk-cheese-september-2026",
-          "title": "E. coliO26:H11: Raw Milk Cheese (September 2026)",
-          "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o26h11-raw-milk-cheese-september-2026"
-        }
-      ],
-      "match_confidence": "strong"
     },
     {
       "id": "cdc_ecoli_organic-walnuts-04-24",
@@ -5281,7 +5282,7 @@
         "OR",
         "WA"
       ],
-      "scraped_at": "2026-11-13T18:04:37.357969+00:00",
+      "scraped_at": "2026-11-14T16:45:01.392744+00:00",
       "case_count": 10,
       "hospitalizations": 4,
       "deaths": 0,
@@ -5886,7 +5887,7 @@
         "NY",
         "TX"
       ],
-      "scraped_at": "2026-11-13T18:04:51.998736+00:00",
+      "scraped_at": "2026-11-14T16:45:15.028313+00:00",
       "case_count": 6,
       "hospitalizations": 1,
       "deaths": 0,
@@ -6276,7 +6277,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:04:20.725068+00:00",
+      "scraped_at": "2026-11-14T16:44:45.228082+00:00",
       "sources": [
         "CDC"
       ]
@@ -6289,7 +6290,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:04:29.045963+00:00",
+      "scraped_at": "2026-11-14T16:44:52.937593+00:00",
       "sources": [
         "CDC"
       ]
@@ -6302,7 +6303,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:04:40.264535+00:00",
+      "scraped_at": "2026-11-14T16:45:04.323964+00:00",
       "sources": [
         "CDC"
       ]
@@ -6315,7 +6316,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:04:54.842941+00:00",
+      "scraped_at": "2026-11-14T16:45:17.831237+00:00",
       "sources": [
         "CDC"
       ]
@@ -6328,7 +6329,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:04:57.549132+00:00",
+      "scraped_at": "2026-11-14T16:45:20.446748+00:00",
       "sources": [
         "CDC"
       ]
@@ -6341,7 +6342,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:00.361216+00:00",
+      "scraped_at": "2026-11-14T16:45:23.171750+00:00",
       "sources": [
         "CDC"
       ]
@@ -6354,7 +6355,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:03.142860+00:00",
+      "scraped_at": "2026-11-14T16:45:25.798869+00:00",
       "sources": [
         "CDC"
       ]
@@ -6382,7 +6383,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:06.000023+00:00",
+      "scraped_at": "2026-11-14T16:45:28.421149+00:00",
       "sources": [
         "CDC"
       ]
@@ -6395,7 +6396,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:09.104793+00:00",
+      "scraped_at": "2026-11-14T16:45:31.524826+00:00",
       "sources": [
         "CDC"
       ]
@@ -6408,7 +6409,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:12.190463+00:00",
+      "scraped_at": "2026-11-14T16:45:34.363749+00:00",
       "sources": [
         "CDC"
       ]
@@ -6421,7 +6422,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:15.291035+00:00",
+      "scraped_at": "2026-11-14T16:45:36.893198+00:00",
       "sources": [
         "CDC"
       ]
@@ -6434,7 +6435,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-13T18:05:18.155078+00:00",
+      "scraped_at": "2026-11-14T16:45:39.593664+00:00",
       "sources": [
         "CDC"
       ]
@@ -7022,11 +7023,11 @@
         "CA"
       ],
       "state_count": 3,
-      "scraped_at": "2026-11-13T18:03:54.382133+00:00",
+      "scraped_at": "2026-11-14T16:44:19.765976+00:00",
       "sources": [
         "FDA"
       ]
     }
   ],
-  "generated_at": "2026-11-13T18:05:19.543761+00:00"
+  "generated_at": "2026-11-14T16:45:40.821336+00:00"
 }

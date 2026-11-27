@@ -342,7 +342,7 @@
         "SD",
         "WI"
       ],
-      "scraped_at": "2026-11-26T19:50:39.851452+00:00",
+      "scraped_at": "2026-11-27T19:40:34.396658+00:00",
       "case_count": 701,
       "hospitalizations": 38,
       "deaths": 0,
@@ -430,7 +430,7 @@
         "WI",
         "WV"
       ],
-      "scraped_at": "2026-11-26T19:50:08.421802+00:00",
+      "scraped_at": "2026-11-27T19:40:03.863275+00:00",
       "case_count": 551,
       "hospitalizations": 155,
       "deaths": 0,
@@ -619,7 +619,7 @@
         "WV",
         "WY"
       ],
-      "scraped_at": "2026-11-26T19:50:18.903475+00:00",
+      "scraped_at": "2026-11-27T19:40:11.976982+00:00",
       "case_count": 407,
       "hospitalizations": 158,
       "deaths": 6,
@@ -741,7 +741,7 @@
         "SC",
         "WI"
       ],
-      "scraped_at": "2026-11-26T19:50:42.595818+00:00",
+      "scraped_at": "2026-11-27T19:40:37.360298+00:00",
       "case_count": 241,
       "hospitalizations": 6,
       "deaths": 0,
@@ -1919,7 +1919,7 @@
         "WI",
         "WY"
       ],
-      "scraped_at": "2026-11-26T19:50:21.499844+00:00",
+      "scraped_at": "2026-11-27T19:40:15.401386+00:00",
       "case_count": 80,
       "hospitalizations": 18,
       "deaths": 1,
@@ -2830,7 +2830,7 @@
         "TX",
         "WI"
       ],
-      "scraped_at": "2026-11-26T19:50:11.184886+00:00",
+      "scraped_at": "2026-11-27T19:40:06.514786+00:00",
       "case_count": 36,
       "hospitalizations": 4,
       "deaths": 0,
@@ -3372,7 +3372,7 @@
       ],
       "state_count": 13,
       "consumer_advice": "Recalled oysters are past their shelf life. If you froze oyster meat, check to see if it's part of the recall and do not eat it.Throw it away or return it.Wash items and surfacesthat may have touched the recalled oysters using hot soapy water or a dishwasher.",
-      "scraped_at": "2026-11-26T19:50:05.736999+00:00",
+      "scraped_at": "2026-11-27T19:40:00.833262+00:00",
       "sources": [
         "CDC"
       ]
@@ -3560,7 +3560,7 @@
         "UT",
         "WA"
       ],
-      "scraped_at": "2026-11-26T19:50:26.670761+00:00",
+      "scraped_at": "2026-11-27T19:40:21.052467+00:00",
       "case_count": 26,
       "hospitalizations": 4,
       "deaths": 0,
@@ -4246,7 +4246,7 @@
         "MN",
         "ND"
       ],
-      "scraped_at": "2026-11-26T19:50:37.333237+00:00",
+      "scraped_at": "2026-11-27T19:40:31.720589+00:00",
       "case_count": 18,
       "hospitalizations": 13,
       "deaths": 0,
@@ -4703,7 +4703,7 @@
         "VA",
         "WA"
       ],
-      "scraped_at": "2026-11-26T19:50:29.336675+00:00",
+      "scraped_at": "2026-11-27T19:40:23.638053+00:00",
       "case_count": 14,
       "hospitalizations": 3,
       "deaths": 0,
@@ -5282,7 +5282,7 @@
         "OR",
         "WA"
       ],
-      "scraped_at": "2026-11-26T19:50:31.929259+00:00",
+      "scraped_at": "2026-11-27T19:40:26.408228+00:00",
       "case_count": 10,
       "hospitalizations": 4,
       "deaths": 0,
@@ -5887,7 +5887,7 @@
         "NY",
         "TX"
       ],
-      "scraped_at": "2026-11-26T19:50:45.460370+00:00",
+      "scraped_at": "2026-11-27T19:40:40.079880+00:00",
       "case_count": 6,
       "hospitalizations": 1,
       "deaths": 0,
@@ -6277,7 +6277,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:13.883412+00:00",
+      "scraped_at": "2026-11-27T19:40:09.034707+00:00",
       "sources": [
         "CDC"
       ]
@@ -6290,7 +6290,7 @@
       "pathogen": "salmonella",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:24.147911+00:00",
+      "scraped_at": "2026-11-27T19:40:18.265368+00:00",
       "sources": [
         "CDC"
       ]
@@ -6303,7 +6303,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:34.654424+00:00",
+      "scraped_at": "2026-11-27T19:40:29.050220+00:00",
       "sources": [
         "CDC"
       ]
@@ -6316,7 +6316,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:48.294549+00:00",
+      "scraped_at": "2026-11-27T19:40:43.008750+00:00",
       "sources": [
         "CDC"
       ]
@@ -6329,7 +6329,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:50.967674+00:00",
+      "scraped_at": "2026-11-27T19:40:45.699076+00:00",
       "sources": [
         "CDC"
       ]
@@ -6342,7 +6342,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:53.606404+00:00",
+      "scraped_at": "2026-11-27T19:40:48.581890+00:00",
       "sources": [
         "CDC"
       ]
@@ -6355,7 +6355,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:56.417611+00:00",
+      "scraped_at": "2026-11-27T19:40:51.399937+00:00",
       "sources": [
         "CDC"
       ]
@@ -6383,7 +6383,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:50:58.935475+00:00",
+      "scraped_at": "2026-11-27T19:40:54.303422+00:00",
       "sources": [
         "CDC"
       ]
@@ -6396,7 +6396,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:51:02.119920+00:00",
+      "scraped_at": "2026-11-27T19:40:57.272688+00:00",
       "sources": [
         "CDC"
       ]
@@ -6409,7 +6409,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:51:04.847905+00:00",
+      "scraped_at": "2026-11-27T19:41:00.207636+00:00",
       "sources": [
         "CDC"
       ]
@@ -6422,7 +6422,7 @@
       "pathogen": "vibrio",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:51:07.433743+00:00",
+      "scraped_at": "2026-11-27T19:41:02.729172+00:00",
       "sources": [
         "CDC"
       ]
@@ -6435,7 +6435,7 @@
       "pathogen": "unknown",
       "status": "unknown",
       "states_affected": [],
-      "scraped_at": "2026-11-26T19:51:10.115675+00:00",
+      "scraped_at": "2026-11-27T19:41:05.272375+00:00",
       "sources": [
         "CDC"
       ]
@@ -7023,11 +7023,11 @@
         "CA"
       ],
       "state_count": 3,
-      "scraped_at": "2026-11-26T19:49:50.968905+00:00",
+      "scraped_at": "2026-11-27T19:39:44.380262+00:00",
       "sources": [
         "FDA"
       ]
     }
   ],
-  "generated_at": "2026-11-26T19:51:11.448992+00:00"
+  "generated_at": "2026-11-27T19:41:06.660203+00:00"
 }
